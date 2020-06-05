@@ -4,7 +4,7 @@
 a,
 a:visited {
 	color: var(--bleu);
-	transition: var(--transition);
+	transition: color var(--transition);
 }
 
 a:hover,
@@ -168,6 +168,15 @@ a:active {
 				}
 			}
 		}
+		&.sticky {
+			ul.menu > li:not(.button) {
+				&.current-menu-item, &.current-menu-ancestor {
+					&::after {
+						bottom:5px;
+					}
+				}
+			}
+		}
 	}
 
 
@@ -218,8 +227,7 @@ a:active {
 			right:5px;
 			top:-5px;
 			a {
-				font-size:14px;
-				
+				font-size:14px;				
 			}
 		}
 
