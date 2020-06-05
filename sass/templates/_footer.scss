@@ -1,0 +1,40 @@
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+
+
+.site-footer {
+	align-items:center;
+	background-color:var(--bleu);
+	color:var(--blanc);
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	padding:2rem var(--padding-x);
+	text-align: center;
+
+
+	ul {
+		list-style: none;
+		margin:0;
+		padding:0;
+	}
+
+	@include bp(md) {
+		flex-direction:row;
+		justify-content: space-around;
+		text-align:left;
+	}
+
+}
+
+.site-footer a {
+	color:var(--blanc);
+	text-decoration: none;
+	&:hover, &:focus {
+		text-decoration: underline;
+	}
+}
+
+

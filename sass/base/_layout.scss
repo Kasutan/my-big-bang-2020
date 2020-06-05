@@ -1,0 +1,113 @@
+
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+// Breakpoints
+@mixin bp($point) {
+  
+	$sm: "(min-width: 576px)";
+	$md: "(min-width: 768px)";
+	$lg: "(min-width: 960px)";
+	$xl: "(min-width: 1450px)";
+  
+	@if $point == sm {
+	@media #{$sm} { @content; }
+	}
+	@else if $point == md {
+	@media #{$md} { @content; }
+	}
+
+	@else if $point == lg {
+	@media #{$lg} { @content; }
+	}
+  
+	@else if $point == xl {
+	@media #{$xl} { @content; }
+	}
+}
+
+
+body {
+	overflow-x:hidden;
+}
+:root {
+	--margin-bottom:40px;
+	--padding-x:20px;
+	//--header-height:80px;
+
+	@include bp(md) {
+		--margin-bottom:80px;
+		--padding-x : 5%;
+	}
+	@include bp(xl) {
+		--padding-x: calc(50vw - 1366px/2);
+	}
+}
+
+
+
+.alignfull , .bleed-container {
+	width: 100vw;
+	margin-left: 50%;
+	padding-left: 0;
+	padding-right: 0;
+	transform: translateX(-50%);
+	margin-bottom:var(--margin-bottom);
+}
+
+.container {
+	max-width:1406px; //1366px largeur max contenu + 20px de padding de chaque côté
+	margin:0 auto;
+	padding:0 20px;
+}
+
+/* Hauteur mini main*/
+
+.site {
+	position: relative;
+}
+.site-main {
+	min-height:100vh;
+}
+
+
+/* Grid */
+
+.flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.show-for-md,
+.show-for-lg {
+	display: none;
+}
+
+@include bp(md) {
+
+
+	.show-for-md {
+		display: initial;
+	}
+
+	.hide-for-md {
+		display: none;
+	}
+}
+
+@include bp(lg) {
+
+
+	.show-for-lg {
+		display: initial;
+	}
+
+	.hide-for-lg {
+		display: none;
+	}
+}
+

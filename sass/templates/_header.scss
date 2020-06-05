@@ -1,0 +1,21 @@
+.site-header {
+	align-items: center;
+	background-color: var(--blanc);
+	display: flex;
+	justify-content: space-between;
+	left: 0;
+	padding: 0 var(--padding-x);
+	top: 0;
+
+	//TODO : sticky
+}
+
+.custom-logo {
+	max-width: 100px;
+}
+
+@include bp(md) {
+	.custom-logo {
+		max-width: unset;
+	}
+}

@@ -1,0 +1,75 @@
+
+/*--------------------------------------------------------------
+# Animations
+--------------------------------------------------------------*/
+/*https://tympanus.net/codrops/2014/08/05/page-preloading-effect/*/
+/*https://alligator.io/js/intersection-observer*/
+
+
+.animate-on-load, .animate-on-load-delay {
+	opacity: 1;
+	animation: animInitialSections 1s cubic-bezier(0.7,0,0.3,1) both;
+}
+
+.animate-on-load-delay {
+	animation-delay: 0.2s;
+}
+
+@keyframes animInitialSections {
+	from { 
+		opacity: 0; 
+		transform: translate3d(50%,0,0); 
+		/*transform: scale3d(0.3,0.3,1);*/
+	}
+}
+
+
+/*Cette classe est ajoutée en JS avec intersection observer aux éléments qui portent la class js-animate-on-visible*/
+.fancy {
+	opacity: 1;
+	animation: animSectionsSuivantes 1s cubic-bezier(0.7,0,0.3,1) both;
+	animation-delay: 0.2s;
+}
+
+@keyframes animSectionsSuivantes {
+	from { 
+		opacity: 0; 
+		transform: translate3d(0, 50% ,0); 
+	}
+}
+
+/*Cette classe est ajoutée en JS avec intersection observer aux enfants des éléments qui portent la class js-animate-on-visible-cascade*/
+
+.fancy-cascade {
+	opacity: 1;
+	animation: animSectionsSuivantes 1s cubic-bezier(0.7,0,0.3,1) both;
+	animation-delay: 0.2s;
+}
+
+/* Si besoin d'une cascade plus complexe ou plus longue : utiliser sass*/
+/*.fancy-cascade:nth-child(n) {
+	animation-delay:calc(0.2s + 0.15s * n);
+}*/
+
+.fancy-cascade:nth-child(1) {
+	animation-delay:calc(0.2s + 0.15s * 1);
+}
+.fancy-cascade:nth-child(2) {
+	animation-delay:calc(0.2s + 0.15s * 2);
+}
+.fancy-cascade:nth-child(3) {
+	animation-delay:calc(0.2s + 0.15s * 3);
+}
+.fancy-cascade:nth-child(4) {
+	animation-delay:calc(0.2s + 0.15s * 4);
+}
+.fancy-cascade:nth-child(5) {
+	animation-delay:calc(0.2s + 0.15s * 5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.animate-on-load, .animate-on-load-delay, .fancy, .fancy-cascade {
+		animation: none;
+		-webkit-animation: none;
+	}
+}

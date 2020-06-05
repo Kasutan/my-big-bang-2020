@@ -1,0 +1,151 @@
+:root {
+	--font: "sofia-pro-soft", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--font-serif: "Zilla Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--padding-lien:7px 12px;
+	--transition : all 0.5s ease-in-out;
+}
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: #49495D;
+	color: var(--bleu);
+	font-family: sans-serif;
+	font-family: var(--font);
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.625;
+}
+
+
+h1,
+h2,
+h3,
+.h1
+{
+	clear: both;
+	font-family: var(--font);
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+h1, .h1 {
+	color: #EC6557;
+	color: var(--rouge);
+	margin:0;
+	padding:1em;
+	text-align:center;
+}
+h2, h3 {
+	margin:0 0 1em;
+}
+
+h1, .h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 1.75rem;
+}
+
+h3, h4, h5, h6 {
+	font-size: 1.25rem;
+}
+
+
+@include bp(md) {
+
+	h1, .h1 {
+		font-size: 3.875rem;
+	}
+
+	h2 {
+		font-size: 3.25rem;
+	}
+
+	h3, h4, h5, h6 {
+		font-size: 1.25rem;
+	}
+}
+
+p {
+	margin-bottom: 0.5rem;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+	font-family:var(--font-serif);
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+mark,
+ins {
+	background: var(--gris-fond-clair);
+	text-decoration: none;
+}
+
+small, .has-small-font-size  {
+	font-size: 80%;
+}
+
+.has-regular-font-size {
+	font-size: 1rem;
+}
+
+big, .has-big-font-size  {
+	font-size: 125%;
+}
+
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   viewBox="0 0 45.070682 36"
+   height="36"
+   width="45.070683"
+   id="svg12"
+   sodipodi:docname="picto_perso_gris_seul.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:export-filename="C:\Users\Magalie\Local Sites\my-big-bang\app\public\wp-content\themes\my-big-bang-2020\icons\picto_perso_gris_seul.png"
+   inkscape:export-xdpi="10"
+   inkscape:export-ydpi="10">
+  <metadata
+     id="metadata18">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs16" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2880"
+     inkscape:window-height="1526"
+     id="namedview14"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-bottom="0"
+     fit-margin-left="9"
+     fit-margin-right="9"
+     inkscape:zoom="6.1688279"
+     inkscape:cx="39.383882"
+     inkscape:cy="5.4863193"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg12" />
+  <g
+     transform="matrix(0.94100762,0,0,0.94100762,9.0005496,-0.00483346)"
+     id="g10">
+    <path
+       style="fill:#fff"
+       transform="translate(-131.626,-8.859)"
+       d="m 132.152,47 a 0.466,0.466 0 0 1 -0.428,-0.656 l 9.928,-22.819 h -9.559 a 0.469,0.469 0 0 1 -0.46,-0.553 l 2.691,-13.754 a 0.469,0.469 0 0 1 0.919,0.181 l -2.582,13.194 h 9.709 a 0.469,0.469 0 0 1 0.428,0.656 L 132.583,46.726 A 0.469,0.469 0 0 1 132.152,47 Z"
+       id="path2"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#fff"
+       transform="translate(-170.086,-9.148)"
+       d="m 198.379,47.35 a 0.466,0.466 0 0 1 -0.428,-0.281 L 187.614,23.521 a 0.469,0.469 0 0 1 0.431,-0.656 h 9.709 l -2.4,-13.022 a 0.477,0.477 0 0 1 0.938,-0.172 l 2.5,13.579 a 0.469,0.469 0 0 1 -0.453,0.553 h -9.575 l 10.047,22.9 a 0.469,0.469 0 0 1 -0.241,0.625 0.441,0.441 0 0 1 -0.191,0.022 z"
+       id="path4"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#fff"
+       transform="translate(-142.649,-63.832)"
+       d="m 148.131,102.093 a 0.488,0.488 0 0 1 -0.256,-0.075 0.469,0.469 0 0 1 -0.134,-0.65 l 7.48,-11.475 a 2.338,2.338 0 0 1 1.963,-1.063 v 0 a 2.338,2.338 0 0 1 1.963,1.06 l 7.421,11.356 a 0.47013642,0.47013642 0 1 1 -0.788,0.513 l -7.418,-11.353 a 1.379,1.379 0 0 0 -1.178,-0.625 v 0 a 1.385,1.385 0 0 0 -1.178,0.625 l -7.48,11.475 a 0.472,0.472 0 0 1 -0.394,0.213 z"
+       id="path6"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#fff"
+       transform="translate(-145.542,-12.826)"
+       d="m 167.574,21.151 h -5.783 a 0.469,0.469 0 0 1 -0.428,-0.66 c 0.313,-0.75 1.035,-2.954 0.334,-4.1 a 1.914,1.914 0 0 0 -1.644,-0.806 h -0.222 a 1.9,1.9 0 0 0 -1.619,0.788 c -0.7,1.144 0,3.36 0.338,4.12 a 0.469,0.469 0 0 1 -0.034,0.444 0.475,0.475 0 0 1 -0.394,0.213 h -5.783 a 0.469,0.469 0 1 1 0,-0.938 h 5.1 c -0.344,-1.025 -0.838,-3.016 -0.028,-4.329 a 2.831,2.831 0 0 1 2.391,-1.25 h 0.275 a 2.807,2.807 0 0 1 2.416,1.25 c 0.8,1.316 0.313,3.292 -0.028,4.311 h 5.1 a 0.469,0.469 0 1 1 0,0.938 z"
+       id="path8"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
