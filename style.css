@@ -1065,7 +1065,11 @@ a:active {
         position: relative; }
         .main-navigation ul.menu > li:hover ul, .main-navigation ul.menu > li.focus ul {
           left: auto;
-          min-width: 100%; } }
+          min-width: 100%; }
+    .main-navigation.sticky ul.menu {
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; } }
 
 /* Style pictos menu mobile */
 .menu-toggle {

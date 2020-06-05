@@ -105,7 +105,13 @@ a:active {
 					}
 				}
 			}
+		}
 
+		//Menu sticky desktop : liens alignés à droite
+		&.sticky {
+			ul.menu {
+				justify-content: flex-end;
+			}
 		}
 
 	}
