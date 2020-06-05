@@ -28,6 +28,9 @@
 }
 
 @include bp(md) {
+	.admin-bar .site-header.sticky {
+		top:32px;
+	}
 	.custom-logo {
 		max-width: unset;
 	}

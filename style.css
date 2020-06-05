@@ -1021,6 +1021,8 @@ a:active {
     display: none; }
   .main-navigation.toggled ul.menu {
     background-color: var(--blanc);
+    -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1031,6 +1033,7 @@ a:active {
     left: 0;
     position: absolute;
     top: 150px;
+    top: var(--header-bottom);
     width: 100vw; }
   .main-navigation.toggled svg.menu {
     display: none; }
@@ -1354,6 +1357,8 @@ a:active {
   max-width: 100px; }
 
 @media (min-width: 768px) {
+  .admin-bar .site-header.sticky {
+    top: 32px; }
   .custom-logo {
     max-width: unset; } }
 
