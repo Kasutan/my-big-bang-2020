@@ -25,150 +25,178 @@ a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+
+/*Logique pour afficher/masquer éléments du menu mobile et sous-menus*/ 
+
 .main-navigation {
 	clear: both;
 	display: block;
 	width: 100%;
+
+	ul {
+		display: none; // par défaut le menu est caché en mobile
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			display: flex;
+			flex-direction: column;
+		}
+
+	}
+
+	.menu-toggle {
+		display: block;
+	}
+
+	svg.times { //croix pour refermer le menu
+		display:none;
+	}
+
+	&.toggled { //menu mobile ouvert
+		ul.menu {
+			background-color:var(--blanc);
+			display: flex;
+			flex-direction: column;
+			left:0;
+			position:absolute;
+			top:150px; //TODO : à caler avec maquette mobile, tenir compte de la topbar
+			width:100vw;
+		}
+
+		svg.menu { //cacher hamburger 
+			display:none;
+		}
+		svg.times { // afficher croix
+			display:block;
+		}
+	}
+
+
+	@include bp(md) { //menu desktop
+		.menu-toggle {
+			display: none;
+		}
+
+		ul.menu {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+
+			ul { //sous-menu
+				background-color:var(--blanc);
+				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+				float: left;
+				position: absolute;
+				top: 100%;
+				left: -999em;
+				z-index: 10;
+			}
+
+			> li { //affichage du sous-menu
+				position: relative;
+				&:hover, &.focus {
+					ul {
+						left: auto;
+						min-width: 100%;
+					}
+				}
+			}
+
+		}
+
+	}
+	
 }
 
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
 
-.main-navigation ul > li.menu-item {
-	padding: var(--padding-lien);	
-}
-
-
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul ul li:hover>ul,
-.main-navigation ul ul li.focus>ul {
-	left: 100%;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul li:hover>ul,
-.main-navigation ul li.focus>ul {
-	left: auto;
-}
-
-.main-navigation li {
-	float: left;
-	position: relative;
-}
-
-.main-navigation  a {
-	color:var(--noir-titre);
-	display: block;
-	font-size: 0.875rem;
-	text-decoration: none;
-	text-transform:uppercase;
-}
-
-.main-navigation .menu >li:first-of-type > a {
-	color:var(--bleu);
-
-}
-
-.main-navigation a:hover, .main-navigation a:active {
-	color:var(--bleu);
-}
-
-.main-navigation .current-menu-item a,
-.main-navigation .current-menu-ancestor > a {
-	font-weight:700;
-}
-
-/* Small menu. */
+/* Style pictos menu mobile */
 
 .menu-toggle {
 	background:transparent;
 	border:0;
 	color:var(--noir-titre);
-	display: block;
 	margin-left: auto;
 	margin-right: 0;
 	&:hover, &:focus, &:active {
 		background:transparent;
 	}
 }
-svg.times {
-	display:none;
-}
-.main-navigation.toggled {
-	svg.menu {
-		display:none;
-	}
-	svg.times {
-		display:block;
-	}
-	ul {
-		background-color:var(--blanc);
-		display: flex;
-		flex-direction: column;
-		position:absolute;
-		left:0;
-		top:var(--header-height);
-		width:100vw;
 
-		ul {
-			box-shadow: unset;
-			display : flex;
-			flex-direction: column;
-			position:relative;
-			top:unset;
-			z-index:unset;
-			left:unset;
+/*Style liens de menus*/ 
+
+.main-navigation {
+	li {
+		padding: 1rem;	
+	}
+
+	a {
+		color:var(--gris-texte);
+		display: block;
+		text-decoration: none;
+		text-transform:uppercase;
+
+		&:hover, &:active {
+			color :var(--rouge);
+		}
+	}
+
+	
+	.current-menu-item > a, .current-menu-ancestor > a {
+		font-weight:700;
+		color:var(--rouge);
+	}
+
+	//Trait de décor sous la page courante (liens de premier niveau et desktop uniquement)
+	@include bp(md) {
+		ul.menu > li:not(.button) {
+			&.current-menu-item, &.current-menu-ancestor {
+				 a {
+					color:var(--gris-texte);
+				}
+
+				position:relative;
+				&::after {
+					background-color: var(--rouge);
+					content:' ';
+					height:3px;
+					width:40px;
+					position:absolute;
+					bottom : 0;
+					left:calc(50% - 20px);
+				}
+			}
 		}
 	}
 
 
+	//Lien de menu affiché sous forme de bouton
+	ul.menu li.button {
+		> a {
+			@include bouton;
+			background: var(--rouge);
+			border-color: var(--rouge);
+			color: var(--blanc);
+			margin-bottom: 0;
+			&:hover, &.focus, &:focus-within {
+				background: var(--blanc);
+				color:var(--rouge);
+				text-decoration: none;
+			}
+		}
+		@include bp(md) {
+			padding-top:0;
+			padding-bottom: 0;
+		}
+	}
+
 }
 
 
-@include bp(md) {
-	.menu-toggle {
-		display: none;
-	}
 
-	.main-navigation  ul.menu {
-		align-items: center;
-		display: flex;
-		justify-content: center;
 
-		
-	}
-	.main-navigation  ul.sub-menu {
-		background-color:var(--blanc);
-		display: flex;
-		flex-direction: column;
 
-	}
-	
-	.main-navigation .menu > li > a {
-		text-align: center;
-		
-	}
-}
 
 .site-main .comment-navigation,
 .site-main .posts-navigation,
