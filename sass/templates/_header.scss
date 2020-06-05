@@ -1,3 +1,11 @@
+.topbar {
+	background-color: var(--rouge);
+	padding: 2px var(--padding-x);
+	text-align: center;
+	&, a {
+		color:var(--blanc);
+	}
+}
 .site-header {
 	align-items: center;
 	background-color: var(--blanc);

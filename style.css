@@ -670,7 +670,8 @@ h3, h4, h5, h6 {
     font-size: 1.25rem; } }
 
 p {
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem;
+  margin-top: 0; }
 
 dfn,
 cite,
@@ -1287,6 +1288,13 @@ svg.times {
   text-decoration: none; }
   .site-footer a:hover, .site-footer a:focus {
     text-decoration: underline; }
+
+.topbar {
+  background-color: var(--rouge);
+  padding: 2px var(--padding-x);
+  text-align: center; }
+  .topbar, .topbar a {
+    color: var(--blanc); }
 
 .site-header {
   -webkit-box-align: center;

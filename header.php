@@ -27,7 +27,10 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#main">Aller directement au contenu</a>
-
+	<?php if (function_exists('get_field') && !empty(get_field('mbb_topbar','option'))) {
+		printf('<div class="topbar">%s</div>',get_field('mbb_topbar','option'));
+	} ?>
+	
 	<header id="masthead" class="site-header">
 
 		<div class="site-branding">
