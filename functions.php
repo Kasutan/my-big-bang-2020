@@ -127,7 +127,7 @@ add_action( 'widgets_init', 'mbb_widgets_init' );
  */
 function mbb_scripts() {
 	wp_enqueue_style( 'mybigbang-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'mybigbang-google-font', 'https://fonts.googleapis.com/css?family=Zilla+Slab:600|Open+Sans:400,700|Vidaloka&display=swap');
+	wp_enqueue_style( 'mybigbang-google-font', 'https://fonts.googleapis.com/css?family=Zilla+Slab:600');
 	wp_enqueue_style( 'mybigbang-typekit-font', 'https://use.typekit.net/siy5vua.css');
 
 	wp_enqueue_script( 'mybigbang-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
