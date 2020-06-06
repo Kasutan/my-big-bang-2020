@@ -49,6 +49,11 @@
 
 		}
 	}
+	&.resultat {
+		.intro {
+			display:none;
+		}
+	}
 	.form-group {
 		margin-bottom: 0 !important;
 		&.question {

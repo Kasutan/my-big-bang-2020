@@ -86,7 +86,7 @@
 function mbb_post_form_submit( obj ) {
 	if ( "complete" == obj.status ) {
 		var element=localStorage.getItem('mbb_element');
-		jQuery('.acf-block-questionnaire').addClass(element);
+		jQuery('.acf-block-questionnaire').addClass(element+ ' resultat');
 	}
     
 }

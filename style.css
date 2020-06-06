@@ -1426,6 +1426,8 @@ a:active {
       left: 0;
       position: absolute;
       width: 40px; }
+  .acf-block-questionnaire.resultat .intro {
+    display: none; }
   .acf-block-questionnaire .form-group {
     margin-bottom: 0 !important; }
     .acf-block-questionnaire .form-group.question {
