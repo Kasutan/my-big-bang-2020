@@ -72,7 +72,10 @@
 			//$('.site').addClass(element);
 		}
 
-
+		//Disable scroll to top on pagenav
+		$(document).on( 'cf.pagenav', function (event, data) {
+			$('html, body').stop();
+			} );
 		
 		
 	});
@@ -81,11 +84,9 @@
 
 
 function mbb_post_form_submit( obj ) {
-	console.log('formulaire Cf envoyé');
 	if ( "complete" == obj.status ) {
 		var element=localStorage.getItem('mbb_element');
 		jQuery('.acf-block-questionnaire').addClass(element);
 	}
     
 }
-
