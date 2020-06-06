@@ -1380,4 +1380,138 @@ a:active {
 .entry-content .search-form {
   margin: 2rem auto; }
 
+.acf-block-questionnaire {
+  --fond-questionnaire:var(--rouge);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: var(--margin-bottom);
+  position: relative; }
+  .acf-block-questionnaire.eau {
+    --fond-questionnaire:var(--bleu); }
+  .acf-block-questionnaire.feu {
+    --fond-questionnaire:orange; }
+  .acf-block-questionnaire .texte {
+    max-width: 462px;
+    position: relative;
+    top: -50px; }
+  .acf-block-questionnaire .titre {
+    background-color: var(--gris-fond-clair);
+    font-size: 36px;
+    line-height: 1.04;
+    margin-bottom: 0;
+    padding: 31px 55px 25px 34px; }
+  .acf-block-questionnaire .questionnaire {
+    background-color: var(--fond-questionnaire);
+    color: var(--blanc);
+    padding: 34px 38px;
+    position: relative; }
+  .acf-block-questionnaire .intro {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    position: relative; }
+    .acf-block-questionnaire .intro::after {
+      background-color: var(--blanc);
+      border-radius: 2px;
+      bottom: 0;
+      content: ' ';
+      height: 3px;
+      left: 0;
+      position: absolute;
+      width: 40px; }
+  .acf-block-questionnaire .form-group {
+    margin-bottom: 0 !important; }
+    .acf-block-questionnaire .form-group.question {
+      min-height: 159px; }
+  .acf-block-questionnaire label.control-label {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 24px; }
+  .acf-block-questionnaire .field_required, .acf-block-questionnaire input[type="radio"] {
+    display: none; }
+  .acf-block-questionnaire label.radio-inline {
+    border: solid 1.4px var(--blanc);
+    font-size: 11px;
+    font-weight: bold;
+    margin: 0 24px 17px 0 !important;
+    padding: 3px 11px;
+    text-transform: uppercase; }
+    .acf-block-questionnaire label.radio-inline.checked {
+      background-color: var(--blanc);
+      border-color: var(--rouge);
+      color: var(--rouge); }
+  .acf-block-questionnaire input[type="submit"], .acf-block-questionnaire input[type="button"] {
+    background-color: transparent;
+    background-image: url("icons/fleche_avec_fond.jpg");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    border: none;
+    font-size: 14px;
+    float: right;
+    margin: 0;
+    padding: 4px 0 6px;
+    padding: 9px 56px 11px 0;
+    text-transform: unset; }
+    .acf-block-questionnaire input[type="submit"]:focus, .acf-block-questionnaire input[type="submit"]:hover, .acf-block-questionnaire input[type="submit"]:active, .acf-block-questionnaire input[type="button"]:focus, .acf-block-questionnaire input[type="button"]:hover, .acf-block-questionnaire input[type="button"]:active {
+      color: var(--blanc);
+      margin-right: -4px;
+      padding-right: 60px; }
+  .acf-block-questionnaire .chiffre {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 80px;
+    line-height: 1;
+    position: absolute;
+    left: 0;
+    bottom: -80px;
+    -webkit-text-stroke: 1px var(--blanc); }
+  .acf-block-questionnaire .caldera-grid .alert.alert-success {
+    background-color: transparent;
+    color: var(--blanc);
+    text-shadow: none; }
+  @media (min-width: 768px) {
+    .acf-block-questionnaire {
+      display: grid;
+      grid-template-columns: 1fr 200px 262px;
+      grid-template-rows: 75px 545px 75px; }
+      .acf-block-questionnaire .chiffre {
+        bottom: -90px;
+        font-size: 130px;
+        line-height: 1;
+        -webkit-text-stroke: 2px var(--blanc); }
+      .acf-block-questionnaire .image {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 3;
+        height: 100%; }
+        .acf-block-questionnaire .image img {
+          -o-object-fit: cover;
+          object-fit: cover; }
+      .acf-block-questionnaire .texte {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        grid-column: 2 / span 2;
+        grid-row: 2 / span 1;
+        height: 100%;
+        top: unset; }
+      .acf-block-questionnaire .questionnaire {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1; } }
+
 /*# sourceMappingURL=style.css.map */
