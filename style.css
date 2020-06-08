@@ -1516,4 +1516,8 @@ a:active {
         -ms-flex-positive: 1;
         flex-grow: 1; } }
 
+#lottie {
+  background-color: var(--rouge);
+  max-width: 400px; }
+
 /*# sourceMappingURL=style.css.map */

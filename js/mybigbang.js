@@ -83,6 +83,7 @@
 })( jQuery );
 
 
+//Fonction de callback saisie en BO dans les réglages du Caldera Form
 function mbb_post_form_submit( obj ) {
 	if ( "complete" == obj.status ) {
 		var element=localStorage.getItem('mbb_element');
@@ -90,3 +91,12 @@ function mbb_post_form_submit( obj ) {
 	}
     
 }
+
+
+lottie.loadAnimation({
+	container: document.getElementById('lottie'), // the dom element that will contain the animation
+	renderer: 'svg',
+	loop: true,
+	autoplay: true,
+	path: '/wp-content/themes/my-big-bang-2020/animations/feu.json' // the path to the animation json
+});

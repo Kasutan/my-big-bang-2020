@@ -134,7 +134,10 @@ function mbb_scripts() {
 
 	wp_enqueue_script( 'mybigbang-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'mybigbang-scripts', get_template_directory_uri() . '/js/mybigbang.js', array('jquery'), '', true );
+	wp_enqueue_script( 'mybigbang-lottie', 'https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.6.10/lottie_light_html.min.js', array(), '', true );
+
+	wp_enqueue_script( 'mybigbang-scripts', get_template_directory_uri() . '/js/mybigbang.js', array('mybigbang-lottie','jquery'), '', true );
+
 
 }
 add_action( 'wp_enqueue_scripts', 'mbb_scripts' );
