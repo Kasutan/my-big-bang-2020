@@ -1,11 +1,11 @@
 .acf-block-etat-esprit {
-	--scroll-mots:0;//variable actualisée au scroll en JS - valeur initiale
+
+	/*****************Part 1*******************************/
 	position:relative;
 	.intro {
 		font-size:1rem;
 		line-height:1.5;
 		text-align:center;
-		
 	}
 
 	.mots {
@@ -59,4 +59,16 @@
 		}
 		
 	}
+
+	/*****************Part 2*******************************/
+	.image {
+		margin-bottom:28px;
+		img {
+			width:100%;
+		}
+	}
+	.texte {
+		padding-bottom:73px;
+	}
+
 }

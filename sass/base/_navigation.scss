@@ -22,6 +22,29 @@ a:active {
 	outline: 0;
 }
 
+a.fleche {
+	font-weight:500;
+	background-image:url('icons/Fleche-Cta.svg');
+	background-repeat: no-repeat;
+	background-position:center right;
+	background-size:contain;
+	float:right;
+	height:41px;
+	line-height: 41px;
+	margin:0;
+	padding-right: 56px;
+	text-decoration: none;
+	transition: color var(--transition);
+
+	&:focus, &:hover, &:active {
+		color:var(--bleu);
+		margin-right:-4px;
+		padding-right:60px;
+
+	}
+	
+}
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/

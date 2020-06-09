@@ -158,6 +158,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5edfab43a7e84",
+            "label": "Texte du lien (mobile)",
+            "name": "label_mobile",
+            "type": "text",
+            "instructions": "Texte plus court en mobile\r\nAffiché au bas de la zone de texte, à côté de l'image",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5edf4c3f9780c",
             "label": "Cible du lien",
             "name": "cible",
@@ -251,5 +270,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1591715433
+    "modified": 1591716707
 }
