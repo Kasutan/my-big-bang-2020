@@ -1598,4 +1598,49 @@ a:active {
       .eclairage.inverse .relief {
         margin-left: var(--padding-x); } }
 
+.acf-block-etat-esprit {
+  position: relative; }
+  .acf-block-etat-esprit .intro {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center; }
+  .acf-block-etat-esprit .mots {
+    bottom: -20px;
+    color: transparent;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1.24;
+    overflow: hidden;
+    position: relative;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px var(--gris-decor);
+    white-space: nowrap;
+    z-index: 2; }
+  .acf-block-etat-esprit .silhouette {
+    display: none; }
+  @media (min-width: 768px) {
+    .acf-block-etat-esprit .part1 {
+      position: relative; }
+    .acf-block-etat-esprit .silhouette {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      height: 100%;
+      left: -12%;
+      position: absolute;
+      top: 0;
+      width: 22%; }
+      .acf-block-etat-esprit .silhouette img {
+        width: 100%; }
+    .acf-block-etat-esprit .intro {
+      font-size: 1.25rem;
+      max-width: 957px;
+      margin: 0 auto 30px; }
+    .acf-block-etat-esprit .mots {
+      bottom: unset;
+      font-size: 85px;
+      left: 28%;
+      line-height: 1;
+      margin-bottom: 40px; } }
+
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,59 @@
+.acf-block-etat-esprit {
+	position:relative;
+	.intro {
+		font-size:1rem;
+		line-height:1.5;
+		text-align:center;
+		
+	}
+
+	.mots {
+		bottom:-20px;
+		color:transparent;
+		font-size:50px;
+		font-weight:900;
+		line-height:1.24;
+		overflow:hidden;
+		position:relative;
+		text-transform:uppercase;
+		-webkit-text-stroke: 1px var(--gris-decor);
+		white-space: nowrap;
+		z-index:2;
+	}
+
+	.silhouette {
+		display: none;
+	}
+
+	@include bp(md) {
+		.part1 {
+			position:relative
+		}
+		.silhouette {
+			display: flex;
+			height:100%;
+			left:-12%;
+			position:absolute;
+			top:0;
+			width:22%;
+			img {
+				width:100%
+			}
+		}
+		
+		.intro {
+			font-size:1.25rem;
+			max-width:957px;
+			margin:0 auto 30px;
+		}
+
+		.mots {
+			bottom:unset;
+			font-size:85px;
+			left: 28%;
+			line-height:1;
+			margin-bottom:40px;
+		}
+		
+	}
+}
