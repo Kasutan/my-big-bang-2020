@@ -10,9 +10,13 @@
 		var headerBottom=0;
 		updateHeaderPosition();
 
+		/****************** Mots qui défilent au scroll *************************/
+		var mots=$('.mots');
+		var motsTop=mots.offset().top;
 
 		$(window).scroll(function () { // scroll event
 			var windowTop = $(window).scrollTop(); // returns number
+			var windowBottom=window.innerHeight+windowTop;
 			if (windowTop > headerTop) {
 				siteHeader.addClass('sticky');
 				mainNavigation.addClass('sticky');
@@ -21,6 +25,11 @@
 				siteHeader.removeClass('sticky');
 				mainNavigation.removeClass('sticky');
 				siteContent.css('margin-top',0);
+			}
+
+			if (windowBottom > motsTop) {
+				scrollMots=(windowBottom - motsTop) / (window.innerHeight - 260); //Proportion d'avancement dans la portion de fenêtre où les mots sont visibles
+				document.documentElement.style.setProperty('--scroll-mots', scrollMots); 
 			}
 		});
 		
@@ -92,11 +101,11 @@ function mbb_post_form_submit( obj ) {
     
 }
 
-
+/*
 lottie.loadAnimation({
 	container: document.getElementById('lottie'), // the dom element that will contain the animation
 	renderer: 'svg',
 	loop: true,
 	autoplay: true,
 	path: '/wp-content/themes/my-big-bang-2020/animations/feu.json' // the path to the animation json
-});
+});*/

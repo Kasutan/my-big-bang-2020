@@ -1599,6 +1599,7 @@ a:active {
         margin-left: var(--padding-x); } }
 
 .acf-block-etat-esprit {
+  --scroll-mots:0;
   position: relative; }
   .acf-block-etat-esprit .intro {
     font-size: 1rem;
@@ -1609,8 +1610,8 @@ a:active {
     color: transparent;
     font-size: 50px;
     font-weight: 900;
+    left: calc(100% - 650px * var(--scroll-mots));
     line-height: 1.24;
-    overflow: hidden;
     position: relative;
     text-transform: uppercase;
     -webkit-text-stroke: 1px var(--gris-decor);
@@ -1639,7 +1640,7 @@ a:active {
     .acf-block-etat-esprit .mots {
       bottom: unset;
       font-size: 85px;
-      left: 28%;
+      left: calc(100% - 1160px * var(--scroll-mots));
       line-height: 1;
       margin-bottom: 40px; } }
 
