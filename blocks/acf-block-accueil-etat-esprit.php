@@ -56,10 +56,9 @@ function mbb_etat_esprit_callback( $block ) {
 			if($texte) printf('<div class="texte">%s',$texte);
 				if($label && $cible) printf('<a href="%s" class="fleche"><span class="show-for-md">%s</span><span class="hide-for-md">%s</span></a>',$cible,$label,$label_mobile); //fleche = bg img (ds _navigation)
 			echo '</div>'; //fin .texte
+		echo '</div>'; //fin .part2
 			if($eclairage) printf('<div class="eclairage"><div class="relief">%s</div></div>',$eclairage); 
 			//eclair = bg img dans _eclairage + bg img plus large avec décor particules
-			printf('<div class="decor particules"></div>');
-		echo '</div>'; //fin .part2
 		if($duree && $texte_duree) : 
 			echo '<div class="part3">'; 
 				printf('<div class="duree">%s</div>',$duree);

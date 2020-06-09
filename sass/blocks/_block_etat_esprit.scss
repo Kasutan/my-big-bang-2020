@@ -70,5 +70,40 @@
 	.texte {
 		padding-bottom:73px;
 	}
-
+	@include bp(md) {
+		.part2 {
+			display: flex;
+		}
+		.image {
+			flex-grow:1;
+			margin-bottom:0;
+		}
+		.texte {
+			flex-basis:480px;
+			flex-shrink:0;
+			padding-left:30px;
+			padding-bottom:100px;
+		}
+		.eclairage {
+			margin-top:0;
+		}
+	}
+	@include bp(lg) {
+		.texte {
+			flex-grow:1;
+			padding-left:60px;
+		}
+	}
+	@include bp(xl) {
+		.image {
+			display: flex;
+			img {
+				object-fit: cover;
+				width:100%;
+			}
+		}
+		.texte {
+			padding-bottom:80px;
+		}
+	}
 }
