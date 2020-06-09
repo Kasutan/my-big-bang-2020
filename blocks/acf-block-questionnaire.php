@@ -9,7 +9,7 @@ function mbb_acf_block_banniere_acf_init() {
 			'title'           => 'Bloc questionnaire avec grande image',
 			'description'     => 'Bloc questionnaire avec grande image pour découvrir l\'élément du visiteur. Ce bloc ne peut être inséré qu\'une fois par page.',
 			'render_callback' => 'mbb_questionnaire_callback',
-			'category'        => 'mybigbang',
+			'category'        => 'mybigbang-home',
 			'icon'            => 'editor-help',
 			'mode'			=> "edit",
 			'supports' => array( 
