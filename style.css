@@ -1620,7 +1620,8 @@ a.fleche {
 .acf-block-etat-esprit {
   /*****************Part 1*******************************/
   position: relative;
-  /*****************Part 2*******************************/ }
+  /*****************Part 2*******************************/
+  /*****************Part 3*******************************/ }
   .acf-block-etat-esprit .intro {
     font-size: 1rem;
     line-height: 1.5;
@@ -1634,7 +1635,7 @@ a.fleche {
     line-height: 1.24;
     position: relative;
     text-transform: uppercase;
-    -webkit-text-stroke: 1px var(--gris-decor);
+    -webkit-text-stroke: 2px var(--gris-decor);
     white-space: nowrap;
     z-index: 2; }
   .acf-block-etat-esprit .silhouette {
@@ -1705,5 +1706,26 @@ a.fleche {
         width: 100%; }
     .acf-block-etat-esprit .texte {
       padding-bottom: 80px; } }
+  .acf-block-etat-esprit .part3 {
+    background-image: url("icons/30min.svg");
+    background-repeat: no-repeat;
+    background-size: 70% auto;
+    background-position: center 30px;
+    font-size: 1rem;
+    padding: 90px 5px 70px;
+    text-align: center; }
+    @media (min-width: 576px) {
+      .acf-block-etat-esprit .part3 {
+        background-position-y: 80px;
+        background-size: 400px auto;
+        min-height: 400px;
+        padding-bottom: 0;
+        padding-top: 140px; }
+        .acf-block-etat-esprit .part3 .texte-duree {
+          max-width: 850px;
+          margin: auto; }
+          .acf-block-etat-esprit .part3 .texte-duree p {
+            font-size: 20px;
+            margin-bottom: 0; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -6,8 +6,8 @@ function mbb_acf_block_etat_esprit_acf_init() {
 	if ( function_exists( 'acf_register_block_type' ) ) {
 		acf_register_block_type( [
 			'name'            => 'acf-etat-esprit',
-			'title'           => 'Bloc accueil état d\'esprit',
-			'description'     => 'Bloc état d\'esprit et de corps pour la page d\'accueil. Ce bloc ne peut être inséré qu\'une fois par page.',
+			'title'           => 'Bloc accueil philosophie',
+			'description'     => 'Bloc philosophie pour la page d\'accueil. Ce bloc ne peut être inséré qu\'une fois par page.',
 			'render_callback' => 'mbb_etat_esprit_callback',
 			'category'        => 'mybigbang-home',
 			'icon'            => 'admin-home',
@@ -39,7 +39,6 @@ function mbb_etat_esprit_callback( $block ) {
 	$label_mobile=esc_html(get_field('label_mobile'));
 	$cible=esc_url(get_field('cible'));
 	$eclairage=wp_kses_post( get_field('eclairage') );
-	$duree=esc_attr( get_field('duree') );
 	$texte_duree=wp_kses_post( get_field('texte_duree') );
 	$mots=esc_attr( get_field('mots') );
 
@@ -59,9 +58,8 @@ function mbb_etat_esprit_callback( $block ) {
 		echo '</div>'; //fin .part2
 			if($eclairage) printf('<div class="eclairage"><div class="relief">%s</div></div>',$eclairage); 
 			//eclair = bg img dans _eclairage + bg img plus large avec décor particules
-		if($duree && $texte_duree) : 
+		if($texte_duree) : 
 			echo '<div class="part3">'; 
-				printf('<div class="duree">%s</div>',$duree);
 				printf('<div class="texte-duree">%s</div>',$texte_duree);
 			echo '</div>'; //fin .part3	
 		endif;

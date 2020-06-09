@@ -1,10 +1,10 @@
 {
     "key": "group_5edf4aa1322cf",
-    "title": "Bloc état d'esprit et de corps pour la page d'accueil",
+    "title": "Bloc philosophie pour la page d'accueil",
     "fields": [
         {
             "key": "field_5edf4ab4ace1d",
-            "label": "Bloc état d'esprit et de corps pour la page d'accueil",
+            "label": "Bloc philosophie pour la page d'accueil",
             "name": "",
             "type": "message",
             "instructions": "",
@@ -215,30 +215,11 @@
             "delay": 0
         },
         {
-            "key": "field_5edf4c9a9780f",
-            "label": "Durée",
-            "name": "duree",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "30'",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_5edf4ce597811",
             "label": "Texte durée",
             "name": "texte_duree",
             "type": "wysiwyg",
-            "instructions": "",
+            "instructions": "Texte affiché en sur-impression au-dessus du décor 30 minutes",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -270,5 +251,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1591716707
+    "modified": 1591721132
 }
