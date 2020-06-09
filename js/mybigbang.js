@@ -86,6 +86,32 @@
 			$('html, body').stop();
 			} );
 		
+
+		/****************** Sliders mobile *************************/
+		var flecheSlider=$('.fleche-slider');
+		flecheSlider.click(function (e) { 
+			var slider=$(this).parents('.slider-container').find('.slider');
+			var active=parseInt(slider.attr('data-active'));
+			var derniere=parseInt(slider.attr('data-nombre'));
+			var direction=parseInt($(this).attr("data-direction"));
+			var newSlide=active+direction;
+			if(newSlide >= 0 && newSlide < derniere) {
+				var newLeft=-1 * newSlide * slider.width();
+				slider.css('left',newLeft);
+				slider.attr('data-active',newSlide);
+			}
+			if(newSlide===0) {
+				slider.parents('.slider-container').find('.fleche-slider.gauche').hide();
+			} else {
+				slider.parents('.slider-container').find('.fleche-slider.gauche').show('slow');
+			}
+			if(newSlide===derniere-1) {
+				slider.parents('.slider-container').find('.fleche-slider.droite').hide();
+			} else {
+				slider.parents('.slider-container').find('.fleche-slider.droite').show('slow');
+			}
+		});
+
 		
 	});
 

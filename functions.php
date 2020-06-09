@@ -182,6 +182,7 @@ add_filter( 'block_categories', 'mbb_block_categories', 10, 2 );
 
 require_once( 'blocks/acf-block-questionnaire.php' );
 require_once( 'blocks/acf-block-accueil-etat-esprit.php' );
+require_once( 'blocks/acf-block-valeurs.php' );
 
 /**
 * Page options
