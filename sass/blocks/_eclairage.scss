@@ -1,0 +1,79 @@
+.eclairage {
+	background-image:url('icons/Motif-Particules-Mobile.svg');
+	position: relative;
+	margin-top:50px;
+	padding-left:50px;
+	@include bleed;
+	.relief {
+		background-color:var(--gris-fond);
+		color:var(--blanc);
+		font-family: var(--font-serif);
+		line-height:1.5;
+		padding:36px 40px 30px;
+		position:relative;
+		top:-50px;
+	}
+
+	@include bp(md) {
+		background-image:url('icons/Motif-Particules-Desktop.svg');
+		.relief {
+			background-image:url('icons/Eclair-eclairage.svg');
+			background-repeat:no-repeat;
+			background-size:36% 100%;
+			font-size:20px;
+			line-height:1.6;
+			margin-left:auto;
+			max-width:836px;
+			padding:30px 15% 20px 36%;
+		}
+	}
+
+	@include bp(lg) {
+		margin-top:80px;
+		.relief {
+			background-size:305px 100%;
+			padding: 72px 125px 50px 305px;
+			top:-80px;
+		}
+	}
+
+	@include bp(xl) {
+		.relief {
+			margin-right:var(--padding-x);
+		}
+	}
+
+	/*Variantes */
+	
+	&.bleu {
+		.relief {
+			background-color:var(--bleu);
+		}
+	}
+
+	&.inverse {
+		padding-left:0;
+		padding-right:50px;
+		@include bp(md) {
+			.relief {
+				background-position-x:right;
+				margin-left:0;
+				margin-right:auto;
+				padding-left:15%;
+				padding-right:36%;
+			}
+		}
+		@include bp(lg) {
+			.relief {
+				padding-left:125px;
+				padding-right:305px;
+			}
+		}
+		@include bp(xl) {
+			.relief {
+				margin-left:var(--padding-x);
+			}
+		}
+	}
+
+}

@@ -46,14 +46,16 @@ body {
 	}
 }
 
-
-
-.alignfull , .bleed-container {
+@mixin bleed {
 	width: 100vw;
 	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+.alignfull , .bleed-container {
+	@include bleed;
 	padding-left: 0;
 	padding-right: 0;
-	transform: translateX(-50%);
 	margin-bottom:var(--margin-bottom);
 }
 

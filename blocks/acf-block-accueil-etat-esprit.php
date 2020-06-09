@@ -52,11 +52,11 @@ function mbb_etat_esprit_callback( $block ) {
 		echo '<div class="part2">'; //display grid
 			if($image_id) printf('<div class="image">%s</div>',	wp_get_attachment_image( $image_id,'medium' ));
 			if($texte) printf('<div class="texte">%s',$texte);
-				if($label && $cible) printf('<a href="%s" class="fleche rouge">%s</a>',$cible,$label); //fleche = bg img (ds _navigation)
+				if($label && $cible) printf('<a href="%s" class="fleche">%s</a>',$cible,$label); //fleche = bg img (ds _navigation)
 			echo '</div>'; //fin .texte
-			if($eclairage) printf('<div class="eclairage gris">%s</div>',$eclairage); 
-			//eclair = bg img dans _eclairage
-			printf('<div class="decor decor-particules"></div>');
+			if($eclairage) printf('<div class="eclairage"><div class="relief">%s</div></div>',$eclairage); 
+			//eclair = bg img dans _eclairage + bg img plus large avec décor particules
+			printf('<div class="decor particules"></div>');
 		echo '</div>'; //fin .part2
 		if($duree && $texte_duree) : 
 			echo '<div class="part3">'; 
