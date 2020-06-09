@@ -45,7 +45,7 @@ function mbb_etat_esprit_callback( $block ) {
 
 	printf('<section class="acf-block-etat-esprit avec-ancre %s"><span class="ancre" id="%s"></span>', $className, $ancre);
 		echo '<div class="part1">';
-			if($titre) printf('<h2 class="titre">%s</h2>',$titre);
+			if($titre) printf('<h2 class="titre h1">%s</h2>',$titre);
 			if($intro) printf('<div class="intro">%s</div>',$intro);
 			if($mots) printf('<div class="mots">%s</div>',$mots);
 		echo '</div>'; //fin .part1

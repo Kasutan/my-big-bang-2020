@@ -551,15 +551,18 @@ body {
   overflow-x: hidden; }
 
 :root {
-  --margin-bottom:40px;
+  --margin-bottom:60px;
   --padding-x:20px; }
   @media (min-width: 768px) {
     :root {
       --margin-bottom:80px;
       --padding-x: 5%; } }
-  @media (min-width: 1450px) {
+  @media (min-width: 960px) {
     :root {
-      --padding-x: calc(50vw - 1366px/2); } }
+      --margin-bottom:105px; } }
+  @media (min-width: 1680px) {
+    :root {
+      --padding-x: calc(50vw - 1515px/2); } }
 
 .alignfull, .bleed-container {
   width: 100vw;
@@ -571,9 +574,7 @@ body {
   margin-bottom: var(--margin-bottom); }
 
 .container {
-  max-width: 1406px;
-  margin: 0 auto;
-  padding: 0 20px; }
+  padding: 0 var(--padding-x); }
 
 /* Hauteur mini main*/
 .site {
@@ -629,8 +630,17 @@ textarea {
   font-family: sans-serif;
   font-family: var(--font);
   font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.625; }
+  font-size: 0.875rem;
+  line-height: 1.57; }
+  @media (min-width: 768px) {
+    body,
+    button,
+    input,
+    select,
+    optgroup,
+    textarea {
+      font-size: 1rem;
+      line-height: 1.5; } }
 
 h1,
 h2,
@@ -652,15 +662,23 @@ h2, h3 {
   margin: 0 0 1em; }
 
 h1, .h1 {
-  font-size: 2.5rem; }
+  font-size: 1.625rem; }
 
 h2 {
-  font-size: 1.75rem; }
-
-h3, h4, h5, h6 {
   font-size: 1.25rem; }
 
+h3, h4, h5, h6 {
+  font-size: 1.125rem; }
+
 @media (min-width: 768px) {
+  h1, .h1 {
+    font-size: 2.75rem; }
+  h2 {
+    font-size: 2.25rem; }
+  h3, h4, h5, h6 {
+    font-size: 1.2rem; } }
+
+@media (min-width: 960px) {
   h1, .h1 {
     font-size: 3.875rem; }
   h2 {
@@ -1557,7 +1575,7 @@ a:active {
         background-size: 305px 100%;
         padding: 72px 125px 50px 305px;
         top: -80px; } }
-  @media (min-width: 1450px) {
+  @media (min-width: 1680px) {
     .eclairage .relief {
       margin-right: var(--padding-x); } }
   .eclairage.bleu .relief {
@@ -1576,7 +1594,7 @@ a:active {
       .eclairage.inverse .relief {
         padding-left: 125px;
         padding-right: 305px; } }
-    @media (min-width: 1450px) {
+    @media (min-width: 1680px) {
       .eclairage.inverse .relief {
         margin-left: var(--padding-x); } }
 

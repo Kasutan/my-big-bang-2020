@@ -10,7 +10,7 @@
 	$sm: "(min-width: 576px)";
 	$md: "(min-width: 768px)";
 	$lg: "(min-width: 960px)";
-	$xl: "(min-width: 1450px)";
+	$xl: "(min-width: 1680px)";
   
 	@if $point == sm {
 	@media #{$sm} { @content; }
@@ -33,7 +33,7 @@ body {
 	overflow-x:hidden;
 }
 :root {
-	--margin-bottom:40px;
+	--margin-bottom:60px;
 	--padding-x:20px;
 	//--header-height:80px;
 
@@ -41,8 +41,11 @@ body {
 		--margin-bottom:80px;
 		--padding-x : 5%;
 	}
+	@include bp(lg) {
+		--margin-bottom:105px;
+	}
 	@include bp(xl) {
-		--padding-x: calc(50vw - 1366px/2);
+		--padding-x: calc(50vw - 1515px/2);
 	}
 }
 
@@ -60,9 +63,9 @@ body {
 }
 
 .container {
-	max-width:1406px; //1366px largeur max contenu + 20px de padding de chaque côté
-	margin:0 auto;
-	padding:0 20px;
+//	max-width:1406px; //1366px largeur max contenu + 20px de padding de chaque côté
+//	margin:0 auto;
+	padding:0 var(--padding-x);
 }
 
 /* Hauteur mini main*/
