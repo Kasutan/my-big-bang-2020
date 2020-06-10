@@ -12,7 +12,9 @@
 
 		/****************** Mots qui défilent au scroll *************************/
 		var mots=$('.mots');
-		var motsTop=mots.offset().top;
+		if(mots.length>0) {
+			var motsTop=mots.offset().top;
+		}
 
 		$(window).scroll(function () { // scroll event
 			var windowTop = $(window).scrollTop(); // returns number
@@ -27,7 +29,7 @@
 				siteContent.css('margin-top',0);
 			}
 
-			if (windowBottom > motsTop) {
+			if (mots.length>0 && windowBottom > motsTop) {
 				scrollMots=(windowBottom - motsTop) / (window.innerHeight - 260); //Proportion d'avancement dans la portion de fenêtre où les mots sont visibles
 				document.documentElement.style.setProperty('--scroll-mots', scrollMots); 
 			}

@@ -54,7 +54,6 @@ a.fleche {
 .main-navigation {
 	clear: both;
 	display: block;
-	width: 100%;
 
 	ul {
 		display: none; // par défaut le menu est caché en mobile
@@ -79,15 +78,18 @@ a.fleche {
 
 	&.toggled { //menu mobile ouvert
 		ul.menu {
-			background-color:var(--blanc);
+			align-items:center;
+			background-color:var(--gris-fond-clair);
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			display: flex;
 			flex-direction: column;
 			left:0;
+			padding:42px 0;
 			position:absolute;
 			top:150px; 
 			top:var(--header-bottom); // calculé en JS, tient compte de la topbar
 			width:100vw;
+			z-index: 2;
 		}
 
 		svg.menu { //cacher hamburger 
@@ -99,7 +101,9 @@ a.fleche {
 	}
 
 
-	@include bp(md) { //menu desktop
+	@include bp(md) { //menu 
+		width: 100%;
+
 		.menu-toggle {
 			display: none;
 		}
@@ -147,9 +151,9 @@ a.fleche {
 .menu-toggle {
 	background:transparent;
 	border:0;
-	color:var(--noir-titre);
 	margin-left: auto;
 	margin-right: 0;
+	max-width:60px;
 	&:hover, &:focus, &:active {
 		background:transparent;
 	}
@@ -159,12 +163,13 @@ a.fleche {
 
 .main-navigation {
 	li {
-		padding: 1rem;	
+		padding: 20px 1rem;	
 	}
 
 	a {
 		color:var(--gris-texte);
 		display: block;
+		font-size:18px;
 		text-decoration: none;
 		text-transform:uppercase;
 
@@ -179,37 +184,25 @@ a.fleche {
 		color:var(--rouge);
 	}
 
-	//Trait de décor sous la page courante (liens de premier niveau et desktop uniquement)
-	@include bp(md) {
-		ul.menu > li:not(.button) {
-			&.current-menu-item, &.current-menu-ancestor {
-				 a {
-					color:var(--gris-texte);
-				}
-
-				position:relative;
-				&::after {
-					background-color: var(--rouge);
-					content:' ';
-					height:3px;
-					width:40px;
-					position:absolute;
-					bottom : 0;
-					left:calc(50% - 20px);
-				}
+	//Trait de décor sous la page courante (liens de premier niveau uniquement)
+	ul.menu > li:not(.button) {
+		&.current-menu-item, &.current-menu-ancestor {
+			a {
+				color:var(--gris-texte);
 			}
-		}
-		&.sticky {
-			ul.menu > li:not(.button) {
-				&.current-menu-item, &.current-menu-ancestor {
-					&::after {
-						bottom:5px;
-					}
-				}
+
+			position:relative;
+			&::after {
+				background-color: var(--rouge);
+				content:' ';
+				height:3px;
+				width:40px;
+				position:absolute;
+				bottom : 0;
+				left:calc(50% - 20px);
 			}
 		}
 	}
-
 
 	//Lien de menu affiché sous forme de bouton
 	ul.menu li.button {
@@ -226,6 +219,7 @@ a.fleche {
 			}
 		}
 		@include bp(md) {
+			margin-left:auto;
 			padding-top:0;
 			padding-bottom: 0;
 		}
@@ -233,17 +227,46 @@ a.fleche {
 
 	//Lien de menu vers l'accès client (lien externe)
 	li.client a {
+		font-size:1rem;
 		text-transform: unset;
-		&::before {
-			background-image:url('icons/utility/user.svg');
-			background-repeat: no-repeat;
-			background-position: center bottom;
-			background-size:15px auto;
-			content:' ';
-			display: inline-block;
-			height:20px;
-			margin-right:8px;
-			width:20px;
+
+		background-image:url('icons/Acces-Client.svg');
+		background-repeat: no-repeat;
+		background-position: left center ;
+		background-size:25px auto;
+		line-height:25px;
+		padding-left: 34px;	
+	}
+
+	//styles adaptés en desktop
+	@include bp(md) {
+		li {
+			padding:1rem;
+			&:first-child {
+				margin-left:auto;
+			}
+			a {
+				background-position: left bottom ;
+				font-size:16px;
+				line-height:1;
+				min-height:25px;
+				padding-top:4px;
+				text-align: center;
+			}
+		}
+		li.client a {
+			font-size:14px;
+			line-height:1;
+			text-align: left;
+		}
+		&.sticky {
+			ul.menu > li:not(.button) {
+				&.current-menu-item, &.current-menu-ancestor {
+					&::after {
+						bottom:5px;
+					}
+				}
+			}
 		}
 	}
 }
@@ -251,15 +274,13 @@ a.fleche {
 //Lien de menu vers l'accès client déplacé en haut à droite (uniquement en desktop si l'en-tête n'est pas sticky)
 @include bp(md) {
 	.site-header:not(.sticky) {
-		padding-top:30px;
+		padding-bottom:51px;
+		padding-top:42px;
 		position: relative;
 		li.client {
 			position: absolute;
-			right:5px;
+			right:var(--padding-x);
 			top:-5px;
-			a {
-				font-size:14px;				
-			}
 		}
 
 	}

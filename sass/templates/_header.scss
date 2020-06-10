@@ -16,8 +16,11 @@
 	justify-content: space-between;
 	padding: 0 var(--padding-x);
 
+
 	&.sticky {
 		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+		padding-left:2rem;
+		padding-right:2rem;
 		position:fixed;
 		left: 0;
 		top: 0;
@@ -27,7 +30,8 @@
 }
 
 .custom-logo {
-	display: inline-block;
+	display: block;
+	margin:20px 0;
 	max-width: 220px;
 }
 
@@ -36,6 +40,7 @@
 		top:32px;
 	}
 	.custom-logo {
+		margin:0;
 		max-width: 290px;
 	}
 }
