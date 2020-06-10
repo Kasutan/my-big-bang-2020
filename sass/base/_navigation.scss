@@ -115,8 +115,9 @@ a.fleche {
 
 			ul { //sous-menu
 				background-color:var(--blanc);
-				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+				border: solid 1px #EAE7E1;
 				float: left;
+				margin-top:10px;
 				position: absolute;
 				top: 100%;
 				left: -999em;
@@ -125,10 +126,11 @@ a.fleche {
 
 			> li { //affichage du sous-menu
 				position: relative;
-				&:hover, &.focus {
+				&:hover, &.focus { //classe .focus ajoutée en JS
 					ul {
-						left: auto;
-						min-width: 100%;
+						left: calc(50% - 130px);
+						padding:20px;
+						width:260px;
 					}
 				}
 			}
@@ -164,6 +166,7 @@ a.fleche {
 .main-navigation {
 	li {
 		padding: 20px 1rem;	
+		text-align:center;
 	}
 
 	a {
@@ -178,28 +181,66 @@ a.fleche {
 		}
 	}
 
+	//sous-menu
+	ul.menu {
+		ul {
+			padding-top:2rem;
+			li {
+				padding:0.5rem;
+				margin-left:0;
+				a {
+					font-size:1rem;
+					text-transform: unset;
+				}
+			} 
+
+			@include bp(md) {
+				padding-top:0;
+				&::after {
+					background-image:url('icons/Eclair-menu.svg');
+					background-position: center;
+					background-repeat: no-repeat;
+					content:' ';
+					height:35px;
+					left:0;
+					position: absolute;
+					top:-20px;
+					width:100%;
+				}
+			}
+		}
+	}
+
 	
 	.current-menu-item > a, .current-menu-ancestor > a {
 		font-weight:700;
-		color:var(--rouge);
 	}
 
 	//Trait de décor sous la page courante (liens de premier niveau uniquement)
 	ul.menu > li:not(.button) {
 		&.current-menu-item, &.current-menu-ancestor {
-			a {
+			> a {
 				color:var(--gris-texte);
+				position:relative;
+				&::after {
+					background-color: var(--rouge);
+					content:' ';
+					height:3px;
+					width:40px;
+					position:absolute;
+					bottom : -1rem;
+					left:calc(50% - 20px);
+				}
 			}
 
-			position:relative;
-			&::after {
-				background-color: var(--rouge);
-				content:' ';
-				height:3px;
-				width:40px;
-				position:absolute;
-				bottom : 0;
-				left:calc(50% - 20px);
+			
+		}
+		//masquer ce trait de décor à l'ouverture du sous-menu
+		&.menu-item-has-children {
+			&:hover, &.focus {
+				a::after {
+					display: none;
+				}
 			}
 		}
 	}
@@ -262,8 +303,8 @@ a.fleche {
 		&.sticky {
 			ul.menu > li:not(.button) {
 				&.current-menu-item, &.current-menu-ancestor {
-					&::after {
-						bottom:5px;
+					a::after {
+						bottom:-5px;
 					}
 				}
 			}
