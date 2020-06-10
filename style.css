@@ -1367,11 +1367,13 @@ a.fleche {
     text-decoration: underline; }
 
 .topbar {
-  background-color: var(--rouge);
+  background-color: var(--bleu);
   padding: 2px var(--padding-x);
   text-align: center; }
   .topbar, .topbar a {
     color: var(--blanc); }
+  .topbar p {
+    margin-bottom: 0; }
 
 .site-header {
   -webkit-box-align: center;
@@ -1395,13 +1397,14 @@ a.fleche {
     z-index: 1; }
 
 .custom-logo {
-  max-width: 100px; }
+  display: inline-block;
+  max-width: 220px; }
 
 @media (min-width: 768px) {
   .admin-bar .site-header.sticky {
     top: 32px; }
   .custom-logo {
-    max-width: unset; } }
+    max-width: 290px; } }
 
 .single-post .entry-meta {
   text-align: center; }
