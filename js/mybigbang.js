@@ -129,11 +129,11 @@ function mbb_post_form_submit( obj ) {
     
 }
 
-/*
+
 lottie.loadAnimation({
 	container: document.getElementById('lottie'), // the dom element that will contain the animation
 	renderer: 'svg',
 	loop: true,
 	autoplay: true,
 	path: '/wp-content/themes/my-big-bang-2020/animations/feu.json' // the path to the animation json
-});*/
+});
