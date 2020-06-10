@@ -35,7 +35,11 @@ if ( ! function_exists( 'mbb_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Menu principal', 'mybigbang' ),
+			'menu-1' => 'Menu principal (en-tête)',
+			'liens-footer' => 'Liens du pied de page',
+			'liens-techniques-footer' => 'Liens techniques du pied de page',
+			'boutons-footer' => 'Boutons du pied de page',
+			'social-footer' => 'Liens vers les réseaux sociaux',
 		) );
 
 		/*
@@ -104,23 +108,6 @@ add_action( 'after_setup_theme', 'mbb_setup' );
 require get_template_directory() . '/inc/colors.php';
 
 
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function mbb_widgets_init() {
-
-	register_sidebar( array(
-		'name'          => esc_html__( 'Copyright', 'mybigbang' ),
-		'id'            => 'copyright',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<span class="widget-title">',
-		'after_title'   => '</span>',
-	) );
-}
-add_action( 'widgets_init', 'mbb_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
