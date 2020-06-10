@@ -1032,6 +1032,16 @@ a.fleche {
     padding-right: 60px; }
 
 /*--------------------------------------------------------------
+## Ancres
+--------------------------------------------------------------*/
+.avec-ancre {
+  position: relative; }
+  .avec-ancre .ancre {
+    left: 0;
+    position: absolute;
+    top: calc(-1px * var(--header-bottom)); }
+
+/*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
 /*Logique pour afficher/masquer éléments du menu mobile et sous-menus*/
@@ -1161,11 +1171,9 @@ a.fleche {
         top: -20px;
         width: 100%; } }
 
-.main-navigation .current-menu-item > a, .main-navigation .current-menu-ancestor > a {
-  font-weight: 700; }
-
 .main-navigation ul.menu > li:not(.button).current-menu-item > a, .main-navigation ul.menu > li:not(.button).current-menu-ancestor > a {
   color: var(--gris-texte);
+  font-weight: 700;
   position: relative; }
   .main-navigation ul.menu > li:not(.button).current-menu-item > a::after, .main-navigation ul.menu > li:not(.button).current-menu-ancestor > a::after {
     background-color: var(--rouge);
