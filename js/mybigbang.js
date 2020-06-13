@@ -1,7 +1,7 @@
 (function($) {
 
 	$( document ).ready(function() {
-		var width=window.width();
+		var width=$(window).width();
 
 		/****************** Sticky header *************************/	
 		var siteHeader=$('.site-header');
@@ -54,7 +54,7 @@
 		var voletQ = $('#questionnaire');
 		var overlay = $('.overlay');
 		var blocQ= $('.acf-block-questionnaire');
-		if(window < 768 && ouvrirQ.length > 0) {
+		if(width < 768 && ouvrirQ.length > 0) {
 			var widthQ=voletQ.outerWidth();
 			voletQ.css('right',-1*widthQ);
 			ouvrirQ.click(function(e) {

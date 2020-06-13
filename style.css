@@ -1686,7 +1686,6 @@ a.fleche {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-bottom: var(--margin-bottom);
   position: relative;
   /*Affichage dans un volet escamotable en mobile*/ }
   .acf-block-questionnaire.eau {
@@ -1801,11 +1800,11 @@ a.fleche {
       padding-right: 60px; }
   .acf-block-questionnaire .chiffre {
     color: rgba(255, 255, 255, 0.2);
-    font-size: 80px;
+    font-size: 64px;
     line-height: 1;
     position: absolute;
     left: 0;
-    bottom: -80px;
+    bottom: -60px;
     -webkit-text-stroke: 1px var(--blanc); }
   .acf-block-questionnaire .caldera-grid .alert.alert-success {
     background-color: transparent;
@@ -1821,6 +1820,7 @@ a.fleche {
     z-index: 6; }
   @media (min-width: 768px) {
     .acf-block-questionnaire {
+      margin-bottom: var(--margin-bottom);
       display: grid;
       grid-template-columns: 1fr 200px 262px;
       grid-template-rows: 75px 545px 75px; }

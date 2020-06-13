@@ -12,7 +12,6 @@
 	align-items: center;
 	display:flex;
 	flex-direction:column;
-	margin-bottom:var(--margin-bottom);
 	position: relative;
 	.texte {
 		max-width:462px;
@@ -146,11 +145,11 @@
 
 	.chiffre {
 		color:rgba(255,255,255,0.2);
-		font-size:80px;
+		font-size:64px;
 		line-height:1;
 		position:absolute;
 		left:0;
-		bottom:-80px;
+		bottom:-60px;
 		-webkit-text-stroke: 1px var(--blanc);
 	}
 
@@ -175,6 +174,8 @@
 	
 
 	@include bp(md) {
+		margin-bottom:var(--margin-bottom);
+
 		.questionnaire {
 			display: block;
 			position: relative;
