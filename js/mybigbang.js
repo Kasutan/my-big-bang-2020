@@ -1,6 +1,7 @@
 (function($) {
 
 	$( document ).ready(function() {
+		var width=window.width();
 
 		/****************** Sticky header *************************/	
 		var siteHeader=$('.site-header');
@@ -47,7 +48,43 @@
 		}
 
 
-		/****************** Questionnaire *************************/
+		/****************** Affichage Questionnaire mobile******************/
+		var ouvrirQ = $('#ouvrir-questionnaire');
+		var fermerQ = $('#fermer-questionnaire');
+		var voletQ = $('#questionnaire');
+		var overlay = $('.overlay');
+		var blocQ= $('.acf-block-questionnaire');
+		if(window < 768 && ouvrirQ.length > 0) {
+			var widthQ=voletQ.outerWidth();
+			voletQ.css('right',-1*widthQ);
+			ouvrirQ.click(function(e) {
+				e.preventDefault();
+				overlay.toggleClass('toggled');
+				$('.acf-block-questionnaire .titre, .acf-block-questionnaire .ouvrir ').slideUp(500);
+				voletQ.show();
+				voletQ.animate(
+					{ right: 0 },
+					500
+				);
+			});
+
+			fermerQ.click(function(e) {
+				$('.acf-block-questionnaire .titre, .acf-block-questionnaire .ouvrir ').slideDown(500);
+				voletQ.animate(
+					{right: -1*widthQ},
+					500,
+					function() {
+						voletQ.hide();
+						blocQ.toggleClass('toggled');
+						overlay.toggleClass('toggled');
+					}
+				);
+			})
+		}
+
+
+
+		/****************** Réponses Questionnaire *************************/
 		var element=localStorage.getItem('mbb_element');
 		if(element!=undefined) {
 			$('.site').addClass(element);

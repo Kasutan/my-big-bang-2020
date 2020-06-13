@@ -614,6 +614,34 @@ body {
   .hide-for-lg {
     display: none; } }
 
+/* Overlay */
+.site-main {
+  position: relative; }
+
+.overlay {
+  background-color: #2D2F38;
+  display: none;
+  opacity: 0.8;
+  -webkit-transition: opacity var(--transition);
+  transition: opacity var(--transition); }
+  .overlay.toggled {
+    display: block;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+/* Echelle z-index 
+Elements qui ont juste besoin d'être au-dessus de leur voisin : 1
+Overlay : 5
+Volet questionnaire mobile : 6
+Sticky header : 10
+Menu mobile : 10
+Sous-menu desktop : 10;
+
+*/
 :root {
   --font: "sofia-pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-serif: "Zilla Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1085,7 +1113,7 @@ a.fleche {
     top: 150px;
     top: var(--header-bottom);
     width: 100vw;
-    z-index: 2; }
+    z-index: 10; }
   .main-navigation.toggled svg.menu {
     display: none; }
   .main-navigation.toggled svg.times {
@@ -1618,7 +1646,7 @@ a.fleche {
     left: 0;
     top: 0;
     width: 100%;
-    z-index: 1; }
+    z-index: 10; }
 
 .custom-logo {
   display: block;
@@ -1659,7 +1687,8 @@ a.fleche {
   -ms-flex-direction: column;
   flex-direction: column;
   margin-bottom: var(--margin-bottom);
-  position: relative; }
+  position: relative;
+  /*Affichage dans un volet escamotable en mobile*/ }
   .acf-block-questionnaire.eau {
     --fond-questionnaire:var(--bleu); }
   .acf-block-questionnaire.feu {
@@ -1670,15 +1699,52 @@ a.fleche {
     top: -50px; }
   .acf-block-questionnaire .titre {
     background-color: var(--gris-fond-clair);
-    font-size: 36px;
+    font-size: 24px;
     line-height: 1.04;
     margin-bottom: 0;
     padding: 31px 55px 25px 34px; }
+  .acf-block-questionnaire .ouvrir {
+    background-color: var(--rouge);
+    padding: 19px 28px; }
+    .acf-block-questionnaire .ouvrir .fleche-simple {
+      color: var(--blanc);
+      font-family: var(--font-serif);
+      font-size: 1.125rem;
+      background-image: url("icons/Fleche-Cta.svg");
+      background-repeat: no-repeat;
+      background-position: center right;
+      background-size: contain;
+      display: block;
+      height: 28px;
+      line-height: 28px;
+      margin: 0;
+      padding-right: 36px;
+      text-align: right;
+      text-decoration: none; }
   .acf-block-questionnaire .questionnaire {
     background-color: var(--fond-questionnaire);
     color: var(--blanc);
-    padding: 34px 38px;
-    position: relative; }
+    padding: 34px 38px; }
+  .acf-block-questionnaire .fermer {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: var(--blanc);
+    border: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 80px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    left: -15px;
+    padding: 0;
+    position: absolute;
+    top: 15px;
+    width: 40px; }
+    .acf-block-questionnaire .fermer svg {
+      max-width: 50%; }
   .acf-block-questionnaire .intro {
     margin-bottom: 25px;
     padding-bottom: 25px;
@@ -1745,11 +1811,28 @@ a.fleche {
     background-color: transparent;
     color: var(--blanc);
     text-shadow: none; }
+  .acf-block-questionnaire .questionnaire {
+    display: none;
+    height: auto;
+    position: fixed;
+    right: 0;
+    top: calc(1px * var(--header-bottom));
+    width: 90%;
+    z-index: 6; }
   @media (min-width: 768px) {
     .acf-block-questionnaire {
       display: grid;
       grid-template-columns: 1fr 200px 262px;
       grid-template-rows: 75px 545px 75px; }
+      .acf-block-questionnaire .questionnaire {
+        display: block;
+        position: relative;
+        right: unset;
+        top: unset;
+        width: unset;
+        z-index: unset; }
+      .acf-block-questionnaire .fermer {
+        display: none; }
       .acf-block-questionnaire .chiffre {
         bottom: -90px;
         font-size: 130px;
@@ -1765,6 +1848,8 @@ a.fleche {
         .acf-block-questionnaire .image img {
           -o-object-fit: cover;
           object-fit: cover; }
+      .acf-block-questionnaire .titre {
+        font-size: 36px; }
       .acf-block-questionnaire .texte {
         display: -webkit-box;
         display: -ms-flexbox;

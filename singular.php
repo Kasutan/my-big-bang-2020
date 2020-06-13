@@ -49,6 +49,7 @@ if(function_exists('mbb_page_avec_banniere') && mbb_page_avec_banniere()) {
 		<?php endif;?>
 
 		<div class="entry-content container">
+			<div class="overlay"></div>
 			<?php
 			the_content();
 			?>

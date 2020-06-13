@@ -101,7 +101,7 @@ a.fleche {
 			top:150px; 
 			top:var(--header-bottom); // calculé en JS, tient compte de la topbar
 			width:100vw;
-			z-index: 2;
+			z-index: 10;
 		}
 
 		svg.menu { //cacher hamburger 

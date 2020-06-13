@@ -65,6 +65,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5ee49c6bcd672",
+            "label": "Texte du lien pour ouvrir le questionnaire (mobile uniquement)",
+            "name": "ouvrir_questionnaire",
+            "type": "text",
+            "instructions": "En mobile uniquement : lien qui ouvre le volet contenant le questionnaire",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Découvrez votre élément",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5edbbab73432a",
             "label": "ID du formulaire Caldera Forms",
             "name": "formulaire",
@@ -101,5 +120,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1591458533
+    "modified": 1592040646
 }

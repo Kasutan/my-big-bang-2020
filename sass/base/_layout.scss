@@ -116,3 +116,34 @@ body {
 	}
 }
 
+
+/* Overlay */
+.site-main {
+	position: relative;
+}
+.overlay {
+	background-color:#2D2F38;
+	display: none;
+	opacity: 0.8;
+	transition: opacity var(--transition);
+	&.toggled {
+		display: block;
+		height: 100%;
+		width: 100%;
+		z-index: 5;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+
+/* Echelle z-index 
+Elements qui ont juste besoin d'être au-dessus de leur voisin : 1
+Overlay : 5
+Volet questionnaire mobile : 6
+Sticky header : 10
+Menu mobile : 10
+Sous-menu desktop : 10;
+
+*/
