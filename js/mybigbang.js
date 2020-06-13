@@ -114,7 +114,8 @@
 
 		function choixElement(element) {
 			$('.form-group.element input').val(element);
-			$('.form-group.reponse textarea').val($('.form-group.reponse_'+element+' textarea').val());
+			$('.form-group.reponse textarea').val($('.reponse_'+element).html());
+			$('#element').html(element);
 			localStorage.setItem('mbb_element',element);
 			//$('.site').removeClass('eau feu terre air');
 			//$('.site').addClass(element);
@@ -162,15 +163,14 @@ function mbb_post_form_submit( obj ) {
 	if ( "complete" == obj.status ) {
 		var element=localStorage.getItem('mbb_element');
 		jQuery('.acf-block-questionnaire').addClass(element+ ' resultat');
+		lottie.loadAnimation({
+			container: document.getElementById('lottie'), // the dom element that will contain the animation
+			renderer: 'svg',
+			loop: true,
+			autoplay: true,
+			path: '/wp-content/themes/my-big-bang-2020/animations/'+element+'.json' // the path to the animation json
+		});
+		jQuery('#lottie').fadeIn();
 	}
     
 }
-
-
-lottie.loadAnimation({
-	container: document.getElementById('lottie'), // the dom element that will contain the animation
-	renderer: 'svg',
-	loop: true,
-	autoplay: true,
-	path: '/wp-content/themes/my-big-bang-2020/animations/feu.json' // the path to the animation json
-});

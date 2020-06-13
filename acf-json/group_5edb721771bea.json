@@ -84,6 +84,60 @@
             "maxlength": ""
         },
         {
+            "key": "field_5ee4c9d493a0c",
+            "label": "Texte de conclusion",
+            "name": "conclusion",
+            "type": "wysiwyg",
+            "instructions": "Affiché sous le résultat du questionnaire, invite à prendre RDV\r\nCe texte est commun, quel que soit le résultat du questionnaire.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 1
+        },
+        {
+            "key": "field_5ee4ca0e93a0d",
+            "label": "Texte du lien CTA",
+            "name": "label_cta",
+            "type": "text",
+            "instructions": "Affiché sous le résultat du questionnaire, invite à prendre RDV",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Je réserve ma séance",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ee4ca4f93a0e",
+            "label": "Cible du lien CTA",
+            "name": "cible_cta",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_5edbbab73432a",
             "label": "ID du formulaire Caldera Forms",
             "name": "formulaire",
@@ -120,5 +174,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1592040646
+    "modified": 1592052423
 }

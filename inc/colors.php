@@ -20,6 +20,13 @@ add_theme_support( 'editor-color-palette', array(
 		'color'	=> '#EC6557',
 	),
 	array(
+		'name'  =>'Jaune',
+		'slug'  => 'jaune',
+		'color'	=> '#E6CB6D',
+	),
+
+	
+	array(
 		'name'  =>'Gris texte',
 		'slug'  => 'gris-texte',
 		'color'	=> '#707070',

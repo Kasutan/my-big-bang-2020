@@ -1,14 +1,6 @@
 .acf-block-questionnaire {
 	--fond-questionnaire:var(--rouge);
 
-	&.eau {
-		--fond-questionnaire:var(--bleu);
-	}
-	&.feu {
-		--fond-questionnaire:orange;
-	}
-
-
 	align-items: center;
 	display:flex;
 	flex-direction:column;
@@ -85,11 +77,7 @@
 
 		}
 	}
-	&.resultat {
-		.intro {
-			display:none;
-		}
-	}
+	
 	.form-group {
 		margin-bottom: 0 !important;
 		&.question {
@@ -153,13 +141,6 @@
 		-webkit-text-stroke: 1px var(--blanc);
 	}
 
-	.caldera-grid {
-		.alert.alert-success {
-			background-color:transparent;
-			color:var(--blanc);
-			text-shadow:none;
-		}
-	}
 
 	/*Affichage dans un volet escamotable en mobile*/
 	.questionnaire {
@@ -172,7 +153,7 @@
 		z-index:6;
 	}
 	
-
+	/*Affichage grille en tablette et desktop*/
 	@include bp(md) {
 		margin-bottom:var(--margin-bottom);
 
@@ -195,7 +176,7 @@
 		}
 		display:grid;
 		grid-template-columns: 1fr 200px 262px;
-		grid-template-rows:75px 545px 75px;
+		grid-template-rows:75px minmax(545px,auto) 75px;
 
 		.image {
 			display:flex;
@@ -222,10 +203,123 @@
 		}
 	}
 
-}
+	/*Affichage des résultats*/
+	.intro-resultat, .conclusion-resultat, .cta-resultat, .animation {
+		display: none;
+	}
+	&.resultat {
+		--fond-questionnaire:var(--bleu);
+		--accent:pink;
+		&.eau {
+			--accent:#53c1b3;
+		}
+		&.feu {
+			--accent:var(--jaune);
+		}
 
-// animations
-#lottie {
-	background-color:var(--rouge);
-	max-width:400px;
+		.intro-resultat, .conclusion-resultat, .cta-resultat {
+			display: block;
+		}
+
+		.intro-resultat, .conclusion-resultat, .cta-resultat, .caldera-grid {
+			position: relative; //pour être affichés au-dessus de l'animation
+		}
+		
+		.intro, .titre {
+			display:none;
+		}
+
+		.animation {
+			height:100%;
+			position: absolute;
+			left:0;
+			top:0;
+			width:100%;
+		}
+
+		.intro-resultat {
+			margin-bottom:160px;
+		}
+
+		.titre-resultat {
+			color:#9B9BAC;
+			font-family: var(--font-serif);
+			font-size:28px;
+			line-height:46px;
+			padding-left:40px;
+			position: relative;
+
+			&::before {
+				background-color:var(--accent);
+				border-radius:2px;
+				top:22px;
+				content:' ';
+				height:2px;
+				left:-38px;
+				position:absolute;
+				width:60px;
+			}
+
+		}
+
+		.element {
+			color:var(--blanc);
+			font-size:40px;
+			font-weight:700;
+			line-height:64px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.caldera-grid {
+			.alert.alert-success { //message personnalisé selon résultat
+				background-color:transparent;
+				color:var(--blanc);
+				font-size:1rem;
+				margin-bottom:1rem;
+				padding:0;
+				text-shadow:none;
+			}
+		}
+		.conclusion-resultat {
+			color:var(--accent);
+			font-size:14px;
+			margin-bottom:2rem;
+		}
+		a.cta-resultat {
+			align-items:center;
+			color:var(--blanc);
+			display: flex;
+			height:41px;
+			justify-content:flex-end;
+			text-align: right;
+			text-decoration: none;
+			margin:0;
+			span {
+				font-size:14px;
+				padding-right:15px;
+			}
+
+			svg {
+				max-width:41px;
+				transform: left var(--transition);
+				.fleche {
+					fill:var(--fond-questionnaire);
+				}
+				.cercle {
+					fill:var(--accent);
+				}
+			}
+
+			&:focus, &:hover, &:active {
+				text-decoration: none;
+				svg {
+					left:3px;
+					position: relative;
+				}
+
+			}
+		}
+	}
+
 }

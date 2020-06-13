@@ -399,6 +399,7 @@ template {
   --rouge-logo: #E5403B;
   --bleu: #49495D;
   --noir: #000;
+  --jaune: #E6CB6D;
   --gris-fond: #AAA89E;
   --gris-fond-clair: #F2F1ED;
   --gris-decor: #EAE7E1;
@@ -486,6 +487,20 @@ a.wp-block-button__link.has-noir-background-color {
     background-color: transparent;
     color: #000;
     border-color: #000;
+    text-decoration: none; }
+
+.has-jaune-color {
+  color: #E6CB6D; }
+
+.has-jaune-background-color {
+  background-color: #E6CB6D; }
+
+a.wp-block-button__link.has-jaune-background-color {
+  border-color: #E6CB6D; }
+  a.wp-block-button__link.has-jaune-background-color:focus, a.wp-block-button__link.has-jaune-background-color:hover {
+    background-color: transparent;
+    color: #E6CB6D;
+    border-color: #E6CB6D;
     text-decoration: none; }
 
 .has-gris-fond-color {
@@ -1687,11 +1702,9 @@ a.fleche {
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
-  /*Affichage dans un volet escamotable en mobile*/ }
-  .acf-block-questionnaire.eau {
-    --fond-questionnaire:var(--bleu); }
-  .acf-block-questionnaire.feu {
-    --fond-questionnaire:orange; }
+  /*Affichage dans un volet escamotable en mobile*/
+  /*Affichage grille en tablette et desktop*/
+  /*Affichage des résultats*/ }
   .acf-block-questionnaire .texte {
     max-width: 462px;
     position: relative;
@@ -1757,8 +1770,6 @@ a.fleche {
       left: 0;
       position: absolute;
       width: 40px; }
-  .acf-block-questionnaire.resultat .intro {
-    display: none; }
   .acf-block-questionnaire .form-group {
     margin-bottom: 0 !important; }
     .acf-block-questionnaire .form-group.question {
@@ -1806,10 +1817,6 @@ a.fleche {
     left: 0;
     bottom: -60px;
     -webkit-text-stroke: 1px var(--blanc); }
-  .acf-block-questionnaire .caldera-grid .alert.alert-success {
-    background-color: transparent;
-    color: var(--blanc);
-    text-shadow: none; }
   .acf-block-questionnaire .questionnaire {
     display: none;
     height: auto;
@@ -1823,7 +1830,7 @@ a.fleche {
       margin-bottom: var(--margin-bottom);
       display: grid;
       grid-template-columns: 1fr 200px 262px;
-      grid-template-rows: 75px 545px 75px; }
+      grid-template-rows: 75px minmax(545px, auto) 75px; }
       .acf-block-questionnaire .questionnaire {
         display: block;
         position: relative;
@@ -1866,10 +1873,94 @@ a.fleche {
         -webkit-box-flex: 1;
         -ms-flex-positive: 1;
         flex-grow: 1; } }
-
-#lottie {
-  background-color: var(--rouge);
-  max-width: 400px; }
+  .acf-block-questionnaire .intro-resultat, .acf-block-questionnaire .conclusion-resultat, .acf-block-questionnaire .cta-resultat, .acf-block-questionnaire .animation {
+    display: none; }
+  .acf-block-questionnaire.resultat {
+    --fond-questionnaire:var(--bleu);
+    --accent:pink; }
+    .acf-block-questionnaire.resultat.eau {
+      --accent:#53c1b3; }
+    .acf-block-questionnaire.resultat.feu {
+      --accent:var(--jaune); }
+    .acf-block-questionnaire.resultat .intro-resultat, .acf-block-questionnaire.resultat .conclusion-resultat, .acf-block-questionnaire.resultat .cta-resultat {
+      display: block; }
+    .acf-block-questionnaire.resultat .intro-resultat, .acf-block-questionnaire.resultat .conclusion-resultat, .acf-block-questionnaire.resultat .cta-resultat, .acf-block-questionnaire.resultat .caldera-grid {
+      position: relative; }
+    .acf-block-questionnaire.resultat .intro, .acf-block-questionnaire.resultat .titre {
+      display: none; }
+    .acf-block-questionnaire.resultat .animation {
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%; }
+    .acf-block-questionnaire.resultat .intro-resultat {
+      margin-bottom: 160px; }
+    .acf-block-questionnaire.resultat .titre-resultat {
+      color: #9B9BAC;
+      font-family: var(--font-serif);
+      font-size: 28px;
+      line-height: 46px;
+      padding-left: 40px;
+      position: relative; }
+      .acf-block-questionnaire.resultat .titre-resultat::before {
+        background-color: var(--accent);
+        border-radius: 2px;
+        top: 22px;
+        content: ' ';
+        height: 2px;
+        left: -38px;
+        position: absolute;
+        width: 60px; }
+    .acf-block-questionnaire.resultat .element {
+      color: var(--blanc);
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 64px;
+      text-align: center;
+      text-transform: uppercase; }
+    .acf-block-questionnaire.resultat .caldera-grid .alert.alert-success {
+      background-color: transparent;
+      color: var(--blanc);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      padding: 0;
+      text-shadow: none; }
+    .acf-block-questionnaire.resultat .conclusion-resultat {
+      color: var(--accent);
+      font-size: 14px;
+      margin-bottom: 2rem; }
+    .acf-block-questionnaire.resultat a.cta-resultat {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      color: var(--blanc);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      height: 41px;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      text-align: right;
+      text-decoration: none;
+      margin: 0; }
+      .acf-block-questionnaire.resultat a.cta-resultat span {
+        font-size: 14px;
+        padding-right: 15px; }
+      .acf-block-questionnaire.resultat a.cta-resultat svg {
+        max-width: 41px;
+        -webkit-transform: left var(--transition);
+        transform: left var(--transition); }
+        .acf-block-questionnaire.resultat a.cta-resultat svg .fleche {
+          fill: var(--fond-questionnaire); }
+        .acf-block-questionnaire.resultat a.cta-resultat svg .cercle {
+          fill: var(--accent); }
+      .acf-block-questionnaire.resultat a.cta-resultat:focus, .acf-block-questionnaire.resultat a.cta-resultat:hover, .acf-block-questionnaire.resultat a.cta-resultat:active {
+        text-decoration: none; }
+        .acf-block-questionnaire.resultat a.cta-resultat:focus svg, .acf-block-questionnaire.resultat a.cta-resultat:hover svg, .acf-block-questionnaire.resultat a.cta-resultat:active svg {
+          left: 3px;
+          position: relative; }
 
 .eclairage {
   background-image: url("icons/Motif-Particules-Mobile.svg");
