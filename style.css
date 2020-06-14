@@ -1820,10 +1820,9 @@ a.fleche {
   .acf-block-questionnaire .questionnaire {
     display: none;
     height: auto;
-    position: fixed;
-    right: 0;
-    top: calc(1px * var(--header-bottom));
-    width: 90%;
+    position: relative;
+    top: 0;
+    width: 90vw;
     z-index: 6; }
   @media (min-width: 768px) {
     .acf-block-questionnaire {
@@ -1833,8 +1832,7 @@ a.fleche {
       grid-template-rows: 75px minmax(545px, auto) 75px; }
       .acf-block-questionnaire .questionnaire {
         display: block;
-        position: relative;
-        right: unset;
+        height: unset;
         top: unset;
         width: unset;
         z-index: unset; }

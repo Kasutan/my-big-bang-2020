@@ -55,15 +55,14 @@
 		var overlay = $('.overlay');
 		var blocQ= $('.acf-block-questionnaire');
 		if(width < 768 && ouvrirQ.length > 0) {
-			var widthQ=voletQ.outerWidth();
-			voletQ.css('right',-1*widthQ);
+			voletQ.css('left',width);
 			ouvrirQ.click(function(e) {
 				e.preventDefault();
 				overlay.toggleClass('toggled');
 				$('.acf-block-questionnaire .titre, .acf-block-questionnaire .ouvrir ').slideUp(500);
 				voletQ.show();
 				voletQ.animate(
-					{ right: 0 },
+					{ left: 0.1*width },
 					500
 				);
 			});
@@ -71,7 +70,7 @@
 			fermerQ.click(function(e) {
 				$('.acf-block-questionnaire .titre, .acf-block-questionnaire .ouvrir ').slideDown(500);
 				voletQ.animate(
-					{right: -1*widthQ},
+					{left: width},
 					500,
 					function() {
 						voletQ.hide();
