@@ -43,7 +43,7 @@ function mbb_etat_esprit_callback( $block ) {
 	$mots=esc_attr( get_field('mots') );
 
 
-	printf('<section class="acf-block-etat-esprit avec-ancre %s"><span class="ancre" id="%s"></span>', $className, $ancre);
+	printf('<section class="acf-block-etat-esprit accueil avec-ancre %s"><span class="ancre" id="%s"></span>', $className, $ancre);
 		echo '<div class="part1">';
 			printf('<div class="silhouette"><img src="%s" alt="picto silhouette" /></div>', mbb_get_picto_url('Silhouette'));
 			if($titre) printf('<h2 class="titre h1">%s</h2>',$titre);

@@ -2020,16 +2020,17 @@ a.fleche {
       .eclairage.inverse .relief {
         margin-left: var(--padding-x); } }
 
-.acf-block-etat-esprit {
+.accueil {
+  /*Bloc état d'esprit mais classe accueil pour réutiliser les styles*/
   /*****************Part 1*******************************/
   position: relative;
   /*****************Part 2*******************************/
   /*****************Part 3*******************************/ }
-  .acf-block-etat-esprit .intro {
+  .accueil .intro {
     font-size: 1rem;
     line-height: 1.5;
     text-align: center; }
-  .acf-block-etat-esprit .mots {
+  .accueil .mots {
     bottom: -20px;
     color: transparent;
     font-size: 50px;
@@ -2041,12 +2042,12 @@ a.fleche {
     -webkit-text-stroke: 2px var(--gris-decor);
     white-space: nowrap;
     z-index: 2; }
-  .acf-block-etat-esprit .silhouette {
+  .accueil .silhouette {
     display: none; }
   @media (min-width: 768px) {
-    .acf-block-etat-esprit .part1 {
+    .accueil .part1 {
       position: relative; }
-    .acf-block-etat-esprit .silhouette {
+    .accueil .silhouette {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -2055,61 +2056,61 @@ a.fleche {
       position: absolute;
       top: 0;
       width: 22%; }
-      .acf-block-etat-esprit .silhouette img {
+      .accueil .silhouette img {
         width: 100%; }
-    .acf-block-etat-esprit .intro {
+    .accueil .intro {
       font-size: 1.25rem;
       max-width: 957px;
       margin: 0 auto 30px; }
-    .acf-block-etat-esprit .mots {
+    .accueil .mots {
       bottom: unset;
       font-size: 85px;
       left: calc(100% - 1160px * var(--scroll-mots));
       line-height: 1;
       margin-bottom: 40px; } }
-  .acf-block-etat-esprit .image {
+  .accueil .image {
     margin-bottom: 28px; }
-    .acf-block-etat-esprit .image img {
+    .accueil .image img {
       width: 100%; }
-  .acf-block-etat-esprit .texte {
+  .accueil .texte {
     padding-bottom: 73px; }
   @media (min-width: 768px) {
-    .acf-block-etat-esprit .part2 {
+    .accueil .part2 {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
-    .acf-block-etat-esprit .image {
+    .accueil .image {
       -webkit-box-flex: 1;
       -ms-flex-positive: 1;
       flex-grow: 1;
       margin-bottom: 0; }
-    .acf-block-etat-esprit .texte {
+    .accueil .texte {
       -ms-flex-preferred-size: 480px;
       flex-basis: 480px;
       -ms-flex-negative: 0;
       flex-shrink: 0;
       padding-left: 30px;
       padding-bottom: 100px; }
-    .acf-block-etat-esprit .eclairage {
+    .accueil .eclairage {
       margin-top: 0; } }
   @media (min-width: 960px) {
-    .acf-block-etat-esprit .texte {
+    .accueil .texte {
       -webkit-box-flex: 1;
       -ms-flex-positive: 1;
       flex-grow: 1;
       padding-left: 60px; } }
   @media (min-width: 1680px) {
-    .acf-block-etat-esprit .image {
+    .accueil .image {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
-      .acf-block-etat-esprit .image img {
+      .accueil .image img {
         -o-object-fit: cover;
         object-fit: cover;
         width: 100%; }
-    .acf-block-etat-esprit .texte {
+    .accueil .texte {
       padding-bottom: 80px; } }
-  .acf-block-etat-esprit .part3 {
+  .accueil .part3 {
     background-image: url("icons/30min.svg");
     background-repeat: no-repeat;
     background-size: 70% auto;
@@ -2118,16 +2119,16 @@ a.fleche {
     padding: 90px 5px 70px;
     text-align: center; }
     @media (min-width: 576px) {
-      .acf-block-etat-esprit .part3 {
+      .accueil .part3 {
         background-position-y: 80px;
         background-size: 400px auto;
         min-height: 400px;
         padding-bottom: 0;
         padding-top: 140px; }
-        .acf-block-etat-esprit .part3 .texte-duree {
+        .accueil .part3 .texte-duree {
           max-width: 850px;
           margin: auto; }
-          .acf-block-etat-esprit .part3 .texte-duree p {
+          .accueil .part3 .texte-duree p {
             font-size: 20px;
             margin-bottom: 0; } }
 
@@ -2257,5 +2258,22 @@ a.fleche {
         max-width: unset; }
         .acf-block-valeurs .texte p {
           font-size: 1rem; } }
+
+.acf-block-coach {
+  /*styles en écart du bloc état d'esprit - classe accueil commune*/ }
+  .acf-block-coach .texte {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .acf-block-coach .mots {
+    position: absolute;
+    margin-bottom: 0; }
 
 /*# sourceMappingURL=style.css.map */

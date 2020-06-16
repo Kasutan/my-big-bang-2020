@@ -1,0 +1,12 @@
+.acf-block-coach {
+	/*styles en écart du bloc état d'esprit - classe accueil commune*/
+	.texte {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.mots {
+		position: absolute;
+		margin-bottom: 0;
+	}
+}

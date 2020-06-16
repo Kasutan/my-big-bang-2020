@@ -1,10 +1,10 @@
 {
-    "key": "group_5edf4aa1322cf",
-    "title": "Bloc philosophie pour la page d'accueil",
+    "key": "group_5ee869533d2da",
+    "title": "Bloc coach pour la page d'accueil",
     "fields": [
         {
-            "key": "field_5edf4ab4ace1d",
-            "label": "Bloc philosophie pour la page d'accueil",
+            "key": "field_5ee869534b131",
+            "label": "Bloc coach pour la page d'accueil",
             "name": "",
             "type": "message",
             "instructions": "",
@@ -20,7 +20,7 @@
             "esc_html": 0
         },
         {
-            "key": "field_5edf4aa138c5c",
+            "key": "field_5ee869534b16b",
             "label": "Titre",
             "name": "titre",
             "type": "text",
@@ -39,7 +39,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5edf4b03a4679",
+            "key": "field_5ee869534b1a3",
             "label": "Ancre",
             "name": "ancre",
             "type": "text",
@@ -58,26 +58,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5edf4aa138c94",
-            "label": "Texte d'introduction",
-            "name": "intro",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
-            "key": "field_5edf4b9154d25",
+            "key": "field_5ee869534b212",
             "label": "Mots qui défilent au scroll",
             "name": "mots",
             "type": "text",
@@ -96,7 +77,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5edf4aa138c24",
+            "key": "field_5ee869534b249",
             "label": "Image",
             "name": "image",
             "type": "image",
@@ -120,7 +101,7 @@
             "mime_types": ""
         },
         {
-            "key": "field_5edf4bbd54d26",
+            "key": "field_5ee869534b281",
             "label": "Zone de texte à côté de l'image",
             "name": "texte",
             "type": "wysiwyg",
@@ -139,88 +120,12 @@
             "delay": 0
         },
         {
-            "key": "field_5edf4be654d27",
-            "label": "Texte du lien",
-            "name": "label",
-            "type": "text",
-            "instructions": "Affiché au bas de la zone de texte, à côté de l'image",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5edfab43a7e84",
-            "label": "Texte du lien (mobile)",
-            "name": "label_mobile",
-            "type": "text",
-            "instructions": "Texte plus court en mobile\r\nAffiché au bas de la zone de texte, à côté de l'image",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5edf4c3f9780c",
-            "label": "Cible du lien",
-            "name": "cible",
-            "type": "page_link",
-            "instructions": "Affiché au bas de la zone de texte, à côté de l'image",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": "",
-            "taxonomy": "",
-            "allow_null": 0,
-            "allow_archives": 1,
-            "multiple": 0
-        },
-        {
-            "key": "field_5edf4c789780e",
+            "key": "field_5ee869534b36e",
             "label": "Texte d'éclairage",
             "name": "eclairage",
             "type": "wysiwyg",
             "instructions": "",
             "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
-            "key": "field_5edf4ce597811",
-            "label": "Texte durée",
-            "name": "texte_duree",
-            "type": "wysiwyg",
-            "instructions": "Texte affiché en sur-impression au-dessus du décor 30 minutes",
-            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -239,7 +144,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/acf-etat-esprit"
+                "value": "acf\/acf-coach"
             }
         ]
     ],
@@ -251,5 +156,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1592290207
+    "modified": 1592290129
 }
