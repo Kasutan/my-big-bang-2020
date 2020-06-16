@@ -1,0 +1,42 @@
+.acf-block-newsletter {
+	background-image : url('icons/Motif-Silhouette-Mobile.svg');
+	background-size: 53px 36px;
+	margin-bottom:0;
+	padding-top:108px;
+
+	.newsletter {
+		background-color : var(--rouge);
+		color:var(--blanc);
+		padding:25px;
+	}
+
+	.titre {
+		color:var(--blanc);
+		font-size:26px;
+	}
+
+	.intro {
+		display: none;
+	}
+
+	@include bp(md) {
+		background-image : url('icons/Motif-Silhouette-Desktop.svg');
+		background-size: 68px 46px;
+		padding:0;
+		margin-top:150px;
+		.newsletter {
+			margin:0 auto;
+			max-width:658px;
+			padding:45px 40px 30px;
+			position: relative;
+			top:-100px;
+		}
+		.titre {
+			font-size:36px;
+		}
+
+		.intro {
+			display: block;
+		}
+	}
+}

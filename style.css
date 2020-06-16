@@ -2508,4 +2508,35 @@ a.fleche {
       .acf-block-blog .texte .fleche {
         margin-top: 1rem; } }
 
+.acf-block-newsletter {
+  background-image: url("icons/Motif-Silhouette-Mobile.svg");
+  background-size: 53px 36px;
+  margin-bottom: 0;
+  padding-top: 108px; }
+  .acf-block-newsletter .newsletter {
+    background-color: var(--rouge);
+    color: var(--blanc);
+    padding: 25px; }
+  .acf-block-newsletter .titre {
+    color: var(--blanc);
+    font-size: 26px; }
+  .acf-block-newsletter .intro {
+    display: none; }
+  @media (min-width: 768px) {
+    .acf-block-newsletter {
+      background-image: url("icons/Motif-Silhouette-Desktop.svg");
+      background-size: 68px 46px;
+      padding: 0;
+      margin-top: 150px; }
+      .acf-block-newsletter .newsletter {
+        margin: 0 auto;
+        max-width: 658px;
+        padding: 45px 40px 30px;
+        position: relative;
+        top: -100px; }
+      .acf-block-newsletter .titre {
+        font-size: 36px; }
+      .acf-block-newsletter .intro {
+        display: block; } }
+
 /*# sourceMappingURL=style.css.map */
