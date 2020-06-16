@@ -8,6 +8,9 @@
 	p {
 		margin-bottom:0;
 	}
+	&:hover, &:focus-within {
+		background-color:var(--rouge);
+	}
 }
 .site-header {
 	align-items: center;
