@@ -1436,7 +1436,7 @@ a.fleche {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--bleu);
+  background-color: #2D2F38;
   color: #F0EEE7;
   display: -webkit-box;
   display: -ms-flexbox;
