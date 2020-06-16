@@ -11,11 +11,6 @@
 		var headerBottom=0;
 		updateHeaderPosition();
 
-		/****************** Mots qui défilent au scroll *************************/
-		var mots=$('.mots');
-		if(mots.length>0) {
-			var motsTop=mots.offset().top;
-		}
 
 		$(window).scroll(function () { // scroll event
 			var windowTop = $(window).scrollTop(); // returns number
@@ -30,10 +25,6 @@
 				siteContent.css('margin-top',0);
 			}
 
-			if (mots.length>0 && windowBottom > motsTop) {
-				scrollMots=(windowBottom - motsTop) / (window.innerHeight - 260); //Proportion d'avancement dans la portion de fenêtre où les mots sont visibles
-				document.documentElement.style.setProperty('--scroll-mots', scrollMots); 
-			}
 		});
 		
 
@@ -153,6 +144,40 @@
 
 		
 	});
+
+	/****************** Mots qui défilent au scroll *************************/
+	
+	//Only Use the IntersectionObserver if it is supported
+	if ('IntersectionObserver' in window) {
+		const config = {
+			rootMargin: '50px 20px 75px 30px',
+			//threshold: [0, 0.25, 0.75, 1]
+		};
+
+			
+		observerMots = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.intersectionRatio > 0) {
+					var mot=entry.target;
+					var motTop=$(entry.target).offset().top;
+					var motWidth=mot.scrollWidth;
+
+					$(window).scroll(function () { // scroll event
+						var windowTop = $(window).scrollTop(); // returns number
+						var windowBottom=window.innerHeight+windowTop;
+						var scrollMots=motWidth * (windowBottom - motTop) / (window.innerHeight - 260); //Longueur d'avancement dans la portion de fenêtre où les mots sont visibles + marge pour le sticky header
+						mot.style.setProperty('--scroll-mots', scrollMots);
+					});
+				} 
+			}, config);
+		});
+
+		const mots=document.querySelectorAll('.mots');
+		mots.forEach(elem => {
+			observerMots.observe(elem);
+		});
+
+	} 
 
 })( jQuery );
 

@@ -5,8 +5,17 @@
 		flex-direction: column;
 		justify-content: center;
 	}
+	.part1 {
+		position: relative;
+	}
 	.mots {
+		bottom:-40px;
 		position: absolute;
 		margin-bottom: 0;
+	}
+	@include bp(md) {
+		.mots {
+			bottom:-50px;
+		}
 	}
 }

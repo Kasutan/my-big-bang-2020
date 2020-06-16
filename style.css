@@ -2035,7 +2035,7 @@ a.fleche {
     color: transparent;
     font-size: 50px;
     font-weight: 900;
-    left: calc(100% - 650px * var(--scroll-mots));
+    left: calc(100% - 1px * var(--scroll-mots));
     line-height: 1.24;
     position: relative;
     text-transform: uppercase;
@@ -2065,7 +2065,7 @@ a.fleche {
     .accueil .mots {
       bottom: unset;
       font-size: 85px;
-      left: calc(100% - 1160px * var(--scroll-mots));
+      left: calc(100% - 1px * var(--scroll-mots));
       line-height: 1;
       margin-bottom: 40px; } }
   .accueil .image {
@@ -2272,8 +2272,14 @@ a.fleche {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
+  .acf-block-coach .part1 {
+    position: relative; }
   .acf-block-coach .mots {
+    bottom: -40px;
     position: absolute;
     margin-bottom: 0; }
+  @media (min-width: 768px) {
+    .acf-block-coach .mots {
+      bottom: -50px; } }
 
 /*# sourceMappingURL=style.css.map */
