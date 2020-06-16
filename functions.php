@@ -178,6 +178,8 @@ require_once( 'blocks/acf-block-accueil-coach.php' );
 require_once( 'blocks/acf-block-accueil-securite-1.php' );
 require_once( 'blocks/acf-block-accueil-securite-2.php' );
 require_once( 'blocks/acf-block-valeurs.php' );
+require_once( 'blocks/acf-block-presse.php' );
+require_once( 'blocks/acf-block-blog.php' );
 
 /**
 * Page options
