@@ -819,12 +819,20 @@ hr {
   height: 1px;
   margin-bottom: 1.5em; }
 
-ul,
-ol {
-  margin: 0 0 1.5em 3em; }
+ul:not([class]),
+ol:not([class]) {
+  margin: 0 0 1.5em 0;
+  padding-left: 0; }
 
-ul {
-  list-style: disc; }
+ul:not([class]) {
+  list-style: none;
+  padding-left: 1em; }
+  ul:not([class]) li::before {
+    content: '•';
+    color: var(--gris-fond);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em; }
 
 ol {
   list-style: decimal; }
@@ -2281,5 +2289,55 @@ a.fleche {
   @media (min-width: 768px) {
     .acf-block-coach .mots {
       bottom: -50px; } }
+
+.acf-block-securite-2 {
+  /*styles en écart du bloc état d'esprit - classe accueil commune*/ }
+  .acf-block-securite-2 .texte {
+    margin-bottom: 28px;
+    padding-bottom: 0; }
+    .acf-block-securite-2 .texte p:nth-of-type(2) strong {
+      background-color: var(--rouge);
+      color: var(--blanc);
+      padding: 2px 5px; }
+  .acf-block-securite-2 .image {
+    margin-bottom: 0;
+    padding-bottom: 73px; }
+  @media (min-width: 768px) {
+    .acf-block-securite-2 .image {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      margin-bottom: 0;
+      padding-bottom: 0; }
+    .acf-block-securite-2 .texte {
+      -ms-flex-preferred-size: 480px;
+      flex-basis: 480px;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      padding-left: 0px;
+      padding-right: 30px;
+      padding-bottom: 100px; }
+    .acf-block-securite-2 .eclairage {
+      margin-top: 0; } }
+  @media screen and (min-width: 1200px) {
+    .acf-block-securite-2 .texte {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      padding-left: 0px;
+      padding-right: 30px;
+      padding-bottom: 1rem; } }
+  @media (min-width: 1680px) {
+    .acf-block-securite-2 .image {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .acf-block-securite-2 .image img {
+        -o-object-fit: cover;
+        object-fit: cover;
+        width: 100%; }
+    .acf-block-securite-2 .texte {
+      padding-bottom: 80px;
+      padding-right: 60px; } }
 
 /*# sourceMappingURL=style.css.map */

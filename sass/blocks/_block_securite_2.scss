@@ -1,0 +1,57 @@
+.acf-block-securite-2 {
+	/*styles en écart du bloc état d'esprit - classe accueil commune*/
+	.texte {
+		p:nth-of-type(2) strong {
+			background-color:var(--rouge);
+			color:var(--blanc);
+			padding:2px 5px;
+		}
+		margin-bottom:28px;
+		padding-bottom:0;
+	}
+	.image {
+		margin-bottom:0;
+		padding-bottom:73px;
+	}
+
+	@include bp(md) {
+		
+		.image {
+			flex-grow:1;
+			margin-bottom:0;
+			padding-bottom:0;
+		}
+		.texte {
+			flex-basis:480px;
+			flex-shrink:0;
+			padding-left:0px;
+			padding-right:30px;
+			padding-bottom:100px;
+		}
+		.eclairage {
+			margin-top:0;
+		}
+	}
+	@media screen and (min-width:1200px) {
+		.texte {
+			flex-grow:1;
+			padding-left:0px;
+			padding-right:30px;
+			padding-bottom:1rem;
+		}
+	}
+	@include bp(xl) {
+		.image {
+			display: flex;
+			img {
+				object-fit: cover;
+				width:100%;
+			}
+		}
+		.texte {
+			padding-bottom:80px;
+			padding-right:60px;
+		}
+	}
+
+}

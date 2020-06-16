@@ -170,6 +170,8 @@ add_filter( 'block_categories', 'mbb_block_categories', 10, 2 );
 require_once( 'blocks/acf-block-questionnaire.php' );
 require_once( 'blocks/acf-block-accueil-etat-esprit.php' );
 require_once( 'blocks/acf-block-accueil-coach.php' );
+require_once( 'blocks/acf-block-accueil-securite-1.php' );
+require_once( 'blocks/acf-block-accueil-securite-2.php' );
 require_once( 'blocks/acf-block-valeurs.php' );
 
 /**
