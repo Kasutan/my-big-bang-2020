@@ -400,6 +400,10 @@ template {
   --bleu: #49495D;
   --noir: #000;
   --jaune: #E6CB6D;
+  --feu: #E6CB6D;
+  --terre: #BBD03C;
+  --air: #C4AAD2;
+  --eau: #56BCB0;
   --gris-fond: #AAA89E;
   --gris-fond-clair: #F2F1ED;
   --gris-decor: #EAE7E1;
@@ -501,6 +505,62 @@ a.wp-block-button__link.has-jaune-background-color {
     background-color: transparent;
     color: #E6CB6D;
     border-color: #E6CB6D;
+    text-decoration: none; }
+
+.has-feu-color {
+  color: #E6CB6D; }
+
+.has-feu-background-color {
+  background-color: #E6CB6D; }
+
+a.wp-block-button__link.has-feu-background-color {
+  border-color: #E6CB6D; }
+  a.wp-block-button__link.has-feu-background-color:focus, a.wp-block-button__link.has-feu-background-color:hover {
+    background-color: transparent;
+    color: #E6CB6D;
+    border-color: #E6CB6D;
+    text-decoration: none; }
+
+.has-terre-color {
+  color: #BBD03C; }
+
+.has-terre-background-color {
+  background-color: #BBD03C; }
+
+a.wp-block-button__link.has-terre-background-color {
+  border-color: #BBD03C; }
+  a.wp-block-button__link.has-terre-background-color:focus, a.wp-block-button__link.has-terre-background-color:hover {
+    background-color: transparent;
+    color: #BBD03C;
+    border-color: #BBD03C;
+    text-decoration: none; }
+
+.has-air-color {
+  color: #C4AAD2; }
+
+.has-air-background-color {
+  background-color: #C4AAD2; }
+
+a.wp-block-button__link.has-air-background-color {
+  border-color: #C4AAD2; }
+  a.wp-block-button__link.has-air-background-color:focus, a.wp-block-button__link.has-air-background-color:hover {
+    background-color: transparent;
+    color: #C4AAD2;
+    border-color: #C4AAD2;
+    text-decoration: none; }
+
+.has-eau-color {
+  color: #56BCB0; }
+
+.has-eau-background-color {
+  background-color: #56BCB0; }
+
+a.wp-block-button__link.has-eau-background-color {
+  border-color: #56BCB0; }
+  a.wp-block-button__link.has-eau-background-color:focus, a.wp-block-button__link.has-eau-background-color:hover {
+    background-color: transparent;
+    color: #56BCB0;
+    border-color: #56BCB0;
     text-decoration: none; }
 
 .has-gris-fond-color {
@@ -2538,5 +2598,133 @@ a.fleche {
         font-size: 36px; }
       .acf-block-newsletter .intro {
         display: block; } }
+
+.acf-block-elements .intro {
+  text-align: center; }
+
+.acf-block-elements .titre {
+  color: transparent;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.24;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px var(--gris-decor);
+  white-space: nowrap;
+  z-index: 2; }
+
+.acf-block-elements .elements {
+  background-color: #353843;
+  color: var(--blanc);
+  padding: 50px 1rem; }
+
+.acf-block-elements .element {
+  margin-bottom: 100px;
+  position: relative;
+  --accent: var(--terre); }
+  .acf-block-elements .element.eau {
+    --accent: var(--eau); }
+  .acf-block-elements .element.feu {
+    --accent: var(--feu); }
+  .acf-block-elements .element.air {
+    --accent: var(--air); }
+
+.acf-block-elements .nom {
+  background-image: url("icons/Particules-Terre.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-right: calc(100% - 150px); }
+  .acf-block-elements .nom h3 {
+    font-size: 34px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase; }
+
+.acf-block-elements .picto {
+  margin: 0 auto 50px;
+  max-width: 105px; }
+
+.acf-block-elements .mots-cles {
+  border-right: dashed 1.5px var(--accent);
+  list-style: none;
+  position: absolute;
+  right: 0;
+  top: 60px; }
+  .acf-block-elements .mots-cles li {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: right;
+    text-transform: uppercase; }
+    .acf-block-elements .mots-cles li::after {
+      background-color: #353843;
+      border: solid 3px var(--accent);
+      border-radius: 50%;
+      content: '';
+      display: inline-block;
+      height: 9px;
+      width: 9px;
+      position: relative;
+      right: -5px;
+      margin-left: 10px; }
+    .acf-block-elements .mots-cles li:nth-of-type(1) {
+      position: relative;
+      top: -10px; }
+    .acf-block-elements .mots-cles li:nth-of-type(2) {
+      margin-top: 10px;
+      margin-bottom: 10px; }
+    .acf-block-elements .mots-cles li:nth-of-type(3) {
+      position: relative;
+      top: 10px; }
+
+@media (min-width: 960px) {
+  .acf-block-elements .titre {
+    font-size: 150px; }
+  .acf-block-elements .elements {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding-bottom: 250px; }
+  .acf-block-elements .element {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-preferred-size: 500px;
+    flex-basis: 500px; }
+    .acf-block-elements .element .nom {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+      padding-right: 20%; }
+    .acf-block-elements .element .mots-cles {
+      -ms-flex-preferred-size: 150px;
+      flex-basis: 150px;
+      -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+      flex-grow: 0;
+      padding-left: 0;
+      position: relative;
+      right: unset;
+      top: unset; }
+    .acf-block-elements .element .texte {
+      -ms-flex-preferred-size: 350px;
+      flex-basis: 350px;
+      -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+      flex-grow: 0;
+      padding-left: 20px;
+      padding-top: 1rem; }
+    .acf-block-elements .element:nth-child(2n) {
+      position: relative;
+      top: 150px; } }
 
 /*# sourceMappingURL=style.css.map */

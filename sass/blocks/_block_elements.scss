@@ -1,0 +1,136 @@
+.acf-block-elements {
+	.intro {
+		text-align: center;
+	}
+	.titre {
+		color:transparent;
+		font-size:60px;
+		font-weight:700;
+		line-height:1.24;
+		position:relative;
+		text-align: center;
+		text-transform:uppercase;
+		-webkit-text-stroke: 2px var(--gris-decor);
+		white-space: nowrap;
+		z-index:2;
+	}
+
+	.elements {
+		background-color:#353843;
+		color:var(--blanc);
+		padding:50px 1rem;
+	}
+
+	.element {
+		margin-bottom:100px;
+		position: relative;
+		--accent : var(--terre);
+		&.eau {
+			--accent : var(--eau);
+		}
+		&.feu {
+			--accent : var(--feu);
+		}
+		&.air {
+			--accent : var(--air);
+		}
+	}
+
+	.nom {
+		background-image:url('icons/Particules-Terre.svg');
+		background-repeat: no-repeat;
+		background-size:cover;
+		padding-right:calc(100% - 150px);
+		h3 {
+			font-size:34px;
+			font-weight:500;
+			text-align:center;
+			text-transform: uppercase;
+		}
+	}
+	.picto {
+		margin:0 auto 50px;
+		max-width:105px;
+	}
+
+	.mots-cles {
+		border-right:dashed 1.5px var(--accent);
+		list-style: none;
+		position: absolute;
+		right:0;
+		top:60px;
+
+		li {
+			color:var(--accent);
+			font-size:14px;
+			font-weight:600;
+			text-align:right;
+			text-transform: uppercase;
+			&::after {
+				background-color:#353843;
+				border:solid 3px var(--accent);
+				border-radius:50%;
+				content:'';
+				display:inline-block;
+				height:9px;
+				width:9px;
+				position: relative;
+				right: -5px;
+				margin-left: 10px;
+			}
+			&:nth-of-type(1) {
+				position: relative;
+				top:-10px;
+			}
+			&:nth-of-type(2) {
+				margin-top:10px;
+				margin-bottom:10px;
+			}
+			&:nth-of-type(3) {
+				position: relative;
+				top:10px;
+			}
+		}
+	}
+
+	@include bp(lg) {
+		.titre {
+			font-size:150px;
+		}
+		.elements {
+			display: flex;
+			flex-wrap:wrap;
+			justify-content: space-around;
+			padding-bottom: 250px;
+		}
+		.element {
+			align-items: flex-start;
+			display:flex;
+			flex-wrap:wrap;
+			flex-basis:500px;
+			.nom {
+				flex-basis:100%;
+				padding-right:20%;
+			}
+			.mots-cles {
+				flex-basis : 150px;
+				flex-grow:0;
+				padding-left:0;
+				position: relative;
+				right:unset;
+				top:unset;
+			}
+			.texte {
+				flex-basis: 350px;
+				flex-grow:0;
+				padding-left: 20px;
+				padding-top:1rem;
+			}
+
+			&:nth-child(2n) {
+				position: relative;
+				top:150px;
+			}
+		}
+	}
+}
