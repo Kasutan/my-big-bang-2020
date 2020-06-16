@@ -2342,4 +2342,68 @@ a.fleche {
       padding-bottom: 80px;
       padding-right: 60px; } }
 
+.acf-block-presse {
+  margin-bottom: var(--margin-bottom);
+  margin-top: var(--margin-bottom); }
+  .acf-block-presse .titre {
+    color: var(--gris-fond);
+    font-size: 32px;
+    font-weight: 300;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase; }
+    .acf-block-presse .titre::after {
+      background-color: var(--rouge);
+      content: ' ';
+      height: 3px;
+      width: 40px;
+      position: absolute;
+      bottom: -1rem;
+      left: calc(50% - 20px); }
+    @media (min-width: 768px) {
+      .acf-block-presse .titre {
+        font-size: 28px;
+        line-height: 62px;
+        margin-bottom: 62px; }
+        .acf-block-presse .titre::after {
+          bottom: -1rem; } }
+  .acf-block-presse .owl-carousel {
+    padding: 0 20px; }
+  .acf-block-presse .owl-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    left: 0;
+    position: absolute;
+    top: calc(50% - 20px);
+    width: 100%; }
+    .acf-block-presse .owl-nav button {
+      background-color: transparent;
+      border: none;
+      margin: 10px;
+      padding: 0; }
+      .acf-block-presse .owl-nav button span {
+        background-image: url("icons/Fleche-P.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        color: transparent;
+        display: block;
+        height: 19px;
+        left: -20px;
+        position: relative;
+        width: 10px; }
+        @media (min-width: 768px) {
+          .acf-block-presse .owl-nav button span {
+            left: -50px; } }
+      .acf-block-presse .owl-nav button.owl-next span {
+        background-image: url("icons/Fleche-S.svg");
+        left: 20px; }
+        @media (min-width: 768px) {
+          .acf-block-presse .owl-nav button.owl-next span {
+            left: 50px; } }
+
 /*# sourceMappingURL=style.css.map */

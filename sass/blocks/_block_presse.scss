@@ -1,0 +1,73 @@
+.acf-block-presse {
+	margin-bottom:var(--margin-bottom);
+	margin-top:var(--margin-bottom);
+	.titre {
+		color:var(--gris-fond);
+		font-size:32px;
+		font-weight:300;
+		position: relative;
+		text-align: center;
+		text-transform: uppercase;
+
+		&::after {
+			background-color: var(--rouge);
+			content:' ';
+			height:3px;
+			width:40px;
+			position:absolute;
+			bottom : -1rem;
+			left:calc(50% - 20px);
+		}
+
+		@include bp(md) {
+			font-size:28px;
+			line-height:62px;
+			margin-bottom:62px;
+			&::after {
+				bottom:-1rem;
+			}
+		}
+	}
+	.owl-carousel {
+		padding:0 20px;
+	}
+	.owl-nav {
+		display: flex;
+		justify-content: space-between;
+		left:0;
+		position:absolute;
+		top:calc(50% - 20px);
+		width:100%;
+		button {
+			background-color:transparent;
+			border:none;
+			margin:10px;
+			padding:0;
+			
+			span {
+				background-image:url('icons/Fleche-P.svg');
+				background-size:contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				color:transparent;
+				display: block;
+				height:19px;
+				left: -20px;
+				position:relative;
+				width:10px;
+				@include bp(md) {
+					left:-50px;
+				}
+
+			}
+			&.owl-next span {
+				background-image:url('icons/Fleche-S.svg');
+				left:20px;
+				@include bp(md) {
+					left:50px;
+				}
+			}
+		}
+
+	}
+}
