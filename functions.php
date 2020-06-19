@@ -31,7 +31,7 @@ if ( ! function_exists( 'mbb_setup' ) ) :
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
-		add_theme_support( 'post-thumbnails', array('post','page'));
+		add_theme_support( 'post-thumbnails', array('post','page','profil','coach','studio'));
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -146,6 +146,11 @@ require get_template_directory() . '/inc/template-functions.php';
 
 //add_image_size('banniere',1960,300,true);
 
+/**
+* CPT et custom taxonomies
+*/
+
+require_once( 'inc/cpt-taxonomies.php' );
 
 
 /**
