@@ -17,7 +17,7 @@ get_header();
 $masquer_titre=false;
 if(function_exists('mbb_page_avec_banniere') && mbb_page_avec_banniere()) {
 	$masquer_titre=true;
-} else if(function_exists('get_field') && get_field('masquer_titre_page')=='1') {
+} else if(function_exists('get_field') && get_field('masquer_titre')=='oui') {
 	$masquer_titre=true;
 }
 ?>
