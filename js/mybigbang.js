@@ -215,8 +215,9 @@
 		loop:true,
 		nav : true,
 		dots : false,
-		autoplay:false,
-		autoplayTimeout:2000,
+		autoplay:true,
+		autoplayTimeout:5000,
+		autoplaySpeed:1500,
 		autoplayHoverPause:true,
 		items:1,
 	});

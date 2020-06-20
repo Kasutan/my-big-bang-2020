@@ -2763,6 +2763,9 @@ a.fleche {
 .acf-block-profils .picto-desktop {
   display: none !important; }
 
+.acf-block-profils .decor-desktop {
+  display: none; }
+
 .acf-block-profils .profil {
   --accent: var(--terre); }
   .acf-block-profils .profil.eau {
@@ -2790,7 +2793,7 @@ a.fleche {
   font-size: 16px;
   font-weight: 600;
   padding: 2px 8px;
-  text-transform: unset; }
+  text-transform: none; }
 
 .acf-block-profils .picto-mobile {
   position: absolute;
@@ -2857,10 +2860,64 @@ a.fleche {
   text-align: right; }
 
 .acf-block-profils .owl-nav {
-  top: 100px; }
+  top: 27vw; }
   .acf-block-profils .owl-nav button span {
     left: 10px; }
   .acf-block-profils .owl-nav button.owl-next span {
     left: -10px; }
+
+@media (min-width: 768px) {
+  .acf-block-profils {
+    position: relative; }
+    .acf-block-profils .titre {
+      display: none; }
+    .acf-block-profils .profils {
+      position: relative; }
+    .acf-block-profils .profil {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 0 var(--padding-x); }
+    .acf-block-profils .image, .acf-block-profils .texte {
+      -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+      max-width: 50%;
+      position: relative; }
+    .acf-block-profils .image {
+      margin: 60px 0 0;
+      padding: 0; }
+    .acf-block-profils .texte {
+      padding-left: 70px; }
+    .acf-block-profils .picto-mobile, .acf-block-profils .decor-mobile {
+      display: none !important; }
+    .acf-block-profils .picto-desktop {
+      display: block	!important;
+      margin-bottom: 32px;
+      max-width: 132px; }
+    .acf-block-profils .decor-desktop {
+      background-image: url("icons/Motif-Silhouette-Desktop.svg");
+      background-repeat: repeat;
+      background-size: 68px 46px;
+      display: block;
+      right: 0;
+      position: absolute;
+      height: 30%;
+      top: 55%;
+      width: 80%; }
+    .acf-block-profils .description {
+      font-size: 18px;
+      margin-bottom: 40px;
+      max-width: 500px;
+      padding: 0; }
+    .acf-block-profils .element, .acf-block-profils .besoins {
+      padding: 0; }
+    .acf-block-profils .bloc-conseil {
+      left: -35%;
+      margin-top: 15%;
+      padding: 0; }
+    .acf-block-profils .relief {
+      padding: 35px; }
+    .acf-block-profils .owl-nav {
+      top: 40%; } }
 
 /*# sourceMappingURL=style.css.map */

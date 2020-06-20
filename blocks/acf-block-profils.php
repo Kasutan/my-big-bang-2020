@@ -37,10 +37,11 @@ function mbb_profils_callback( $block ) {
 	$label=esc_html(get_field('label'));
 	$cible=esc_url(get_field('cible'));
 
-	printf('<section class="acf-block-profils avec-ancre %s"><span class="ancre" id="%s"></span>', $className, $ancre);
+	printf('<section class="acf-block-profils avec-ancre %s alignfull"><span class="ancre" id="%s"></span>', $className, $ancre);
 		if($titre) printf('<h2 class="titre">%s</h2>',$titre);
+		echo '<div class="decor-desktop"></div>';
 		if( $profils ): 
-			echo '<ul class="profils owl-carousel owl-theme alignfull">';
+			echo '<ul class="profils owl-carousel owl-theme">';
 			foreach( $profils as $p):
 				$post_id=$p->ID; 
 				$element=mbb_get_element($post_id);
@@ -54,17 +55,17 @@ function mbb_profils_callback( $block ) {
 						printf('<div class="description">%s</div>',wp_kses_post(get_field('description',$post_id)));
 						printf('<div class="element"><p class="contraste">Son élément</p><p>%s</p><img src="%s" alt="" class="picto-mobile" height="61" weight="61"/></div>',$element,get_stylesheet_directory_uri(  ).'/icons\/'.$element.'.svg');
 						printf('<div class="besoins"><p class="contraste">Ses besoins</p><p>%s</p></div>',$besoins);
+						if($conseil) :
+							echo '<div class="bloc-conseil">';
+								echo '<div class="decor-mobile"></div>';
+								echo '<div class="relief"><p class="titre-conseil">Conseil de coach</p>';
+									printf('<div class="conseil">%s</div>',$conseil);
+									printf('<p>Votre profil est proche de celui de %s&nbsp;?</p>',$nom);
+									if($label && $cible) printf('<a href="%s" class="fleche inverse">%s</a>',$cible,$label); 
+								echo '</div>'; 
+							echo '</div>';
+						endif;
 					echo '</div>';//fin .texte 
-					if($conseil) :
-						echo '<div class="bloc-conseil">';
-							echo '<div class="decor-mobile"></div>';
-							echo '<div class="relief"><p class="titre-conseil">Conseil de coach</p>';
-								printf('<div class="conseil">%s</div>',$conseil);
-								printf('<p>Votre profil est proche de celui de %s&nbsp;?</p>',$nom);
-								if($label && $cible) printf('<a href="%s" class="fleche inverse">%s</a>',$cible,$label); 
-							echo '</div>'; 
-						echo '</div>';
-					endif;
 				echo '</li>';
 			endforeach; 
 			echo '</ul>';

@@ -25,6 +25,9 @@
 	.picto-desktop {
 		display:none !important;
 	}
+	.decor-desktop {
+		display: none;
+	}
 	.profil {
 		--accent : var(--terre);
 		&.eau {
@@ -55,7 +58,7 @@
 		font-size:16px;
 		font-weight:600;
 		padding:2px 8px;
-		text-transform: unset;
+		text-transform: none;
 	}
 	
 	.picto-mobile {
@@ -124,7 +127,7 @@
 		text-align: right;
 	}
 	.owl-nav {
-		top:100px;
+		top:27vw;
 		button {
 			span {
 			left:10px;
@@ -132,6 +135,71 @@
 			&.owl-next span {
 				left:-10px;
 			}
+		}
+	}
+
+	@include bp(md) {
+		position: relative;
+		.titre {
+			display: none;
+		}
+		.profils {
+			position: relative;
+		}
+		.profil {
+			display:flex;
+			padding:0 var(--padding-x);
+		}
+		.image, .texte {
+			flex-basis:50%;
+			max-width:50%;
+			position: relative;
+		}
+		.image {
+			margin:60px 0 0;
+			padding:0;
+		}
+		.texte {
+			padding-left:70px;
+		}
+		.picto-mobile, .decor-mobile {
+			display: none !important;
+		}
+		.picto-desktop {
+			display: block	!important;
+			margin-bottom:32px;
+			max-width:132px;
+		}
+		.decor-desktop {
+			background-image:url('icons/Motif-Silhouette-Desktop.svg');
+			background-repeat: repeat;
+			background-size:68px 46px;
+			display:block;
+			right:0;
+			position: absolute;
+			height:30%;
+			top:55%;
+			width:80%;
+		}
+		.description {
+			font-size: 18px;
+			margin-bottom: 40px;
+			max-width:500px;
+			padding:0;
+		}
+		.element, .besoins {
+			padding:0;
+		}
+		.bloc-conseil {
+			left:-35%;
+			margin-top:15%;
+			padding:0;
+		}
+		.relief {
+			padding:35px;
+		}
+		.owl-nav {
+			top:40%;
 		}
 	}
 }
