@@ -207,6 +207,20 @@
 		},
 	});
 
+	/****************** Carrousel de profils *************************/
+
+
+	$(".acf-block-profils .owl-carousel").owlCarousel({
+		center: false,
+		loop:true,
+		nav : true,
+		dots : false,
+		autoplay:false,
+		autoplayTimeout:2000,
+		autoplayHoverPause:true,
+		items:1,
+	});
+
 })( jQuery );
 
 

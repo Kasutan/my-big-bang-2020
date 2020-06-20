@@ -1,0 +1,137 @@
+.acf-block-profils {
+	.titre {
+		color:transparent;
+		font-size:60px;
+		font-weight:700;
+		letter-spacing: 3px;
+		line-height:1.24;
+		margin-bottom: 0;
+		position:relative;
+		text-align: center;
+		text-transform:uppercase;
+		top:32px;
+		-webkit-text-stroke: 1px var(--gris-decor);
+		white-space: nowrap;
+		z-index:2;
+	}
+	ul.profils {
+		list-style: none;
+		padding-left:0;
+	}
+	.image {
+		margin-bottom:10px;
+		padding:0 60px;
+	}
+	.picto-desktop {
+		display:none !important;
+	}
+	.profil {
+		--accent : var(--terre);
+		&.eau {
+			--accent : var(--eau);
+		}
+		&.feu {
+			--accent : var(--feu);
+		}
+		&.air {
+			--accent : var(--air);
+		}
+	}
+	.description {
+		font-size:16px;
+		padding:0 var(--padding-x) 10px;
+	}
+	.element, .besoins {
+		color:#989895;
+		font-weight:300;
+		padding:0 var(--padding-x);
+		position:relative;
+		text-transform: uppercase;
+	}
+	.contraste {
+		background-color:var(--accent);
+		color:var(--blanc);
+		display: inline-block;
+		font-size:16px;
+		font-weight:600;
+		padding:2px 8px;
+		text-transform: unset;
+	}
+	
+	.picto-mobile {
+		position: absolute;
+		right:37px;
+		top:0;
+		max-width:61px;
+	}
+	.separateur {
+		color: transparent;
+		font-weight: bold;
+		margin: 0 1ch;
+		background: var(--accent);
+		width: 2px;
+		display: inline-block;
+		height: 15px;
+		position: relative;
+		top: 5px;
+	}
+	.bloc-conseil {
+		padding-top: 73px;
+		padding-left: 53px;
+		position: relative;
+	}
+	.decor-mobile {
+		background-image:url('icons/Motif-Silhouette-Mobile.svg');
+		background-repeat: repeat;
+		background-size:53px 36px;
+		left:0;
+		position: absolute;
+		height:256px;
+		top:0;
+		width:100%;
+	}
+	.relief {
+		background-color:var(--rouge);
+		color:var(--blanc);
+		padding:35px 25px;
+		position: relative;
+	}
+	.titre-conseil {
+		font-size:26px;
+		font-weight:900;
+		text-transform: uppercase;
+	}
+	.conseil {
+		font-size:16px;
+		margin-bottom: 30px;
+		padding-bottom:10px;
+		position: relative;
+		&::after {
+			background-color:var(--blanc);
+			border-radius:2px;
+			bottom:0;
+			content:' ';
+			height:3px;
+			left:0;
+			position:absolute;
+			width:40px;
+		}
+	}
+	.fleche {
+		display: block;
+		float:none;
+		margin-top:20px;
+		text-align: right;
+	}
+	.owl-nav {
+		top:100px;
+		button {
+			span {
+			left:10px;
+			}
+			&.owl-next span {
+				left:-10px;
+			}
+		}
+	}
+}

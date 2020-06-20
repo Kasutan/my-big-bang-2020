@@ -224,3 +224,22 @@ function mbb_studio_post_type() {
 }
 add_action( 'init', 'mbb_studio_post_type', 0 );
 
+/***************************************************************
+	Fonctions communes
+/***************************************************************/
+function mbb_get_element($post_id) {
+	$terms=get_the_terms($post_id,'element');
+	if($terms) {
+		return $terms[0]->name;
+	}
+}
+function mbb_get_besoins($post_id) {
+	$terms=get_the_terms($post_id,'besoin');
+	if($terms) {
+		$besoins=array();
+		foreach($terms as $term) {
+			$besoins[]=$term->name;
+		}
+		return join(' <span class="separateur"> | </span>',$besoins);
+	}
+}

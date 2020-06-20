@@ -187,6 +187,7 @@ require_once( 'blocks/acf-block-presse.php' );
 require_once( 'blocks/acf-block-blog.php' );
 require_once( 'blocks/acf-block-newsletter.php' );
 require_once( 'blocks/acf-block-elements.php' );
+require_once( 'blocks/acf-block-profils.php' );
 
 /**
 * Page options
