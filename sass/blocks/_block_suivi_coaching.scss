@@ -1,0 +1,78 @@
+.acf-block-suivi-coaching {
+    background-image:url('icons/Motif-Particules-Mobile.svg');
+    background-repeat: no-repeat;
+    background-size:100%;
+    background-position-y:bottom;
+    .zone {
+        align-items: center;
+        display: flex;
+        flex-direction:column;
+        padding:0 var(--padding-x);
+
+        &:nth-of-type(2) {
+            flex-direction:column-reverse;
+        }
+
+        .image {
+            display: flex;
+            max-height: 310px;
+            img {
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+        
+        .image, .texte-wrap {
+            margin-bottom:20px;
+        }
+        h3 {
+            background-color:var(--rouge);
+            color:var(--blanc);
+            display: inline-block;
+            padding:8px 8px 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li {
+                background-image: url('icons/fleche_simple.svg');
+                background-position: left 5px;
+                background-repeat: no-repeat;
+                background-size:15px 9px;
+                padding-left:25px;
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+    @include bp(md) {
+        background-image:url('icons/Motif-Particules-Desktop.svg');
+        background-repeat: repeat;
+        background-size: 250px 100%;
+        background-position-y: 150px;
+        .zone {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            &:nth-of-type(2) {
+                flex-direction:row-reverse;
+            }
+            .image {
+                max-height:unset;
+                display: block ;
+                img {
+                    margin:auto;
+                }
+            }
+        
+        }
+        .image, .texte-wrap {
+            flex-basis:50%;
+            margin:20px;
+        }
+    }
+}
