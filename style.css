@@ -2992,7 +2992,7 @@ a.fleche {
 .acf-block-coach-personnel h3 {
   color: var(--blanc);
   font-size: 26px;
-  line-height: 34px;
+  line-height: 1.3;
   margin-bottom: 0;
   position: relative; }
   .acf-block-coach-personnel h3::before {
@@ -3010,20 +3010,67 @@ a.fleche {
 .acf-block-coach-personnel .texte {
   color: #2D2F38; }
 
-@media (min-width: 960px) {
+.acf-block-coach-personnel .mots {
+  bottom: -30px;
+  color: transparent;
+  font-size: 50px;
+  font-weight: 900;
+  left: calc(100% - 1px * var(--scroll-mots));
+  line-height: 1.24;
+  position: relative;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px var(--gris-decor);
+  white-space: nowrap; }
+
+@media (min-width: 768px) {
   .acf-block-coach-personnel .fond {
-    padding: 90px var(--padding-x) 98px; }
+    padding: 90px var(--padding-x) 200px; }
   .acf-block-coach-personnel .intro {
-    margin-bottom: 42px;
-    max-width: 800px; }
+    margin-bottom: 114px; }
     .acf-block-coach-personnel .intro p {
-      font-size: 22px; }
+      font-size: 20px; }
+  .acf-block-coach-personnel .avantages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0; }
+  .acf-block-coach-personnel .chiffre {
+    font-size: 130px;
+    top: -48px; }
   .acf-block-coach-personnel h3 {
-    margin-bottom: 33px;
-    padding-bottom: 31px; }
+    font-size: 34px;
+    line-height: 1.5; }
   .acf-block-coach-personnel .texte {
-    max-width: unset; }
-    .acf-block-coach-personnel .texte p {
-      font-size: 1rem; } }
+    font-size: 18px; }
+  .acf-block-coach-personnel .avantage {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    margin-bottom: 144px;
+    margin-top: 0; }
+    .acf-block-coach-personnel .avantage:nth-of-type(2n) {
+      padding-left: 35px;
+      position: relative;
+      top: 140px; }
+      .acf-block-coach-personnel .avantage:nth-of-type(2n) h3::before {
+        left: -38px; }
+      .acf-block-coach-personnel .avantage:nth-of-type(2n) .chiffre {
+        left: 40px; }
+    .acf-block-coach-personnel .avantage:nth-of-type(2n+1) {
+      padding-right: 35px;
+      text-align: right; }
+      .acf-block-coach-personnel .avantage:nth-of-type(2n+1) .chiffre {
+        left: unset;
+        right: 40px; }
+      .acf-block-coach-personnel .avantage:nth-of-type(2n+1) h3::before {
+        left: unset;
+        right: -39px; }
+  .acf-block-coach-personnel .pointilles {
+    left: 50%; }
+  .acf-block-coach-personnel .mots {
+    bottom: -100px;
+    font-size: 85px;
+    line-height: 62px; } }
 
 /*# sourceMappingURL=style.css.map */

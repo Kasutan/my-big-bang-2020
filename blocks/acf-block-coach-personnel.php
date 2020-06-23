@@ -55,8 +55,8 @@ function mbb_coach_personnel_callback( $block ) {
 			endwhile;
 			echo '</ol>'; //fin .avantages
 		endif;
-		echo '</div>'; //fin .fond
 		if($mots) printf('<div class="mots">%s</div>',$mots);	
+		echo '</div>'; //fin .fond
 	echo "</section>";
 
 }

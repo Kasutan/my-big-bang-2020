@@ -134,6 +134,25 @@
                     "new_lines": "br"
                 }
             ]
+        },
+        {
+            "key": "field_5ef232bb53ffe",
+            "label": "Mots qui défilent au scroll",
+            "name": "mots",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -153,5 +172,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1592924527
+    "modified": 1592931045
 }
