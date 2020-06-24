@@ -3110,8 +3110,11 @@ a.fleche {
     .acf-block-suivi-coaching .zone h3 {
       background-color: var(--rouge);
       color: var(--blanc);
-      display: inline-block;
-      padding: 8px 8px 0; }
+      display: inline;
+      padding: 2px 8px 2px;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      line-height: 2; }
     .acf-block-suivi-coaching .zone ul {
       list-style: none;
       padding: 0;
@@ -3153,6 +3156,7 @@ a.fleche {
           max-height: unset;
           display: block; }
           .acf-block-suivi-coaching .zone .image img {
+            display: block;
             margin: auto; }
       .acf-block-suivi-coaching .image, .acf-block-suivi-coaching .texte-wrap {
         -ms-flex-preferred-size: 50%;
