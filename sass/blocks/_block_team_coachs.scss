@@ -1,0 +1,282 @@
+.acf-block-team-coachs {
+	.intro {
+		margin-bottom: 30px;
+		text-align: center;
+
+		span {
+			background-color: var(--rouge);
+			color: var(--blanc);
+			display: inline;
+			font-size: 16px;
+			font-weight: 700;
+			padding: 2px 8px 2px;
+			box-decoration-break: clone;
+			line-height: 2;
+		}
+
+		.separateur {
+			display: block;
+			height: 0;
+			width: 0;
+			overflow: hidden;
+		}
+	}
+
+	.fond {
+		background-color: var(--bleu);
+		color: var(--blanc);
+		padding: 50px 0 25px;
+		position: relative;
+
+
+	}
+
+	.decor {
+		background-image: url('icons/Motif-Silhouette-Mobile.svg');
+		background-repeat: repeat;
+		background-size: 53px 36px;
+		background-position-y: top;
+		height: 256px;
+		left: 0;
+		opacity: 0.2;
+		position: absolute;
+		top: 5px;
+		width: 100%;
+	}
+
+	.coachs-wrapper {
+		overflow-y: auto;
+		position: relative;
+	}
+
+	.coachs {
+		display: flex;
+		list-style: none;
+		overflow-y: visible;
+		padding-left: 30px;
+		margin-left: 0;
+	}
+
+	.coach {
+		flex-basis: 260px;
+		flex-shrink: 0;
+		padding-right: 30px;
+
+		&:last-of-type {
+			margin-right: 30px;
+		}
+
+		--accent : var(--terre);
+
+		&.eau {
+			--accent: var(--eau);
+		}
+
+		&.feu {
+			--accent: var(--feu);
+		}
+
+		&.air {
+			--accent: var(--air);
+		}
+	}
+
+	.image {
+		display: flex;
+		height: 270px;
+		margin-bottom: 16px;
+
+		img {
+			object-fit: cover;
+			width: 100%;
+		}
+	}
+
+	.nom {
+		align-items: flex-end;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	h3 {
+		color: var(--blanc);
+		font-size: 26px;
+		line-height: 62px;
+		margin-bottom: 0;
+		;
+	}
+
+	.picto {
+		max-width: 50px;
+	}
+
+	.infos {
+		position: relative;
+		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
+
+		li {
+			line-height: 47px;
+			margin-bottom: 0;
+			padding-left: 15px;
+			position: relative;
+			text-transform: uppercase;
+
+			&::before {
+				background-color: var(--bleu);
+				border: solid 2px var(--accent);
+				border-radius: 50%;
+				content: '';
+				display: inline-block;
+				height: 9px;
+				width: 9px;
+				position: absolute;
+				left: -4px;
+				top: 15px;
+			}
+
+			span {
+				color: var(--accent);
+			}
+		}
+	}
+
+	.pointilles {
+		border-right: dashed 1px var(--accent);
+		height: 100px;
+		left: 0;
+		position: absolute;
+		top: 15px;
+		width: 1px;
+	}
+
+	a.cta-resultat {
+		align-items: center;
+		color: var(--blanc);
+		display: flex;
+		font-weight: 500;
+		height: 41px;
+		justify-content: flex-end;
+		letter-spacing: 0.5px;
+		text-align: right;
+		text-decoration: none;
+		margin: 0 0 30px;
+
+		span {
+			font-size: 14px;
+			padding-right: 15px;
+		}
+
+		svg {
+			max-width: 41px;
+			transform: left var(--transition);
+
+			.fleche {
+				fill: var(--blanc);
+			}
+
+			.cercle {
+				fill: var(--accent);
+			}
+		}
+
+		&:focus,
+		&:hover,
+		&:active {
+			text-decoration: none;
+
+			svg {
+				left: 3px;
+				position: relative;
+			}
+
+		}
+	}
+
+	.owl-nav {
+		display: none;
+	}
+
+
+	@include bp(lg) {
+		.titre {
+			margin-bottom: 20px;
+		}
+
+		.intro {
+			margin-bottom: 60px;
+
+			.separateur {
+				display: inline;
+				font-weight: 700;
+			}
+		}
+
+		.fond {
+			padding: 112px 0 60px 350px;
+
+			&::after {
+				content: ' ';
+				background-color: #F0EEE7;
+				content: ' ';
+				width: 3px;
+				height: 60px;
+				position: absolute;
+				top: -30px;
+				left: calc(50% - 1.5px);
+			}
+
+		}
+
+		.decor {
+			background-image: url('icons/Motif-Silhouette-Desktop.svg');
+			background-size: 68px 46px;
+			height: 100%;
+			top: 0;
+			width: 300px;
+
+		}
+
+		.coachs-wrapper {
+			overflow-y: unset;
+		}
+
+		.coachs {
+			left: 0;
+			position: relative;
+			transition: left var(--transition);
+		}
+
+		.coach {
+			flex-basis: 428px;
+			padding-right: 123px;
+		}
+
+		.image {
+			height: 364px;
+			margin-bottom: 20px;
+		}
+
+		.infos {
+			font-size: 14px;
+			margin-bottom: 16px;
+		}
+
+
+		.fleches {
+			display: flex;
+			justify-content: flex-end;
+			position: relative;
+			padding-right: 75px;
+
+			button {
+				padding: 0;
+				width: 10px;
+				background: none;
+				border: none;
+				margin: 0 25px;
+			}
+		}
+	}
+}
