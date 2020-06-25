@@ -3180,7 +3180,8 @@ a.fleche {
     display: block;
     height: 0;
     width: 0;
-    overflow: hidden; }
+    overflow: hidden;
+    padding: 0; }
 
 .acf-block-team-coachs .fond {
   background-color: var(--bleu);
@@ -3337,7 +3338,8 @@ a.fleche {
     margin-bottom: 60px; }
     .acf-block-team-coachs .intro .separateur {
       display: inline;
-      font-weight: 700; }
+      font-weight: 700;
+      padding: 2px 8px 2px; }
   .acf-block-team-coachs .fond {
     padding: 112px 0 60px 350px; }
     .acf-block-team-coachs .fond::after {
