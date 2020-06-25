@@ -142,8 +142,24 @@
 			}
 		});
 
+		/****************** Sliders coachs *************************/
+		var flecheSlider=$('.fleche-coach');
+		flecheSlider.click(function (e) { 
+			var slider=$('#coachs');
+			var active=parseInt(slider.attr('data-active'));
+			var derniere=parseInt(slider.attr('data-nombre'));
+			var direction=parseInt($(this).attr("data-direction"));
+			var newSlide=active+direction;
+			var slideWidth=$('.coach').outerWidth();
+			if(newSlide >= 0 && newSlide < derniere) {
+				var newLeft=-1 * newSlide * slideWidth;
+				slider.css('left',newLeft);
+				slider.attr('data-active',newSlide);
+			}
+		});
+
 		
-	});
+	}); //fin jquery
 
 	/****************** Mots qui défilent au scroll *************************/
 	
