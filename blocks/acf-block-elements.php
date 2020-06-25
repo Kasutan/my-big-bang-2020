@@ -52,7 +52,7 @@ function mbb_elements_callback( $block ) {
 					printf('<ul class="mots-cles"><li>%s</li><li>%s</li><li>%s</li></ul>',
 						esc_html(get_sub_field('mot_1')),
 						esc_html(get_sub_field('mot_2')),
-						esc_html(get_sub_field('mot_3')),
+						esc_html(get_sub_field('mot_3'))
 					);
 					printf('<div class="texte">%s</div>',wp_kses_post(get_sub_field('description')));
 				echo "</div>";
