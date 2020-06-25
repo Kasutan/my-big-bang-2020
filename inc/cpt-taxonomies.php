@@ -142,7 +142,7 @@ function mbb_coach_post_type() {
 		'label'                 => __( 'Coach', 'mybigbang' ),
 		'description'           => __( 'Post Type Description', 'mybigbang' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom-fields' ),
+		'supports'              => array( 'title', 'thumbnail', 'revisions', 'custom-fields' ),
 		'taxonomies'            => array( 'element' ),
 		'hierarchical'          => false,
 		'public'                => false,
