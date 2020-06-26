@@ -46,7 +46,7 @@ function mbb_deroule_seance_callback( $block ) {
 				if($num<10) : $chiffre="0".$num; else : $chiffre=$num; endif;
 				printf('<li class="etape">
 						<div class="texte">
-							<div class="chiffre">0%s</div>
+							<div class="chiffre">%s</div>
 							<div class="titre"><strong><span>%s</span> %s </strong> %s</div>
 						</div>
 						<div class="picto desktop">%s</div>	
