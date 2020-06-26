@@ -192,6 +192,7 @@ require_once( 'blocks/acf-block-coach-personnel.php' );
 require_once( 'blocks/acf-block-suivi-coaching.php' );
 require_once( 'blocks/acf-block-team-coachs.php' );
 require_once( 'blocks/acf-block-deroule-seance.php' );
+require_once( 'blocks/acf-block-rdv.php' );
 
 /**
 * Page options

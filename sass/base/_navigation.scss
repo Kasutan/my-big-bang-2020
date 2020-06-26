@@ -53,6 +53,48 @@ a.fleche {
 	
 }
 
+a.cta-resultat {
+	align-items: center;
+	color: var(--blanc);
+	display: flex;
+	font-weight: 500;
+	height: 41px;
+	justify-content: flex-end;
+	letter-spacing: 0.5px;
+	text-align: right;
+	text-decoration: none;
+	margin: 0 0 30px;
+
+	span {
+		font-size: 14px;
+		padding-right: 15px;
+	}
+
+	svg {
+		max-width: 41px;
+		transform: left var(--transition);
+
+		.fleche {
+			fill: var(--rouge);
+		}
+
+		.cercle {
+			fill: var(--blanc);
+		}
+	}
+
+	&:focus,
+	&:hover,
+	&:active {
+		text-decoration: none;
+
+		svg {
+			left: 3px;
+			position: relative;
+		}
+
+	}
+}
 /*--------------------------------------------------------------
 ## Ancres
 --------------------------------------------------------------*/

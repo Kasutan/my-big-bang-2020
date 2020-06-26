@@ -1,0 +1,70 @@
+.acf-block-rdv {
+	padding:0 0 70px;
+	h2, .intro {
+		padding:0 20px;
+	}
+	h2 {
+		line-height: 36px;
+		margin-bottom: 26px;
+	}
+	.intro {
+		font-size: 16px;
+		text-align: center;
+	}
+	.mots {
+		bottom:-30px;
+		color:transparent;
+		font-size:50px;
+		font-weight:900;
+		left: calc(100% - 1px * var(--scroll-mots)); //variable actualisée au scroll en JS
+		line-height:1.24;
+		position:relative;
+		text-transform:uppercase;
+		-webkit-text-stroke: 2px var(--gris-decor);
+		white-space: nowrap;
+	}
+	.rdvs {
+		display: flex;
+		flex-wrap: nowrap;
+		overflow-x:auto;
+		padding-bottom:70px;
+		padding-right: 33px;
+		position: relative;
+	}
+	.rdv {
+		background-color:var(--bleu);
+		color:var(--blanc);
+		margin-right:33px;
+		padding:45px 30px;
+		flex-basis:calc(286px + 33px);
+		flex-shrink:0;
+	}
+	h3 {
+		font-size: 18px;
+		text-align: center;
+		line-height: 30px;
+		letter-spacing: 0.5px;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	}
+	.image {
+		display: block;
+		height:105px;
+		margin: 0 auto 20px;
+		width:105px;
+	}
+	.texte {
+		margin-bottom:20px;
+	}
+
+	.decor {
+		background-image: url('icons/Motif-Silhouette-Mobile.svg');
+		background-repeat: repeat;
+		background-size: 53px 36px;
+		height: 359px;
+		left: 0;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+}
