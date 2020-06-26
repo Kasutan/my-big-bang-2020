@@ -22,6 +22,7 @@
 		text-transform:uppercase;
 		-webkit-text-stroke: 2px var(--gris-decor);
 		white-space: nowrap;
+		z-index: 1;
 	}
 	.rdvs {
 		display: flex;
@@ -66,5 +67,46 @@
 		position: absolute;
 		bottom: 0;
 		width: 100%;
+	}
+	@include bp(md) {
+		padding:0 var(--padding-x) 70px;
+		h2 {
+			line-height: 64px;
+			margin-bottom: 35px;
+		}
+		.intro {
+			font-size: 20px;
+			line-height: 30px;
+		}
+		.mots {
+			bottom:-35px;
+			font-size: 85px;
+			line-height: 62px;
+		}
+		.rdvs {
+			justify-content: center;
+			padding-right:unset;
+			overflow-x: unset;
+		}
+		.rdv {
+			flex-basis:calc(375px + 90px);
+			flex-grow:0;
+			flex-shrink: 1;
+			margin:0 45px;
+		}
+		h3 {
+			font-size: 20px;
+		}
+		.image {
+			margin-bottom: 40px;
+		}
+		.texte {
+			line-height: 28px;
+		}
+		.decor {
+			background-image: url('icons/Motif-Silhouette-Desktop.svg');
+			background-size: 68px 46px;
+			height: 463px;
+		}
 	}
 }
