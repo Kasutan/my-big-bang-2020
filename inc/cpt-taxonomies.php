@@ -43,6 +43,26 @@ register_taxonomy('besoin','profil',array(
 ));
 }
 
+add_action( 'init', 'create_session_tag', 0 );
+function create_session_tag() {
+// Labels part for the GUI
+$labels = array(
+	'name' => _x( 'Types de sessions', 'taxonomy general name' ),
+	'singular_name' => _x( 'Type de sessions', 'taxonomy singular name' ),
+	'menu_name' => __( 'Types de sessions' ),
+); 
+register_taxonomy('type_sessions','session',array(
+	'hierarchical' => true,
+	'labels' => $labels,
+	'show_ui' => true,
+	'show_admin_column' => true,
+	'query_var' => false,
+	'public' => false,
+	'show_in_rest' => true
+));
+}
+
+
 
 /***************************************************************
 	Custom Post Type : profil
@@ -225,6 +245,57 @@ function mbb_studio_post_type() {
 add_action( 'init', 'mbb_studio_post_type', 0 );
 
 /***************************************************************
+	Custom Post Type : sessions
+/***************************************************************/
+function mbb_session_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Sessions', 'Post Type General Name', 'mybigbang' ),
+		'singular_name'         => _x( 'Session', 'Post Type Singular Name', 'mybigbang' ),
+		'menu_name'             => __( 'Sessions', 'mybigbang' ),
+		'name_admin_bar'        => __( 'Sessions', 'mybigbang' ),
+		'archives'              => __( 'Item Archives', 'mybigbang' ),
+		'attributes'            => __( 'Item Attributes', 'mybigbang' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'mybigbang' ),
+		'all_items'             => __( 'Toutes les sessions', 'mybigbang' ),
+		'add_new_item'          => __( 'Ajouter une session', 'mybigbang' ),
+		'add_new'               => __( 'Ajouter', 'mybigbang' ),
+		'new_item'              => __( 'Nouvelle session', 'mybigbang' ),
+		'edit_item'             => __( 'Modifier la session', 'mybigbang' ),
+		'update_item'           => __( 'Mettre à jour la session', 'mybigbang' ),
+		'view_item'             => __( 'Voir la session', 'mybigbang' ),
+		'view_items'            => __( 'Voir les sessions', 'mybigbang' ),
+		'search_items'          => __( 'Rechercher une session', 'mybigbang' ),
+		'not_found'             => __( 'Aucune session', 'mybigbang' ),
+		'not_found_in_trash'    => __( 'Aucune session dans la corbeille', 'mybigbang' ),
+	);
+	$args = array(
+		'label'                 => __( 'Session', 'mybigbang' ),
+		'description'           => __( 'Sessions à réserver en ligne ou en studio', 'mybigbang' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'revisions', 'custom-fields' ),
+		'taxonomies'            => array( 'type_sessions'),
+		'hierarchical'          => false,
+		'public'                => false,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-calendar-alt',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => false,
+		'can_export'            => true,
+		'has_archive'           => false,
+		'exclude_from_search'   => true,
+		'publicly_queryable'    => false,
+		'capability_type'       => 'page',
+		'show_in_rest'          => true,
+	);
+	register_post_type( 'session', $args );
+
+}
+add_action( 'init', 'mbb_session_post_type', 0 );
+
+/***************************************************************
 	Fonctions communes
 /***************************************************************/
 function mbb_get_element($post_id) {
@@ -241,5 +312,11 @@ function mbb_get_besoins($post_id) {
 			$besoins[]=$term->name;
 		}
 		return join(' <span class="separateur"> | </span>',$besoins);
+	}
+}
+function mbb_get_type_session_id($post_id) {
+	$terms=get_the_terms($post_id,'type_session');
+	if($terms) {
+		return $terms[0]->term_id;
 	}
 }
