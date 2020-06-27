@@ -95,7 +95,7 @@ function mbb_reservation_session_callback( $block ) {
 			);
 			$count++;
 		}
-		printf('<div class="fleches"><button class="fleche-session gauche" data-direction="-1"><img alt="naviguer vers la gauche" src="%s"/></button> <button class="fleche-session droite" data-direction="+1"><img alt="naviguer vers la droite" src="%s"/></button></div>', mbb_get_picto_url('Fleche-P-blanche'), mbb_get_picto_url('Fleche-S-blanche'));
+		printf('<div class="fleches"><button class="fleche-session gauche" data-direction="-1"><img alt="naviguer vers la gauche" src="%s"/></button> <button class="fleche-session droite" data-direction="+1"><img alt="naviguer vers la droite" src="%s"/></button></div>', mbb_get_picto_url('Fleche-P'), mbb_get_picto_url('Fleche-S'));
 		echo '</nav>';
 
 		echo '<div class="sessions-wrapper">'; //scroll horizontal

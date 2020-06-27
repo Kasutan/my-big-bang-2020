@@ -3712,12 +3712,12 @@ a.cta-resultat {
   height: 325px;
   left: 0;
   position: absolute;
-  top: 390px;
+  top: 365px;
   width: 100%; }
 
 .acf-block-reservation-sessions .navigation {
   margin-bottom: 40px; }
-  .acf-block-reservation-sessions .navigation button {
+  .acf-block-reservation-sessions .navigation > button {
     background-color: var(--accent);
     border: none;
     display: block;
@@ -3728,17 +3728,17 @@ a.cta-resultat {
     text-align: left;
     text-transform: unset;
     width: 100%; }
-    .acf-block-reservation-sessions .navigation button.type-1 {
+    .acf-block-reservation-sessions .navigation > button.type-1 {
       --accent: var(--rouge); }
-    .acf-block-reservation-sessions .navigation button.type-2 {
+    .acf-block-reservation-sessions .navigation > button.type-2 {
       --accent: var(--bleu); }
-    .acf-block-reservation-sessions .navigation button.type-3 {
+    .acf-block-reservation-sessions .navigation > button.type-3 {
       --accent: #989895; }
-    .acf-block-reservation-sessions .navigation button.type-4 {
+    .acf-block-reservation-sessions .navigation > button.type-4 {
       --accent: #AAA89E; }
-    .acf-block-reservation-sessions .navigation button.actif, .acf-block-reservation-sessions .navigation button:hover, .acf-block-reservation-sessions .navigation button:focus {
+    .acf-block-reservation-sessions .navigation > button.actif, .acf-block-reservation-sessions .navigation > button:hover, .acf-block-reservation-sessions .navigation > button:focus {
       color: var(--blanc); }
-      .acf-block-reservation-sessions .navigation button.actif::after, .acf-block-reservation-sessions .navigation button:hover::after, .acf-block-reservation-sessions .navigation button:focus::after {
+      .acf-block-reservation-sessions .navigation > button.actif::after, .acf-block-reservation-sessions .navigation > button:hover::after, .acf-block-reservation-sessions .navigation > button:focus::after {
         background-color: var(--blanc);
         border-radius: 2px;
         content: ' ';
@@ -3760,9 +3760,14 @@ a.cta-resultat {
   -ms-flex-wrap: no-wrap;
   flex-wrap: no-wrap;
   list-style: none;
+  margin-top: 0;
   margin-bottom: 30px;
   padding-left: 20px;
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  left: 0;
+  position: relative;
+  -webkit-transition: left var(--transition);
+  transition: left var(--transition); }
 
 .acf-block-reservation-sessions .session {
   -webkit-box-align: center;
@@ -3841,5 +3846,81 @@ a.cta-resultat {
     font-size: 16px;
     line-height: 24px;
     font-weight: 600; }
+
+@media (min-width: 768px) {
+  .acf-block-reservation-sessions .intro {
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 840px;
+    margin: 0 auto 20px;
+    padding: 0; }
+  .acf-block-reservation-sessions .decor {
+    background-image: url("icons/Motif-Silhouette-Desktop.svg");
+    background-size: 68px 46px;
+    height: 463px;
+    top: 325px; }
+  .acf-block-reservation-sessions .navigation {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 34px; }
+    .acf-block-reservation-sessions .navigation > button {
+      line-height: 24px;
+      padding: 7px 7px 0;
+      margin-bottom: 30px;
+      margin-right: 11px;
+      text-align: center;
+      width: unset; }
+      .acf-block-reservation-sessions .navigation > button.actif::after, .acf-block-reservation-sessions .navigation > button:hover::after, .acf-block-reservation-sessions .navigation > button:focus::after {
+        background-color: var(--accent);
+        top: unset;
+        bottom: -29px;
+        right: calc(50% - 20px); }
+    .acf-block-reservation-sessions .navigation .fleches {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      margin-left: auto;
+      position: relative; }
+      .acf-block-reservation-sessions .navigation .fleches button {
+        padding: 0;
+        width: 10px;
+        background: none;
+        border: none;
+        margin: 0 25px; }
+  .acf-block-reservation-sessions .sessions-wrapper {
+    overflow-x: unset; }
+  .acf-block-reservation-sessions .sessions {
+    padding-left: var(--padding-x);
+    padding-bottom: 0;
+    margin-bottom: 160px; }
+  .acf-block-reservation-sessions .session {
+    -ms-flex-preferred-size: 375px;
+    flex-basis: 375px;
+    margin-right: 70px;
+    min-height: 364px;
+    padding: 75px 30px 30px; }
+    .acf-block-reservation-sessions .session h3 {
+      padding-bottom: 30px; }
+  .acf-block-reservation-sessions .prix {
+    font-size: 48px;
+    line-height: 34px; }
+    .acf-block-reservation-sessions .prix span {
+      font-size: 22px; }
+  .acf-block-reservation-sessions .prix-dessus, .acf-block-reservation-sessions .prix-dessous, .acf-block-reservation-sessions .info {
+    font-size: 18px;
+    line-height: 34px; }
+  .acf-block-reservation-sessions .eclairage .relief {
+    font-size: 20px;
+    line-height: 32px;
+    max-width: 927px;
+    padding-right: 50px;
+    top: 0; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -44,13 +44,13 @@
 		height: 325px;
 		left: 0;
 		position: absolute;
-		top: 390px;
+		top: 365px;
 		width: 100%;
 	}
 
 	.navigation {
 		margin-bottom: 40px;
-		button {
+		> button {
 			&.type-1 {
 				--accent: var(--rouge);
 			}
@@ -107,9 +107,14 @@
 		display: flex;
 		flex-wrap: no-wrap;
 		list-style: none;
+		margin-top:0;
 		margin-bottom: 30px;
 		padding-left: 20px;
 		padding-bottom:30px;
+
+		left: 0;
+		position: relative;
+		transition: left var(--transition);
 
 	}
 
@@ -196,6 +201,103 @@
 			font-size: 16px;
 			line-height: 24px;
 			font-weight: 600;
+		}
+	}
+
+	@include bp(md) {
+		.intro {
+			font-size: 20px;
+			line-height: 30px;
+			max-width: 840px;
+			margin:0 auto 20px;
+			padding:0;
+		}
+		.decor {
+			background-image: url('icons/Motif-Silhouette-Desktop.svg');
+			background-size: 68px 46px;
+			height: 463px;
+			top:325px;
+		}
+		.navigation {
+			align-items: flex-start;
+			display: flex;
+			margin-bottom:34px;
+			> button {
+				line-height: 24px;
+				padding:7px 7px 0;
+				margin-bottom: 30px;
+				margin-right:11px;
+				text-align: center;
+				width:unset;
+				&.actif,
+				&:hover,
+				&:focus {
+					&::after {
+						background-color: var(--accent);
+						top:unset;
+						bottom:-29px;
+						right:calc(50% - 20px);
+					}
+				}
+			}
+			.fleches {
+				display: flex;
+				justify-content: flex-end;
+				margin-left: auto;
+				position: relative;
+	
+				button {
+					padding: 0;
+					width: 10px;
+					background: none;
+					border: none;
+					margin: 0 25px;
+				}
+			}
+		}
+		
+		.sessions-wrapper {
+			overflow-x:unset;
+		}
+
+		.sessions {
+			padding-left:var(--padding-x);
+			padding-bottom: 0;
+			margin-bottom: 160px;
+		}
+
+		.session {
+			flex-basis:375px;
+			margin-right: 70px;
+			min-height:364px;
+			padding:75px 30px 30px;
+
+			h3 {
+				padding-bottom:30px;
+			}
+		}
+
+		.prix {
+			font-size: 48px;
+			line-height: 34px;
+			span {
+				font-size: 22px;
+			}
+		}
+
+		.prix-dessus, .prix-dessous, .info {
+			font-size: 18px;
+			line-height: 34px;
+		}
+
+		.eclairage {
+			.relief {
+				font-size: 20px;
+				line-height: 32px;
+				max-width: 927px;
+				padding-right: 50px;
+				top:0;
+			}
 		}
 	}
 	
