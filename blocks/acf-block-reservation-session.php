@@ -113,7 +113,7 @@ function mbb_reservation_session_callback( $block ) {
 					$label=esc_html(get_field('label',$post_id));
 					$cible=esc_url(get_field('cible',$post_id));
 
-					printf('<li class="session type-%s" data-type="%s" data-session"%s">',$count,$term_id,$count2);
+					printf('<li class="session type-%s" data-type="%s" data-session="%s">',$count,$term_id,$count2);
 						printf('<h3>%s</h3>',$nom);
 						if($prix_dessus) printf('<div class="prix-dessus">%s</div>',$prix_dessus);
 						if($prix) printf('<div class="prix">%s<span>%s</span></div>',$prix,$prix_cote);

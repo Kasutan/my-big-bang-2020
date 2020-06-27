@@ -3751,6 +3751,7 @@ a.cta-resultat {
     display: none; }
 
 .acf-block-reservation-sessions .sessions-wrapper {
+  padding-left: 20px;
   overflow-x: auto; }
 
 .acf-block-reservation-sessions .sessions {
@@ -3762,7 +3763,7 @@ a.cta-resultat {
   list-style: none;
   margin-top: 0;
   margin-bottom: 30px;
-  padding-left: 20px;
+  padding-left: 0;
   padding-bottom: 30px;
   left: 0;
   position: relative;
@@ -3895,9 +3896,9 @@ a.cta-resultat {
         border: none;
         margin: 0 25px; }
   .acf-block-reservation-sessions .sessions-wrapper {
-    overflow-x: unset; }
+    overflow-x: unset;
+    padding-left: var(--padding-x); }
   .acf-block-reservation-sessions .sessions {
-    padding-left: var(--padding-x);
     padding-bottom: 0;
     margin-bottom: 160px; }
   .acf-block-reservation-sessions .session {

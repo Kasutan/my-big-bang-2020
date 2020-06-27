@@ -158,6 +158,48 @@
 			}
 		});
 
+		/****************** Sliders reservation session *************************/
+		var flecheSession=$('.fleche-session');
+		if(flecheSession.length >0) {
+			var slider=$('#sessions');
+			var derniere=parseInt(slider.attr('data-nombre'));
+			var slideWidth=$('.session').outerWidth()+parseInt($('.session').css('margin-right'));
+
+			//au chargement, ajouter la classe actif au premier bouton
+			$('.navigation > button:first-of-type').addClass('actif');
+
+
+			flecheSession.click(function (e) { 
+				var active=parseInt(slider.attr('data-active'));
+				var direction=parseInt($(this).attr("data-direction"));
+				var newSlide=active+direction;
+				bougeSession(newSlide);
+				var type=$('.sessions').find(`[data-session='${newSlide+1}']`).attr('data-type');
+				repereBouton(type);
+			});
+	
+			$('.navigation > button').click(function(e) {
+				var newSlide=parseInt($(this).attr('data-left'))-1;
+				bougeSession(newSlide);
+				$('.navigation > button').removeClass('actif');
+				$(this).addClass('actif');
+			});
+		}
+
+		function bougeSession(newSlide) {
+			if(newSlide >= 0 && newSlide < derniere) {
+				var newLeft=-1 * newSlide * slideWidth;
+				slider.css('left',newLeft);
+				slider.attr('data-active',newSlide);
+			}
+		}
+		
+
+		function repereBouton(type) {
+			$('.navigation > button').removeClass('actif');
+			$('.navigation').find(`[data-type='${type}']`).addClass('actif');
+		}
+
 		
 	}); //fin jquery
 
