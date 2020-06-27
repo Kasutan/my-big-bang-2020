@@ -115,9 +115,9 @@ function mbb_reservation_session_callback( $block ) {
 
 					printf('<li class="session type-%s" data-type="%s" data-session"%s">',$count,$term_id,$count2);
 						printf('<h3>%s</h3>',$nom);
-						if($prix_dessus) printf('<div class="prix_dessus">%s</div>',$prix_dessus);
+						if($prix_dessus) printf('<div class="prix-dessus">%s</div>',$prix_dessus);
 						if($prix) printf('<div class="prix">%s<span>%s</span></div>',$prix,$prix_cote);
-						if($prix_dessous) printf('<div class="prix_dessous">%s</div>',$prix_dessous);
+						if($prix_dessous) printf('<div class="prix-dessous">%s</div>',$prix_dessous);
 						
 						if($label && $cible && function_exists('mbb_get_picto_inline')) {
 							printf('<a class="cta-resultat" href="%s"><span>%s</span>', $cible, $label);

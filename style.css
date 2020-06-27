@@ -3679,4 +3679,167 @@ a.cta-resultat {
         background-size: 68px 46px;
         height: 463px; } }
 
+.acf-block-reservation-sessions .intro,
+.acf-block-reservation-sessions .titre,
+.acf-block-reservation-sessions .navigation {
+  padding: 0 var(--padding-x); }
+
+.acf-block-reservation-sessions .intro {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center; }
+
+.acf-block-reservation-sessions > a.cta-resultat {
+  color: var(--bleu);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 35px; }
+  .acf-block-reservation-sessions > a.cta-resultat span {
+    color: var(--bleu); }
+  .acf-block-reservation-sessions > a.cta-resultat svg .fleche {
+    fill: var(--blanc); }
+  .acf-block-reservation-sessions > a.cta-resultat svg .cercle {
+    fill: var(--rouge); }
+
+.acf-block-reservation-sessions .contenu {
+  position: relative; }
+
+.acf-block-reservation-sessions .decor {
+  background-image: url("icons/Motif-Silhouette-Mobile.svg");
+  background-repeat: repeat;
+  background-size: 53px 36px;
+  height: 325px;
+  left: 0;
+  position: absolute;
+  top: 390px;
+  width: 100%; }
+
+.acf-block-reservation-sessions .navigation {
+  margin-bottom: 40px; }
+  .acf-block-reservation-sessions .navigation button {
+    background-color: var(--accent);
+    border: none;
+    display: block;
+    line-height: 22px;
+    padding: 20px 90px 12px 15px;
+    position: relative;
+    margin-bottom: 0;
+    text-align: left;
+    text-transform: unset;
+    width: 100%; }
+    .acf-block-reservation-sessions .navigation button.type-1 {
+      --accent: var(--rouge); }
+    .acf-block-reservation-sessions .navigation button.type-2 {
+      --accent: var(--bleu); }
+    .acf-block-reservation-sessions .navigation button.type-3 {
+      --accent: #989895; }
+    .acf-block-reservation-sessions .navigation button.type-4 {
+      --accent: #AAA89E; }
+    .acf-block-reservation-sessions .navigation button.actif, .acf-block-reservation-sessions .navigation button:hover, .acf-block-reservation-sessions .navigation button:focus {
+      color: var(--blanc); }
+      .acf-block-reservation-sessions .navigation button.actif::after, .acf-block-reservation-sessions .navigation button:hover::after, .acf-block-reservation-sessions .navigation button:focus::after {
+        background-color: var(--blanc);
+        border-radius: 2px;
+        content: ' ';
+        height: 3px;
+        position: absolute;
+        right: 23px;
+        top: 27px;
+        width: 40px; }
+  .acf-block-reservation-sessions .navigation .fleches {
+    display: none; }
+
+.acf-block-reservation-sessions .sessions-wrapper {
+  overflow-x: auto; }
+
+.acf-block-reservation-sessions .sessions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: no-wrap;
+  flex-wrap: no-wrap;
+  list-style: none;
+  margin-bottom: 30px;
+  padding-left: 20px;
+  padding-bottom: 30px; }
+
+.acf-block-reservation-sessions .session {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--accent);
+  color: var(--blanc);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 250px;
+  flex-basis: 250px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  font-weight: 600;
+  padding: 35px 15px 23px;
+  margin-right: 33px;
+  min-height: 270px;
+  position: relative; }
+  .acf-block-reservation-sessions .session.type-1 {
+    --accent: var(--rouge); }
+  .acf-block-reservation-sessions .session.type-2 {
+    --accent: var(--bleu); }
+  .acf-block-reservation-sessions .session.type-3 {
+    --accent: #989895; }
+  .acf-block-reservation-sessions .session.type-4 {
+    --accent: #AAA89E; }
+  .acf-block-reservation-sessions .session a.cta-resultat {
+    margin-bottom: 0;
+    margin-top: auto; }
+
+.acf-block-reservation-sessions h3 {
+  color: var(--blanc);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 1px;
+  margin-bottom: auto;
+  padding-bottom: 20px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase; }
+  .acf-block-reservation-sessions h3::after {
+    background-color: var(--blanc);
+    border-radius: 2px;
+    bottom: 0;
+    content: ' ';
+    height: 3px;
+    left: calc(50% - 20px);
+    position: absolute;
+    width: 40px; }
+
+.acf-block-reservation-sessions .prix {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 24px; }
+  .acf-block-reservation-sessions .prix span {
+    font-size: 18px; }
+
+.acf-block-reservation-sessions .prix-dessus, .acf-block-reservation-sessions .prix-dessous, .acf-block-reservation-sessions .info {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  text-align: center; }
+
+.acf-block-reservation-sessions .info {
+  margin-top: auto; }
+
+.acf-block-reservation-sessions .eclairage {
+  background-image: none; }
+  .acf-block-reservation-sessions .eclairage .relief {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600; }
+
 /*# sourceMappingURL=style.css.map */
