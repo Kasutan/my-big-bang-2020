@@ -32,6 +32,7 @@ function mbb_deroule_seance_callback( $block ) {
 
 
 	$titre=wp_kses_post( get_field('titre') );
+	$ancre = esc_attr( get_field('ancre') );
 	$picto_chrono = esc_attr( get_field('picto_chrono') );
 
 	printf('<section class="acf-block-deroule-seance avec-ancre %s"><span class="ancre" id="%s"></span>', $className, $ancre);
