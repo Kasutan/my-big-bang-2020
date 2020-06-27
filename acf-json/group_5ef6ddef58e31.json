@@ -1,12 +1,12 @@
 {
-    "key": "group_5ef6d648d31c0",
-    "title": "Informations sur la session",
+    "key": "group_5ef6ddef58e31",
+    "title": "Bloc réservation de ma session",
     "fields": [
         {
-            "key": "field_5ef6d67306e30",
-            "label": "Texte au-dessus du prix",
-            "name": "prix_dessus",
-            "type": "textarea",
+            "key": "field_5ef6ddef5e447",
+            "label": "Bloc réservation de ma session",
+            "name": "",
+            "type": "message",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,19 +15,17 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "Tarif Préférentiel",
-            "maxlength": "",
-            "rows": 2,
-            "new_lines": "br"
+            "message": "Saisie des sessions et des types de sessions dans le menu \"Sessions\" de la barre latérale gauche.\r\nUtilisez le sous-menu \"re-order\" pour modifier l'ordre dans lequel les sessions sont affichées.\r\n(Mais elles resteront groupées par types de sessions)",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
-            "key": "field_5ef6d65706e2f",
-            "label": "Prix",
-            "name": "prix",
+            "key": "field_5ef6ddef5e480",
+            "label": "Titre",
+            "name": "titre",
             "type": "text",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -41,12 +39,12 @@
             "maxlength": ""
         },
         {
-            "key": "field_5ef6d68506e31",
-            "label": "Texte à côté du prix",
-            "name": "prix_cote",
+            "key": "field_5ef6ddef5e4b7",
+            "label": "Ancre",
+            "name": "ancre",
             "type": "text",
-            "instructions": "",
-            "required": 0,
+            "instructions": "portion d'url sans accents ni espaces, utilisée pour créer des liens directement vers cette section de la page",
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -54,16 +52,16 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "\/mois",
+            "placeholder": "",
             "prepend": "",
             "append": "",
             "maxlength": ""
         },
         {
-            "key": "field_5ef6d6e406e32",
-            "label": "Texte en dessous du prix",
-            "name": "prix_dessous",
-            "type": "textarea",
+            "key": "field_5ef6ddef5e4ee",
+            "label": "Introduction",
+            "name": "intro",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -73,14 +71,14 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "valable 6 mois",
-            "maxlength": "",
-            "rows": 2,
-            "new_lines": "br"
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 1
         },
         {
-            "key": "field_5ef6d71c06e33",
-            "label": "Label CTA",
+            "key": "field_5ef6ddef5e593",
+            "label": "Label du CTA",
             "name": "label",
             "type": "text",
             "instructions": "",
@@ -98,11 +96,11 @@
             "maxlength": ""
         },
         {
-            "key": "field_5ef6d72a06e34",
-            "label": "Cible CTA",
+            "key": "field_5ef6ddef5e5ca",
+            "label": "Cible du CTA",
             "name": "cible",
             "type": "url",
-            "instructions": "Laisser ce champ vide pour n'afficher qu'un simple texte d'information non cliquable",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -110,16 +108,35 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "http:\/\/my-big-bang.kasutan.pro\/nos-studios-delectro-stimulation\/",
+            "default_value": "\/nos-studios-delectro-stimulation\/",
             "placeholder": ""
+        },
+        {
+            "key": "field_5ef6f1c060f32",
+            "label": "Eclairage",
+            "name": "eclairage",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
         }
     ],
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "session"
+                "value": "acf\/acf-reservation-session"
             }
         ]
     ],
@@ -131,5 +148,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1593245707
+    "modified": 1593246294
 }
