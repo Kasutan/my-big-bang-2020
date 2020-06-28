@@ -1229,7 +1229,9 @@ a.cta-resultat {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    height: 100Vh;
     left: 0;
+    overflow-y: auto;
     padding: 42px 0;
     position: absolute;
     top: 150px;
