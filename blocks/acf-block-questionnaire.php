@@ -46,9 +46,8 @@ function mbb_questionnaire_callback( $block ) {
 			printf('<h2 class="titre">%s</h2>', $titre);
 			printf('<div class="ouvrir hide-for-md"><a href="#questionnaire" id="ouvrir-questionnaire" class="fleche-simple">%s</a></div>',$ouvrir_questionnaire);
 			echo '<div class="questionnaire" id="questionnaire">';
-				echo '<div id="lottie" class="animation"></div>';
 				printf('<div class="intro">%s</div>',$intro);
-				echo '<div class="intro-resultat"><div class="titre-resultat">Vous avez une tendance</div><div class="element" id="element"></div></div>';
+				echo '<div class="intro-resultat"><div id="lottie" class="animation"></div><div class="titre-resultat">Vous avez une tendance</div><div class="element" id="element"></div></div>';
 				echo Caldera_Forms::render_form($formulaire_id);
 				printf('<div class="conclusion-resultat">%s</div><a class="cta-resultat" href="%s"><span>%s</span>',$conclusion, $cible_cta, $label_cta);
 				echo mbb_get_picto_inline('fleche-cta').'</a>';

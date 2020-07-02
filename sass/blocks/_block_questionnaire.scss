@@ -44,6 +44,10 @@
 		padding:34px 38px;
 	}
 
+	.caldera-grid .has-error .checkbox, .caldera-grid .has-error .checkbox-inline, .caldera-grid .has-error .control-label, .caldera-grid .has-error .help-block, .caldera-grid .has-error .radio, .caldera-grid .has-error .radio-inline, .caldera-grid .has-error.checkbox label, .caldera-grid .has-error.checkbox-inline label, .caldera-grid .has-error.radio label, .caldera-grid .has-error.radio-inline label {
+		color: #fff;
+	}
+
 	.fermer {
 		align-items: center;
 		background-color:var(--blanc);
@@ -207,12 +211,15 @@
 	}
 	&.resultat {
 		--fond-questionnaire:var(--bleu);
-		--accent:pink;
+		--accent:var(--air);
 		&.eau {
-			--accent:#53c1b3;
+			--accent:var(--eau);
 		}
 		&.feu {
-			--accent:var(--jaune);
+			--accent:var(--feu);
+		}
+		&.terre {
+			--accent:var(--terre);
 		}
 
 		.intro-resultat, .conclusion-resultat, .cta-resultat {
@@ -228,15 +235,24 @@
 		}
 
 		.animation {
-			height:100%;
+			height:auto;
 			position: absolute;
 			left:0;
-			top:0;
+			top:80px;
 			width:100%;
 		}
 
 		.intro-resultat {
-			margin-bottom:160px;
+			margin-bottom:100px;
+			position: relative;
+		}
+		@include bp(md) {
+			.animation {
+				top:0;
+			}
+			.intro-resultat {
+				margin-bottom: 140px;
+			}
 		}
 
 		.titre-resultat {
@@ -279,6 +295,7 @@
 				text-shadow:none;
 			}
 		}
+		
 		.conclusion-resultat {
 			color:var(--accent);
 			font-size:14px;

@@ -80,21 +80,17 @@
 			$('.site').addClass(element);
 		}
 
-		var scoreInput=$('.form-group.score input');	
-		if (scoreInput.length > 0) {
-			scoreInput.change(function (e) { 
-				var score=scoreInput.val();
-				if(score < 5) {
-					choixElement('feu');
-				} else {
-					choixElement('eau');
-				}
+		var elementInput=$('.form-group.question_element input');	
+		if (elementInput.length > 0) {
+			elementInput.change(function (e) { 
+				var newElement=$('.form-group.question_element input:checked').val();
+				console.log(newElement);
+				choixElement(newElement);
 			});
 
 			//Pour le style : appliquer une classe au label quand l'input radio est checked
 			$('input[type="radio"]').change(function(e) {
 				var name=$(this).attr('name');
-				console.log(name);
 				$('label[for^="'+name+'"].radio-inline').removeClass('checked');
 				if($(this).is(':checked')) {
 					$(this).parent().addClass('checked');
@@ -104,11 +100,11 @@
 
 		function choixElement(element) {
 			$('.form-group.element input').val(element);
-			$('.form-group.reponse textarea').val($('.reponse_'+element).html());
+			$('.form-group.reponse_element textarea').val($('.reponse_'+element).html());
 			$('#element').html(element);
 			localStorage.setItem('mbb_element',element);
-			//$('.site').removeClass('eau feu terre air');
-			//$('.site').addClass(element);
+			$('.site').removeClass('eau feu terre air');
+			$('.site').addClass(element);
 		}
 
 		//Disable scroll to top on pagenav

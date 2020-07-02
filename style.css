@@ -1848,6 +1848,8 @@ a.cta-resultat {
     background-color: var(--fond-questionnaire);
     color: var(--blanc);
     padding: 34px 38px; }
+  .acf-block-questionnaire .caldera-grid .has-error .checkbox, .acf-block-questionnaire .caldera-grid .has-error .checkbox-inline, .acf-block-questionnaire .caldera-grid .has-error .control-label, .acf-block-questionnaire .caldera-grid .has-error .help-block, .acf-block-questionnaire .caldera-grid .has-error .radio, .acf-block-questionnaire .caldera-grid .has-error .radio-inline, .acf-block-questionnaire .caldera-grid .has-error.checkbox label, .acf-block-questionnaire .caldera-grid .has-error.checkbox-inline label, .acf-block-questionnaire .caldera-grid .has-error.radio label, .acf-block-questionnaire .caldera-grid .has-error.radio-inline label {
+    color: #fff; }
   .acf-block-questionnaire .fermer {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1986,11 +1988,13 @@ a.cta-resultat {
     display: none; }
   .acf-block-questionnaire.resultat {
     --fond-questionnaire:var(--bleu);
-    --accent:pink; }
+    --accent:var(--air); }
     .acf-block-questionnaire.resultat.eau {
-      --accent:#53c1b3; }
+      --accent:var(--eau); }
     .acf-block-questionnaire.resultat.feu {
-      --accent:var(--jaune); }
+      --accent:var(--feu); }
+    .acf-block-questionnaire.resultat.terre {
+      --accent:var(--terre); }
     .acf-block-questionnaire.resultat .intro-resultat, .acf-block-questionnaire.resultat .conclusion-resultat, .acf-block-questionnaire.resultat .cta-resultat {
       display: block; }
     .acf-block-questionnaire.resultat .intro-resultat, .acf-block-questionnaire.resultat .conclusion-resultat, .acf-block-questionnaire.resultat .cta-resultat, .acf-block-questionnaire.resultat .caldera-grid {
@@ -1998,13 +2002,19 @@ a.cta-resultat {
     .acf-block-questionnaire.resultat .intro, .acf-block-questionnaire.resultat .titre {
       display: none; }
     .acf-block-questionnaire.resultat .animation {
-      height: 100%;
+      height: auto;
       position: absolute;
       left: 0;
-      top: 0;
+      top: 80px;
       width: 100%; }
     .acf-block-questionnaire.resultat .intro-resultat {
-      margin-bottom: 160px; }
+      margin-bottom: 100px;
+      position: relative; }
+    @media (min-width: 768px) {
+      .acf-block-questionnaire.resultat .animation {
+        top: 0; }
+      .acf-block-questionnaire.resultat .intro-resultat {
+        margin-bottom: 140px; } }
     .acf-block-questionnaire.resultat .titre-resultat {
       color: #9B9BAC;
       font-family: var(--font-serif);
