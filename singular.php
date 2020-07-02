@@ -53,6 +53,7 @@ if(function_exists('mbb_page_avec_banniere') && mbb_page_avec_banniere()) {
 			<?php
 			the_content();
 			?>
+
 		</div><!-- .entry-content -->
 
 		<?php	

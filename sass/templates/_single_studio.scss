@@ -1,0 +1,58 @@
+.single-studio {
+	.entry-header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		margin-bottom: 52px;
+	}
+	h1 {
+		margin-bottom:0;
+		padding-bottom:10px;
+	}
+	.sur-titre {
+		color:var(--bleu);
+		font-size: 20px;
+		display: block;
+	}
+	.notation {
+		color:#989895;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 30px;
+		letter-spacing: 0.04px;
+		.avis {
+			margin-left:11px;
+		}
+		.etoile {
+			background-image: url('icons/etoile.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			width:16px;
+			height:15px;
+			display: inline-block;
+			margin-right: 2px;
+		}
+	}
+	.telephone {
+		font-size: 32px;
+		line-height: 72px;
+		font-weight: 700;
+	}
+	a.button.studio {
+		color:var(--rouge);
+		background-color:transparent;
+		background-image:url('icons/fleche_simple.svg');
+		background-repeat: no-repeat;
+		background-position:10px center;
+		background-size:contain;
+		font-weight: 300;
+		height:36px;
+		line-height: 36px;
+		margin:0;
+		padding-left: 48px;
+		background-size: 16px 9px;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}

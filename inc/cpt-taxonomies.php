@@ -238,6 +238,8 @@ function mbb_studio_post_type() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 		'show_in_rest'          => true,
+		//'rewrite'				=> array('slug' =>'nos-studios-delectro-stimulation'),
+		'rewrite'				=> array('slug' =>'nos-studios'),
 	);
 	register_post_type( 'studio', $args );
 
