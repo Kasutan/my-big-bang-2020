@@ -17,7 +17,8 @@ if(function_exists('get_field')) {
 	$etoiles=esc_attr(get_field('nombre_etoiles'));
 	$avis=esc_attr(get_field('nombre_avis'));
 	$telephone=esc_attr(get_field('telephone'));
-	$adresse=esc_attr(get_field('adresse'));
+	$location=esc_attr(get_field('adresse'));
+	$email=antispambot(esc_attr(get_field('email')));
 	$horaires=get_field('horaires'); //champ de type groupe
 	$galerie=get_field('galerie');
 	$numero_script=esc_attr(get_field('numero_script'));
@@ -29,7 +30,16 @@ if(function_exists('get_field')) {
 	$texte_droite=wp_kses_post(get_field('texte_droite_studio','option'));
 	$shortcode_widget=esc_html(get_field('shortcode_widget_studio','option'));
 
+	$adresse=array();
+    foreach( array('street_number', 'street_name', 'post_code', 'city') as $i => $k ) {
+        if( isset( $location[ $k ] ) ) {
+            $adresse[]=$location[ $k ];
+        }
+	}
+	$adresse=implode(', ',$adresse);
 }
+
+$semaine=array('lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche');
 ?>
 
 <main id="main" class="site-main">
@@ -38,33 +48,56 @@ if(function_exists('get_field')) {
 		the_post();
 		?>
 
-			<header class="entry-header">
-				
-				<?php printf('<h1 class="page-title"><span class="sur-titre">Centre d’électrostimulation (EMS) Miha Bodytech </span>%s</h1>',
-					 get_the_title() 
-				);?>
-				
-					<div class="entry-meta">
-						<div class="notation">
-							<?php for($i=1;$i<=$etoiles;$i++) {
-								echo '<span class="etoile"></span>';
-							}
-							printf('<span class="screen-reader-text">%s étoiles</span>',$etoiles);
-							printf('<span class="avis">%s avis</span>',$avis);
-							?>
-						</div>
-						<div class="telephone"><?php echo $telephone;?></div>
-						<?php printf('<a class="button studio" href="%s">%s</a>',$cible,$label); ?>
-					</div><!-- .entry-meta -->
-			</header><!-- .entry-header -->
+	<header class="entry-header">
+		
+		<?php printf('<h1 class="page-title"><span class="sur-titre">Centre d’électrostimulation (EMS) Miha Bodytech </span>%s</h1>',
+				get_the_title() 
+		);?>
+		
+			<div class="entry-meta">
+				<div class="notation">
+					<?php for($i=1;$i<=$etoiles;$i++) {
+						echo '<span class="etoile"></span>';
+					}
+					printf('<span class="screen-reader-text">%s étoiles</span>',$etoiles);
+					printf('<span class="avis">%s avis</span>',$avis);
+					?>
+				</div>
+				<div class="telephone"><?php echo $telephone;?></div>
+				<?php printf('<a class="button studio" href="%s">%s</a>',$cible,$label); ?>
+			</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
 
-		<div class="entry-content container">
-			<div class="overlay"></div>
-			<?php
-			the_content();
-			?>
+	
+<section class="studio">
+	<?php
+	echo '<div class="galerie owl-carousel owl-theme">';
+		foreach( $galerie as $image_id ) {
+			printf('<div class="image-wrapper">%s</div>',
+				wp_get_attachment_image( $image_id, 'large')
+			);
+		}
+	echo '</div>';//fin galerie
+	echo '<div class="texte">';
+		echo '<p class="avant-nom"><strong>Studio Mihabodytec My Big Bang</strong></p>';
+		printf('<p class="nom"><strong>%s</strong></p>',get_the_title());
+		//printf('<p class="adresse">%s</p>',$adresse); Attente clé Google API
+		printf('<p class="adresse">%s</p>','16 rue du Départ, 75014 Paris');
+		printf('<p class="email">%s</p>',$email);
+		echo '<p class="contraste">Horaires</p><ul class="horaires">';
+		foreach($semaine as $jour) {
+			printf('<li>%s : <strong>%s</strong>',ucfirst($jour),$horaires[$jour]);
+			if(array_key_exists($jour.'_am',$horaires) && !empty($horaires[$jour.'_am'])) {
+				printf('<span class="separateur">//</span><strong>%s</strong>',$horaires[$jour.'_am']);
+			}
+			echo '</li>';
+		}
+		echo "</ul>";
+	echo '</div>';//fin .texte 
 
-		</div><!-- .entry-content -->
+	printf('<div class="eclairage localisation"><div class="relief">%s</div></div>',get_the_content());
+	?>
+</section>
 
 		<?php	
 

@@ -276,6 +276,21 @@
 		items:1,
 	});
 
+	/****************** Carrousel single studio *************************/
+
+
+	$(".single-studio .owl-carousel").owlCarousel({
+		center: false,
+		loop:true,
+		nav : true,
+		dots : true,
+		autoplay:true,
+		autoplayTimeout:3000,
+		autoplaySpeed:1500,
+		autoplayHoverPause:true,
+		items:1,
+	});
+
 })( jQuery );
 
 

@@ -1,4 +1,5 @@
 .single-studio {
+	/***************************entry-header***********************/
 	.entry-header {
 		display: flex;
 		flex-direction: column;
@@ -44,15 +45,166 @@
 		background-color:transparent;
 		background-image:url('icons/fleche_simple.svg');
 		background-repeat: no-repeat;
-		background-position:10px center;
-		background-size:contain;
+		background-position:10px 14px;
+		background-size: 16px 9px;
 		font-weight: 300;
-		height:36px;
 		line-height: 36px;
 		margin:0;
 		padding-left: 48px;
-		background-size: 16px 9px;
 		padding-top: 0;
 		padding-bottom: 0;
+		text-align: left;
 	}
+
+	/***************************studio***********************/
+	.galerie {
+		margin-bottom:10px;
+	}
+	.image-wrapper {
+		display: flex;
+		height:79vw;
+		img {
+			object-fit: cover;
+			width:100%;
+		}
+	}
+	.texte {
+		font-size: 16px;
+		padding: 0 var(--padding-x) 40px;
+	}
+	.avant-nom {
+		margin-bottom: 0;
+	}
+	.nom {
+		color:var(--rouge);
+	}
+	.adresse, .email {
+		background-image:url('icons/pic-Studio.svg');
+		background-repeat: no-repeat;
+		background-position:left center;
+		background-size:16px 22px;
+		line-height: 25px;
+		padding-left:35px;
+	}
+	.email {
+		background-image:url('icons/pic-mail.svg');
+		background-size:17px 15px;
+	}
+
+	.contraste {
+		background-color:var(--rouge);
+		color:var(--blanc);
+		display: inline-block;
+		font-weight:600;
+		margin-top: 20px;
+		padding:2px 8px;
+		text-transform: none;
+	}
+
+	.horaires {
+		list-style:none;
+		padding:0;
+		margin:0;
+	}
+	.separateur {
+		color:var(--rouge);
+		display: inline-block;
+		margin:0 1ch;
+	}
+
+	.eclairage .relief {
+		font-family: var(--font);
+	}
+
+	.owl-nav button {
+		span {
+		background-image: url("icons/Fleche-P-blanche.svg");
+		left:unset;
+		}
+		&.owl-next span {
+			background-image: url("icons/Fleche-S-blanche.svg");
+			left:unset;
+		}
+	}
+
+	.owl-dots {
+		position: absolute;
+		bottom: 20px;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	.owl-dot {
+		span {
+			background-color:var(--blanc);
+			border-radius:50%;
+			display: block;
+			height:10px;
+			margin:0 5px;
+			width:10px;
+		}
+		&.active span {
+			background-color:var(--rouge);
+		}
+	}
+
+
+	@include bp(md) {
+		.studio {
+			display: flex;
+			flex-wrap:wrap;
+		}
+		.galerie {
+			flex-basis:49%;
+			margin-bottom:0;
+			max-width:49%;
+		}
+		.image-wrapper { 
+			height: 532px;
+		}
+		.texte {
+			flex-basis:51%;
+			max-width: 51%;
+			padding:15px var(--padding-x) 80px 60px;
+		}
+		.contraste {
+			margin-top:40px;
+		}
+
+		.eclairage {
+			flex-basis:100%;
+			margin:0;
+			padding:0;
+			padding-left:40%;
+			transform: unset;
+			z-index:1;
+			.relief {
+				background-image:none;
+				padding:40px 45px;
+				top:-130px
+			}
+		}
+	}
+
+	@include bp(lg) {
+		.image-wrapper {
+			height:653px;
+		}
+		.texte {
+			font-size: 20px;
+			line-height: 30px;
+			padding-bottom:180px;
+		}
+		.eclairage {
+			.relief {
+				padding:80px 90px;
+				top:-150px;
+			}
+		}
+	}
+
+
+	
+
 }
