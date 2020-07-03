@@ -1803,7 +1803,8 @@ a.cta-resultat {
 .single-studio {
   /***************************entry-header***********************/
   /***************************studio***********************/
-  /***************************general***********************/ }
+  /***************************general***********************/
+  /***************************avis***********************/ }
   .single-studio .entry-header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1830,7 +1831,7 @@ a.cta-resultat {
     font-weight: 500;
     line-height: 30px;
     letter-spacing: 0.04px; }
-    .single-studio .notation .avis {
+    .single-studio .notation .nb-avis {
       margin-left: 11px; }
     .single-studio .notation .etoile {
       background-image: url("icons/etoile.svg");
@@ -2025,6 +2026,29 @@ a.cta-resultat {
     .single-studio .bloc {
       -ms-flex-preferred-size: 40%;
       flex-basis: 40%; } }
+  .single-studio a.button.studio.studio-2 {
+    background-color: #fff;
+    max-width: 464px;
+    margin: 0 auto;
+    position: relative;
+    top: 18px;
+    z-index: 1; }
+  .single-studio .avis, .single-studio .carte {
+    background-color: var(--gris-decor);
+    height: 700px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .single-studio .avis .contraste, .single-studio .carte .contraste {
+      text-align: center; }
+  .single-studio .carte {
+    background-color: var(--gris-fond); }
 
 .acf-block-questionnaire {
   --fond-questionnaire:var(--rouge);

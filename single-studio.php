@@ -62,7 +62,7 @@ $semaine=array('lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'
 						echo '<span class="etoile"></span>';
 					}
 					printf('<span class="screen-reader-text">%s étoiles</span>',$etoiles);
-					printf('<span class="avis">%s avis</span>',$avis);
+					printf('<span class="nb-avis">%s avis</span>',$avis);
 					?>
 				</div>
 				<div class="telephone"><?php echo $telephone;?></div>
@@ -112,6 +112,14 @@ $semaine=array('lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'
 		echo mbb_get_picto_inline('fleche-cta').'</a></div>';
 	}?>
 </section>
+<?php printf('<a class="button studio studio-2" href="%s">%s</a>',$cible,$label); ?>
+<section class="avis">
+	<div class="contraste">AVIS</div>
+</section>
+<section class="carte">
+	<div class="contraste">CARTE</div>
+</section>
+
 
 		<?php	
 
