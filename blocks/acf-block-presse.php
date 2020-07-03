@@ -40,7 +40,7 @@ function mbb_presse_callback( $block ) {
 			while ( have_rows('presse') ) : the_row();
 				printf('<a class="logo-presse" href="%s"  target="_blank" rel="nofollow noopener" >%s</a>',
 					esc_url(get_sub_field('url')),
-					wp_get_attachment_image( get_sub_field('image'),'small' ),
+					wp_get_attachment_image( get_sub_field('image'),'small' )
 				);
 			endwhile;
 			echo '</div>'; //fin .owl-carousel
