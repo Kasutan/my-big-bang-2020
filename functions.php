@@ -194,6 +194,7 @@ require_once( 'blocks/acf-block-team-coachs.php' );
 require_once( 'blocks/acf-block-deroule-seance.php' );
 require_once( 'blocks/acf-block-rdv.php' );
 require_once( 'blocks/acf-block-reservation-session.php' );
+require_once( 'blocks/acf-block-deux-colonnes.php' );
 
 /**
 * Page options

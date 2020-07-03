@@ -54,4 +54,19 @@
 		}
 	}
 
+	/*variante pour la page Mon studio*/
+	&.studios {
+		.texte {
+			margin-top:50px;
+		}
+		@include bp(md) {
+			.mots {
+				position: relative;
+				top:103px;
+			}
+			.texte {
+				margin-top:100px;
+			}
+		}
+	}
 }

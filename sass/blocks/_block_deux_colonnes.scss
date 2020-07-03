@@ -1,0 +1,65 @@
+.acf-block-deux-colonnes {
+	padding-top:30px;
+	.image {
+		height:auto;
+		display: flex;
+		img {
+			object-fit: cover;
+			width:100%;
+		}
+	}
+	.texte {
+		padding:40px var(--padding-x);
+	}
+	h3 {
+		background-color:var(--rouge);
+		color:var(--blanc);
+		display: inline-block;
+		font-weight:600;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		padding:2px 8px;
+		text-transform: uppercase;
+	}
+
+	ul {
+		list-style:none;
+		padding:0;
+		li {
+			background-image:url('icons/fleche_simple.svg');
+			background-repeat: no-repeat;
+			background-position:0 3px;
+			background-size: 16px 9px;
+			line-height:20px;
+			margin-bottom:20px;
+			padding-left: 25px;
+			&::before {
+				display: none;
+			}
+		}
+	}
+	@include bp(md) {
+		align-items:center;
+		display: flex;
+		justify-content: center;
+		padding-bottom: 80px;
+
+		.image, .texte {
+			flex-basis:50%;
+		}
+		.image {
+			height:532px;
+		}
+		.texte {
+			padding:0 var(--padding-x) 0 60px;
+		}
+
+		h3 {
+			margin:40px 0;
+		}
+	}
+	@include bp(lg) {
+		align-items: flex-end;
+	}
+
+}
