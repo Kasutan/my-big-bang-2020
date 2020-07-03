@@ -38,6 +38,41 @@
             "placeholder": ""
         },
         {
+            "key": "field_5eff3c05317c5",
+            "label": "Label du lien éléments",
+            "name": "label_elements_studio",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Découvrez votre élément",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5eff3c524f298",
+            "label": "Cible du lien éléments",
+            "name": "cible_elements_studio",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "\/",
+            "placeholder": ""
+        },
+        {
             "key": "field_5efdd061f04a9",
             "label": "Titre du bloc de texte de gauche",
             "name": "titre_gauche_studio",
@@ -150,5 +185,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1593694527
+    "modified": 1593785532
 }

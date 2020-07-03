@@ -1802,7 +1802,8 @@ a.cta-resultat {
 
 .single-studio {
   /***************************entry-header***********************/
-  /***************************studio***********************/ }
+  /***************************studio***********************/
+  /***************************general***********************/ }
   .single-studio .entry-header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1892,7 +1893,7 @@ a.cta-resultat {
     font-weight: 600;
     margin-top: 20px;
     padding: 2px 8px;
-    text-transform: none; }
+    text-transform: uppercase; }
   .single-studio .horaires {
     list-style: none;
     padding: 0;
@@ -1973,6 +1974,57 @@ a.cta-resultat {
     .single-studio .eclairage .relief {
       padding: 80px 90px;
       top: -150px; } }
+  .single-studio .general {
+    padding: 0 var(--padding-x) 40px; }
+    .single-studio .general h2.contraste {
+      font-size: 16px;
+      line-height: 22px;
+      text-transform: none; }
+  .single-studio .contenu ul {
+    list-style: none;
+    padding: 0; }
+    .single-studio .contenu ul li {
+      background-image: url("icons/fleche_simple.svg");
+      background-repeat: no-repeat;
+      background-position: 0 3px;
+      background-size: 16px 9px;
+      line-height: 20px;
+      margin-bottom: 20px;
+      padding-left: 25px; }
+      .single-studio .contenu ul li::before {
+        display: none; }
+  .single-studio .lien {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+    .single-studio .lien a.cta-resultat {
+      color: var(--bleu); }
+  @media (min-width: 768px) {
+    .single-studio .general {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding-bottom: 80px; }
+      .single-studio .general h2.contraste {
+        margin-bottom: 50px; }
+    .single-studio .contenu {
+      -ms-flex-preferred-size: 45%;
+      flex-basis: 45%; }
+    .single-studio .lien {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%; } }
+  @media (min-width: 960px) {
+    .single-studio .bloc {
+      -ms-flex-preferred-size: 40%;
+      flex-basis: 40%; } }
 
 .acf-block-questionnaire {
   --fond-questionnaire:var(--rouge);

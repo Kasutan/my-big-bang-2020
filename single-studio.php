@@ -24,10 +24,12 @@ if(function_exists('get_field')) {
 	$numero_script=esc_attr(get_field('numero_script'));
 	$label=esc_html(get_field('label_cta_studio','option'));
 	$cible=esc_url(get_field('cible_cta_studio','option'));
+	$label_elements=esc_html(get_field('label_elements_studio','option'));
+	$cible_elements=esc_url(get_field('cible_elements_studio','option'));
 	$titre_gauche=wp_kses_post(get_field('titre_gauche_studio','option'));
-	$texte_droite=wp_kses_post(get_field('texte_droite_studio','option'));
-	$titre_gauche=wp_kses_post(get_field('titre_gauche_studio','option'));
-	$texte_droite=wp_kses_post(get_field('texte_droite_studio','option'));
+	$titre_droite=wp_kses_post(get_field('titre_droite_studio','option'));
+	$texte_gauche=wp_kses_post(get_field('contenu_gauche_studio','option'));
+	$texte_droite=wp_kses_post(get_field('contenu_droite_studio','option'));
 	$shortcode_widget=esc_html(get_field('shortcode_widget_studio','option'));
 
 	$adresse=array();
@@ -97,6 +99,18 @@ $semaine=array('lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'
 
 	printf('<div class="eclairage localisation"><div class="relief">%s</div></div>',get_the_content());
 	?>
+</section>
+<section class="general">
+	<?php if($texte_gauche) {
+		printf('<div class="contenu"><h2 class="contraste">%s</h2><div>%s</div></div>',$titre_gauche,$texte_gauche);
+	}
+	if($texte_droite) {
+		printf('<div class="contenu"><h2 class="contraste">%s</h2><div>%s</div></div>',$titre_droite,$texte_droite);
+	}
+	if($label_elements && $cible_elements && function_exists('mbb_get_picto_inline')) {
+		printf('<div class="lien"><a class="cta-resultat" href="%s"><span>%s</span>', $cible_elements, $label_elements);
+		echo mbb_get_picto_inline('fleche-cta').'</a></div>';
+	}?>
 </section>
 
 		<?php	

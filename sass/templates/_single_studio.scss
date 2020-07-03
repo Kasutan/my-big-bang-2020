@@ -98,7 +98,7 @@
 		font-weight:600;
 		margin-top: 20px;
 		padding:2px 8px;
-		text-transform: none;
+		text-transform: uppercase;
 	}
 
 	.horaires {
@@ -204,7 +204,68 @@
 		}
 	}
 
+/***************************general***********************/
+	.general {
+		padding:0 var(--padding-x) 40px;
 
-	
+		h2.contraste {
+			font-size: 16px;
+			line-height: 22px;
+			text-transform: none;
+		}
+	}
+	.contenu {
+		ul {
+			list-style:none;
+			padding:0;
+			li {
+				background-image:url('icons/fleche_simple.svg');
+				background-repeat: no-repeat;
+				background-position:0 3px;
+				background-size: 16px 9px;
+				line-height:20px;
+				margin-bottom:20px;
+				padding-left: 25px;
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+	.lien {
+		display: flex;
+		justify-content: flex-end;
+
+		a.cta-resultat {
+			color:var(--bleu);
+		}
+	}
+
+	@include bp(md) {
+		.general {
+			display: flex;
+			flex-wrap:wrap;
+			justify-content: space-between;
+			padding-bottom: 80px;
+
+			h2.contraste {
+				margin-bottom: 50px;
+			}
+			
+		}
+		.contenu {
+			flex-basis: 45%;
+		}
+		.lien {
+			flex-basis:100%;
+		}
+		
+	}
+
+	@include bp(lg) {
+		.bloc {
+			flex-basis: 40%;
+		}
+	}
 
 }
