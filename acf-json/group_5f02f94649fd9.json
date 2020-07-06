@@ -1,0 +1,79 @@
+{
+    "key": "group_5f02f94649fd9",
+    "title": "Bloc studios à proximité",
+    "fields": [
+        {
+            "key": "field_5f02f9466419e",
+            "label": "Bloc studios à proximité",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Saisie des studios dans le menu \"Studios\" de la barre latérale gauche.\r\nUtilisez le sous-menu \"re-order\" pour modifier l'ordre dans lequel les studios sont affichés.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5f02f946641da",
+            "label": "Titre",
+            "name": "titre",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Studios à proximité",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f02f94664212",
+            "label": "Ancre",
+            "name": "ancre",
+            "type": "text",
+            "instructions": "portion d'url sans accents ni espaces, utilisée pour créer des liens directement vers cette section de la page",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/acf-studios"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1594030569
+}
