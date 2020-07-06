@@ -44,19 +44,25 @@ function mbb_studios_callback( $block ) {
 		//s'il n'y a pas de studios, on arrête là
 		return;
 	}
-	printf('<section class="acf-block-studios avec-ancre %s"><span class="ancre" id="%s"></span>', $className, $ancre);
-		if($titre) printf('<h2 class="titre">%s</h2>',$titre);
+	printf('<section class="acf-block-studios alignfull avec-ancre %s"><span class="ancre" id="%s"></span>', $className, $ancre);
+		if($titre) printf('<h2 class="h1">%s</h2>',$titre);
 		echo '<div class="fond" id="studios">';
 		?>
 			<div class="filtre">
 				<label for="studios-search" class="screen-reader-text">Rechercher un studio par nom, code postal ou ville</label>
-				<input  id="studios-search" class="search" name="studios-search" type="search" placeholder="Nom, Code postal, Ville"/>
-				<button class="avec-fleche">Rechercher</button>
+				<input  id="studios-search" class="search" name="studios-search" type="search" placeholder="Nom, Code postal, Ville"/><button>
+				<svg xmlns="http://www.w3.org/2000/svg" width="16.191" height="10.457" viewBox="0 0 16.191 10.457">
+					<g id="Composant_14_3" data-name="Composant 14 – 3" transform="translate(0.652 0.921)">
+						<line id="Ligne_47" data-name="Ligne 47" x1="14.463" transform="translate(0 4.379)" fill="#ebeae9" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.304"/>
+						<path id="Tracé_515" data-name="Tracé 515" d="M200.987,194.055l3.956,4.339-3.956,4.275" transform="translate(-190.057 -194.055)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.304"/>
+					</g>
+					</svg>
+					<span>Rechercher</span>
+				</button>
 			</div>
 
 			<div class="onglets">
-				<button id="toggle-liste" aria-controls="liste" aria-expanded="true">Voir la liste</button>
-				<button id="toggle-carte" aria-controls="carte" aria-expanded="false">Voir la carte</button>
+				<button id="toggle-liste" aria-controls="liste" aria-expanded="true">Voir la liste</button><button id="toggle-carte" aria-controls="carte" aria-expanded="false" class="inactif">Voir la carte</button>
 			</div>
 
 			<div class="studios">
@@ -87,6 +93,7 @@ function mbb_affiche_studio($post_id) {
 
 	$metro=get_field('metro',$post_id);
 	$telephone=get_field('telephone',$post_id);
+	$email=antispambot(esc_attr(get_field('email',$post_id)));
 
 	//Données temporaires
 	$ville='Bordeaux';
@@ -94,10 +101,10 @@ function mbb_affiche_studio($post_id) {
 	$adresse='125 rue Sainte Catherine, 33000 Bordeaux';
 
 	printf('<li class="studio" id="studio-%s">',$post_id);
-		printf('<p><span class="ville">%s</span> <span class="nom">%s</span></p>',$ville, get_the_title($post_id));
+		printf('<p class="titre"><span class="ville">%s</span> <span class="nom">%s</span></p>',$ville, get_the_title($post_id));
 		printf('<p class="adresse">%s</p>',$adresse);
 		printf('<p class="metro">%s</p>',$metro);
-		printf('<a href="https://www.google.com/maps/dir/?api=1&destination=%s" class="itinéraire" target="_blank" title="Voir l\'itinéraire dans un nouvel onglet">Itinéraire</a>',urlencode($adresse));
+		printf('<a href="https://www.google.com/maps/dir/?api=1&destination=%s" class="itineraire" target="_blank" title="Voir l\'itinéraire dans un nouvel onglet">Itinéraire</a>',urlencode($adresse));
 		printf('<a href="tel:" class="telephone">%s</a>',$telephone, $telephone);
 		printf('<p class="email">%s</p>',$email);
 		printf('<a class="cta-resultat" href="%s"><span>%s</span>', get_the_permalink($post_id), 'Voir le studio');

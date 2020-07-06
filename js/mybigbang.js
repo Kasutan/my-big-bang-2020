@@ -291,6 +291,32 @@
 		items:1,
 	});
 
+	/****************** Onglets carte/liste studios *************************/
+	var toggleListe=$('#toggle-liste');
+	var toggleCarte=$('#toggle-carte');
+	var listeStudios=$('#liste');
+	var carteStudios=$('#carte');
+	$(toggleListe).click(function(){
+		if($(toggleListe).hasClass('inactif')) {
+			toggleListe.toggleClass('inactif');
+			toggleCarte.toggleClass('inactif');
+			toggleListe.attr('aria-hidden',false);
+			toggleCarte.attr('aria-hidden',true);
+			listeStudios.fadeIn();
+			carteStudios.fadeOut();
+		}
+	});
+	$(toggleCarte).click(function(){
+		if($(toggleCarte).hasClass('inactif')) {
+			toggleListe.toggleClass('inactif');
+			toggleCarte.toggleClass('inactif');
+			toggleListe.attr('aria-hidden',true);
+			toggleCarte.attr('aria-hidden',false);
+			listeStudios.fadeOut();
+			carteStudios.fadeIn();
+		}
+	});
+
 })( jQuery );
 
 
