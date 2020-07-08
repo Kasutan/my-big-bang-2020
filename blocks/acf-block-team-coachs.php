@@ -67,8 +67,8 @@ function mbb_team_coach_callback( $block ) {
 						echo '</div>';
 						printf('<ul class="infos"><div class="pointilles"></div>
 							<li><span>%s</span> %s</li>
-							<li><span>Zone push</span> %s</li>
-							<li><span>Energie</span> %s</li>
+							<li><span>Le +</span> %s</li>
+							<li><span>Mantra</span> %s</li>
 							</ul>',
 							$ville,
 							$studio,

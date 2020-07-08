@@ -42,7 +42,7 @@
         },
         {
             "key": "field_5ef47214394f8",
-            "label": "Zone push",
+            "label": "Le +",
             "name": "zone_push",
             "type": "text",
             "instructions": "",
@@ -61,7 +61,7 @@
         },
         {
             "key": "field_5ef47226394f9",
-            "label": "Energie",
+            "label": "Mantra",
             "name": "energie",
             "type": "text",
             "instructions": "",
@@ -72,7 +72,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "+++",
+            "default_value": "",
             "placeholder": "",
             "prepend": "",
             "append": "",
@@ -96,5 +96,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1593079667
+    "modified": 1594212752
 }
