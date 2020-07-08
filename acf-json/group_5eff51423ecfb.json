@@ -20,13 +20,39 @@
             "esc_html": 0
         },
         {
+            "key": "field_5f05d3385baca",
+            "label": "Titre",
+            "name": "titre",
+            "type": "textarea",
+            "instructions": "titre h2 optionnel",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": "br"
+        },
+        {
             "key": "field_5eff516702c10",
             "label": "Image",
             "name": "image",
             "type": "image",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
+            "instructions": "Laisser vide pour insérer une vidéo dans le champ suivant",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5f05d46ac11af",
+                        "operator": "==empty"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -42,6 +68,55 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5f05d46ac11af",
+            "label": "Vidéo intégrée",
+            "name": "video",
+            "type": "oembed",
+            "instructions": "Laisser vide pour insérer une image dans le champ précédent",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eff516702c10",
+                        "operator": "==empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "width": "",
+            "height": ""
+        },
+        {
+            "key": "field_5f05d3dd5bacc",
+            "label": "Titre de la vidéo (optionnel)",
+            "name": "titre_video",
+            "type": "text",
+            "instructions": "Affiché dans un bandeau sombre au-dessus de la vidéo",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eff516702c10",
+                        "operator": "==empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5eff517602c11",
@@ -61,6 +136,30 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 1
+        },
+        {
+            "key": "field_5f05d4d3c11b0",
+            "label": "Afficher l'image\/la vidéo à droite ?",
+            "name": "inverser",
+            "type": "radio",
+            "instructions": "Par défaut, l'image\/la vidéo est affichée à gauche et le texte à droite.\r\nUtiliser cette option pour inverser le texte et l'image\/la video.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": [
+                "image \/ vidéo à gauche",
+                "image \/ video à droite"
+            ],
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": 0,
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
         }
     ],
     "location": [
@@ -80,5 +179,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1593790860
+    "modified": 1594220584
 }
