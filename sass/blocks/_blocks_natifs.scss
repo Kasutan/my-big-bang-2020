@@ -1,0 +1,23 @@
+.wp-block-group {
+	&.alignfull {
+		padding:40px var(--padding-x);
+		@include bp(md) {
+			padding-top:80px;
+			padding-bottom:60px;
+		}
+	}
+	&.decor {
+		margin-top:60px;
+		position:relative;
+		&::after {
+			content:' ';
+			background-color: 	#F0EEE7;
+			content:' ';
+			width:3px;
+			height:60px;
+			position:absolute;
+			top : -30px;
+			left:calc(50% - 1.5px);
+		}
+	}
+}
