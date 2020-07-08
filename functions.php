@@ -204,3 +204,8 @@ require_once( 'blocks/acf-block-studios.php' );
 require_once( 'inc/acf-options-page.php' );
 
 
+/**
+* Maps
+*/
+
+require_once( 'inc/maps-api.php' );
