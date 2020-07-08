@@ -2117,6 +2117,28 @@ a.cta-resultat {
   .single-studio .carte {
     background-color: var(--gris-fond); }
 
+h1.fond-bleu {
+  background-color: var(--bleu);
+  color: #fff;
+  position: relative;
+  font-size: 1.25rem; }
+  @media (min-width: 768px) {
+    h1.fond-bleu {
+      font-size: 2.25rem;
+      margin-bottom: 60px; }
+      h1.fond-bleu::after {
+        content: ' ';
+        background-color: #F0EEE7;
+        content: ' ';
+        width: 3px;
+        height: 60px;
+        position: absolute;
+        bottom: -40px;
+        left: calc(50% - 1.5px); } }
+  @media (min-width: 960px) {
+    h1.fond-bleu {
+      font-size: 3.25rem; } }
+
 .acf-block-questionnaire {
   --fond-questionnaire:var(--rouge);
   -webkit-box-align: center;

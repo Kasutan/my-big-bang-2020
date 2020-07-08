@@ -1,0 +1,24 @@
+h1.fond-bleu {
+	background-color: var(--bleu);
+	color:#fff;
+	position: relative;
+	font-size: 1.25rem;
+	
+	@include bp(md) {
+		font-size: 2.25rem;
+		margin-bottom: 60px;
+		&::after {
+			content:' ';
+				background-color: 	#F0EEE7;
+				content:' ';
+				width:3px;
+				height:60px;
+				position:absolute;
+				bottom : -40px;
+				left:calc(50% - 1.5px);
+		}
+	}
+	@include bp(lg) {
+		font-size: 3.25rem;
+	}
+}

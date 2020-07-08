@@ -20,6 +20,10 @@ if(function_exists('mbb_page_avec_banniere') && mbb_page_avec_banniere()) {
 } else if(function_exists('get_field') && get_field('masquer_titre')=='oui') {
 	$masquer_titre=true;
 }
+$classe_titre='';
+if(function_exists('get_field') && get_field('fond_bleu')=='oui') {
+	$classe_titre=' fond-bleu';
+}
 ?>
 
 <main id="main" class="site-main">
@@ -32,8 +36,9 @@ if(function_exists('mbb_page_avec_banniere') && mbb_page_avec_banniere()) {
 
 			<header class="entry-header">
 				
-				<?php printf('<h1 class="page-title">%s</h1>',
-					remove_accents( get_the_title() )
+				<?php printf('<h1 class="page-title%s">%s</h1>',
+					$classe_titre,
+					get_the_title()
 				);?>
 				
 				<?php if ( 'post' === get_post_type() ) :
