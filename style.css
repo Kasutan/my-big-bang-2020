@@ -4611,9 +4611,24 @@ h1.fond-bleu {
       justify-content: center; }
       .acf-block-coupon .image, .acf-block-coupon .texte {
         -ms-flex-preferred-size: 50%;
-        flex-basis: 50%; } }
+        flex-basis: 50%; }
+      .acf-block-coupon .texte {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+      .acf-block-coupon .formulaire {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1; } }
   .acf-block-coupon .formcraft-css .fc-form.align-left {
     margin-left: auto; }
+  .acf-block-coupon .formcraft-css .fc-form .form-page-content .form-element-type-customText {
+    display: block;
+    margin-bottom: 30px; }
   .acf-block-coupon .formcraft-css .fc-form .form-element .field-cover.customText-cover p {
     color: var(--blanc) !important;
     font-size: 14px;
@@ -4624,9 +4639,7 @@ h1.fond-bleu {
     .acf-block-coupon .formcraft-css .fc-form .form-element.form-element-type-checkbox .form-element-html > div span.main-label > span {
       color: var(--blanc) !important;
       font-size: 22px;
-      font-weight: bold;
-      display: block;
-      margin-top: 20px; }
+      font-weight: bold; }
       .acf-block-coupon .formcraft-css .fc-form .form-element.form-element-type-checkbox .form-element-html > div span.main-label > span::after {
         color: var(--blanc) !important; }
   .acf-block-coupon .formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="radio"] {

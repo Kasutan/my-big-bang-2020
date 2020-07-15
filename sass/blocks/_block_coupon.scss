@@ -33,11 +33,22 @@
 		.image, .texte {
 			flex-basis:50%;
 		}
+		.texte {
+			display: flex;
+			flex-direction: column;
+		}
+		.formulaire {
+			flex-grow:1;
+		}
 		
 	}
 
 	.formcraft-css .fc-form.align-left {
 		margin-left:auto;
+	}
+	.formcraft-css .fc-form .form-page-content .form-element-type-customText {
+		display: block;
+		margin-bottom: 30px;
 	}
 	.formcraft-css .fc-form .form-element .field-cover.customText-cover p {
 		color:var(--blanc) !important;
@@ -51,8 +62,6 @@
 			color:var(--blanc) !important;
 			font-size: 22px;
 			font-weight: bold;
-			display: block;
-			margin-top: 20px;
 			&::after {
 				color:var(--blanc) !important;
 			}
