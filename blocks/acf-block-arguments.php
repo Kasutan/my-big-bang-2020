@@ -32,9 +32,8 @@ function mbb_arguments_callback( $block ) {
 
 
 	$titre=wp_kses_post( get_field('titre') );
-	$ancre = esc_attr( get_field('ancre') );
 
-	printf('<section class="acf-block-arguments avec-ancre %s"><span class="ancre" id="%s"></span>', $className, $ancre);
+	printf('<section class="acf-block-arguments %s">', $className);
 		if($titre) printf('<h2 class="titre screen-reader-text">%s</h2>',$titre);
 		if( have_rows('arguments') ):
 			echo '<ol class="arguments">';
