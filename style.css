@@ -887,13 +887,17 @@ ol:not([class]) {
 
 ul:not([class]) {
   list-style: none;
-  padding-left: 1em; }
-  ul:not([class]) li::before {
-    content: '•';
-    color: var(--gris-fond);
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em; }
+  padding: 0; }
+  ul:not([class]) > li {
+    background-image: url("icons/fleche_simple.svg");
+    background-repeat: no-repeat;
+    background-position: 0 3px;
+    background-size: 16px 9px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    padding-left: 25px; }
+    ul:not([class]) > li::before {
+      display: none; }
 
 ol {
   list-style: decimal; }
@@ -4720,5 +4724,30 @@ h1.fond-bleu {
           min-height: unset; }
       .acf-block-arguments .pointilles {
         left: 50%; } }
+
+.acf-block-facteurs {
+  /*styles en écart du bloc état d'esprit - classe accueil commune*/ }
+  .acf-block-facteurs .texte {
+    padding-bottom: 20px; }
+    .acf-block-facteurs .texte strong {
+      background-color: var(--rouge);
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      color: var(--blanc);
+      padding: 2px 5px; }
+  .acf-block-facteurs .relief {
+    font-family: var(--font);
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase; }
+    .acf-block-facteurs .relief strong {
+      color: var(--rouge);
+      font-weight: 700; }
+  @media (min-width: 768px) {
+    .acf-block-facteurs .texte {
+      padding-top: 40px; }
+    .acf-block-facteurs .relief {
+      font-style: 26px;
+      line-height: 58px; } }
 
 /*# sourceMappingURL=style.css.map */

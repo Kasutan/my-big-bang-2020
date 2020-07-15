@@ -1,0 +1,31 @@
+.acf-block-facteurs {
+	/*styles en écart du bloc état d'esprit - classe accueil commune*/
+	.texte {
+		padding-bottom: 20px;
+		strong {
+			background-color: var(--rouge);
+			box-decoration-break: clone;
+			color: var(--blanc);
+			padding: 2px 5px;
+		}
+	}
+	.relief {
+		font-family: var(--font);
+		font-size: 20px;
+		font-weight: 700;
+		text-transform: uppercase;
+		strong {
+			color:var(--rouge);
+			font-weight: 700;
+		}
+	}
+	@include bp(md) {
+		.texte {
+			padding-top:40px;
+		}
+		.relief {
+			font-style: 26px;
+			line-height: 58px;
+		}
+	}
+}
