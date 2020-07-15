@@ -33,7 +33,6 @@ if ( ! function_exists( 'mbb_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails', array('post','page','profil','coach','studio'));
 
-		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => 'Menu principal (en-tête)',
 			'liens-footer' => 'Liens du pied de page',
@@ -41,6 +40,20 @@ if ( ! function_exists( 'mbb_setup' ) ) :
 			'boutons-footer' => 'Boutons du pied de page',
 			'social-footer' => 'Liens vers les réseaux sociaux',
 		) );
+
+		add_action( 'widgets_init', function() {
+			
+
+			register_sidebar(array(
+				'name'=> 'Barre latérale du blog',
+				'id' => 'blog',
+				'before_widget' => '<div id="%1$s" class="widget">',
+				'after_widget' => '</div>',
+				'before_title' => '<h2 class="h4 titre-widget">',
+				'after_title' => '</h2>',
+			));
+
+		} );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
