@@ -4573,4 +4573,58 @@ h1.fond-bleu {
     top: -30px;
     left: calc(50% - 1.5px); }
 
+.acf-block-coupon {
+  margin-bottom: 40px; }
+  .acf-block-coupon h2 {
+    background-color: var(--bleu);
+    color: var(--blanc);
+    font-size: 26px;
+    line-height: 30px;
+    margin: 0;
+    padding: 20px 35px;
+    text-align: center; }
+    .acf-block-coupon h2 span {
+      font-size: 20px;
+      font-weight: normal; }
+  .acf-block-coupon .formulaire {
+    background-color: var(--rouge); }
+  .acf-block-coupon .image {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .acf-block-coupon .image img {
+      -o-object-fit: cover;
+      object-fit: cover;
+      width: 100%; }
+  @media (min-width: 960px) {
+    .acf-block-coupon {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .acf-block-coupon .image, .acf-block-coupon .texte {
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%; } }
+  .acf-block-coupon .formcraft-css .fc-form.align-left {
+    margin-left: auto; }
+  .acf-block-coupon .formcraft-css .fc-form .form-element .field-cover.customText-cover p {
+    color: var(--blanc) !important;
+    font-size: 14px;
+    line-height: 24px; }
+  .acf-block-coupon .formcraft-css .fc-form .form-element.form-element-type-checkbox .form-element-html > div {
+    background-color: transparent;
+    color: var(--blanc) !important; }
+    .acf-block-coupon .formcraft-css .fc-form .form-element.form-element-type-checkbox .form-element-html > div span.main-label > span {
+      color: var(--blanc) !important;
+      font-size: 22px;
+      font-weight: bold; }
+      .acf-block-coupon .formcraft-css .fc-form .form-element.form-element-type-checkbox .form-element-html > div span.main-label > span::after {
+        color: var(--blanc) !important; }
+  .acf-block-coupon .formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="radio"] {
+    background-color: transparent !important;
+    border-color: #fff !important; }
+
 /*# sourceMappingURL=style.css.map */
