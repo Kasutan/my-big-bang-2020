@@ -23,7 +23,7 @@ get_header();?>
 		<div class="primary">
 			<header class="entry-header">
 				
-				<?php printf('<h1 class="post-title">%s</h1>',
+				<?php printf('<h1 class="entry-title">%s</h1>',
 					get_the_title()
 				);?>
 				
@@ -46,7 +46,7 @@ get_header();?>
 			</header><!-- .entry-header -->
 
 
-			<div class="entry-content container">
+			<div class="entry-content">
 				<?php
 				the_content();
 				?>
@@ -61,14 +61,15 @@ get_header();?>
 
 	endwhile; // End of the loop. 
 
-	//bloc newsletter réutilisable https://wordpress.org/support/topic/reusable-block-in-single-php/
-	$reuse_block = get_post( 22715 ); //ID du bloc réutilisable
-	$reuse_block_content = apply_filters( 'the_content', $reuse_block->post_content);
-	echo $reuse_block_content;
+	
 	
 	?>
 
 	</main><!-- #main -->
 
 <?php
+//bloc newsletter réutilisable https://wordpress.org/support/topic/reusable-block-in-single-php/
+$reuse_block = get_post( 22715 ); //ID du bloc réutilisable
+$reuse_block_content = apply_filters( 'the_content', $reuse_block->post_content);
+echo $reuse_block_content;
 get_footer();
