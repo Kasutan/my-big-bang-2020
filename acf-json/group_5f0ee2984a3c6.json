@@ -1,0 +1,111 @@
+{
+    "key": "group_5f0ee2984a3c6",
+    "title": "Bloc témoignages pour landing page",
+    "fields": [
+        {
+            "key": "field_5f0ee2984e1f8",
+            "label": "Bloc témoignages pour landing page",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5f0ee2c22d345",
+            "label": "Titre",
+            "name": "titre",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Nos clients témoignent&nbsp;!",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f0ee2984e231",
+            "label": "Image des témoignages",
+            "name": "image",
+            "type": "image",
+            "instructions": "Copie d'écran de témoignages.\r\nFormat portrait.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5f0ee31837bf3",
+            "label": "Galerie de photos",
+            "name": "galerie",
+            "type": "gallery",
+            "instructions": "3 photos au format 4\/3 à afficher verticalement à côté des témoignages",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "insert": "append",
+            "library": "all",
+            "min": 3,
+            "max": 3,
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "JPG"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/acf-temoignages"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1594811313
+}
