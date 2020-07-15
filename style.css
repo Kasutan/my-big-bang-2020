@@ -4483,13 +4483,13 @@ h1.fond-bleu {
   .acf-block-studios a.cta-resultat svg .cercle {
     fill: var(--rouge); }
 
-.acf-block-studios .titre {
+.acf-block-studios .nom {
   font-size: 18px;
   font-weight: 700; }
-  .acf-block-studios .titre .ville {
+  .acf-block-studios .nom span {
     color: var(--rouge); }
 
-.acf-block-studios .titre, .acf-block-studios .email, .acf-block-studios .metro, .acf-block-studios .itineraire {
+.acf-block-studios .nom, .acf-block-studios .email, .acf-block-studios .metro, .acf-block-studios .itineraire {
   background-image: url("icons/pic-Studio.svg");
   background-repeat: no-repeat;
   background-position: left center;

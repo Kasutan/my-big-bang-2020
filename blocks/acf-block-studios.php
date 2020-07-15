@@ -37,7 +37,7 @@ function mbb_studios_callback( $block ) {
 	$studios=get_posts(array(
 		'post_type' => 'studio',
 		'numberposts' => -1,
-		'orderby' => 'menu_order',
+		'orderby' => 'title',
 		'order' => 'ASC',
 	));
 	if(count($studios)==0) {
@@ -95,13 +95,9 @@ function mbb_affiche_studio($post_id) {
 	$telephone=get_field('telephone',$post_id);
 	$email=antispambot(esc_attr(get_field('email',$post_id)));
 
-	//Données temporaires
-	$ville='Bordeaux';
-	$code_postal='33000';
-	$adresse='125 rue Sainte Catherine, 33000 Bordeaux';
-
 	printf('<li class="studio" id="studio-%s">',$post_id);
-		printf('<p class="titre"><span class="ville">%s</span> <span class="nom">%s</span></p>',$ville, get_the_title($post_id));
+		printf('<p class="screen-reader-text"><span class="ville">%s</span><span class="code_postal">%s</span></p>',$ville,$code_postal);//pour le filtre avec list.js
+		printf('<p class="nom">%s</p>',get_the_title($post_id));
 		printf('<p class="adresse">%s</p>',$adresse);
 		printf('<p class="metro">%s</p>',$metro);
 		printf('<a href="https://www.google.com/maps/dir/?api=1&destination=%s" class="itineraire" target="_blank" title="Voir l\'itinéraire dans un nouvel onglet">Itinéraire</a>',urlencode($adresse));
@@ -113,12 +109,10 @@ function mbb_affiche_studio($post_id) {
 }
 
 function mbb_prepare_adresse($location) {
-	$adresse=array();
-    foreach( array('street_number', 'street_name', 'post_code', 'city') as $i => $k ) {
-        if( isset( $location[ $k ] ) ) {
-            $adresse[]=$location[ $k ];
-        }
+	$adresse='';
+	if( isset( $location[ 'street_number' ] ) ) {
+		$adresse.=$location[ 'street_number' ].' ';
 	}
-	$adresse=implode(', ',$adresse);
+	$adresse.=$location['street_name'].', '.$location['post_code'].' '.$location['city'];
 	return $adresse;
 }

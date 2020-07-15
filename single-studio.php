@@ -17,7 +17,7 @@ if(function_exists('get_field')) {
 	$etoiles=esc_attr(get_field('nombre_etoiles'));
 	$avis=esc_attr(get_field('nombre_avis'));
 	$telephone=esc_attr(get_field('telephone'));
-	$location=esc_attr(get_field('adresse'));
+	$location=get_field('adresse');
 	$email=antispambot(esc_attr(get_field('email')));
 	$horaires=get_field('horaires'); //champ de type groupe
 	$galerie=get_field('galerie');
@@ -32,13 +32,10 @@ if(function_exists('get_field')) {
 	$texte_droite=wp_kses_post(get_field('contenu_droite_studio','option'));
 	$shortcode_widget=esc_html(get_field('shortcode_widget_studio','option'));
 
-	$adresse=array();
-    foreach( array('street_number', 'street_name', 'post_code', 'city') as $i => $k ) {
-        if( isset( $location[ $k ] ) ) {
-            $adresse[]=$location[ $k ];
-        }
+	$adresse='';
+	if(function_exists('mbb_prepare_adresse')) {
+		$adresse=mbb_prepare_adresse($location) ;
 	}
-	$adresse=implode(', ',$adresse);
 }
 
 $semaine=array('lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche');
@@ -83,8 +80,7 @@ $semaine=array('lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'
 	echo '<div class="texte">';
 		echo '<p class="avant-nom"><strong>Studio Mihabodytec My Big Bang</strong></p>';
 		printf('<p class="nom"><strong>%s</strong></p>',get_the_title());
-		//printf('<p class="adresse">%s</p>',$adresse); Attente clé Google API
-		printf('<p class="adresse">%s</p>','16 rue du Départ, 75014 Paris');
+		printf('<p class="adresse">%s</p>',$adresse);
 		printf('<p class="email">%s</p>',$email);
 		echo '<p class="contraste">Horaires</p><ul class="horaires">';
 		foreach($semaine as $jour) {

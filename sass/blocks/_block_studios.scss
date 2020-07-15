@@ -105,14 +105,14 @@
 		}
 	}
 
-	.titre {
+	.nom {
 		font-size: 18px;
 		font-weight: 700;
-		.ville {
+		span {
 			color:var(--rouge);
 		}
 	}
-	.titre, .email, .metro, .itineraire {
+	.nom, .email, .metro, .itineraire {
 		background-image:url('icons/pic-Studio.svg');
 		background-repeat: no-repeat;
 		background-position:left center;
