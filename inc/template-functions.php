@@ -85,6 +85,51 @@ function mbb_page_avec_banniere() {
 
 
 /***************************************************************
+	Affiche le fil d'ariane
+/***************************************************************/
+if ( ! function_exists( 'mbb_fil_ariane' ) ) :
+	/**
+	* Affiche le fil d'ariane.
+	*/
+	function mbb_fil_ariane() {
+		
+		//On n'affiche le fil d'ariane que sur les pages du bog
+		if ( (is_single() && 'post' === get_post_type()) || is_category() || is_home()) :
+			echo '<p class="fil-ariane">';
+
+			//Afficher le lien vers l'accueil
+			$accueil=get_option('page_on_front');
+			printf('<a href="%s">%s</a> <span class="eclair"></span> ',
+				get_the_permalink( $accueil),
+				get_the_title($accueil)
+			);
+			
+			$actus=get_option( 'page_for_posts' ); 
+			//Afficher la page des actualités pour les articles (single ou archive de catégorie)
+			if ( is_single() || is_category() ) :
+				printf('<a href="%s">%s</a> <span class="eclair"></span> ',
+					get_the_permalink( $actus),
+					get_the_title($actus)
+				);
+			endif;
+
+			//Afficher le titre de la page courante
+			if(is_single()): //single article
+				the_title('<span class="current">','</span>'); 
+			elseif (is_category()) :  //archives catégories d'articles
+				echo '<span class="current">'.single_cat_title( '', false ).'</span>';
+			elseif (is_home()) : //page du blog
+				printf('<span class="current">%s</span>',get_the_title($actus));
+			endif;
+
+			//Fermer la balise du fil d'ariane
+			echo '</p>';
+
+		endif;
+	}
+endif;
+
+/***************************************************************
 Remove WP compression for images - there's a plugin for that
 ***************************************************************/
 add_filter( 'jpeg_quality', 'smashing_jpeg_quality' );
