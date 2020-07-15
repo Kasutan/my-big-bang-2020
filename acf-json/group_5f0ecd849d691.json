@@ -48,7 +48,7 @@
             "label": "Zone de texte à côté de l'image",
             "name": "texte",
             "type": "wysiwyg",
-            "instructions": "",
+            "instructions": "Les mots en gras sont affichés en blanc surligné rouge.",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -67,8 +67,27 @@
             "label": "Texte d'éclairage",
             "name": "eclairage",
             "type": "wysiwyg",
-            "instructions": "",
+            "instructions": "Les mots en gras sont affichés en rouge.",
             "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5f0edc5008669",
+            "label": "Définition de My Big Bang",
+            "name": "definition",
+            "type": "wysiwyg",
+            "instructions": "Texte affiché sous l'éclairage, avec le picto silhouette en arrière plan.\r\nLes mots en gras sont affichés en rouge.",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -99,5 +118,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594805694
+    "modified": 1594809508
 }

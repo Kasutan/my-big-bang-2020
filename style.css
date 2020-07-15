@@ -4743,11 +4743,26 @@ h1.fond-bleu {
     .acf-block-facteurs .relief strong {
       color: var(--rouge);
       font-weight: 700; }
+  .acf-block-facteurs .definition {
+    background-image: url("icons/Silhouette.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90px;
+    font-size: 18px;
+    padding: 50px 0;
+    text-align: center; }
+    .acf-block-facteurs .definition strong {
+      color: var(--rouge); }
   @media (min-width: 768px) {
     .acf-block-facteurs .texte {
       padding-top: 40px; }
     .acf-block-facteurs .relief {
       font-style: 26px;
-      line-height: 58px; } }
+      line-height: 58px; }
+    .acf-block-facteurs .definition {
+      background-size: 155px 220px;
+      padding: 200px 0 150px;
+      font-size: 22px;
+      line-height: 36px; } }
 
 /*# sourceMappingURL=style.css.map */

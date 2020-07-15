@@ -19,6 +19,18 @@
 			font-weight: 700;
 		}
 	}
+	.definition {
+		background-image: url('icons/Silhouette.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 90px;
+		font-size: 18px;
+		padding:50px 0;
+		text-align: center;
+		strong {
+			color:var(--rouge);
+		}
+	}
 	@include bp(md) {
 		.texte {
 			padding-top:40px;
@@ -26,6 +38,12 @@
 		.relief {
 			font-style: 26px;
 			line-height: 58px;
+		}
+		.definition {
+			background-size: 155px 220px;
+			padding:200px 0 150px;
+			font-size: 22px;
+			line-height: 36px;
 		}
 	}
 }

@@ -32,6 +32,7 @@ function mbb_facteurs_callback( $block ) {
 	$image_id=esc_attr( get_field('image') );
 	$texte=wp_kses_post( get_field('texte') );
 	$eclairage=wp_kses_post( get_field('eclairage') );
+	$definition= get_field('definition');
 
 
 
@@ -42,6 +43,7 @@ function mbb_facteurs_callback( $block ) {
 		echo '</div>'; //fin .part2
 			if($eclairage) printf('<div class="eclairage bleu"><div class="relief">%s</div></div>',$eclairage); 
 			//eclair = bg img dans _eclairage + bg img plus large avec décor particules
+		if($definition) printf('<div class="definition">%s</div>',$definition);
 	echo "</section>";
 
 }
