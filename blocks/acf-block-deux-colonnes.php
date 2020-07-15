@@ -9,7 +9,7 @@ function mbb_acf_block_deux_colonnes_acf_init() {
 			'title'           => 'Bloc deux colonnes',
 			'description'     => 'Bloc deux colonnes avec titre optionnel, image ou vidéo à gauche et texte WYSIWYG à droite',
 			'render_callback' => 'mbb_deux_colonnes_callback',
-			'category'        => 'mybigbang-home',
+			'category'        => 'mybigbang',
 			'icon'            => 'align-left',
 			'mode'			=> "edit",
 			'supports' => array( 
