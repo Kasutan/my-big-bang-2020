@@ -51,6 +51,8 @@
 			color:var(--blanc) !important;
 			font-size: 22px;
 			font-weight: bold;
+			display: block;
+			margin-top: 20px;
 			&::after {
 				color:var(--blanc) !important;
 			}

@@ -4624,7 +4624,9 @@ h1.fond-bleu {
     .acf-block-coupon .formcraft-css .fc-form .form-element.form-element-type-checkbox .form-element-html > div span.main-label > span {
       color: var(--blanc) !important;
       font-size: 22px;
-      font-weight: bold; }
+      font-weight: bold;
+      display: block;
+      margin-top: 20px; }
       .acf-block-coupon .formcraft-css .fc-form .form-element.form-element-type-checkbox .form-element-html > div span.main-label > span::after {
         color: var(--blanc) !important; }
   .acf-block-coupon .formcraft-css .fc-form.fc-form-2 .form-element .field-cover input[type="radio"] {
