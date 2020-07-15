@@ -32,6 +32,7 @@ function mbb_newsletter_callback( $block ) {
 
 	$titre=wp_kses_post( get_field('titre') );
 	$intro=wp_kses_post( get_field('intro') );
+	$formulaire=get_field('formulaire');
 	
 
 	printf('<section class="acf-block-newsletter alignfull %s">', $className);
@@ -39,7 +40,7 @@ function mbb_newsletter_callback( $block ) {
 		echo '<div class="newsletter">';
 			if($titre) printf('<h2 class="titre">%s</h2>',$titre);
 			if($intro) printf('<div class="intro">%s</div>',$intro);
-			echo '<em>formulaire sendinblue</em>';
+			if($formulaire) printf('<div class="formulaire">%s</div>',$formulaire);
 		echo '</div>';
 	echo "</section>";
 
