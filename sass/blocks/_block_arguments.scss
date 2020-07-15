@@ -1,0 +1,125 @@
+.acf-block-arguments {
+	padding:0 var(--padding-x) 40px;
+
+	.arguments {
+		list-style: none;
+		padding-left: 30px;
+		position: relative;
+		margin: 0;
+	}
+
+	.pointilles {
+		border-right: dashed 1px var(--gris-fond);
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 9px;
+		width: 1px;
+
+	}
+
+	.argument {
+		margin-top: 60px;
+		position: relative;
+	}
+
+	.chiffre {
+		color: var(--gris-fond);
+		font-size: 80px;
+		line-height: 65px;
+		left: -2px;
+		font-weight: 700;
+		opacity: 0.2;
+		position: absolute;
+		top: -38px;
+	}
+
+	h3, .texte {
+		font-size: 18px;
+		line-height: 1.2;
+	}
+
+	h3 {
+		color: var(--bleu);
+		font-weight: 500;
+		margin-bottom: 0;
+		position: relative;
+		text-transform: none;
+
+		&::before {
+			background-color: var(--blanc);
+			border: solid 2px var(--gris-fond);
+			border-radius: 50%;
+			content: '';
+			display: inline-block;
+			height: 7px;
+			width: 7px;
+			position: absolute;
+			left: -33px;
+			top: 9px;
+		}
+	}
+
+	.texte {
+		color: var(--rouge);
+		font-weight: 700;
+	}
+	
+
+	@include bp(md) {
+		padding-top:60px;
+		padding-bottom: 60px;
+		.arguments {
+			display: flex;
+			flex-wrap: wrap;
+			padding-left: 0;
+		}
+		.chiffre {
+			font-size: 130px;
+			top:-48px;
+		}
+
+		h3, .texte {
+			font-size: 20px;
+			line-height: 24px;
+		}
+		
+		.argument {
+			flex-basis:50%;
+			margin-bottom: 0;
+			margin-top: 0;
+			min-height:200px;
+			&:nth-of-type(2n) {
+				padding-left:35px;
+				position: relative;
+				top:100px;
+
+				h3::before {
+					left:-38px;
+				}
+				.chiffre {
+					left:40px;
+				}
+
+			}
+			&:nth-of-type(2n+1) {
+				padding-right: 35px;
+				text-align: right;
+				.chiffre {
+					left:unset;
+					right: 40px;
+				}
+				h3::before {
+					left:unset;
+					right:-39px;
+				}
+			}
+			&:last-of-type {
+				min-height:unset;
+			}
+		}
+		.pointilles {
+			left:50%;
+		}
+	}
+}

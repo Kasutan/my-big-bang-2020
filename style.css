@@ -4627,4 +4627,98 @@ h1.fond-bleu {
     background-color: transparent !important;
     border-color: #fff !important; }
 
+.acf-block-arguments {
+  padding: 0 var(--padding-x) 40px; }
+  .acf-block-arguments .arguments {
+    list-style: none;
+    padding-left: 30px;
+    position: relative;
+    margin: 0; }
+  .acf-block-arguments .pointilles {
+    border-right: dashed 1px var(--gris-fond);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 9px;
+    width: 1px; }
+  .acf-block-arguments .argument {
+    margin-top: 60px;
+    position: relative; }
+  .acf-block-arguments .chiffre {
+    color: var(--gris-fond);
+    font-size: 80px;
+    line-height: 65px;
+    left: -2px;
+    font-weight: 700;
+    opacity: 0.2;
+    position: absolute;
+    top: -38px; }
+  .acf-block-arguments h3, .acf-block-arguments .texte {
+    font-size: 18px;
+    line-height: 1.2; }
+  .acf-block-arguments h3 {
+    color: var(--bleu);
+    font-weight: 500;
+    margin-bottom: 0;
+    position: relative;
+    text-transform: none; }
+    .acf-block-arguments h3::before {
+      background-color: var(--blanc);
+      border: solid 2px var(--gris-fond);
+      border-radius: 50%;
+      content: '';
+      display: inline-block;
+      height: 7px;
+      width: 7px;
+      position: absolute;
+      left: -33px;
+      top: 9px; }
+  .acf-block-arguments .texte {
+    color: var(--rouge);
+    font-weight: 700; }
+  @media (min-width: 768px) {
+    .acf-block-arguments {
+      padding-top: 60px;
+      padding-bottom: 60px; }
+      .acf-block-arguments .arguments {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding-left: 0; }
+      .acf-block-arguments .chiffre {
+        font-size: 130px;
+        top: -48px; }
+      .acf-block-arguments h3, .acf-block-arguments .texte {
+        font-size: 20px;
+        line-height: 24px; }
+      .acf-block-arguments .argument {
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+        margin-bottom: 0;
+        margin-top: 0;
+        min-height: 200px; }
+        .acf-block-arguments .argument:nth-of-type(2n) {
+          padding-left: 35px;
+          position: relative;
+          top: 100px; }
+          .acf-block-arguments .argument:nth-of-type(2n) h3::before {
+            left: -38px; }
+          .acf-block-arguments .argument:nth-of-type(2n) .chiffre {
+            left: 40px; }
+        .acf-block-arguments .argument:nth-of-type(2n+1) {
+          padding-right: 35px;
+          text-align: right; }
+          .acf-block-arguments .argument:nth-of-type(2n+1) .chiffre {
+            left: unset;
+            right: 40px; }
+          .acf-block-arguments .argument:nth-of-type(2n+1) h3::before {
+            left: unset;
+            right: -39px; }
+        .acf-block-arguments .argument:last-of-type {
+          min-height: unset; }
+      .acf-block-arguments .pointilles {
+        left: 50%; } }
+
 /*# sourceMappingURL=style.css.map */

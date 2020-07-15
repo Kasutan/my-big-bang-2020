@@ -197,6 +197,7 @@ require_once( 'blocks/acf-block-reservation-session.php' );
 require_once( 'blocks/acf-block-deux-colonnes.php' );
 require_once( 'blocks/acf-block-studios.php' );
 require_once( 'blocks/acf-block-coupon.php' );
+require_once( 'blocks/acf-block-arguments.php' );
 
 /**
 * Page options
