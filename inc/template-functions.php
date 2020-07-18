@@ -130,6 +130,14 @@ if ( ! function_exists( 'mbb_fil_ariane' ) ) :
 endif;
 
 /***************************************************************
+Personnaliser l'extrait
+***************************************************************/
+function mbb_excerpt_more( $more ) {
+	return '...';
+}
+add_filter( 'excerpt_more', 'mbb_excerpt_more' );
+
+/***************************************************************
 Remove WP compression for images - there's a plugin for that
 ***************************************************************/
 add_filter( 'jpeg_quality', 'smashing_jpeg_quality' );

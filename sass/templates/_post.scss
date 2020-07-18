@@ -21,7 +21,7 @@
 }
 .single-post, .archive, .blog {
 	.site-main {
-		padding:0 var(--padding-x);
+		padding:0 20px;
 	}
 	h1.entry-title {
 		color:var(--bleu);
@@ -69,12 +69,13 @@
 			flex-basis:100%;
 		}
 		.primary {
-			flex-basis: calc(100% - 453px);
+			flex-basis: calc(100% - 373px);
 		}
 		.sidebar {
-			flex-basis:413px;
+			flex-basis:353px;
 			flex-grow:0;
 			flex-shrink:0;
+			margin-left: 20px;
 			margin-top: 0;
 		}
 		h1.entry-title {
@@ -88,6 +89,18 @@
 		}
 	}
 	@include bp(lg) {
+		.site-main {
+			padding:0 var(--padding-x);
+		}
+		.sidebar {
+			flex-basis:413px;
+			margin-left:40px;
+		}
+		.primary {
+			flex-basis: calc(100% - 453px);
+		}
+	}
+	@include bp(xl) {
 		.sidebar {
 			margin-left:100px;
 		}
@@ -288,19 +301,137 @@
 	}
 }
 
+/************Vignettes articles dans la boucle***************/
 .entry-content {
 	&.loop {
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
 		article {
-			margin-bottom:var(--margin-bottom);
+			flex-basis:330px;
+			flex-grow:0;
+			margin-bottom:40px;
+		}
+
+		.posts-navigation {
+			flex-basis:100%;
+		}
+		
+		.post-categories {
+			background-image: url('icons/Eclair-menu.svg');
+			background-position: left center;
+			background-repeat: no-repeat;
+			background-size: 6px;
+			display: flex;
+			list-style: none;
+			margin-left: 0;
+			margin-top: 0;
+			padding-left: 15px;
+			a {
+				color:var(--rouge);
+				font-size: 14px;
+				line-height: 19px;
+				font-weight: 600;
+				text-decoration: none;
+			}
+		}
+		.image {
+			display: block;
+			margin-bottom:55px;
+			margin-right:55px;
+			position: relative;
+
+			.image-wrapper {
+				display: flex;
+				max-width:100%;
+				position: relative;
+				height:270px;
+				left:25px;
+				top:25px;
+				width:100%;
+				&::before {
+					background-color:var(--gris-fond);
+					content:'';
+					height:100%;
+					left:-25px;
+					position: absolute;
+					top:-25px;
+					width:100%;
+				}
+				img {
+					object-fit: cover;
+					width: 100%;
+					position: relative;
+				}
+			}
+		
+		
+		}
+		.date {
+			background-color: var(--gris-fond);
+			color:var(--blanc);
+			display: inline-block;
+			line-height: 28px;
+			margin-bottom: 18px;
+			padding:0 5px;
 		}
 		h2.item-title {
-			margin-bottom:0;
+			font-size: 18px;
+			line-height: 24px;
+			margin-bottom:10px;
 			a {
 				text-decoration: none;
 			}
 		}
+		.extrait {
+			font-size: 14px;
+			line-height: 22px;
+			margin-bottom: 20px;
+		}
+
+		@include bp(md) {
+			article {
+				align-items: flex-start;
+				display: flex;
+				flex-direction: column;
+			}
+			
+			a.fleche {
+				align-self: flex-end;
+				margin-top:auto;
+			}
+
+		}
+		@include bp(lg) {
+			justify-content: space-between;
+			article {
+				margin-bottom: 80px;
+			}
+			article:first-of-type {
+				flex-basis :100%;
+				padding-left:calc(50% + 20px);
+				position: relative;
+				.image {
+					left:0;
+					top:0;
+					position: absolute;
+					width:calc(50% - 50px);
+				}
+				h2.item-title {
+					font-family: var(--font-serif);
+					font-size: 24px;
+					line-height: 32px;
+				}
+				.extrait {
+					font-size: 16px;
+				}
+			}
+		}
 	}
 
+	//Si aucun article trouvé
 	.search-form {
 		margin: 2rem auto;
 	}

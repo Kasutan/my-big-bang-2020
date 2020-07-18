@@ -15,23 +15,19 @@
 get_header();
 ?>
 
-		<main id="main" class="site-main">
-
+	<main id="main" class="site-main">
+		<?php if(function_exists('mbb_fil_ariane')) mbb_fil_ariane(); ?>
+		
+		<div class="primary">
 		<?php
-		if ( have_posts() ) :
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header class="entry-header">
-					<?php printf('<h1 class="page-title">%s</h1>',
-						remove_accents( get_the_title() )
-					);?>
-				</header>
-				<?php
-			endif;
+		if ( is_home() && ! is_front_page() ) :
+			printf('<h1 class="screen-reader-text">%s</h1>',get_the_title(get_option( 'page_for_posts' )));
+		endif; 
 
-			
-			echo '<div class="entry-content container loop">';
+		if ( have_posts() ) :	
+		
+		echo '<div class="entry-content loop">';
 
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -45,11 +41,6 @@ get_header();
 				get_template_part( 'template-parts/content-loop', get_post_type() );
 
 			endwhile;
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<?php
-			endif;
 
 			if (function_exists('wp_pagenavi')) :
 				wp_pagenavi();
@@ -65,8 +56,13 @@ get_header();
 
 		endif;
 		?>
+		</div><!-- .primary -->
+		<aside class="sidebar" >
+			<?php dynamic_sidebar('blog');?>
+		</aside>
 
-		</main><!-- #main -->
+
+	</main><!-- #main -->
 
 <?php
 get_footer();

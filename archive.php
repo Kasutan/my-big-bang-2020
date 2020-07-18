@@ -10,19 +10,18 @@
 get_header();
 ?>
 
-		<main id="main" class="site-main">
+	<main id="main" class="site-main">
+		<?php if(function_exists('mbb_fil_ariane')) mbb_fil_ariane(); ?>
+		<div class="primary">
+
+
+		<?php 
+			printf('<h1 class="screen-reader-text">%s - %s</h1>',get_the_title(get_option( 'page_for_posts' )),get_the_archive_title());
+		?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="entry-header">
-				<?php
-				printf('<h1 class="page-title">%s</h1>',
-					remove_accents( get_the_archive_title() )
-				);
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-			<div class="entry-content container loop">
+			<div class="entry-content loop">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -53,8 +52,11 @@ get_header();
 
 		endif;
 		?>
-
-		</main><!-- #main -->
+		</div><!-- .primary -->
+		<aside class="sidebar" >
+			<?php dynamic_sidebar('blog');?>
+		</aside>
+	</main><!-- #main -->
 
 <?php
 
