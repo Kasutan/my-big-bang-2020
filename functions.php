@@ -226,3 +226,4 @@ require_once( 'inc/acf-options-page.php' );
 */
 
 require_once( 'inc/maps-api.php' );
+require_once( 'inc/maps.php' );

@@ -268,16 +268,16 @@
 		}
 	}
 
-/***************************avis***********************/
-a.button.studio.studio-2 {
-	background-color: #fff;
-	max-width:464px;
-	margin:0 auto;
-	position: relative;
-	top:18px;
-	z-index: 1;
-}
-	.avis, .carte {
+	/***************************avis***********************/
+	a.button.studio.studio-2 {
+		background-color: #fff;
+		max-width:464px;
+		margin:0 auto;
+		position: relative;
+		top:18px;
+		z-index: 1;
+	}
+	.avis {
 		background-color:var(--gris-decor);
 		height:700px;
 		display: flex;
@@ -289,7 +289,17 @@ a.button.studio.studio-2 {
 			text-align: center;
 		}
 	}
-	.carte {
-		background-color:var(--gris-fond);
+
+	/***************************carte***********************/
+	.acf-map {
+		height:58vw;
+		width: 100%;
+		.etiquette {
+			font-size: 14px;
+			font-weight: bold;
+			strong {
+				color:var(--rouge);
+			}
+		}
 	}
 }

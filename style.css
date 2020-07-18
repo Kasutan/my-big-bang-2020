@@ -2253,7 +2253,8 @@ a.cta-resultat {
   /***************************entry-header***********************/
   /***************************studio***********************/
   /***************************general***********************/
-  /***************************avis***********************/ }
+  /***************************avis***********************/
+  /***************************carte***********************/ }
   .single-studio .entry-header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2482,7 +2483,7 @@ a.cta-resultat {
     position: relative;
     top: 18px;
     z-index: 1; }
-  .single-studio .avis, .single-studio .carte {
+  .single-studio .avis {
     background-color: var(--gris-decor);
     height: 700px;
     display: -webkit-box;
@@ -2494,10 +2495,16 @@ a.cta-resultat {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
-    .single-studio .avis .contraste, .single-studio .carte .contraste {
+    .single-studio .avis .contraste {
       text-align: center; }
-  .single-studio .carte {
-    background-color: var(--gris-fond); }
+  .single-studio .acf-map {
+    height: 58vw;
+    width: 100%; }
+    .single-studio .acf-map .etiquette {
+      font-size: 14px;
+      font-weight: bold; }
+      .single-studio .acf-map .etiquette strong {
+        color: var(--rouge); }
 
 h1.fond-bleu {
   background-color: var(--bleu);

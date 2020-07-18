@@ -68,56 +68,58 @@ $semaine=array('lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'
 	</header><!-- .entry-header -->
 
 	
-<section class="studio">
-	<?php
-	echo '<div class="galerie owl-carousel owl-theme">';
-		foreach( $galerie as $image_id ) {
-			printf('<div class="image-wrapper">%s</div>',
-				wp_get_attachment_image( $image_id, 'large')
-			);
-		}
-	echo '</div>';//fin galerie
-	echo '<div class="texte">';
-		echo '<p class="avant-nom"><strong>Studio Mihabodytec My Big Bang</strong></p>';
-		printf('<p class="nom"><strong>%s</strong></p>',get_the_title());
-		printf('<p class="adresse">%s</p>',$adresse);
-		printf('<p class="email">%s</p>',$email);
-		echo '<p class="contraste">Horaires</p><ul class="horaires">';
-		foreach($semaine as $jour) {
-			printf('<li>%s : <strong>%s</strong>',ucfirst($jour),$horaires[$jour]);
-			if(array_key_exists($jour.'_am',$horaires) && !empty($horaires[$jour.'_am'])) {
-				printf('<span class="separateur">//</span><strong>%s</strong>',$horaires[$jour.'_am']);
+	<section class="studio">
+		<?php
+		echo '<div class="galerie owl-carousel owl-theme">';
+			foreach( $galerie as $image_id ) {
+				printf('<div class="image-wrapper">%s</div>',
+					wp_get_attachment_image( $image_id, 'large')
+				);
 			}
-			echo '</li>';
+		echo '</div>';//fin galerie
+		echo '<div class="texte">';
+			echo '<p class="avant-nom"><strong>Studio Mihabodytec My Big Bang</strong></p>';
+			printf('<p class="nom"><strong>%s</strong></p>',get_the_title());
+			printf('<p class="adresse">%s</p>',$adresse);
+			printf('<p class="email">%s</p>',$email);
+			echo '<p class="contraste">Horaires</p><ul class="horaires">';
+			foreach($semaine as $jour) {
+				printf('<li>%s : <strong>%s</strong>',ucfirst($jour),$horaires[$jour]);
+				if(array_key_exists($jour.'_am',$horaires) && !empty($horaires[$jour.'_am'])) {
+					printf('<span class="separateur">//</span><strong>%s</strong>',$horaires[$jour.'_am']);
+				}
+				echo '</li>';
+			}
+			echo "</ul>";
+		echo '</div>';//fin .texte 
+
+		printf('<div class="eclairage localisation"><div class="relief">%s</div></div>',get_the_content());
+		?>
+	</section>
+	<section class="general">
+		<?php if($texte_gauche) {
+			printf('<div class="contenu"><h2 class="contraste">%s</h2><div>%s</div></div>',$titre_gauche,$texte_gauche);
 		}
-		echo "</ul>";
-	echo '</div>';//fin .texte 
-
-	printf('<div class="eclairage localisation"><div class="relief">%s</div></div>',get_the_content());
-	?>
-</section>
-<section class="general">
-	<?php if($texte_gauche) {
-		printf('<div class="contenu"><h2 class="contraste">%s</h2><div>%s</div></div>',$titre_gauche,$texte_gauche);
-	}
-	if($texte_droite) {
-		printf('<div class="contenu"><h2 class="contraste">%s</h2><div>%s</div></div>',$titre_droite,$texte_droite);
-	}
-	if($label_elements && $cible_elements && function_exists('mbb_get_picto_inline')) {
-		printf('<div class="lien"><a class="cta-resultat" href="%s"><span>%s</span>', $cible_elements, $label_elements);
-		echo mbb_get_picto_inline('fleche-cta').'</a></div>';
-	}?>
-</section>
-<?php printf('<a class="button studio studio-2" href="%s">%s</a>',$cible,$label); ?>
-<section class="avis">
-	<div class="contraste">AVIS</div>
-</section>
-<section class="carte">
-	<div class="contraste">CARTE</div>
-</section>
-
-
-		<?php	
+		if($texte_droite) {
+			printf('<div class="contenu"><h2 class="contraste">%s</h2><div>%s</div></div>',$titre_droite,$texte_droite);
+		}
+		if($label_elements && $cible_elements && function_exists('mbb_get_picto_inline')) {
+			printf('<div class="lien"><a class="cta-resultat" href="%s"><span>%s</span>', $cible_elements, $label_elements);
+			echo mbb_get_picto_inline('fleche-cta').'</a></div>';
+		}?>
+	</section>
+	<?php printf('<a class="button studio studio-2" href="%s">%s</a>',$cible,$label); ?>
+	<section class="avis">
+		<div class="contraste">AVIS</div>
+	</section>
+	<?php if( $location ): ?>
+		<section class="carte acf-map" data-zoom="16">
+			<div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>">
+				<p class="etiquette"><strong>My Big Bang</strong> <?php the_title(); ?></p>
+				<?php printf('<a href="https://www.google.com/maps/dir/?api=1&destination=%s" class="itineraire" target="_blank" title="Voir l\'itinéraire dans un nouvel onglet"> Itinéraire</a>',urlencode($adresse)); ?>
+			</div>
+		</div>
+	<?php endif;
 
 endwhile; // End of the loop. ?>
 
