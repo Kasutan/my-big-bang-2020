@@ -85,6 +85,8 @@ function mbb_affiche_studio($post_id) {
 	$location=get_field('adresse',$post_id);
 	$ville=$location['city'];
 	$code_postal=$location['post_code'];
+	//hack
+	if($code_postal=='75116') $code_postal='75016';
 	$adresse=mbb_prepare_adresse($location);
 
 	$metro=get_field('metro',$post_id);
@@ -109,6 +111,8 @@ function mbb_prepare_adresse($location) {
 	if( isset( $location[ 'street_number' ] ) ) {
 		$adresse.=$location[ 'street_number' ].' ';
 	}
+	if($location['post_code']=='75116') $location['post_code']='75016';
+
 	$adresse.=$location['street_name'].', '.$location['post_code'].' '.$location['city'];
 	return $adresse;
 }
