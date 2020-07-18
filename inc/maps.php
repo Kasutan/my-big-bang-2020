@@ -42,9 +42,10 @@ function mbb_get_studio_marker($post_id,$address) {
 	//Si besoin : concaténer d'autres critères de filtre
 		if(!empty($lat) && !empty($lng)) :
 			?>
-			<li class="marker" data-lat="<?php echo $lat; ?>" data-lng="<?php echo $lng; ?>" id="marker-<?php echo $post_id;?>" data-keys="<?php echo $search_keys; ?>">
-				<p><a class="etiquette" href="#studio-<?php echo $post_id; ?>" rel="bookmark"><strong>My Big Bang</strong> <?php echo get_the_title($post_id); ?> </a><br> <span class="code"><?php echo $address['post_code'];?> <span class="ville"><?php echo $address['city'];?></p> 
-		</li>
+			<div class="marker" data-lat="<?php echo $lat; ?>" data-lng="<?php echo $lng; ?>" id="marker-<?php echo $post_id;?>" data-keys="<?php echo $search_keys; ?>">
+				<span class="etiquette"><strong>My Big Bang</strong> <?php echo get_the_title($post_id); ?> </span><br>
+				<a href="<?php echo get_the_permalink($post_id);?>">Voir le studio</a>
+			</div>
 		<?php endif;
 	return ob_get_clean();
 }

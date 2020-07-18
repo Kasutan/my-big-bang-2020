@@ -300,3 +300,20 @@ object {
 	text-align: center;
 }
 
+/*infoWindow Google Map*/
+.gm-style .gm-style-iw-c {
+	border-radius:0;
+	font-size: 14px;
+	font-weight: 700;
+	strong {
+		color:var(--rouge);
+	}
+	p {
+		margin-bottom:0;
+	}
+	a {
+		font-weight:400;
+		margin-top:8px;
+	}
+
+}

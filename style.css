@@ -1172,6 +1172,19 @@ object {
 .wp-caption-text {
   text-align: center; }
 
+/*infoWindow Google Map*/
+.gm-style .gm-style-iw-c {
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 700; }
+  .gm-style .gm-style-iw-c strong {
+    color: var(--rouge); }
+  .gm-style .gm-style-iw-c p {
+    margin-bottom: 0; }
+  .gm-style .gm-style-iw-c a {
+    font-weight: 400;
+    margin-top: 8px; }
+
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
@@ -2500,11 +2513,6 @@ a.cta-resultat {
   .single-studio .acf-map {
     height: 58vw;
     width: 100%; }
-    .single-studio .acf-map .etiquette {
-      font-size: 14px;
-      font-weight: bold; }
-      .single-studio .acf-map .etiquette strong {
-        color: var(--rouge); }
 
 h1.fond-bleu {
   background-color: var(--bleu);
