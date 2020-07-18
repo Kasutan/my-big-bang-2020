@@ -11,7 +11,7 @@
 
 <section class="no-results not-found">
 	<header class="entry-header">
-		<h1 class="page-title">Aucun resultat</h1>
+		<h1 class="page-title">Aucun résultat</h1>
 	</header><!-- .page-header -->
 
 	<div class="entry-content container">
