@@ -47,9 +47,9 @@ if ( ! function_exists( 'mbb_setup' ) ) :
 			register_sidebar(array(
 				'name'=> 'Barre latérale du blog',
 				'id' => 'blog',
-				'before_widget' => '<div id="%1$s" class="widget">',
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget' => '</div>',
-				'before_title' => '<h2 class="h4 titre-widget">',
+				'before_title' => '<h2 class="titre-widget">',
 				'after_title' => '</h2>',
 			));
 

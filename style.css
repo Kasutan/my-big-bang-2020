@@ -1903,10 +1903,9 @@ a.cta-resultat {
 .single-post .sidebar, .archive .sidebar, .blog .sidebar {
   background-color: var(--bleu);
   color: var(--blanc);
+  margin-bottom: 40px;
   margin-top: 40px;
   padding: 27px; }
-  .single-post .sidebar a, .archive .sidebar a, .blog .sidebar a {
-    color: var(--blanc); }
 
 @media (min-width: 768px) {
   .single-post .site-main, .archive .site-main, .blog .site-main {
@@ -1935,8 +1934,7 @@ a.cta-resultat {
     flex-grow: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    margin-top: 0;
-    padding: 27px; }
+    margin-top: 0; }
   .single-post h1.entry-title, .archive h1.entry-title, .blog h1.entry-title {
     font-size: 36px;
     line-height: 46px; }
@@ -1996,14 +1994,96 @@ a.cta-resultat {
 .site > .et_social_inline {
   display: none; }
 
+/************Widgets de la barre latérale***************/
+.sidebar a {
+  color: var(--blanc);
+  line-height: 24px;
+  text-decoration: none; }
+  .sidebar a:hover, .sidebar a:focus, .sidebar a:active {
+    text-decoration: underline; }
+
+.sidebar h2.titre-widget {
+  background-color: var(--rouge);
+  color: var(--blanc);
+  display: inline-block;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 27px;
+  padding: 5px 5px 0; }
+
+.sidebar .widget {
+  margin-bottom: 34px; }
+
+.sidebar .widget_search .search-form {
+  border: solid 2px var(--blanc); }
+
+.sidebar .widget_search label {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1; }
+
+.sidebar .widget_search .search-field {
+  background-color: transparent;
+  border: none;
+  color: var(--blanc);
+  height: 45px;
+  line-height: 45px;
+  padding-left: 17px;
+  width: 100%; }
+  .sidebar .widget_search .search-field::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    opacity: 1; }
+  .sidebar .widget_search .search-field::-moz-placeholder {
+    /* Firefox 19+ */
+    opacity: 1; }
+  .sidebar .widget_search .search-field:-ms-input-placeholder {
+    /* IE 10+ */
+    opacity: 1; }
+  .sidebar .widget_search .search-field:-moz-placeholder {
+    /* Firefox 18- */
+    opacity: 1; }
+
+.sidebar .widget_search .search-submit {
+  background-image: url("icons/utility/search-blanc.svg");
+  background-position: center left;
+  background-size: 23px;
+  width: 40px; }
+
+.sidebar .widget_categories ul.wpp-list, .sidebar .popular-posts ul.wpp-list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.sidebar .widget_categories li, .sidebar .popular-posts li {
+  background-image: none;
+  margin: 0;
+  padding: 0; }
+  .sidebar .widget_categories li a, .sidebar .popular-posts li a {
+    border-bottom: dashed 1px var(--gris-fond);
+    display: block;
+    margin-bottom: 10px;
+    padding-bottom: 10px; }
+
+.sidebar .widget_categories ul.children, .sidebar .popular-posts ul.children {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .sidebar .widget_categories ul.children li a, .sidebar .popular-posts ul.children li a {
+    padding-left: 10px; }
+    .sidebar .widget_categories ul.children li a::before, .sidebar .popular-posts ul.children li a::before {
+      content: '-';
+      display: inline-block;
+      margin-right: 5px;
+      position: relative; }
+
 /************Styles single post***************/
-.single-post h2, .single-post h3, .single-post h4 {
+.single-post .primary h2, .single-post .primary h3, .single-post .primary h4 {
   color: var(--rouge); }
 
-.single-post h2 {
+.single-post .primary h2 {
   font-size: 24px; }
 
-.single-post h3 {
+.single-post .primary h3 {
   font-size: 20px; }
 
 /************Bloc TOC***************/
@@ -2020,13 +2100,13 @@ a.cta-resultat {
   .entry-content .gutentoc a {
     text-decoration: none; }
   .entry-content .gutentoc #toclist .gutentoc-toc__list-wrap > ul {
-    border-bottom: dashed 1px #AAA89E;
+    border-bottom: dashed 1px #ffffff;
     margin-top: 20px;
     padding-bottom: 20px; }
     .entry-content .gutentoc #toclist .gutentoc-toc__list-wrap > ul > li > a {
       font-weight: 700; }
     .entry-content .gutentoc #toclist .gutentoc-toc__list-wrap > ul > li:not(:first-of-type) {
-      border-top: dashed 1px #AAA89E;
+      border-top: dashed 1px #ffffff;
       margin-top: 20px;
       padding-top: 20px; }
 
