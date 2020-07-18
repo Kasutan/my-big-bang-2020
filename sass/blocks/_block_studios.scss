@@ -77,6 +77,7 @@
 	}
 	#carte {
 		display:none;
+		height:90vh;
 	}
 	.list {
 		border-top:dashed 1px #AAA89E;
@@ -175,6 +176,8 @@
 		#carte {
 			display: block;
 			flex-grow:1;
+			height:805px;
+			width:100%;
 		}
 	}
 }

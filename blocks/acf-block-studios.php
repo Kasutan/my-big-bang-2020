@@ -72,18 +72,13 @@ function mbb_studios_callback( $block ) {
 					mbb_affiche_studio($post_id);
 				endforeach;?>
 				</ul>
-				<div class="carte" id="carte">
-					<?php mbb_affiche_carte_studios($studios);?>
-				</div>
+				<?php mbb_affiche_carte_studios($studios);?>
 			</div>
 		</div>
 	</section>
 <?php
 }
 
-function mbb_affiche_carte_studios($studios) {
-	echo '<div>Carte</div>';
-}
 
 function mbb_affiche_studio($post_id) {
 	$location=get_field('adresse',$post_id);

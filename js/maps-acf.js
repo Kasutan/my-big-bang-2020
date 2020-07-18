@@ -169,7 +169,7 @@
     *  @return	n/a
     */
     
-    function center_map( map ) {
+    function center_map( map , desktop) {
     
         // vars
         var bounds = new google.maps.LatLngBounds();
@@ -187,15 +187,24 @@
         if( map.markers.length == 1 )
         {
             // set center of map
-            map.setCenter( bounds.getCenter() );
-			map.setZoom( 16 );
+			map.setCenter( bounds.getCenter() );
+			if(desktop) {
+				map.setZoom( 16 );
+			} else {
+				map.setZoom( 10 );
+			}
         }
         else
         {
             // fit to bounds
-              map.setCenter( bounds.getCenter() );
-               map.setZoom( 5 ); // Change the zoom value as required
-            //map.fitBounds( bounds ); // This is the default setting which I have uncommented to stop the World Map being repeated
+			  map.setCenter( bounds.getCenter() );
+			  if(desktop) {
+				map.setZoom( 10 );
+				map.fitBounds( bounds ); 
+
+			} else {
+				map.setZoom( 5 );
+			}
     
         }
     
@@ -222,7 +231,7 @@
     
             // create map
 			map = new_map( $(this) );
-			center_map(map);
+			center_map(map, window.innerWidth > 768);
 			
 
     
