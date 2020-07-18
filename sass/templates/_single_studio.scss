@@ -278,16 +278,24 @@
 		z-index: 1;
 	}
 	.avis {
-		background-color:var(--gris-decor);
-		height:700px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	
+		background-color:var(--gris-decor);	
+		padding:60px var(--padding-x);
 
-		.contraste {
-			text-align: center;
+		.wp-google-list {
+			display: flex;
+			flex-direction: column;
+			align-items:center;
+			@include bp(md) {
+				flex-direction: row;
+			}
 		}
+		.wp-gr.wpac {
+			font-family: var(--font) !important;
+			a {
+				color:var(--bleu) !important;
+			}
+		}
+		
 	}
 
 	/***************************carte***********************/

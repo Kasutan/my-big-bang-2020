@@ -30,7 +30,7 @@ if(function_exists('get_field')) {
 	$titre_droite=wp_kses_post(get_field('titre_droite_studio','option'));
 	$texte_gauche=wp_kses_post(get_field('contenu_gauche_studio','option'));
 	$texte_droite=wp_kses_post(get_field('contenu_droite_studio','option'));
-	$shortcode_widget=esc_html(get_field('shortcode_widget_studio','option'));
+	$shortcode_widget=get_field('shortcode_widget_studio','option');
 
 	$adresse='';
 	if(function_exists('mbb_prepare_adresse')) {
@@ -110,7 +110,7 @@ $semaine=array('lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'
 	</section>
 	<?php printf('<a class="button studio studio-2" href="%s">%s</a>',$cible,$label); ?>
 	<section class="avis">
-		<div class="contraste">AVIS</div>
+		<?php echo do_shortcode($shortcode_widget); ?>
 	</section>
 	<?php if( $location ): ?>
 		<section class="carte acf-map" data-zoom="16">
