@@ -17,7 +17,7 @@ get_header();
 			<header class="entry-header">
 				<h1 class="page-title">
 					<?php
-					echo "Recherche&nbsp;:".' <span>'. remove_accents(get_search_query()) . '</span>' ;
+					echo "Recherche&nbsp;:".' <span>'. get_search_query() . '</span>' ;
 					?>
 				</h1>
 			</header><!-- .page-header -->
