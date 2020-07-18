@@ -63,6 +63,12 @@
 				color:#AAA89E;
 			  }
 		}
+		.no-result {
+			color:var(--blanc);
+			display: none;
+			flex-basis:100%;
+			margin-top:10px;
+		}
 	}
 	.onglets {
 		display: flex;
@@ -154,7 +160,6 @@
 
 	@include bp(md) {
 		.filtre {
-			flex-wrap: nowrap;
 			padding:80px var(--padding-x);
 			button {
 				width:unset;

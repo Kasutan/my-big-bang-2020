@@ -317,6 +317,28 @@
 		}
 	});
 
+	/****************** Filtre / recherche liste studio *************************/
+	var searchInput=$("#studios-search");
+	if(searchInput.length>0) {
+		var optionsListe = {
+			valueNames: [ 'nom', 'ville', 'code_postal' ]
+		};
+		var liste = new List('studios', optionsListe); //id du *container* de la liste ul.list
+		$('#button-studios-search').click(function(){
+			var top=$('#liste').offset().top - 100;
+			$('html, body').animate({
+				scrollTop: top
+			}, 'slow');
+		});
+		liste.on('updated', function(liste) {
+			if (liste.matchingItems.length > 0) {
+				$('.no-result').slideUp()
+			} else {
+				$('.no-result').slideDown()
+			}
+		});
+	}
+
 })( jQuery );
 
 

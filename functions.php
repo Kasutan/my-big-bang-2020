@@ -141,7 +141,10 @@ function mbb_scripts() {
 
 	//wp_register_script( 'mybigbang-modaal',get_template_directory_uri() . '/lib/modaal/modaal.min.js', array('jquery'), '0.4.4', true );
 
-	wp_enqueue_script( 'mybigbang-scripts', get_template_directory_uri() . '/js/mybigbang.js', array('mybigbang-lottie','jquery', 'mybigbang-owl-carousel'), '', true );
+	wp_enqueue_script( 'mybigbang-list',get_template_directory_uri() . '/lib/list.min.js', array(), '1.5.0', true );
+
+
+	wp_enqueue_script( 'mybigbang-scripts', get_template_directory_uri() . '/js/mybigbang.js', array('mybigbang-lottie','jquery', 'mybigbang-owl-carousel','mybigbang-list'), '', true );
 
 
 }

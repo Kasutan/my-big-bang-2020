@@ -38,12 +38,12 @@ function mbb_get_studio_marker($post_id,$address) {
 	ob_start();
 	$lat = $address['lat'];
 	$lng = $address['lng'];
-	$search_keys=strtolower($address['post_code'].' '.$address['city'].' '.get_the_title());
+	$search_keys=strtolower($address['post_code'].' '.$address['city'].' '.get_the_title($post_id));
 	//Si besoin : concaténer d'autres critères de filtre
 		if(!empty($lat) && !empty($lng)) :
 			?>
 			<li class="marker" data-lat="<?php echo $lat; ?>" data-lng="<?php echo $lng; ?>" id="marker-<?php echo $post_id;?>" data-keys="<?php echo $search_keys; ?>">
-				<p ><a class="etiquette" href="#studio-<?php echo $post_id; ?>" rel="bookmark"><strong>My Big Bang</strong> <?php echo get_the_title($post_id); ?> <span class="nom screen-reader-text"><?php echo get_the_title($post_id); ?></span></a><br> <span class="code"><?php echo $address['post_code'];?> <span class="ville"><?php echo $address['city'];?></p> 
+				<p><a class="etiquette" href="#studio-<?php echo $post_id; ?>" rel="bookmark"><strong>My Big Bang</strong> <?php echo get_the_title($post_id); ?> </a><br> <span class="code"><?php echo $address['post_code'];?> <span class="ville"><?php echo $address['city'];?></p> 
 		</li>
 		<?php endif;
 	return ob_get_clean();

@@ -46,39 +46,9 @@
 
 		//https://stackoverflow.com/questions/35065861/filter-google-map-markers
 		//Filtrer les marqueurs à la saisie dans le champ de recherche
-		$("#pro-search").keyup(function(){
+		$("#studios-search").keyup(function(){
 			filtreCarte(map);
 		});
-		$("#filtre-clientele").change(function (e) { 
-			filtreCarte(map);
-		});
-		$('.annuaire .no-search, .annuaire .no-filter').click(function (e) { 
-			filtreCarte(map);
-		});
-		$('.no-filter-mini-annuaire').click(function (e) { 
-			$("input[name='filtre-clientele']").attr('checked',false);
-			filtreCarte(map);
-		});
-		
-
-		//Centrer la carte sur une adresse au clic sur la liste de résultats
-		$('.annuaire .js-center-map').click(function(e) {
-			e.preventDefault();
-			var selected_lat= parseFloat( $(this).attr('data-lat') );
-			var selected_lng=parseFloat( $(this).attr('data-lng') );
-			map.setCenter({lat: selected_lat, lng: selected_lng});
-			map.setZoom( 14 );
-
-		});
-		
-        // centrer la carte sur le milieu de tous les marqueurs au chargement de la carte
-        //center_map( map );
-	
-		//Si mini formulaire de recherche de l'accueil, dézoomer d'un niveau
-		if ($el.hasClass('accueil')) {
-			map.setZoom(5);
-		}
-
 
     
         // return
@@ -87,23 +57,13 @@
 	}
 	
 	function filtreCarte(map) {
-		var selected_value = $("input[name='filtre-clientele']:checked").val();
-		var search=$("#pro-search").val().toLowerCase();
-		if(undefined==selected_value) {
-			$.each(map.markers, function(i, marker) {
-				if(marker.keys.indexOf(search) >= 0)
-					marker.setVisible(true);
-				else
-					marker.setVisible(false);
-			});
-		} else {
-			$.each(map.markers, function(i, marker) {
-				if(marker.keys.indexOf(search) >= 0 && marker.keys.indexOf(selected_value) >= 0)
-					marker.setVisible(true);
-				else
-					marker.setVisible(false);
-			});
-		}
+		var search=$("#studios-search").val().toLowerCase();
+		$.each(map.markers, function(i, marker) {
+			if(marker.keys.indexOf(search) >= 0)
+				marker.setVisible(true);
+			else
+				marker.setVisible(false);
+		});
 	}
     
     /*

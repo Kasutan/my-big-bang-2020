@@ -50,7 +50,7 @@ function mbb_studios_callback( $block ) {
 		?>
 			<div class="filtre">
 				<label for="studios-search" class="screen-reader-text">Rechercher un studio par nom, code postal ou ville</label>
-				<input  id="studios-search" class="search" name="studios-search" type="search" placeholder="Nom, Code postal, Ville"/><button>
+				<input  id="studios-search" class="search" name="studios-search" type="search" placeholder="Nom, Code postal, Ville"/><button id="button-studios-search">
 				<svg xmlns="http://www.w3.org/2000/svg" width="16.191" height="10.457" viewBox="0 0 16.191 10.457">
 					<g id="Composant_14_3" data-name="Composant 14 – 3" transform="translate(0.652 0.921)">
 						<line id="Ligne_47" data-name="Ligne 47" x1="14.463" transform="translate(0 4.379)" fill="#ebeae9" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.304"/>
@@ -59,6 +59,7 @@ function mbb_studios_callback( $block ) {
 					</svg>
 					<span>Rechercher</span>
 				</button>
+				<p class="no-result">Aucun studio ne correspond à votre recherche</p>
 			</div>
 
 			<div class="onglets">

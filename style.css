@@ -4904,6 +4904,12 @@ h1.fond-bleu {
     .acf-block-studios .filtre input:-moz-placeholder {
       /* Firefox 18- */
       color: #AAA89E; }
+  .acf-block-studios .filtre .no-result {
+    color: var(--blanc);
+    display: none;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    margin-top: 10px; }
 
 .acf-block-studios .onglets {
   display: -webkit-box;
@@ -4986,8 +4992,6 @@ h1.fond-bleu {
 
 @media (min-width: 768px) {
   .acf-block-studios .filtre {
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
     padding: 80px var(--padding-x); }
     .acf-block-studios .filtre button {
       width: unset; }
