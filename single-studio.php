@@ -126,4 +126,7 @@ endwhile; // End of the loop. ?>
 </main><!-- #main -->
 
 <?php
+if($numero_script) {
+	printf('<script src="https://apipro.masalledesport.com/widget/%s/js?configFrom=10312"></script>',$numero_script);
+}
 get_footer();
