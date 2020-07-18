@@ -2164,7 +2164,8 @@ a.cta-resultat {
     display: block;
     margin-bottom: 55px;
     margin-right: 55px;
-    position: relative; }
+    position: relative;
+    width: 100%; }
     .entry-content.loop .image .image-wrapper {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2228,21 +2229,21 @@ a.cta-resultat {
       justify-content: space-between; }
       .entry-content.loop article {
         margin-bottom: 80px; }
-      .entry-content.loop article:first-of-type {
+      .entry-content.loop article.has-post-thumbnail:first-of-type {
         -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
         padding-left: calc(50% + 20px);
         position: relative; }
-        .entry-content.loop article:first-of-type .image {
+        .entry-content.loop article.has-post-thumbnail:first-of-type .image {
           left: 0;
           top: 0;
           position: absolute;
           width: calc(50% - 50px); }
-        .entry-content.loop article:first-of-type h2.item-title {
+        .entry-content.loop article.has-post-thumbnail:first-of-type h2.item-title {
           font-family: var(--font-serif);
           font-size: 24px;
           line-height: 32px; }
-        .entry-content.loop article:first-of-type .extrait {
+        .entry-content.loop article.has-post-thumbnail:first-of-type .extrait {
           font-size: 16px; } }
 
 .entry-content .search-form {

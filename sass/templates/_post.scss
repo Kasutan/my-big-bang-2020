@@ -342,6 +342,7 @@
 			margin-bottom:55px;
 			margin-right:55px;
 			position: relative;
+			width:100%;
 
 			.image-wrapper {
 				display: flex;
@@ -409,7 +410,7 @@
 			article {
 				margin-bottom: 80px;
 			}
-			article:first-of-type {
+			article.has-post-thumbnail:first-of-type {
 				flex-basis :100%;
 				padding-left:calc(50% + 20px);
 				position: relative;
