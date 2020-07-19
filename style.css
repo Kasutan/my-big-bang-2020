@@ -622,7 +622,7 @@ a.wp-block-button__link.has-gris-texte-background-color {
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
-body {
+body, .entry-content {
   overflow-x: hidden; }
 
 :root {
@@ -991,6 +991,7 @@ a.wp-block-button__link:not(.has-background) {
   a.wp-block-button__link:not(.has-background):active {
     background: var(--blanc);
     color: var(--rouge);
+    outline: none;
     text-decoration: none; }
 
 input[type="text"],
@@ -1251,7 +1252,7 @@ a.cta-resultat {
     font-size: 14px;
     padding-right: 15px; }
   a.cta-resultat svg {
-    max-width: 41px;
+    width: 41px;
     -webkit-transform: left var(--transition);
     transform: left var(--transition); }
     a.cta-resultat svg .fleche {
@@ -1296,8 +1297,11 @@ a.cta-resultat {
       flex-direction: column; }
   .main-navigation .menu-toggle {
     display: block; }
+  .main-navigation svg.menu {
+    width: 36px; }
   .main-navigation svg.times {
-    display: none; }
+    display: none;
+    width: 25px; }
   .main-navigation.toggled ul.menu {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -2701,7 +2705,7 @@ h1.fond-bleu {
     top: 15px;
     width: 40px; }
     .acf-block-questionnaire .fermer svg {
-      max-width: 50%; }
+      width: 50%; }
   .acf-block-questionnaire .intro {
     margin-bottom: 25px;
     padding-bottom: 25px;
@@ -4976,7 +4980,8 @@ h1.fond-bleu {
       margin-bottom: 0;
       width: 100%; }
       .acf-block-studios .filtre button svg {
-        margin-right: 13px; }
+        margin-right: 13px;
+        width: 16px; }
       .acf-block-studios .filtre button:hover, .acf-block-studios .filtre button:focus {
         background-color: var(--rouge);
         color: var(--blanc); }

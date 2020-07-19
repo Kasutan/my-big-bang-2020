@@ -71,7 +71,7 @@ a.cta-resultat {
 	}
 
 	svg {
-		max-width: 41px;
+		width: 41px;
 		transform: left var(--transition);
 
 		.fleche {
@@ -133,9 +133,12 @@ a.cta-resultat {
 	.menu-toggle {
 		display: block;
 	}
-
+	svg.menu {
+		width:36px;
+	}
 	svg.times { //croix pour refermer le menu
 		display:none;
+		width:25px;
 	}
 
 	&.toggled { //menu mobile ouvert

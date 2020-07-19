@@ -119,6 +119,7 @@ a.wp-block-button__link:not(.has-background) {
 	&:hover, &:focus, &:active {
 		background: var(--blanc);
 		color: var(--rouge);
+		outline:none;
 		text-decoration: none;
 	}
 }
