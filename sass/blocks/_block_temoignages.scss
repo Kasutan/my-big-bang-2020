@@ -82,6 +82,7 @@
 			display: flex;
 			flex-basis:54%;
 			img {
+				object-fit: contain;
 				width:100%;
 			}
 		}
@@ -91,6 +92,7 @@
 			flex-basis:45%;
 			flex-direction: column;
 			justify-content: space-between;
+			max-height:947px;
 		}
 		.image-wrapper {
 			display: flex;

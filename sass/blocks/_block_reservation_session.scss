@@ -210,9 +210,9 @@
 		.intro {
 			font-size: 20px;
 			line-height: 30px;
-			max-width: 840px;
+			max-width: 880px;
 			margin:0 auto 20px;
-			padding:0;
+			padding:0 20px;
 		}
 		.decor {
 			background-image: url('icons/Motif-Silhouette-Desktop.svg');
@@ -221,7 +221,7 @@
 			top:325px;
 		}
 		.navigation {
-			align-items: flex-start;
+			align-items: stretch;
 			display: flex;
 			margin-bottom:34px;
 			> button {

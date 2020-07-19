@@ -9,6 +9,9 @@
 			padding: 2px 5px;
 		}
 	}
+	.eclairage {
+		margin-top:50px;
+	}
 	.relief {
 		font-family: var(--font);
 		font-size: 20px;
@@ -44,6 +47,21 @@
 			padding:200px 0 150px;
 			font-size: 22px;
 			line-height: 36px;
+		}
+	}
+	@include bp(lg) {
+		.eclairage {
+			margin-top:0;
+			.relief {
+				top:-50px;
+			}
+		}
+	}
+	@include bp(xl) {
+		.eclairage {
+			.relief {
+				top:-80px;
+			}
 		}
 	}
 }

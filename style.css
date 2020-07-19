@@ -2434,7 +2434,7 @@ a.cta-resultat {
       .single-studio .eclairage .relief {
         background-image: none;
         padding: 40px 45px;
-        top: -130px; } }
+        top: -50px; } }
   @media (min-width: 960px) {
     .single-studio .image-wrapper {
       height: 653px; }
@@ -4775,18 +4775,18 @@ h1.fond-bleu {
   .acf-block-reservation-sessions .intro {
     font-size: 20px;
     line-height: 30px;
-    max-width: 840px;
+    max-width: 880px;
     margin: 0 auto 20px;
-    padding: 0; }
+    padding: 0 20px; }
   .acf-block-reservation-sessions .decor {
     background-image: url("icons/Motif-Silhouette-Desktop.svg");
     background-size: 68px 46px;
     height: 463px;
     top: 325px; }
   .acf-block-reservation-sessions .navigation {
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5308,6 +5308,8 @@ h1.fond-bleu {
       box-decoration-break: clone;
       color: var(--blanc);
       padding: 2px 5px; }
+  .acf-block-facteurs .eclairage {
+    margin-top: 50px; }
   .acf-block-facteurs .relief {
     font-family: var(--font);
     font-size: 20px;
@@ -5337,6 +5339,14 @@ h1.fond-bleu {
       padding: 200px 0 150px;
       font-size: 22px;
       line-height: 36px; } }
+  @media (min-width: 960px) {
+    .acf-block-facteurs .eclairage {
+      margin-top: 0; }
+      .acf-block-facteurs .eclairage .relief {
+        top: -50px; } }
+  @media (min-width: 1680px) {
+    .acf-block-facteurs .eclairage .relief {
+      top: -80px; } }
 
 .acf-block-temoignages {
   margin-bottom: 0; }
@@ -5406,6 +5416,8 @@ h1.fond-bleu {
       -ms-flex-preferred-size: 54%;
       flex-basis: 54%; }
       .acf-block-temoignages .temoignages img {
+        -o-object-fit: contain;
+        object-fit: contain;
         width: 100%; }
     .acf-block-temoignages .galerie {
       display: -webkit-box;
@@ -5419,7 +5431,8 @@ h1.fond-bleu {
       flex-direction: column;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+      max-height: 947px; }
     .acf-block-temoignages .image-wrapper {
       display: -webkit-box;
       display: -ms-flexbox;
