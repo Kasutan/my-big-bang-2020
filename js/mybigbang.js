@@ -174,7 +174,7 @@
 				repereBouton(type);
 			});
 	
-			$('.navigation > button').click(function(e) {
+			$('.navigation > button').on('click touchend',function(e) {
 				var newSlide=parseInt($(this).attr('data-left'))-1;
 				bougeSession(newSlide);
 				$('.navigation > button').removeClass('actif');
