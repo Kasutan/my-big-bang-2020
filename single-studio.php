@@ -54,14 +54,16 @@ $semaine=array('lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'
 		);?>
 		
 			<div class="entry-meta">
+				<?php if($notation) : ?>
 				<div class="notation">
 					<?php for($i=1;$i<=$etoiles;$i++) {
 						echo '<span class="etoile"></span>';
 					}
 					printf('<span class="screen-reader-text">%s étoiles</span>',$etoiles);
-					printf('<span class="nb-avis">%s avis</span>',$avis);
+					if($avis) printf('<span class="nb-avis">%s avis</span>',$avis);
 					?>
 				</div>
+				<?php endif; ?>
 				<div class="telephone"><?php echo $telephone;?></div>
 				<?php printf('<a class="button studio" href="%s">%s</a>',$cible,$label); ?>
 			</div><!-- .entry-meta -->

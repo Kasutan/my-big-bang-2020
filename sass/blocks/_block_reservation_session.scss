@@ -82,6 +82,7 @@
 			&:hover,
 			&:focus {
 				color:var(--blanc);
+				outline:none;
 				&::after {
 					background-color: var(--blanc);
 					border-radius: 2px;

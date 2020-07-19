@@ -50,7 +50,7 @@ function mbb_valeurs_callback( $block ) {
 			endwhile;
 			echo '</div>'; //fin .valeurs	
 
-			printf('<div class="fleches"><button class="fleche-slider gauche" data-direction="-1"><img alt="naviguer vers la gauche" src="%s"/></button> <button class="fleche-slider droite"  data-direction="+1"><img alt="naviguer vers la droite" src="%s"/></button></div>', mbb_get_picto_url('Fleche-P'), mbb_get_picto_url('Fleche-S'));
+			printf('<div class="fleches"><button class="fleche-slider gauche" data-direction="-1"><img alt="naviguer vers la gauche" src="%s"/></button> <button class="fleche-slider droite"  data-direction="+1"><img alt="naviguer vers la droite" src="%s"/></button></div>', mbb_get_picto_url('Fleche-P-blanche'), mbb_get_picto_url('Fleche-S-blanche'));
 			echo '</div>'; //fin .slider-container	
 		endif;
 	

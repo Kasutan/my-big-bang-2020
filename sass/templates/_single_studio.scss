@@ -49,7 +49,7 @@
 		background-size: 16px 9px;
 		font-weight: 300;
 		line-height: 36px;
-		margin:0;
+		margin:0 10px;
 		padding-left: 48px;
 		padding-top: 0;
 		padding-bottom: 0;
@@ -271,11 +271,14 @@
 	/***************************avis***********************/
 	a.button.studio.studio-2 {
 		background-color: #fff;
-		max-width:464px;
-		margin:0 auto;
+		margin:0 10px;
 		position: relative;
 		top:18px;
 		z-index: 1;
+		@include bp(md) {
+			max-width:464px;
+			margin:0 auto;
+		}
 	}
 	.avis {
 		background-color:var(--gris-decor);	
@@ -300,6 +303,7 @@
 
 	/***************************carte***********************/
 	.acf-map {
+		min-height:400px;
 		height:58vw;
 		width: 100%;
 	}

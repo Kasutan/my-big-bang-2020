@@ -2,6 +2,7 @@
 	background-color: var(--bleu);
 	padding: 2px var(--padding-x) 4px;
 	text-align: center;
+	transition: background-color var(--transition);
 	&, a {
 		color:var(--blanc);
 	}

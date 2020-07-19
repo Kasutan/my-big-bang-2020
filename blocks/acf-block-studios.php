@@ -90,8 +90,16 @@ function mbb_affiche_studio($post_id) {
 	$adresse=mbb_prepare_adresse($location);
 
 	$metro=get_field('metro',$post_id);
-	$telephone=get_field('telephone',$post_id);
 	$email=antispambot(esc_attr(get_field('email',$post_id)));
+	$telephone=get_field('telephone',$post_id);
+	//dissocier les 2 numéros s'il y en a 2 
+	if(strpos($telephone,' / ')>0) {
+		$array_tel=explode(' / ',$telephone);
+		$telephone=$array_tel[0];
+		$telephone_2=$array_tel[1];
+	} else {
+		$telephone_2='';
+	}
 
 	printf('<li class="studio" id="studio-%s">',$post_id);
 		printf('<p class="screen-reader-text"><span class="ville">%s</span><span class="code_postal">%s</span></p>',$ville,$code_postal);//pour le filtre avec list.js
@@ -99,7 +107,8 @@ function mbb_affiche_studio($post_id) {
 		printf('<p class="adresse">%s</p>',$adresse);
 		printf('<p class="metro">%s</p>',$metro);
 		printf('<a href="https://www.google.com/maps/dir/?api=1&destination=%s" class="itineraire" target="_blank" title="Voir l\'itinéraire dans un nouvel onglet">Itinéraire</a>',urlencode($adresse));
-		printf('<a href="tel:" class="telephone">%s</a>',$telephone, $telephone);
+		printf('<a href="tel:%s" class="telephone">%s</a>',$telephone, $telephone);
+		if($telephone_2) printf('<a href="tel:%s" class="telephone">%s</a>',$telephone_2, $telephone_2);
 		printf('<p class="email">%s</p>',$email);
 		printf('<a class="cta-resultat" href="%s"><span>%s</span>', get_the_permalink($post_id), 'Voir le studio');
 		echo mbb_get_picto_inline('fleche-cta').'</a>'; 

@@ -4,6 +4,7 @@
 	align-items: center;
 	display:flex;
 	flex-direction:column;
+	margin-bottom: 0;
 	position: relative;
 	.texte {
 		max-width:462px;
@@ -158,8 +159,6 @@
 	
 	/*Affichage grille en tablette et desktop*/
 	@include bp(md) {
-		margin-bottom:var(--margin-bottom);
-
 		.questionnaire {
 			display: block;
 			height:unset;
@@ -187,6 +186,7 @@
 			height:100%;
 			img {
 				object-fit: cover;
+				width:100%;
 			}
 		}
 		.titre {
@@ -203,6 +203,10 @@
 		.questionnaire {
 			flex-grow: 1;
 		}
+	}
+
+	@media screen and (min-width:1400px) {
+		padding:0 var(--padding-x);
 	}
 
 	/*Affichage des résultats*/
