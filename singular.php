@@ -54,7 +54,6 @@ if(function_exists('get_field') && get_field('fond_bleu')=='oui') {
 		<?php endif;?>
 
 		<div class="entry-content container">
-			<div class="overlay"></div>
 			<?php
 			the_content();
 			?>

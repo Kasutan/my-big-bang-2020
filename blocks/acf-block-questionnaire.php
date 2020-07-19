@@ -41,6 +41,7 @@ function mbb_questionnaire_callback( $block ) {
 	$cible_cta=esc_url( get_field('cible_cta') );
 
 	printf('<section class="acf-block-questionnaire alignfull %s">', $className);
+		echo '<div class="overlay"></div>';
 		printf('<div class="image">%s</div>',	wp_get_attachment_image( $image_id,'large' ));
 		echo '<div class="texte">';
 			printf('<h2 class="titre">%s</h2>', $titre);
