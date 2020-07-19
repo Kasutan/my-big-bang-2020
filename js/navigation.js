@@ -31,6 +31,18 @@
 	}
 
 	button.onclick = function() {
+		toggleMenu();
+	};
+	
+	jQuery('.sub-menu .current_page_item a').click(function(){
+		if(window.innerWidth < 768) {
+			toggleMenu();
+		}
+	});
+
+	
+
+	function toggleMenu() {
 		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
 			container.className = container.className.replace( ' toggled', '' );
 			button.setAttribute( 'aria-expanded', 'false' );
@@ -40,7 +52,7 @@
 			button.setAttribute( 'aria-expanded', 'true' );
 			menu.setAttribute( 'aria-expanded', 'true' );
 		}
-	};
+	}
 
 	// Get all the link elements within the menu.
 	links    = menu.getElementsByTagName( 'a' );
