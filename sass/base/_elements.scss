@@ -211,6 +211,18 @@ html .formcraft-css .fc-form .final-success {
 html .formcraft-css .fc-form .final-success .final-success-check {
 	border-color:#fff !important;
 }
+html .formcraft-css .fc-form .form-element.form-element-type-checkbox .form-element-html > div {
+	background-color: transparent;
+	color:var(--blanc) !important;
+	span.main-label > span {
+		color:var(--blanc) !important;
+		font-size: 22px;
+		font-weight: bold;
+		&::after {
+			color:var(--blanc) !important;
+		}
+	}
+}
 /*--------------------------------------------------------------
 ## Search form
 --------------------------------------------------------------*/

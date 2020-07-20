@@ -1088,6 +1088,16 @@ html .formcraft-css .fc-form .final-success {
 html .formcraft-css .fc-form .final-success .final-success-check {
   border-color: #fff !important; }
 
+html .formcraft-css .fc-form .form-element.form-element-type-checkbox .form-element-html > div {
+  background-color: transparent;
+  color: var(--blanc) !important; }
+  html .formcraft-css .fc-form .form-element.form-element-type-checkbox .form-element-html > div span.main-label > span {
+    color: var(--blanc) !important;
+    font-size: 22px;
+    font-weight: bold; }
+    html .formcraft-css .fc-form .form-element.form-element-type-checkbox .form-element-html > div span.main-label > span::after {
+      color: var(--blanc) !important; }
+
 /*--------------------------------------------------------------
 ## Search form
 --------------------------------------------------------------*/
@@ -5131,6 +5141,10 @@ h1.fond-bleu {
     position: absolute;
     top: -30px;
     left: calc(50% - 1.5px); }
+
+.wp-block-group.contact {
+  margin-bottom: 0;
+  margin-top: 50px; }
 
 .wp-block-image.alignfull {
   margin-bottom: 0; }
