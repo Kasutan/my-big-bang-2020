@@ -14,7 +14,7 @@
 	<footer id="colophon" class="site-footer">
 		<?php
 
-		printf('<div class="logo-footer"><img src="%s" width="97" height="70" alt="My Big Bang Logo"/></div>',mbb_get_picto_url('logo-Footer') );
+		printf('<div class="logo-footer"><img src="%s" width="120" height="86" alt="My Big Bang Logo"/></div>',mbb_get_picto_url('logo-Footer') );
 
 		wp_nav_menu( array(
 			'theme_location' => 'liens-footer',

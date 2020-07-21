@@ -47,4 +47,10 @@
 		margin:0;
 		max-width: 290px;
 	}
+	.site-header.sticky {
+		min-height:125px;
+		.custom-logo {
+			max-width:286px;
+		}
+	}
 }

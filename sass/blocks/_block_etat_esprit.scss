@@ -38,6 +38,7 @@
 			top:0;
 			width:22%;
 			img {
+				object-fit: cover;
 				width:100%
 			}
 		}
@@ -45,7 +46,8 @@
 		.intro {
 			font-size:1.25rem;
 			max-width:957px;
-			margin:0 auto 30px;
+			margin:0 auto;
+			padding-bottom:30px;
 		}
 
 		.mots {
@@ -89,8 +91,18 @@
 	}
 	@include bp(lg) {
 		.texte {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 			flex-grow:1;
 			padding-left:60px;
+			> * {
+				max-width: 550px;
+			}
+			a.fleche {
+				align-self:flex-end;
+				margin-top:2rem;
+			}
 		}
 	}
 	@include bp(xl) {

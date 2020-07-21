@@ -393,6 +393,13 @@ a.cta-resultat {
 		}
 
 	}
+	//en header sticky : on n'affiche plus que le picto
+	.site-header.sticky {
+		li.client a {
+			width: 34px;
+			overflow: hidden;
+		}
+	}
 }
 
 
