@@ -6,21 +6,22 @@
 	flex-direction:column;
 	margin-bottom: 0;
 	position: relative;
+	z-index: 5;
 	.texte {
-		max-width:462px;
+		max-width:280px;
 		position: relative;
 		top:-50px;
 	}
 	.titre {
 		background-color:var(--gris-fond-clair);
 		font-size:24px;
-		line-height: 1.04;
+		line-height: 30px;
 		margin-bottom: 0;
 		padding: 31px 55px 25px 34px;
 	}
 	.ouvrir {
 		background-color:var(--rouge);
-		padding:19px 28px;
+		padding:19px 20px;
 		.fleche-simple {
 			color:var(--blanc);
 			font-family:var(--font-serif);
@@ -34,7 +35,7 @@
 			line-height: 28px;
 			margin:0;
 			padding-right: 36px;
-			text-align: right;
+			text-align: center;
 			text-decoration: none;
 		}
 	}
@@ -151,7 +152,7 @@
 	.questionnaire {
 		display: none;
 		height:auto;
-		position:relative;
+		position:fixed;
 		top:0;
 		width:90vw;
 		z-index:6;
@@ -159,9 +160,11 @@
 	
 	/*Affichage grille en tablette et desktop*/
 	@include bp(md) {
+		z-index: unset;
 		.questionnaire {
 			display: block;
 			height:unset;
+			position: unset;
 			top:unset;
 			width:unset;
 			z-index:unset;
@@ -198,6 +201,7 @@
 			grid-column: 2 / span 2;
 			grid-row: 2 / span 1;
 			height:100%;
+			max-width: unset;
 			top:unset;
 		}
 		.questionnaire {

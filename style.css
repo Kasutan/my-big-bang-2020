@@ -701,8 +701,8 @@ body, .entry-content {
   transition: opacity var(--transition); }
   .overlay.toggled {
     display: block;
-    height: 100%;
-    width: 100%;
+    height: 1000vh;
+    width: 100vw;
     z-index: 5;
     position: absolute;
     top: 0;
@@ -2659,22 +2659,23 @@ h1.fond-bleu {
   flex-direction: column;
   margin-bottom: 0;
   position: relative;
+  z-index: 5;
   /*Affichage dans un volet escamotable en mobile*/
   /*Affichage grille en tablette et desktop*/
   /*Affichage des résultats*/ }
   .acf-block-questionnaire .texte {
-    max-width: 462px;
+    max-width: 280px;
     position: relative;
     top: -50px; }
   .acf-block-questionnaire .titre {
     background-color: var(--gris-fond-clair);
     font-size: 24px;
-    line-height: 1.04;
+    line-height: 30px;
     margin-bottom: 0;
     padding: 31px 55px 25px 34px; }
   .acf-block-questionnaire .ouvrir {
     background-color: var(--rouge);
-    padding: 19px 28px; }
+    padding: 19px 20px; }
     .acf-block-questionnaire .ouvrir .fleche-simple {
       color: var(--blanc);
       font-family: var(--font-serif);
@@ -2688,7 +2689,7 @@ h1.fond-bleu {
       line-height: 28px;
       margin: 0;
       padding-right: 36px;
-      text-align: right;
+      text-align: center;
       text-decoration: none; }
   .acf-block-questionnaire .questionnaire {
     background-color: var(--fond-questionnaire);
@@ -2779,18 +2780,20 @@ h1.fond-bleu {
   .acf-block-questionnaire .questionnaire {
     display: none;
     height: auto;
-    position: relative;
+    position: fixed;
     top: 0;
     width: 90vw;
     z-index: 6; }
   @media (min-width: 768px) {
     .acf-block-questionnaire {
+      z-index: unset;
       display: grid;
       grid-template-columns: 1fr 200px 262px;
       grid-template-rows: 75px minmax(545px, auto) 75px; }
       .acf-block-questionnaire .questionnaire {
         display: block;
         height: unset;
+        position: unset;
         top: unset;
         width: unset;
         z-index: unset; }
@@ -2825,6 +2828,7 @@ h1.fond-bleu {
         grid-column: 2 / span 2;
         grid-row: 2 / span 1;
         height: 100%;
+        max-width: unset;
         top: unset; }
       .acf-block-questionnaire .questionnaire {
         -webkit-box-flex: 1;
@@ -3009,7 +3013,7 @@ h1.fond-bleu {
     line-height: 1.24;
     position: relative;
     text-transform: uppercase;
-    -webkit-text-stroke: 2px var(--gris-decor);
+    -webkit-text-stroke: 1px var(--gris-decor);
     white-space: nowrap;
     z-index: 2; }
   .accueil .silhouette {
@@ -3037,7 +3041,8 @@ h1.fond-bleu {
       font-size: 85px;
       left: calc(100% - 1px * var(--scroll-mots));
       line-height: 1;
-      margin-bottom: 40px; } }
+      margin-bottom: 40px;
+      -webkit-text-stroke: 2px var(--gris-decor); } }
   .accueil .image {
     margin-bottom: 28px; }
     .accueil .image img {
@@ -3231,6 +3236,8 @@ h1.fond-bleu {
 
 .acf-block-coach {
   /*styles en écart du bloc état d'esprit - classe accueil commune*/ }
+  .acf-block-coach .titre {
+    margin-bottom: 20px; }
   .acf-block-coach .texte {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3241,7 +3248,8 @@ h1.fond-bleu {
     flex-direction: column;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    padding-bottom: 0; }
   .acf-block-coach .part1 {
     position: relative; }
   .acf-block-coach .mots {
@@ -3407,9 +3415,11 @@ h1.fond-bleu {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      position: relative; }
+      height: 272px;
+      position: relative;
+      width: 272px; }
       .acf-block-blog .image .image-wrapper::before {
-        background-color: var(--gris-fond);
+        background-color: var(--gris-decor);
         content: '';
         height: 100%;
         left: -20px;
@@ -3543,7 +3553,7 @@ h1.fond-bleu {
     clear: both;
     display: block;
     font-size: 14px;
-    margin-top: 20px; }
+    padding-top: 20px; }
     .acf-block-newsletter .terms input {
       margin-right: 10px; }
   .acf-block-newsletter form#sib_signup_form_1 p.sib-alert-message-success, .acf-block-newsletter form#sib_signup_form_1 p.sib-alert-message-warning {
@@ -3577,7 +3587,7 @@ h1.fond-bleu {
         float: none;
         margin-left: 20px; }
       .acf-block-newsletter .terms {
-        margin-top: 40px; } }
+        padding-top: 40px; } }
 
 .acf-block-elements .intro {
   margin: 0 auto;

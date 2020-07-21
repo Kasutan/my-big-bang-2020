@@ -46,14 +46,14 @@
 		var overlay = $('.overlay');
 		var blocQ= $('.acf-block-questionnaire');
 		if(width < 768 && ouvrirQ.length > 0) {
-			voletQ.css('left',width);
+			voletQ.css('right',width);
 			ouvrirQ.click(function(e) {
 				e.preventDefault();
 				overlay.toggleClass('toggled');
 				$('.acf-block-questionnaire .titre, .acf-block-questionnaire .ouvrir ').slideUp(500);
 				voletQ.show();
 				voletQ.animate(
-					{ left: 0.1*width },
+					{ right: 0 },
 					500
 				);
 			});
@@ -61,7 +61,7 @@
 			fermerQ.click(function(e) {
 				$('.acf-block-questionnaire .titre, .acf-block-questionnaire .ouvrir ').slideDown(500);
 				voletQ.animate(
-					{left: width},
+					{right: width},
 					500,
 					function() {
 						voletQ.hide();
@@ -219,7 +219,7 @@
 					$(window).scroll(function () { // scroll event
 						var windowTop = $(window).scrollTop(); // returns number
 						var windowBottom=window.innerHeight+windowTop;
-						var scrollMots=motWidth * (windowBottom - motTop) / (window.innerHeight - 260); //Longueur d'avancement dans la portion de fenêtre où les mots sont visibles + marge pour le sticky header
+						var scrollMots=motWidth * (windowBottom - motTop) / (window.innerHeight - 160); //Longueur d'avancement dans la portion de fenêtre où les mots sont visibles + marge pour le sticky header
 						mot.style.setProperty('--scroll-mots', scrollMots);
 					});
 				} 

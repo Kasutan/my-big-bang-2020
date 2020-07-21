@@ -29,9 +29,11 @@
 
 		.image-wrapper {
 			display: flex;
+			height:272px;
 			position: relative;
+			width:272px;
 			&::before {
-				background-color:var(--gris-fond);
+				background-color:var(--gris-decor);
 				content:'';
 				height:100%;
 				left:-20px;
