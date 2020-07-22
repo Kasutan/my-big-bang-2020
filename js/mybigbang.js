@@ -11,7 +11,7 @@
 		var headerBottom=0;
 		updateHeaderPosition();
 
-/*
+
 		$(window).scroll(function () { // scroll event
 			var windowTop = $(window).scrollTop(); // returns number
 			var windowBottom=window.innerHeight+windowTop;
@@ -26,7 +26,7 @@
 			}
 
 		});
-		*/
+		
 
 		//Si on permet au visiteur de masquer la topbar
 		//var topbar = $('.topbar');
