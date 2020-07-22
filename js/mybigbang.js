@@ -269,9 +269,10 @@
 		loop:true,
 		nav : true,
 		dots : false,
-		autoplay:true,
+		autoplay:false,
 		autoplayTimeout:5000,
 		autoplaySpeed:1500,
+		navSpeed:1500,
 		autoplayHoverPause:true,
 		items:1,
 	});
