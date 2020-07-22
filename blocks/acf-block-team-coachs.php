@@ -46,7 +46,7 @@ function mbb_team_coach_callback( $block ) {
 			echo '</div>';	
 		}
 		
-		echo '<div class="fond"><div class="decor"></div>';
+		echo '<div class="fond"><div class="decor"><div class="decor-image"></div></div>';
 		if($coachs) :
 			echo '<div class="coachs-wrapper">'; //scroll horizontal
 				printf( '<ul class="coachs" id="coachs" data-active="0" data-nombre="%s">',count($coachs));

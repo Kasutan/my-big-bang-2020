@@ -34,16 +34,20 @@
 	}
 
 	.decor {
-		background-image: url('icons/Motif-Silhouette-Mobile.svg');
-		background-repeat: repeat;
-		background-size: 53px 36px;
-		background-position-y: top;
 		height: 256px;
 		left: 0;
-		opacity: 0.2;
 		position: absolute;
 		top: 5px;
 		width: 100%;
+		.decor-image {
+			background-image: url('icons/Motif-Silhouette-Mobile.svg');
+			background-repeat: repeat;
+			background-size: 53px 36px;
+			background-position-y: top;
+			opacity: 0.2;
+			height: 100%;
+			width: 100%;
+		}
 	}
 
 	.coachs-wrapper {
@@ -135,7 +139,7 @@
 				width: 9px;
 				position: absolute;
 				left: -4px;
-				top: 15px;
+				top: 20px;
 			}
 
 			span {
@@ -149,7 +153,7 @@
 		height: 100px;
 		left: 0;
 		position: absolute;
-		top: 15px;
+		top: 20px;
 		width: 1px;
 	}
 
@@ -233,11 +237,17 @@
 		}
 
 		.decor {
-			background-image: url('icons/Motif-Silhouette-Desktop.svg');
-			background-size: 68px 46px;
+			background-color: var(--bleu);
 			height: 100%;
 			top: 0;
 			width: 300px;
+			z-index: 1;
+			.decor-image {
+				background-image: url('icons/Motif-Silhouette-Desktop.svg');
+				background-size: 68px 46px;
+				height: 100%;
+				width: 100%;
+			}
 
 		}
 
