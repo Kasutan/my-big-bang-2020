@@ -18,6 +18,9 @@
 		position: relative;
 		top: 3px;
 	}
+	.current {
+		font-weight: 700;
+	}
 }
 .single-post, .archive, .blog {
 	.site-main {
@@ -176,7 +179,7 @@
 		font-size: 16px;
 		line-height: 24px;
 		margin-bottom: 27px;
-		padding:5px 5px 0;
+		padding:2px 5px 3px;
 	}
 	.widget {
 		margin-bottom: 34px;
@@ -264,12 +267,32 @@
 	h3 {
 		font-size: 20px;
 	}
+	.entry-content {
+		display: flex;
+		flex-direction: column;
+		> * {
+			order:4;
+		}
+		> .wp-post-image {
+			margin-bottom: 30px;
+			order:3;
+		}
+		> p:first-of-type {
+			order:1;
+		}
+		> .et_social_top {
+			order:2;
+		}
+	}
 }
 
 /************Bloc TOC***************/
 .entry-content .gutentoc {
 	background-color: transparent;
 	border:none;
+	.toggleone {
+		display: none;
+	}
 	.gutentoc-toc-title-wrap {
 		text-align-last: left;
 	}
@@ -290,14 +313,19 @@
 			}
 
 			&:not(:first-of-type) {
-				border-top:dashed 1px #ffffff;
+				border-top:dashed 1px var(--gris-fond);
 				margin-top: 20px;
 				padding-top:20px;
 			}
+
 		}
-		border-bottom:dashed 1px #ffffff;
+		border-bottom:dashed 1px var(--gris-fond);
 		margin-top: 20px;
 		padding-bottom:20px;
+
+		ul a strong {
+			font-weight: normal;
+		}
 	}
 }
 
@@ -346,14 +374,15 @@
 
 			.image-wrapper {
 				display: flex;
+				margin:0 auto;
 				max-width:100%;
 				position: relative;
 				height:270px;
 				left:25px;
 				top:25px;
-				width:100%;
+				width:270px;
 				&::before {
-					background-color:var(--gris-fond);
+					background-color:var(--gris-decor);
 					content:'';
 					height:100%;
 					left:-25px;
@@ -428,6 +457,17 @@
 				.extrait {
 					font-size: 16px;
 				}
+			}
+		}
+		@media screen and(min-width:1320px) {
+			justify-content: flex-start;
+			article {
+				margin-right: 30px;
+			}
+		}
+		@include bp(xl) {
+			article {
+				margin-right:100px;
 			}
 		}
 	}
