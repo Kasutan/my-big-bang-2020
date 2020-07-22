@@ -38,6 +38,17 @@ ul:not([class])  {
 				display: none;
 			}
 		}
+
+		ul {
+			margin-top:10px;
+			& >li {
+				background-position:0 7px;
+				margin-bottom: 10px;
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
 }
 
 ol {

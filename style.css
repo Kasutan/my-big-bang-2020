@@ -800,6 +800,9 @@ i {
   font-style: italic;
   font-family: var(--font-serif); }
 
+strong {
+  font-weight: 700; }
+
 blockquote {
   margin: 0 1.5em; }
 
@@ -897,6 +900,13 @@ ul:not([class]) {
     padding-left: 25px; }
     ul:not([class]) > li::before {
       display: none; }
+  ul:not([class]) ul {
+    margin-top: 10px; }
+    ul:not([class]) ul > li {
+      background-position: 0 7px;
+      margin-bottom: 10px; }
+      ul:not([class]) ul > li:last-of-type {
+        margin-bottom: 0; }
 
 ol {
   list-style: decimal; }
@@ -5060,12 +5070,8 @@ h1.fond-bleu {
           padding-right: 20px;
           padding-left: var(--padding-x); } }
   @media (min-width: 960px) {
-    .acf-block-deux-colonnes {
-      -webkit-box-align: end;
-      -ms-flex-align: end;
-      align-items: flex-end; }
-      .acf-block-deux-colonnes.inverse .texte {
-        padding-right: 70px; } }
+    .acf-block-deux-colonnes.inverse .texte {
+      padding-right: 70px; } }
 
 .acf-block-studios {
   margin-bottom: 0; }
@@ -5268,6 +5274,9 @@ h1.fond-bleu {
 
 .wp-block-image.alignfull {
   margin-bottom: 0; }
+  @media (min-width: 768px) {
+    .wp-block-image.alignfull.show-for-md {
+      display: block; } }
 
 .acf-block-coupon {
   margin-bottom: 40px; }

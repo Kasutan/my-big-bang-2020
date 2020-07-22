@@ -28,4 +28,9 @@
 
 .wp-block-image.alignfull {
 	margin-bottom: 0;
+	@include bp(md) {
+		&.show-for-md {
+			display: block;
+		}
+	}
 }

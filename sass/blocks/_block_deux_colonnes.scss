@@ -90,7 +90,6 @@
 		}
 	}
 	@include bp(lg) {
-		align-items: flex-end;
 		&.inverse .texte {
 			padding-right:70px;
 		}
