@@ -158,6 +158,7 @@
 		var flecheSession=$('.fleche-session');
 		if(flecheSession.length >0) {
 			var slider=$('#sessions');
+			var sliderWrapper=$('.sessions-wrapper');
 			var derniere=parseInt(slider.attr('data-nombre'));
 			var slideWidth=$('.session').outerWidth()+parseInt($('.session').css('margin-right'));
 
@@ -185,7 +186,14 @@
 		function bougeSession(newSlide) {
 			if(newSlide >= 0 && newSlide < derniere) {
 				var newLeft=-1 * newSlide * slideWidth;
-				slider.css('left',newLeft);
+				if(width>768) { //en desktop on change la position du slider
+					slider.css('left',newLeft);
+				} else { // en mobile on utilise le scroll horizontal
+					$(sliderWrapper).animate({
+						scrollLeft : -1*newLeft},
+						300
+					);
+				}
 				slider.attr('data-active',newSlide);
 			}
 		}
