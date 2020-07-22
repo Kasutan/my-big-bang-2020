@@ -4,10 +4,10 @@
     "fields": [
         {
             "key": "field_5efd91e0385d8",
-            "label": "Nombre d'étoiles",
+            "label": "Note dans Google Maps",
             "name": "nombre_etoiles",
-            "type": "number",
-            "instructions": "Compris entre 1 et 5",
+            "type": "text",
+            "instructions": "Utiliser le point comme séparateur décimal (par exemple 4.9)\r\nLa note sera arrondie au nombre entier le plus proche pour afficher des étoiles mais sera utilisée telle quelle dans les données structurées.",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -15,13 +15,11 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": 5,
+            "default_value": "",
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "min": 1,
-            "max": 5,
-            "step": 1
+            "maxlength": ""
         },
         {
             "key": "field_5efd9274385d9",
@@ -134,25 +132,6 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5efd94f588a0f",
-                    "label": "Lundi deuxième plage horaire",
-                    "name": "lundi_am",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "16:00 - 21:00",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
                     "key": "field_5efd9365385de",
                     "label": "Lundi",
                     "name": "lundi",
@@ -166,6 +145,25 @@
                         "id": ""
                     },
                     "default_value": "8:00 - 14:00",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5efd94f588a0f",
+                    "label": "Lundi deuxième plage horaire",
+                    "name": "lundi_am",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "16:00 - 21:00",
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
@@ -465,5 +463,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1593695227
+    "modified": 1595439372
 }

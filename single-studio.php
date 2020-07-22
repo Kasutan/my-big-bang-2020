@@ -11,10 +11,11 @@
  *
  * @package mybigbang
  */
-
+add_filter( 'wpseo_json_ld_output', '__return_false' );
 get_header();
 if(function_exists('get_field')) {
-	$etoiles=esc_attr(get_field('nombre_etoiles'));
+	$notation=esc_attr(get_field('nombre_etoiles'));
+	$etoiles=round($notation);
 	$avis=esc_attr(get_field('nombre_avis'));
 	$telephone=esc_attr(get_field('telephone'));
 	$location=get_field('adresse');
@@ -48,6 +49,7 @@ if(function_exists('get_field')) {
 }
 
 $semaine=array('lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche');
+$images_json=array();
 ?>
 
 <main id="main" class="site-main">
@@ -90,6 +92,7 @@ $semaine=array('lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'
 				printf('<div class="image-wrapper">%s</div>',
 					wp_get_attachment_image( $image_id, 'large')
 				);
+				$images_json[]='"'.wp_get_attachment_image_url($image_id,'large').'"';
 			}
 		echo '</div>';//fin galerie
 		echo '<div class="texte">';
@@ -144,4 +147,102 @@ endwhile; // End of the loop. ?>
 if($numero_script) {
 	printf('<script src="https://apipro.masalledesport.com/widget/%s/js?configFrom=10312"></script>',$numero_script);
 }
+//Données structurées
+$images_json=implode(',',$images_json);
+$adresse=$ville=$code_postal=$lat=$lng='';
+if($location) {
+	if( isset( $location[ 'street_number' ] ) ) {
+		$adresse.=$location[ 'street_number' ].' ';
+	}
+	$adresse.=$location['street_name'];
+	$ville=$location['city'];
+	$code_postal=$location['post_code'];
+	$lat=$location['lat'];
+	$lng=$location['lng'];
+}
+$description='';
+if(function_exists('wpseo_get_value')){
+	$description=wpseo_get_value('metadesc'); //la description YOAST SEO
+}
+if(!$description) {
+	$description='Studio Mihabodytec My Big Bang '.get_the_title();
+}
+$semaine_en=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+$opening_hours=array();
+foreach($semaine as $indice=>$jour) {
+	$horaires_plage=$horaires[$jour];
+	if(strpos($horaires_plage,' - ')) { //la plage horaire n'est pas vide ni "fermée"
+		$horaires_plage=explode(' - ',$horaires_plage);
+		$opening_hours[]=sprintf('{
+			"@type": "OpeningHoursSpecification",
+			"dayOfWeek": [
+				"%s"
+			],
+			"opens": "%s",
+			"closes": "%s"
+			}',
+				$semaine_en[$indice],
+				$horaires_plage[0],
+				$horaires_plage[1]
+			);
+	}
+	if(array_key_exists($jour.'_am',$horaires) && !empty($horaires[$jour.'_am'])) {
+		$horaires_plage=$horaires[$jour.'_am'];
+		if(strpos($horaires_plage,' - ')) { //la plage horaire n'est pas vide ni "fermée"
+			$horaires_plage=explode(' - ',$horaires_plage);
+			$opening_hours[]=sprintf('{
+				"@type": "OpeningHoursSpecification",
+				"dayOfWeek": [
+					"%s"
+				],
+				"opens": "%s",
+				"closes": "%s"
+				}',
+					$semaine_en[$indice],
+					$horaires_plage[0],
+					$horaires_plage[1]
+				);
+		}
+
+	}
+}
+$opening_hours=implode(',',$opening_hours);
+?>
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "LocalBusiness",
+	"image": [
+		<?php echo $images_json;?>
+	],
+
+	"@id" : "<?php echo get_the_permalink();?>",
+	"url" : "<?php echo get_the_permalink();?>",
+	"address": {
+		"@type": "PostalAddress",
+		"streetAddress": "<?php echo $adresse;?>",
+		"addressLocality": "<?php echo $ville;?>",
+		"postalCode": "<?php echo $code_postal;?>",
+		"addressCountry": "FR"
+	},
+	"geo": {
+		"@type": "GeoCoordinates",
+		"latitude": <?php echo $lat;?>,
+		"longitude": <?php echo $lng;?>
+	},
+
+	"description": "<?php echo strip_tags(get_the_content());?>",
+	"name": "Studio Mihabodytec My Big Bang <?php echo strip_tags(get_the_title());?>",
+	"telephone": "<?php echo $telephone;?>",
+	"aggregateRating": {
+		"@type": "AggregateRating",
+		"ratingValue": "<?php echo $notation;?>",
+		"reviewCount": "<?php echo $avis;?>"
+	},
+	"priceRange" : "20-33€/session",
+	"openingHoursSpecification": [<?php echo $opening_hours;?>]
+
+}
+</script>
+<?php
 get_footer();
