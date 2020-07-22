@@ -4446,7 +4446,8 @@ h1.fond-bleu {
       justify-content: flex-end; }
     .acf-block-deroule-seance .etape .titre {
       font-size: 18px;
-      line-height: 24px; }
+      line-height: 24px;
+      position: relative; }
       .acf-block-deroule-seance .etape .titre span {
         color: var(--rouge); }
   .acf-block-deroule-seance .texte {
@@ -4471,8 +4472,6 @@ h1.fond-bleu {
     top: 65px; }
   .acf-block-deroule-seance .picto {
     opacity: 0.5; }
-    .acf-block-deroule-seance .picto img {
-      background-color: #E0FFA7; }
   .acf-block-deroule-seance .picto.desktop {
     display: none; }
   .acf-block-deroule-seance .picto.mobile {
@@ -4560,7 +4559,7 @@ h1.fond-bleu {
     font-size: 16px;
     text-align: center; }
   .acf-block-rdv .mots {
-    bottom: -30px;
+    bottom: -25px;
     color: transparent;
     font-size: 50px;
     font-weight: 900;
@@ -4568,9 +4567,8 @@ h1.fond-bleu {
     line-height: 1.24;
     position: relative;
     text-transform: uppercase;
-    -webkit-text-stroke: 2px var(--gris-decor);
-    white-space: nowrap;
-    z-index: 1; }
+    -webkit-text-stroke: 1px var(--gris-decor);
+    white-space: nowrap; }
   .acf-block-rdv .rdvs {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4584,6 +4582,13 @@ h1.fond-bleu {
   .acf-block-rdv .rdv {
     background-color: var(--bleu);
     color: var(--blanc);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     margin-right: 33px;
     padding: 45px 30px;
     -ms-flex-preferred-size: calc(286px + 33px);
@@ -4604,6 +4609,11 @@ h1.fond-bleu {
     width: 105px; }
   .acf-block-rdv .texte {
     margin-bottom: 20px; }
+  .acf-block-rdv .cta-resultat {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    margin-bottom: 0;
+    margin-top: auto; }
   .acf-block-rdv .decor {
     background-image: url("icons/Motif-Silhouette-Mobile.svg");
     background-repeat: repeat;
@@ -4621,11 +4631,14 @@ h1.fond-bleu {
         margin-bottom: 35px; }
       .acf-block-rdv .intro {
         font-size: 20px;
-        line-height: 30px; }
+        line-height: 30px;
+        max-width: 830px;
+        margin: 0 auto; }
       .acf-block-rdv .mots {
-        bottom: -35px;
+        bottom: -20px;
         font-size: 85px;
-        line-height: 62px; }
+        line-height: 62px;
+        -webkit-text-stroke: 2px var(--gris-decor); }
       .acf-block-rdv .rdvs {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -4844,7 +4857,7 @@ h1.fond-bleu {
     margin-bottom: 34px; }
     .acf-block-reservation-sessions .navigation > button {
       line-height: 24px;
-      padding: 7px 7px 0;
+      padding: 3px 7px 3px;
       margin-bottom: 30px;
       margin-right: 11px;
       text-align: center;
@@ -4876,8 +4889,8 @@ h1.fond-bleu {
     padding-bottom: 0;
     margin-bottom: 160px; }
   .acf-block-reservation-sessions .session {
-    -ms-flex-preferred-size: 375px;
-    flex-basis: 375px;
+    -ms-flex-preferred-size: 305px;
+    flex-basis: 305px;
     margin-right: 70px;
     min-height: 364px;
     padding: 75px 30px 30px; }

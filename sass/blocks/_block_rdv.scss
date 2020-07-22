@@ -13,7 +13,7 @@
 		text-align: center;
 	}
 	.mots {
-		bottom:-30px;
+		bottom:-25px;
 		color:transparent;
 		font-size:50px;
 		font-weight:900;
@@ -21,9 +21,8 @@
 		line-height:1.24;
 		position:relative;
 		text-transform:uppercase;
-		-webkit-text-stroke: 2px var(--gris-decor);
+		-webkit-text-stroke: 1px var(--gris-decor);
 		white-space: nowrap;
-		z-index: 1;
 	}
 	.rdvs {
 		display: flex;
@@ -36,6 +35,8 @@
 	.rdv {
 		background-color:var(--bleu);
 		color:var(--blanc);
+		display: flex;
+		flex-direction: column;
 		margin-right:33px;
 		padding:45px 30px;
 		flex-basis:calc(286px + 33px);
@@ -58,6 +59,11 @@
 	.texte {
 		margin-bottom:20px;
 	}
+	.cta-resultat {
+		align-self: flex-end;
+		margin-bottom: 0;
+		margin-top: auto;
+	}
 
 	.decor {
 		background-image: url('icons/Motif-Silhouette-Mobile.svg');
@@ -78,11 +84,14 @@
 		.intro {
 			font-size: 20px;
 			line-height: 30px;
+			max-width:830px;
+			margin:0 auto;
 		}
 		.mots {
-			bottom:-35px;
+			bottom:-20px;
 			font-size: 85px;
 			line-height: 62px;
+			-webkit-text-stroke: 2px var(--gris-decor);
 		}
 		.rdvs {
 			justify-content: center;

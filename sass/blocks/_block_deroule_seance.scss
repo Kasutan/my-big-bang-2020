@@ -46,6 +46,7 @@
 		.titre {
 			font-size: 18px;
 			line-height: 24px;
+			position: relative;
 			span {
 				color:var(--rouge);
 			}
@@ -73,10 +74,6 @@
 	}
 	.picto {
 		opacity: 0.5;
-		img {
-			background-color: #E0FFA7;
-			
-		}
 	}
 	.picto.desktop {
 		display: none;
