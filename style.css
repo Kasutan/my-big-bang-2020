@@ -4004,6 +4004,20 @@ h1.fond-bleu {
         padding: 35px; }
       .acf-block-profils .owl-nav {
         top: 40%; } }
+  @media (min-width: 960px) {
+    .acf-block-profils .profil {
+      padding-bottom: 400px; }
+    .acf-block-profils .texte {
+      min-height: 623px; }
+    .acf-block-profils .decor-desktop {
+      height: 278px;
+      top: 520px; }
+    .acf-block-profils .bloc-conseil {
+      left: -132px;
+      margin-top: 0;
+      position: absolute;
+      top: 566px;
+      width: 350px; } }
 
 .acf-block-coach-personnel .titre {
   margin-bottom: 20px; }

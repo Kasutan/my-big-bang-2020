@@ -203,5 +203,24 @@
 			top:40%;
 		}
 	}
+	@include bp(lg) {
+		.profil {
+			padding-bottom:400px;
+		}
+		.texte {
+			min-height:623px;
+		}
+		.decor-desktop {
+			height:278px;
+			top:520px;
+		}
+		.bloc-conseil {
+			left:-132px;
+			margin-top: 0;
+			position:absolute;
+			top:566px;
+			width:350px;
+		}
+	}
 	
 }

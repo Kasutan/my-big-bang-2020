@@ -277,7 +277,7 @@
 		loop:true,
 		nav : true,
 		dots : false,
-		autoplay:false,
+		autoplay:true,
 		autoplayTimeout:5000,
 		autoplaySpeed:1500,
 		navSpeed:1500,
