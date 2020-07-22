@@ -57,10 +57,23 @@
 			}
 		}
 	}
-	@include bp(xl) {
+	@media screen and (min-width:1200px) {
+		.texte {
+			padding-bottom:110px;
+		}
 		.eclairage {
 			.relief {
-				top:-80px;
+				top:-100px;
+			}
+		}
+	}
+	@include bp(xl) {
+		.texte {
+			padding-bottom:160px;
+		}
+		.eclairage {
+			.relief {
+				top:-156px;
 			}
 		}
 	}

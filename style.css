@@ -5487,9 +5487,16 @@ h1.fond-bleu {
       margin-top: 0; }
       .acf-block-facteurs .eclairage .relief {
         top: -50px; } }
-  @media (min-width: 1680px) {
+  @media screen and (min-width: 1200px) {
+    .acf-block-facteurs .texte {
+      padding-bottom: 110px; }
     .acf-block-facteurs .eclairage .relief {
-      top: -80px; } }
+      top: -100px; } }
+  @media (min-width: 1680px) {
+    .acf-block-facteurs .texte {
+      padding-bottom: 160px; }
+    .acf-block-facteurs .eclairage .relief {
+      top: -156px; } }
 
 .acf-block-temoignages {
   margin-bottom: 0; }
