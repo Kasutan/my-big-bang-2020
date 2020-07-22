@@ -157,6 +157,16 @@ a.cta-resultat {
 			top:var(--header-bottom); // calculé en JS, tient compte de la topbar
 			width:100vw;
 			z-index: 10;
+
+			//sous-menu mobile
+			ul {
+				display:none;
+			}
+			> li.focus { //classe focus ajoutée en JS
+				ul {
+					display: flex;
+				}
+			}
 		}
 
 		svg.menu { //cacher hamburger 
@@ -278,10 +288,7 @@ a.cta-resultat {
 		}
 	}
 
-	
-	.current-menu-item > a, .current-menu-ancestor > a {
-		//font-weight:700; // TODO solution pour les liens vers des ancres
-	}
+
 
 	//Trait de décor sous la page courante (liens de premier niveau uniquement)
 	ul.menu > li:not(.button) {

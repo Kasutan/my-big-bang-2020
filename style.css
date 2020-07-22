@@ -1345,6 +1345,12 @@ a.cta-resultat {
     top: var(--header-bottom);
     width: 100vw;
     z-index: 10; }
+    .main-navigation.toggled ul.menu ul {
+      display: none; }
+    .main-navigation.toggled ul.menu > li.focus ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
   .main-navigation.toggled svg.menu {
     display: none; }
   .main-navigation.toggled svg.times {
