@@ -62,10 +62,10 @@
 		@include bp(md) {
 			.mots {
 				position: relative;
-				top:103px;
+				top:75px;
 			}
 			.texte {
-				margin-top:100px;
+				margin-top: 0;
 			}
 		}
 	}

@@ -36,6 +36,15 @@ if(function_exists('get_field')) {
 	if(function_exists('mbb_prepare_adresse')) {
 		$adresse=mbb_prepare_adresse($location) ;
 	}
+
+	//dissocier les 2 numéros s'il y en a 2 
+	if(strpos($telephone,' / ')>0) {
+		$array_tel=explode(' / ',$telephone);
+		$telephone=$array_tel[0];
+		$telephone_2=$array_tel[1];
+	} else {
+		$telephone_2='';
+	}
 }
 
 $semaine=array('lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche');
@@ -54,7 +63,7 @@ $semaine=array('lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'
 		);?>
 		
 			<div class="entry-meta">
-				<?php if($notation) : ?>
+				<?php if($etoiles) : ?>
 				<div class="notation">
 					<?php for($i=1;$i<=$etoiles;$i++) {
 						echo '<span class="etoile"></span>';
@@ -64,7 +73,11 @@ $semaine=array('lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'
 					?>
 				</div>
 				<?php endif; ?>
-				<div class="telephone"><?php echo $telephone;?></div>
+				<div class="telephone">
+					<?php echo $telephone;
+					if($telephone_2) printf('<span class="sep"> /</span><span class="tel-2">%s</span>',$telephone_2);
+					?>
+				</div>
 				<?php printf('<a class="button studio" href="%s">%s</a>',$cible,$label); ?>
 			</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->

@@ -37,23 +37,37 @@
 	}
 	.telephone {
 		font-size: 32px;
-		line-height: 72px;
+		line-height: 1.2;
 		font-weight: 700;
+		padding:16px 0;
+		text-align: center;
+		.sep {
+			display:none;
+		}
+		.tel-2 {
+			display: block;
+		}
 	}
 	a.button.studio {
 		color:var(--rouge);
-		background-color:transparent;
+		background-color:var(--blanc);
 		background-image:url('icons/fleche_simple.svg');
 		background-repeat: no-repeat;
 		background-position:10px 14px;
 		background-size: 16px 9px;
 		font-weight: 300;
 		line-height: 36px;
-		margin:0 10px;
+		margin:0 auto;
+		max-width:300px;
 		padding-left: 48px;
 		padding-top: 0;
 		padding-bottom: 0;
 		text-align: left;
+		&:hover, &:focus, &:active {
+			color:var(--blanc);
+			background-color: var(--rouge);
+			background-image: url('icons/fleche_simple_blanche.svg');
+		}
 	}
 
 	/***************************studio***********************/
@@ -151,9 +165,21 @@
 
 
 	@include bp(md) {
+		.telephone {
+			padding:20px 0;
+			.sep, .tel-2 {
+				display: inline-block;
+			}
+			.sep {
+				margin: 0 5px;
+			}
+		}
 		.studio {
 			display: flex;
 			flex-wrap:wrap;
+		}
+		a.button.studio {
+			max-width:unset;
 		}
 		.galerie {
 			flex-basis:49%;
@@ -221,7 +247,7 @@
 			li {
 				background-image:url('icons/fleche_simple.svg');
 				background-repeat: no-repeat;
-				background-position:0 3px;
+				background-position:0 7px;
 				background-size: 16px 9px;
 				line-height:20px;
 				margin-bottom:20px;
@@ -234,10 +260,19 @@
 	}
 	.lien {
 		display: flex;
-		justify-content: flex-end;
+		justify-content: center;
+		margin-top: 30px;
 
 		a.cta-resultat {
 			color:var(--bleu);
+			svg {
+				.cercle {
+					fill:var(--rouge);
+				}
+				.fleche {
+					fill:var(--blanc);
+				}
+			}
 		}
 	}
 
@@ -270,7 +305,6 @@
 
 	/***************************avis***********************/
 	a.button.studio.studio-2 {
-		background-color: #fff;
 		margin:0 10px;
 		position: relative;
 		top:18px;

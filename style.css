@@ -2330,22 +2330,33 @@ a.cta-resultat {
       margin-right: 2px; }
   .single-studio .telephone {
     font-size: 32px;
-    line-height: 72px;
-    font-weight: 700; }
+    line-height: 1.2;
+    font-weight: 700;
+    padding: 16px 0;
+    text-align: center; }
+    .single-studio .telephone .sep {
+      display: none; }
+    .single-studio .telephone .tel-2 {
+      display: block; }
   .single-studio a.button.studio {
     color: var(--rouge);
-    background-color: transparent;
+    background-color: var(--blanc);
     background-image: url("icons/fleche_simple.svg");
     background-repeat: no-repeat;
     background-position: 10px 14px;
     background-size: 16px 9px;
     font-weight: 300;
     line-height: 36px;
-    margin: 0 10px;
+    margin: 0 auto;
+    max-width: 300px;
     padding-left: 48px;
     padding-top: 0;
     padding-bottom: 0;
     text-align: left; }
+    .single-studio a.button.studio:hover, .single-studio a.button.studio:focus, .single-studio a.button.studio:active {
+      color: var(--blanc);
+      background-color: var(--rouge);
+      background-image: url("icons/fleche_simple_blanche.svg"); }
   .single-studio .galerie {
     margin-bottom: 10px; }
   .single-studio .image-wrapper {
@@ -2419,12 +2430,20 @@ a.cta-resultat {
   .single-studio .owl-dot.active span {
     background-color: var(--rouge); }
   @media (min-width: 768px) {
+    .single-studio .telephone {
+      padding: 20px 0; }
+      .single-studio .telephone .sep, .single-studio .telephone .tel-2 {
+        display: inline-block; }
+      .single-studio .telephone .sep {
+        margin: 0 5px; }
     .single-studio .studio {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
+    .single-studio a.button.studio {
+      max-width: unset; }
     .single-studio .galerie {
       -ms-flex-preferred-size: 49%;
       flex-basis: 49%;
@@ -2474,7 +2493,7 @@ a.cta-resultat {
     .single-studio .contenu ul li {
       background-image: url("icons/fleche_simple.svg");
       background-repeat: no-repeat;
-      background-position: 0 3px;
+      background-position: 0 7px;
       background-size: 16px 9px;
       line-height: 20px;
       margin-bottom: 20px;
@@ -2485,11 +2504,16 @@ a.cta-resultat {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end; }
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 30px; }
     .single-studio .lien a.cta-resultat {
       color: var(--bleu); }
+      .single-studio .lien a.cta-resultat svg .cercle {
+        fill: var(--rouge); }
+      .single-studio .lien a.cta-resultat svg .fleche {
+        fill: var(--blanc); }
   @media (min-width: 768px) {
     .single-studio .general {
       display: -webkit-box;
@@ -2514,7 +2538,6 @@ a.cta-resultat {
       -ms-flex-preferred-size: 40%;
       flex-basis: 40%; } }
   .single-studio a.button.studio.studio-2 {
-    background-color: #fff;
     margin: 0 10px;
     position: relative;
     top: 18px;
@@ -3346,9 +3369,9 @@ h1.fond-bleu {
   @media (min-width: 768px) {
     .acf-block-securite-2.studios .mots {
       position: relative;
-      top: 103px; }
+      top: 75px; }
     .acf-block-securite-2.studios .texte {
-      margin-top: 100px; } }
+      margin-top: 0; } }
 
 .acf-block-presse {
   margin-bottom: var(--margin-bottom);
@@ -4952,7 +4975,7 @@ h1.fond-bleu {
     .acf-block-deux-colonnes .texte > ul > li {
       background-image: url("icons/fleche_simple.svg");
       background-repeat: no-repeat;
-      background-position: 0 3px;
+      background-position: 0 7px;
       background-size: 16px 9px;
       line-height: 20px;
       margin-bottom: 20px;
