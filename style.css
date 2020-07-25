@@ -3868,7 +3868,7 @@ h1.fond-bleu {
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
-        padding: 130px var(--padding-x) 250px;
+        padding: 130px calc(50vw - 537px) 250px;
         margin-top: -40px; }
       .acf-block-elements .element {
         -webkit-box-align: start;
@@ -3903,7 +3903,7 @@ h1.fond-bleu {
           -ms-flex-positive: 0;
           flex-grow: 0;
           padding-left: 20px;
-          padding-top: 1rem; }
+          padding-top: 5px; }
         .acf-block-elements .element:nth-child(2n) {
           position: relative;
           top: 150px; } }
@@ -4281,12 +4281,13 @@ h1.fond-bleu {
     .acf-block-suivi-coaching .zone h3 {
       background-color: var(--rouge);
       color: var(--blanc);
-      display: inline-block;
-      margin-bottom: 35px;
-      padding: 2px 8px 2px;
+      display: inline;
+      padding: 2px 5px;
       -webkit-box-decoration-break: clone;
       box-decoration-break: clone;
-      line-height: 2; }
+      line-height: 1.5; }
+      .acf-block-suivi-coaching .zone h3 + .texte {
+        margin-top: 35px; }
     .acf-block-suivi-coaching .zone ul {
       list-style: none;
       padding: 0;
@@ -4320,8 +4321,8 @@ h1.fond-bleu {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center; }
-        .acf-block-suivi-coaching .zone h3 {
-          margin-bottom: 42px; }
+        .acf-block-suivi-coaching .zone h3 + .texte {
+          margin-top: 42px; }
         .acf-block-suivi-coaching .zone:nth-of-type(2) {
           -webkit-box-orient: horizontal;
           -webkit-box-direction: reverse;
