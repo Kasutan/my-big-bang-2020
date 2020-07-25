@@ -23,6 +23,7 @@
 		text-transform:uppercase;
 		-webkit-text-stroke: 1px var(--gris-decor);
 		white-space: nowrap;
+		z-index: 1;
 	}
 	.rdvs {
 		display: flex;
