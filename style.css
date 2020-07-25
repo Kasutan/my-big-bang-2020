@@ -3128,8 +3128,8 @@ h1.fond-bleu {
       top: 0;
       width: 22%; }
       .accueil .silhouette img {
-        -o-object-fit: cover;
-        object-fit: cover;
+        -o-object-fit: contain;
+        object-fit: contain;
         width: 100%; }
     .accueil .intro {
       font-size: 1.25rem;
