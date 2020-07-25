@@ -1,6 +1,20 @@
+.presse-blog .wp-block-group__inner-container {
+	margin-top:var(--margin-bottom);
+	@include bp(lg) {
+		display: flex;
+		justify-content: space-between;
+		.acf-block-presse {
+			flex-basis:460px;
+			flex-shrink: 0;
+			max-width: 460px;
+		}
+		.acf-block-blog {
+			flex-basis :calc(100% - 460px);
+		}
+	}
+}
 .acf-block-presse {
 	margin-bottom:var(--margin-bottom);
-	margin-top:var(--margin-bottom);
 	.titre {
 		color:var(--gris-fond);
 		font-size:32px;
@@ -29,6 +43,38 @@
 		}
 	}
 	.owl-carousel {
+		display: flex;
+		overflow: scroll;
 		padding:0 20px;
 	}
+	.slide {
+		display: flex;
+	}
+	.logo-presse {
+		border:solid 1px #D1CBC0;
+		display: flex;
+		flex-basis : 200px;
+		flex-shrink: 0;
+		height: 124px;
+		margin-right:15px;
+		margin-bottom: 15px;
+		width:200px;
+		img {
+			object-fit: contain;
+		}
+	}
+	@include bp(md) {
+		.owl-carousel {
+			overflow:unset;
+		}
+		.slide {
+			display:grid;
+			grid-template-columns: 200px 200px;
+			grid-template-rows: 124px 124px;
+			grid-gap:15px;
+			margin:0 auto;
+			max-width: 420px;
+		}
+	}
+	
 }

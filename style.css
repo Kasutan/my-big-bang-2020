@@ -3433,9 +3433,28 @@ h1.fond-bleu {
     .acf-block-securite-2.studios .texte {
       margin-top: 0; } }
 
-.acf-block-presse {
-  margin-bottom: var(--margin-bottom);
+.presse-blog .wp-block-group__inner-container {
   margin-top: var(--margin-bottom); }
+  @media (min-width: 960px) {
+    .presse-blog .wp-block-group__inner-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      .presse-blog .wp-block-group__inner-container .acf-block-presse {
+        -ms-flex-preferred-size: 460px;
+        flex-basis: 460px;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        max-width: 460px; }
+      .presse-blog .wp-block-group__inner-container .acf-block-blog {
+        -ms-flex-preferred-size: calc(100% - 460px);
+        flex-basis: calc(100% - 460px); } }
+
+.acf-block-presse {
+  margin-bottom: var(--margin-bottom); }
   .acf-block-presse .titre {
     color: var(--gris-fond);
     font-size: 32px;
@@ -3459,7 +3478,41 @@ h1.fond-bleu {
         .acf-block-presse .titre::after {
           bottom: -1rem; } }
   .acf-block-presse .owl-carousel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: scroll;
     padding: 0 20px; }
+  .acf-block-presse .slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .acf-block-presse .logo-presse {
+    border: solid 1px #D1CBC0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: 200px;
+    flex-basis: 200px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    height: 124px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 200px; }
+    .acf-block-presse .logo-presse img {
+      -o-object-fit: contain;
+      object-fit: contain; }
+  @media (min-width: 768px) {
+    .acf-block-presse .owl-carousel {
+      overflow: unset; }
+    .acf-block-presse .slide {
+      display: grid;
+      grid-template-columns: 200px 200px;
+      grid-template-rows: 124px 124px;
+      grid-gap: 15px;
+      margin: 0 auto;
+      max-width: 420px; } }
 
 .owl-nav {
   display: -webkit-box;
@@ -3594,14 +3647,27 @@ h1.fond-bleu {
         margin-bottom: 62px; }
         .acf-block-blog > .titre::after {
           bottom: -1rem; }
-      .acf-block-blog .image, .acf-block-blog .texte {
-        -ms-flex-preferred-size: 50%;
-        flex-basis: 50%; }
+      .acf-block-blog .texte {
+        -ms-flex-preferred-size: 310px;
+        flex-basis: 310px;
+        -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+        flex-grow: 0; }
+      .acf-block-blog .image-wrapper {
+        margin: 0; }
       .acf-block-blog .image {
+        -ms-flex-preferred-size: 280px;
+        flex-basis: 280px;
+        -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+        flex-grow: 0;
         margin: 0;
         padding-right: 40px; }
       .acf-block-blog .texte .fleche {
         margin-top: 1rem; } }
+  @media (min-width: 960px) {
+    .acf-block-blog .image, .acf-block-blog .texte {
+      margin-top: 20px; } }
 
 .acf-block-newsletter {
   background-image: url("icons/Motif-Silhouette-Mobile.svg");

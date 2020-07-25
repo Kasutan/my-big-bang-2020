@@ -205,7 +205,6 @@
 		}
 
 		
-	}); //fin jquery
 
 	/****************** Mots qui défilent au scroll *************************/
 	
@@ -243,31 +242,21 @@
 
 	/****************** Carrousel de logos presse *************************/
 
-
-	$(".acf-block-presse .owl-carousel").owlCarousel({
-		center: true,
-		loop:true,
-		nav : true,
-		dots : false,
-		margin : 40,
-		autoplay:true,
-		autoplayTimeout:2000,
-		autoplayHoverPause:true,
-		responsive : {
-			// breakpoint from 0 up
-			0 : {
-				items:1,
-			},
-			// breakpoint from 768px (md) up
-			768 : {
-				items : 3,
-			},
-			// breakpoint from 960px  (lg) up
-			960 : {
-				items : 5,
-			},
-		},
-	});
+	if(width >= 768) {
+		$(".acf-block-presse .owl-carousel").owlCarousel({
+			center: true,
+			loop:true,
+			nav : false,
+			dots : false,
+			margin : 40,
+			autoplay:true,
+			autoplayTimeout:6000,
+			autoplaySpeed:2000,
+			autoplayHoverPause:true,
+			items:1
+		});
+	}
+	
 
 	/****************** Carrousel de profils *************************/
 
@@ -347,6 +336,7 @@
 			}
 		});
 	}
+	}); //fin document ready
 
 })( jQuery );
 
