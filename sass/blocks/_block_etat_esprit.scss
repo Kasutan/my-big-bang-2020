@@ -25,6 +25,9 @@
 	.silhouette {
 		display: none;
 	}
+	.texte {
+		padding-bottom: 72px;
+	}
 
 	@include bp(md) {
 		.part1 {
@@ -68,8 +71,8 @@
 			width:100%;
 		}
 	}
-	.texte {
-		padding-bottom:73px;
+	.part-2 .texte {
+		padding-bottom:40px;
 	}
 	@include bp(md) {
 		.part2 {
