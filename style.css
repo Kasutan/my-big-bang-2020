@@ -2303,6 +2303,8 @@ a.cta-resultat {
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column; }
+    .entry-content.loop .image .image-wrapper {
+      margin: 0; }
     .entry-content.loop a.fleche {
       -ms-flex-item-align: end;
       align-self: flex-end;
