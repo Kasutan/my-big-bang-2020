@@ -45,13 +45,11 @@
 		flex-shrink:0;
 	}
 	.image {
+		align-items: flex-end;
 		display:flex;
 		margin-bottom:30px;
 		min-height:160px;
 		max-width:100px;
-		img {
-			margin-top:auto
-		}
 	}
 	h3 {
 		margin-bottom:23px;

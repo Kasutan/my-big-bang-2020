@@ -3097,7 +3097,7 @@ h1.fond-bleu {
     line-height: 1.5;
     text-align: center; }
   .accueil .mots {
-    bottom: -20px;
+    bottom: 12px;
     color: transparent;
     font-size: 50px;
     font-weight: 900;
@@ -3130,7 +3130,7 @@ h1.fond-bleu {
       font-size: 1.25rem;
       max-width: 957px;
       margin: 0 auto;
-      padding-bottom: 30px; }
+      padding-bottom: 0; }
     .accueil .mots {
       bottom: unset;
       font-size: 85px;
@@ -3267,14 +3267,15 @@ h1.fond-bleu {
     -ms-flex-negative: 0;
     flex-shrink: 0; }
   .acf-block-valeurs .image {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 30px;
     min-height: 160px;
     max-width: 100px; }
-    .acf-block-valeurs .image img {
-      margin-top: auto; }
   .acf-block-valeurs h3 {
     margin-bottom: 23px;
     padding-bottom: 27px;
