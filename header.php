@@ -40,7 +40,7 @@
 			} else {
 				printf('<a href="%s" class="custom-logo"><img alt="My Big Bang" src="%s" width="286" height="55"/></a>',
 					esc_url( home_url( '/' ) ),
-					mbb_get_picto_url('Logo-MPP-Header')
+					mbb_get_picto_url('Logo-MBB-Header')
 				);
 			}
 			?>
