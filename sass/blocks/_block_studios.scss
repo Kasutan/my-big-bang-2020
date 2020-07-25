@@ -158,6 +158,7 @@
 	}
 
 	@include bp(md) {
+		overflow-y: hidden;
 		.filtre {
 			padding:80px var(--padding-x);
 			button {
@@ -175,7 +176,7 @@
 			flex-grow:0;
 			flex-shrink:0;
 			max-height:805px;
-			overflow-y:auto;
+			overflow-y:scroll;
 		}
 		#carte {
 			display: block;

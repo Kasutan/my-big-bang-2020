@@ -39,7 +39,7 @@
 		font-size: 32px;
 		line-height: 1.2;
 		font-weight: 700;
-		padding:16px 0;
+		padding:16px 0 26px;
 		text-align: center;
 		.sep {
 			display:none;
@@ -49,24 +49,24 @@
 		}
 	}
 	a.button.studio {
-		color:var(--rouge);
-		background-color:var(--blanc);
-		background-image:url('icons/fleche_simple.svg');
+		color:var(--blanc);
+		background-color: var(--rouge);
+		background-image: url('icons/fleche_simple_blanche.svg');
 		background-repeat: no-repeat;
-		background-position:10px 14px;
+		background-position:10px 20px;
 		background-size: 16px 9px;
 		font-weight: 300;
-		line-height: 36px;
+		line-height: 1.5;
 		margin:0 auto;
 		max-width:300px;
 		padding-left: 48px;
-		padding-top: 0;
-		padding-bottom: 0;
+		padding-top: 12px;
+		padding-bottom: 12px;
 		text-align: left;
 		&:hover, &:focus, &:active {
-			color:var(--blanc);
-			background-color: var(--rouge);
-			background-image: url('icons/fleche_simple_blanche.svg');
+			color:var(--rouge);
+			background-color:var(--blanc);
+			background-image:url('icons/fleche_simple.svg');
 		}
 	}
 
@@ -305,7 +305,8 @@
 
 	/***************************avis***********************/
 	a.button.studio.studio-2 {
-		margin:0 10px;
+		display:block;
+		margin:0 auto;
 		position: relative;
 		top:18px;
 		z-index: 1;
