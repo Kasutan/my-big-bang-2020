@@ -46,7 +46,7 @@
 		var overlay = $('.overlay');
 		var blocQ= $('.acf-block-questionnaire');
 		if(width < 768 && ouvrirQ.length > 0) {
-			voletQ.css('right',width);
+			voletQ.css('right',-1*width);
 			ouvrirQ.click(function(e) {
 				e.preventDefault();
 				overlay.toggleClass('toggled');
@@ -61,7 +61,7 @@
 			fermerQ.click(function(e) {
 				$('.acf-block-questionnaire .titre, .acf-block-questionnaire .ouvrir ').slideDown(500);
 				voletQ.animate(
-					{right: width},
+					{right: -1*width},
 					500,
 					function() {
 						voletQ.hide();
