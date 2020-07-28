@@ -49,7 +49,7 @@
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Menu">
 
-				<svg version="1.1"class="menu"  xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+				<svg version="1.1" class="menu"  xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
 					viewBox="0 0 39 31" style="enable-background:new 0 0 39 31;">
 				<g transform="translate(1.5 1.5)">
 					<path fill="#EC6557" d="M36,1.5H0c-0.8,0-1.5-0.7-1.5-1.5S-0.8-1.5,0-1.5h36c0.8,0,1.5,0.7,1.5,1.5S36.8,1.5,36,1.5z"/>

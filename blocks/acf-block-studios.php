@@ -107,8 +107,8 @@ function mbb_affiche_studio($post_id) {
 		printf('<p class="adresse">%s</p>',$adresse);
 		printf('<p class="metro">%s</p>',$metro);
 		printf('<a href="https://www.google.com/maps/dir/?api=1&destination=%s" class="itineraire" target="_blank" title="Voir l\'itinéraire dans un nouvel onglet">Itinéraire</a>',urlencode($adresse));
-		printf('<a href="tel:%s" class="telephone">%s</a>',$telephone, $telephone);
-		if($telephone_2) printf('<a href="tel:%s" class="telephone">%s</a>',$telephone_2, $telephone_2);
+		printf('<a href="tel:%s" class="telephone">%s</a>',str_replace(' ', '', $telephone), $telephone);
+		if($telephone_2) printf('<a href="tel:%s" class="telephone">%s</a>',str_replace(' ', '', $telephone_2), $telephone_2);
 		printf('<p class="email">%s</p>',$email);
 		printf('<a class="cta-resultat" href="%s"><span>%s</span>', get_the_permalink($post_id), 'Voir le studio');
 		echo mbb_get_picto_inline('fleche-cta').'</a>'; 

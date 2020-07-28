@@ -43,7 +43,7 @@ function mbb_presse_callback( $block ) {
 				if($count!=0 && $count % 4 ==0) echo '</div><div class="slide">'; // on prépare une nouvelle slide tous les 4 logos
 				printf('<a class="logo-presse" href="%s"  target="_blank" rel="nofollow noopener" >%s</a>',
 					esc_url(get_sub_field('url')),
-					wp_get_attachment_image( get_sub_field('image'),'small' )
+					wp_get_attachment_image( get_sub_field('image'))
 				);
 				$count++;
 			endwhile;

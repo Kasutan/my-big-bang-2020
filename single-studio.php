@@ -136,7 +136,7 @@ $images_json=array();
 				<p class="etiquette"><strong>My Big Bang</strong> <?php the_title(); ?></p>
 				<?php printf('<a href="https://www.google.com/maps/dir/?api=1&destination=%s" class="itineraire" target="_blank" title="Voir l\'itinéraire dans un nouvel onglet"> Itinéraire</a>',urlencode($adresse)); ?>
 			</div>
-		</div>
+		</section>
 	<?php endif;
 
 endwhile; // End of the loop. ?>

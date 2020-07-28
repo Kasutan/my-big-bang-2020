@@ -51,9 +51,9 @@ function mbb_profils_callback( $block ) {
 				printf('<li class="profil %s">',strtolower($element));
 					printf('<div class="image">%s</div>',get_the_post_thumbnail($post_id, 'medium'));
 					echo '<div class="texte">';
-						printf('<img src="%s" alt="" class="picto-desktop" height="61" weight="61"/>',get_stylesheet_directory_uri(  ).'/icons\/'.$element.'.svg');
+						printf('<img src="%s" alt="" class="picto-desktop" height="61" width="61"/>',get_stylesheet_directory_uri(  ).'/icons/'.$element.'.svg');
 						printf('<div class="description">%s</div>',wp_kses_post(get_field('description',$post_id)));
-						printf('<div class="element"><p class="contraste">Son élément</p><p>%s</p><img src="%s" alt="" class="picto-mobile" height="61" weight="61"/></div>',$element,get_stylesheet_directory_uri(  ).'/icons\/'.$element.'.svg');
+						printf('<div class="element"><p class="contraste">Son élément</p><p>%s</p><img src="%s" alt="" class="picto-mobile" height="61" width="61"/></div>',$element,get_stylesheet_directory_uri(  ).'/icons/'.$element.'.svg');
 						printf('<div class="besoins"><p class="contraste">Ses besoins</p><p>%s</p></div>',$besoins);
 						if($conseil) :
 							echo '<div class="bloc-conseil">';

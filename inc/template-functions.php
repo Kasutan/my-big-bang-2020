@@ -36,7 +36,7 @@ add_action( 'wp_head', 'mbb_pingback_header' );
 * Get picto url.
 */
 function mbb_get_picto_url($name) {
-	return get_template_directory_uri() . '/icons\/'.$name.'.svg';
+	return get_template_directory_uri() . '/icons/'.$name.'.svg';
 }
 
 function mbb_get_picto_social_url($name) {

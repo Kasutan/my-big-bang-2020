@@ -63,9 +63,9 @@ function mbb_team_coach_callback( $block ) {
 						printf('<div class="image">%s</div>',get_the_post_thumbnail($post_id, 'medium'));
 						echo '<div class="nom">';
 							printf('<h3>%s</h3>',$nom);
-							printf('<img src="%s" alt="" class="picto" height="50" weight="50"/>',get_stylesheet_directory_uri(  ).'/icons\/'.$element.'.svg');
+							printf('<img src="%s" alt="" class="picto" height="50" width="50"/>',get_stylesheet_directory_uri(  ).'/icons/'.$element.'.svg');
 						echo '</div>';
-						printf('<ul class="infos"><div class="pointilles"></div>
+						printf('<ul class="infos"><span class="pointilles"></span>
 							<li><span>%s</span> %s</li>
 							<li><span>Le +</span> %s</li>
 							<li><span>Mantra</span> %s</li>

@@ -48,7 +48,7 @@ function mbb_temoignages_callback( $block ) {
 							);
 						}
 					echo '</div>';
-				echo '<div>';//fin contenu
+				echo '</div>';//fin contenu
 			endif;
 		echo '</div>'; // fin fond
 	echo "</section>";

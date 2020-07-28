@@ -40,7 +40,7 @@ function mbb_get_studio_marker($post_id,$address) {
 	$lng = $address['lng'];
 	if($address['post_code']=='75116') $address['post_code']='75016';
 
-	$search_keys=strtolower($address['post_code'].' '.$address['city'].' '.get_the_title($post_id));
+	$search_keys=strtolower($address['post_code'].' '.$address['city'].' '.strip_tags(get_the_title($post_id)));
 	//Si besoin : concaténer d'autres critères de filtre
 		if(!empty($lat) && !empty($lng)) :
 			?>

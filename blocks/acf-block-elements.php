@@ -43,10 +43,10 @@ function mbb_elements_callback( $block ) {
 			while ( have_rows('elements', 'options') ) : the_row();
 				$nom=esc_attr(get_sub_field('nom')) ;
 				printf('<div class="element %s">',strtolower($nom) );
-					printf('<div class="nom %s"><h3>%s</h3><div class="picto"><img src="%s" alt="picto %s" height="105" weight="105"/></div></div>',
+					printf('<div class="nom %s"><h3>%s</h3><div class="picto"><img src="%s" alt="picto %s" height="105" width="105"/></div></div>',
 						strtolower($nom),
 						$nom,
-						get_stylesheet_directory_uri(  ).'/icons\/'.$nom.'.svg',
+						get_stylesheet_directory_uri(  ).'/icons/'.$nom.'.svg',
 						$nom
 					);
 					printf('<ul class="mots-cles"><li>%s</li><li>%s</li><li>%s</li></ul>',
