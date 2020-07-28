@@ -2883,7 +2883,7 @@ h1.fond-bleu {
       z-index: unset;
       display: grid;
       grid-template-columns: 1fr 200px 262px;
-      grid-template-rows: 75px minmax(545px, auto) 75px; }
+      grid-template-rows: 75px 547px 75px; }
       .acf-block-questionnaire .questionnaire {
         display: block;
         height: unset;
@@ -2959,10 +2959,12 @@ h1.fond-bleu {
       margin-bottom: 100px;
       position: relative; }
     @media (min-width: 768px) {
-      .acf-block-questionnaire.resultat .animation {
-        top: 0; }
-      .acf-block-questionnaire.resultat .intro-resultat {
-        margin-bottom: 140px; } }
+      .acf-block-questionnaire.resultat {
+        grid-template-rows: 75px minmax(545px, auto) 75px; }
+        .acf-block-questionnaire.resultat .animation {
+          top: 0; }
+        .acf-block-questionnaire.resultat .intro-resultat {
+          margin-bottom: 140px; } }
     .acf-block-questionnaire.resultat .titre-resultat {
       color: #9B9BAC;
       font-family: var(--font-serif);

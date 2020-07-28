@@ -182,7 +182,7 @@
 		}
 		display:grid;
 		grid-template-columns: 1fr 200px 262px;
-		grid-template-rows:75px minmax(545px,auto) 75px;
+		grid-template-rows:75px 547px 75px; //hauteur fixe du bloc questionnaire pour l'affichage des questions
 
 		.image {
 			display:flex;
@@ -258,6 +258,7 @@
 			position: relative;
 		}
 		@include bp(md) {
+			grid-template-rows:75px minmax(545px,auto) 75px; //hauteur auto du bloc questionnaire pour l'affichage des réponses
 			.animation {
 				top:0;
 			}
