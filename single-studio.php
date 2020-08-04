@@ -29,9 +29,19 @@ if(function_exists('get_field')) {
 	$cible_elements=esc_url(get_field('cible_elements_studio','option'));
 	$titre_gauche=wp_kses_post(get_field('titre_gauche_studio','option'));
 	$titre_droite=wp_kses_post(get_field('titre_droite_studio','option'));
-	$texte_gauche=wp_kses_post(get_field('contenu_gauche_studio','option'));
-	$texte_droite=wp_kses_post(get_field('contenu_droite_studio','option'));
 	$shortcode_widget=get_field('shortcode_widget_studio','option');
+
+	//on récupère le contenu saisi pour ce studio
+	$texte_gauche=wp_kses_post(get_field('contenu_gauche'));
+	$texte_droite=wp_kses_post(get_field('contenu_droite'));
+
+	//s'il est vide, on récupère le contenu commun à tous les studios, saisi dans les options MBB
+	if(!$texte_gauche) {
+		$texte_gauche=wp_kses_post(get_field('contenu_gauche_studio','option'));
+	}
+	if(!$texte_droite) {
+		$texte_droite=wp_kses_post(get_field('contenu_droite_studio','option'));
+	}
 
 	$adresse='';
 	if(function_exists('mbb_prepare_adresse')) {

@@ -444,6 +444,44 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5f295c25591b7",
+            "label": "Contenu colonne de gauche",
+            "name": "contenu_gauche",
+            "type": "wysiwyg",
+            "instructions": "(Services et Équipements accessibles)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 1
+        },
+        {
+            "key": "field_5f295c90591b8",
+            "label": "Contenu colonne de droite",
+            "name": "contenu_droite",
+            "type": "wysiwyg",
+            "instructions": "(Bénéfices de notre Méthode)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 1
         }
     ],
     "location": [
@@ -463,5 +501,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1595439372
+    "modified": 1596546217
 }
