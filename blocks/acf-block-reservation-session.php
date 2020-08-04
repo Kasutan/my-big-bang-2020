@@ -40,7 +40,7 @@ function mbb_reservation_session_callback( $block ) {
 	//On cherche tous les types de sessions
 	$types_sessions= get_terms( array(
 		'taxonomy' => 'type_sessions',
-		'orderby' => 'term_id',
+		'orderby' => 'menu_order',
 	) );
 
 	//On cherche toutes les sessions pour chaque type

@@ -48,9 +48,13 @@
 		max-width: 290px;
 	}
 	.site-header.sticky {
-		min-height:125px;
 		.custom-logo {
 			max-width:286px;
 		}
+	}
+}
+@include bp(xl) {
+	.site-header.sticky {
+		min-height:125px;
 	}
 }
