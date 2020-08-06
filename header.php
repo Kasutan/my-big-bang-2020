@@ -22,9 +22,11 @@
 
 
 	<?php wp_head(); ?>
+	<?php do_action('fdc_head_bottom'); ?>
 </head>
 
 <body <?php body_class(); ?>>
+<?php do_action('fdc_body_top');?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#main">Aller directement au contenu</a>
 	<?php if (function_exists('get_field') && !empty(get_field('mbb_topbar','option'))) {

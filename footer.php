@@ -57,6 +57,6 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<?php do_action('fdc_body_bottom');?>
 </body>
 </html>
