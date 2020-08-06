@@ -4909,7 +4909,7 @@ h1.fond-bleu {
     .acf-block-reservation-sessions .navigation > button.type-3 {
       --accent: #989895; }
     .acf-block-reservation-sessions .navigation > button.type-4 {
-      --accent: #AAA89E; }
+      --accent: #53C1B3; }
     .acf-block-reservation-sessions .navigation > button.actif, .acf-block-reservation-sessions .navigation > button:hover, .acf-block-reservation-sessions .navigation > button:focus {
       color: var(--blanc);
       outline: none; }
@@ -4974,7 +4974,7 @@ h1.fond-bleu {
   .acf-block-reservation-sessions .session.type-3 {
     --accent: #989895; }
   .acf-block-reservation-sessions .session.type-4 {
-    --accent: #AAA89E; }
+    --accent: #53C1B3; }
   .acf-block-reservation-sessions .session a.cta-resultat {
     margin-bottom: 0;
     margin-top: auto; }
