@@ -135,8 +135,10 @@ function mbb_scripts() {
 
 	wp_enqueue_script( 'mybigbang-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'mybigbang-lottie', 'https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.6.10/lottie_light_html.min.js', array(), '', true );
-
+	if(is_front_page(  )) {
+		wp_enqueue_script( 'mybigbang-lottie', 'https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.6.10/lottie_light_html.min.js', array(), '', true );
+	}
+	
 	wp_enqueue_script( 'mybigbang-owl-carousel',get_template_directory_uri() . '/lib/owlcarousel/owl.carousel.min.js', array('jquery'), '2.3.4', true );
 
 	//wp_register_script( 'mybigbang-modaal',get_template_directory_uri() . '/lib/modaal/modaal.min.js', array('jquery'), '0.4.4', true );
@@ -144,7 +146,7 @@ function mbb_scripts() {
 	wp_enqueue_script( 'mybigbang-list',get_template_directory_uri() . '/lib/list.min.js', array(), '1.5.0', true );
 
 
-	wp_enqueue_script( 'mybigbang-scripts', get_template_directory_uri() . '/js/mybigbang.js', array('mybigbang-lottie','jquery', 'mybigbang-owl-carousel','mybigbang-list'), '', true );
+	wp_enqueue_script( 'mybigbang-scripts', get_template_directory_uri() . '/js/mybigbang.js', array('jquery', 'mybigbang-owl-carousel','mybigbang-list'), '', true );
 
 
 }
