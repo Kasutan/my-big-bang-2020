@@ -291,14 +291,3 @@ function fdc_add_body_start() {
 
 add_action( 'fdc_body_top', 'fdc_add_body_start' );
 
-
-
-// Add in end <body>
-function fdc_add_body_end() {
-
-	echo "<div data-key='154-OTk4MzY5ZTQ4Njk3MGI1NjZhYTFhYm' class='preview mplug'></div>
-	<script type='text/javascript' src='//plugin.myli.io/js/baoreviews.min.js.gz'></script>";
-
-}
-
-add_action( 'fdc_body_bottom', 'fdc_add_body_end' );
