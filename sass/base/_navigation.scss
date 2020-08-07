@@ -162,10 +162,8 @@ a.cta-resultat {
 			ul {
 				display:none;
 			}
-			> li.focus { //classe focus ajoutée en JS
-				ul {
+			> li >a.focus-smenu + ul { //classe focus ajoutée en JS
 					display: flex;
-				}
 			}
 		}
 

@@ -1347,7 +1347,7 @@ a.cta-resultat {
     z-index: 10; }
     .main-navigation.toggled ul.menu ul {
       display: none; }
-    .main-navigation.toggled ul.menu > li.focus ul {
+    .main-navigation.toggled ul.menu > li > a.focus-smenu + ul {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }

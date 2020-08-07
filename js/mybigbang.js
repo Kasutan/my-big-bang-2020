@@ -2,7 +2,23 @@
 
 	$( document ).ready(function() {
 		var width=$(window).width();
+		/****************** Sous menu mobile *************************/	
+		if(width<768) {
+			var liensParents=$('.menu-item-has-children > a, .page_item_has_children > a');
+			liensParents.click(function(e){
+				if(!$(this).hasClass('focus-smenu')) {
+					e.preventDefault();
+					liensParents.removeClass('focus-smenu');
+					$(this).addClass('focus-smenu');
 
+				}
+			});
+			$('.sub-menu a').click(function(){
+				$('#site-navigation').removeClass('toggled');
+				$('#site-navigation ul.menu').attr('aria-expanded','false');
+				$('#site-navigation button.menu-toggle').attr('aria-expanded','false');
+			});
+		}
 		/****************** Sticky header *************************/	
 		var siteHeader=$('.site-header');
 		var siteContent=$('.site-main');
