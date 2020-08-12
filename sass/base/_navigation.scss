@@ -161,9 +161,9 @@ a.cta-resultat {
 			//sous-menu mobile
 			ul {
 				display:none;
-			}
-			> li >a.focus-smenu + ul { //classe focus ajoutée en JS
+				&.ouvert {//classe ouvert ajoutée en JS
 					display: flex;
+				}
 			}
 		}
 

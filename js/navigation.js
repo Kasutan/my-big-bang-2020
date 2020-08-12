@@ -33,12 +33,6 @@
 	button.onclick = function() {
 		toggleMenu();
 	};
-	
-	jQuery('.sub-menu .current_page_item a').click(function(){
-		if(window.innerWidth < 768) {
-			toggleMenu();
-		}
-	});
 
 	
 

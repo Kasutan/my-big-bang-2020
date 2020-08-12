@@ -10,6 +10,8 @@
 					e.preventDefault();
 					liensParents.removeClass('focus-smenu');
 					$(this).addClass('focus-smenu');
+					$('.sub-menu').removeClass('ouvert');
+					$(this).parent().children('.sub-menu').addClass('ouvert');
 
 				}
 			});
@@ -17,6 +19,8 @@
 				$('#site-navigation').removeClass('toggled');
 				$('#site-navigation ul.menu').attr('aria-expanded','false');
 				$('#site-navigation button.menu-toggle').attr('aria-expanded','false');
+				$('.sub-menu').removeClass('ouvert');
+				liensParents.removeClass('focus-smenu');
 			});
 		}
 		/****************** Sticky header *************************/	
