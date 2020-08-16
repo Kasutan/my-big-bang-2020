@@ -2716,6 +2716,9 @@ a.cta-resultat {
         padding-bottom: 0;
         margin: 30px auto 0;
         width: 230px; }
+    .single-studio .msdsWidget-trial > section .msdsModal-appointment {
+      background-color: #f0eee7;
+      position: relative; }
 
 h1.fond-bleu {
   background-color: var(--bleu);
