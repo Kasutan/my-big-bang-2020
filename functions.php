@@ -293,3 +293,15 @@ function fdc_add_body_start() {
 
 add_action( 'fdc_body_top', 'fdc_add_body_start' );
 
+
+/**
+* Ordonner les articles par date de modification sur les pages blog et archives de catégories/tags
+*/
+function mbb_order_posts($query)
+{
+	if (($query->is_home() && $query->is_main_query()) || is_tax( 'category' ) || is_tax( 'tag' ))
+	{
+		$query->set( 'orderby', 'modified' );
+	}
+}
+add_action('pre_get_posts', 'mbb_order_posts');
