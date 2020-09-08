@@ -4,8 +4,8 @@ Contributors: automattic, kasutan
 Tags: custom-logo, custom-menu, featured-images, threaded-comments
 
 Requires at least: 4.5
-Tested up to: 4.8
-Stable tag: 1.0.0
+Tested up to: 5.5
+Stable tag: 1.1.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
