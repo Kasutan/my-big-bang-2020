@@ -25,7 +25,7 @@
 			);
 			endif;
 
-			printf('<span class="date">%s</span>', get_the_date(''));
+			printf('<span class="date">%s</span>', get_the_modified_date('d/m/Y'));
 
 			printf( '<h2 class="item-title"><a href="%s" rel="bookmark">%s</a></h2>',
 				esc_url( get_permalink() ),
