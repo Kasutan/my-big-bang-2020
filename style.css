@@ -889,11 +889,12 @@ ol:not([class]) {
 
 ul:not([class]) {
   list-style: none;
+  margin-bottom: 0;
   padding: 0; }
   ul:not([class]) > li {
     background-image: url("icons/fleche_simple.svg");
     background-repeat: no-repeat;
-    background-position: 0 3px;
+    background-position: 0 7px;
     background-size: 16px 9px;
     line-height: 20px;
     margin-bottom: 20px;
@@ -2179,6 +2180,8 @@ a.cta-resultat {
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2; }
+  .single-post .primary .entry-content a {
+    font-weight: 700; }
 
 /************Bloc TOC***************/
 .entry-content .gutentoc {
@@ -2196,14 +2199,10 @@ a.cta-resultat {
   .entry-content .gutentoc a {
     text-decoration: none; }
   .entry-content .gutentoc #toclist .gutentoc-toc__list-wrap > ul {
-    border-bottom: dashed 1px var(--gris-fond);
-    margin-top: 20px;
-    padding-bottom: 20px; }
+    margin-top: 20px; }
     .entry-content .gutentoc #toclist .gutentoc-toc__list-wrap > ul > li > a {
       font-weight: 700; }
     .entry-content .gutentoc #toclist .gutentoc-toc__list-wrap > ul > li:not(:first-of-type) {
-      border-top: dashed 1px var(--gris-fond);
-      margin-top: 20px;
       padding-top: 20px; }
     .entry-content .gutentoc #toclist .gutentoc-toc__list-wrap > ul ul a strong {
       font-weight: normal; }

@@ -283,6 +283,10 @@
 		> .et_social_top {
 			order:2;
 		}
+
+		a {
+			font-weight: 700;
+		}
 	}
 }
 
@@ -313,15 +317,11 @@
 			}
 
 			&:not(:first-of-type) {
-				border-top:dashed 1px var(--gris-fond);
-				margin-top: 20px;
 				padding-top:20px;
 			}
 
 		}
-		border-bottom:dashed 1px var(--gris-fond);
 		margin-top: 20px;
-		padding-bottom:20px;
 
 		ul a strong {
 			font-weight: normal;
