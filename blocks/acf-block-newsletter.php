@@ -38,7 +38,7 @@ function mbb_newsletter_callback( $block ) {
 	printf('<section class="acf-block-newsletter alignfull %s">', $className);
 		//decor en bg de la section
 		echo '<div class="newsletter">';
-			if($titre) printf('<h2 class="titre">%s</h2>',$titre);
+			if($titre) printf('<p class="titre">%s</p>',$titre);
 			if($intro) printf('<div class="intro">%s</div>',$intro);
 			if($formulaire) printf('<div class="formulaire">%s</div>',$formulaire);
 		echo '</div>';

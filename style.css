@@ -2071,7 +2071,7 @@ a.cta-resultat {
   .sidebar a:hover, .sidebar a:focus, .sidebar a:active {
     text-decoration: underline; }
 
-.sidebar h2.titre-widget {
+.sidebar p.titre-widget {
   background-color: var(--rouge);
   color: var(--blanc);
   display: inline-block;
@@ -3693,6 +3693,7 @@ h1.fond-bleu {
   .acf-block-newsletter .titre {
     color: var(--blanc);
     font-size: 26px;
+    font-weight: 700;
     margin-bottom: 1rem; }
   .acf-block-newsletter .intro {
     display: none; }

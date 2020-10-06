@@ -49,8 +49,8 @@ if ( ! function_exists( 'mbb_setup' ) ) :
 				'id' => 'blog',
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget' => '</div>',
-				'before_title' => '<h2 class="titre-widget">',
-				'after_title' => '</h2>',
+				'before_title' => '<p class="titre-widget">',
+				'after_title' => '</p>',
 			));
 
 		} );
