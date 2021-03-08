@@ -27,15 +27,22 @@ if(function_exists('get_field')) {
 	$cible=esc_url(get_field('cible_cta_studio','option'));
 	$label_elements=esc_html(get_field('label_elements_studio','option'));
 	$cible_elements=esc_url(get_field('cible_elements_studio','option'));
-	$titre_gauche=wp_kses_post(get_field('titre_gauche_studio','option'));
-	$titre_droite=wp_kses_post(get_field('titre_droite_studio','option'));
 	$shortcode_widget=get_field('shortcode_widget_studio','option');
 
 	//on récupère le contenu saisi pour ce studio
+	$titre_gauche=wp_kses_post(get_field('titre_gauche'));
+	$titre_droite=wp_kses_post(get_field('titre_droite'));	
 	$texte_gauche=wp_kses_post(get_field('contenu_gauche'));
 	$texte_droite=wp_kses_post(get_field('contenu_droite'));
+	$texte_sous_carte=wp_kses_post(get_field('contenu_sous_carte'));
 
 	//s'il est vide, on récupère le contenu commun à tous les studios, saisi dans les options MBB
+	if(!$titre_gauche) {
+		$titre_gauche=wp_kses_post(get_field('titre_gauche_studio','option'));
+	}
+	if(!$titre_droite) {
+		$titre_droite=wp_kses_post(get_field('titre_droite_studio','option'));
+	}	
 	if(!$texte_gauche) {
 		$texte_gauche=wp_kses_post(get_field('contenu_gauche_studio','option'));
 	}
@@ -148,6 +155,10 @@ $images_json=array();
 			</div>
 		</section>
 	<?php endif;
+
+	if($texte_sous_carte) :
+		printf('<section class="general sous-carte"><div class="contenu">%s</div></section>',$texte_sous_carte);
+	endif;
 
 endwhile; // End of the loop. ?>
 

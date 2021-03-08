@@ -2549,6 +2549,14 @@ a.cta-resultat {
       font-size: 16px;
       line-height: 22px;
       text-transform: none; }
+    .single-studio .general.sous-carte {
+      padding-top: 40px; }
+      .single-studio .general.sous-carte h3 {
+        background-color: var(--rouge);
+        color: var(--blanc);
+        display: inline-block;
+        font-weight: 600;
+        padding: 2px 8px; }
   .single-studio .contenu ul {
     list-style: none;
     padding: 0; }
@@ -2589,6 +2597,10 @@ a.cta-resultat {
       padding-bottom: 80px; }
       .single-studio .general h2.contraste {
         margin-bottom: 50px; }
+      .single-studio .general.sous-carte {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
     .single-studio .contenu {
       -ms-flex-preferred-size: 45%;
       flex-basis: 45%; }

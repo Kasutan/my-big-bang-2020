@@ -239,6 +239,16 @@
 			line-height: 22px;
 			text-transform: none;
 		}
+		&.sous-carte {
+			padding-top:40px;
+			h3 {
+				background-color: var(--rouge);
+				color: var(--blanc);
+				display: inline-block;
+				font-weight: 600;
+				padding: 2px 8px;
+			}
+		}
 	}
 	.contenu {
 		ul {
@@ -285,6 +295,10 @@
 
 			h2.contraste {
 				margin-bottom: 50px;
+			}
+
+			&.sous-carte {
+				justify-content: center;
 			}
 			
 		}

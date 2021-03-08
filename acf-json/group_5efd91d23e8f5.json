@@ -446,6 +446,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_60463744a21b6",
+            "label": "Titre colonne de gauche",
+            "name": "titre_gauche",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Services et Équipements accessibles",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5f295c25591b7",
             "label": "Contenu colonne de gauche",
             "name": "contenu_gauche",
@@ -465,6 +484,25 @@
             "delay": 1
         },
         {
+            "key": "field_6046377da21b7",
+            "label": "Titre colonne de droite",
+            "name": "titre_droite",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Bénéfices de notre Méthode",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5f295c90591b8",
             "label": "Contenu colonne de droite",
             "name": "contenu_droite",
@@ -480,6 +518,25 @@
             "default_value": "",
             "tabs": "all",
             "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 1
+        },
+        {
+            "key": "field_604637a5a21b8",
+            "label": "Contenu sous la carte",
+            "name": "contenu_sous_carte",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
             "media_upload": 0,
             "delay": 1
         }
@@ -499,7 +556,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1596546217
+    "modified": 1615215148
 }
