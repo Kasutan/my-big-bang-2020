@@ -35,6 +35,7 @@ if(function_exists('get_field')) {
 	$texte_gauche=wp_kses_post(get_field('contenu_gauche'));
 	$texte_droite=wp_kses_post(get_field('contenu_droite'));
 	$texte_sous_carte=wp_kses_post(get_field('contenu_sous_carte'));
+	$titre_contenu_sous_carte=wp_kses_post(get_field('titre_contenu_sous_carte'));
 
 	//s'il est vide, on récupère le contenu commun à tous les studios, saisi dans les options MBB
 	if(!$titre_gauche) {
@@ -157,7 +158,10 @@ $images_json=array();
 	<?php endif;
 
 	if($texte_sous_carte) :
-		printf('<section class="general sous-carte"><div class="contenu">%s</div></section>',$texte_sous_carte);
+		echo '<section class="general sous-carte">';
+			if($titre_contenu_sous_carte) printf('<h2>%s</h2>',$titre_contenu_sous_carte);
+			printf('<details><summary>Afficher le contenu</summary><div class="contenu">%s</div></details>',$texte_sous_carte);
+		echo '</section>';
 	endif;
 
 endwhile; // End of the loop. ?>

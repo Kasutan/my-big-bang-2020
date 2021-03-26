@@ -2557,6 +2557,10 @@ a.cta-resultat {
         display: inline-block;
         font-weight: 600;
         padding: 2px 8px; }
+      .single-studio .general.sous-carte details {
+        width: 100%; }
+      .single-studio .general.sous-carte .contenu {
+        padding-top: 30px; }
   .single-studio .contenu ul {
     list-style: none;
     padding: 0; }
