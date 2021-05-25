@@ -1,0 +1,95 @@
+.acf-block-actus-franchises {
+
+
+	margin-bottom:var(--margin-bottom);
+
+	.titre-section {
+		text-align: center;
+	}
+	
+	.actus {
+		margin: 0;
+		padding:0;
+	}
+
+	.actu {
+		display: flex;
+		flex-direction: column;
+		list-style-type: none;
+	}
+
+	.image {
+		margin:30px;
+		position: relative;
+
+		.image-wrapper {
+			display: flex;
+			height:272px;
+			margin:0 auto;
+			position: relative;
+			width:272px;
+			&::before {
+				background-color:var(--gris-decor);
+				content:'';
+				height:100%;
+				left:-20px;
+				position: absolute;
+				top:-20px;
+				width:100%;
+			}
+			img {
+				object-fit: cover;
+				width: 100%;
+				position: relative;
+			}
+		}
+		
+		
+	}
+
+	.texte {
+		align-items:flex-start;
+		display: flex;
+		flex-direction: column;
+		padding:0 50px;
+
+
+		.titre {
+			font-size:24px;
+			font-family: var(--font-serif);
+			text-decoration: none;
+		}
+		.extrait {
+			margin-bottom:0;
+			text-decoration: none;
+		}
+	
+	}
+	
+
+	@include bp(md) {
+		.actu {
+			flex-direction: row;
+			justify-content: center;
+			padding:0 50px;
+		}
+		
+
+		.texte {
+			flex-basis : 310px;
+			flex-grow:1;
+			padding:0;
+		}
+		.image-wrapper {
+			margin:0;
+		}
+		.image {
+			flex-basis:280px;
+			flex-grow:0;
+			margin:0;
+			padding-right:40px;
+		}
+
+
+	}
+}

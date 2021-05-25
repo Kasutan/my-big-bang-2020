@@ -356,6 +356,23 @@
 			}
 		});
 	}
+
+		/****************** Carrousel bloc actus franchise *************************/
+
+
+		$(".acf-block-actus-franchises .owl-carousel").owlCarousel({
+			center: false,
+			loop:true,
+			nav : true,
+			dots : false,
+			autoplay:true,
+			autoplayTimeout:7000,
+			autoplaySpeed:2000,
+			navSpeed:2000,
+			autoplayHoverPause:true,
+			items:1,
+		});
+
 	}); //fin document ready
 
 })( jQuery );

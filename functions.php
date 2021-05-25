@@ -218,6 +218,7 @@ require_once( 'blocks/acf-block-coupon.php' );
 require_once( 'blocks/acf-block-arguments.php' );
 require_once( 'blocks/acf-block-facteurs-succes.php' );
 require_once( 'blocks/acf-block-temoignages.php' );
+require_once( 'blocks/acf-block-actus-franchises.php' );
 
 /**
 * Page options
