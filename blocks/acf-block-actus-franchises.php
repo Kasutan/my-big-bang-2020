@@ -46,7 +46,7 @@ function mbb_actus_franchises_callback( $block ) {
 				$image=esc_attr(get_sub_field('image'));
 
 				echo '<li class="actu">';
-					printf('<div class="image"><div class="image-wrapper">%s</div></div>',wp_get_attachment_image( $image, 'medium'));
+					printf('<div class="image"><div class="image-wrapper">%s</div></div>',wp_get_attachment_image( $image, 'large'));
 		
 					echo '<div class="texte">';
 						printf('<h3 class="titre">%s</h3>',$titre);

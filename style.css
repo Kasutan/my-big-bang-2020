@@ -3663,8 +3663,20 @@ h1.fond-bleu {
       -webkit-box-flex: 0;
       -ms-flex-positive: 0;
       flex-grow: 0;
-      margin: 0;
       padding-right: 40px; } }
+  @media (min-width: 960px) {
+    .acf-block-actus-franchises .image {
+      -ms-flex-preferred-size: 460px;
+      flex-basis: 460px;
+      -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+      flex-grow: 0;
+      margin: 30px 0 0;
+      padding-right: 40px; }
+      .acf-block-actus-franchises .image .image-wrapper {
+        height: 400px;
+        width: 400px;
+        margin: 0; } }
 
 .acf-block-blog {
   display: -webkit-box;
