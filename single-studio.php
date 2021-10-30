@@ -120,11 +120,13 @@ $images_json=array();
 			printf('<p class="email">%s</p>',$email);
 			echo '<p class="contraste">Horaires</p><ul class="horaires">';
 			foreach($semaine as $jour) {
-				printf('<li>%s : <strong>%s</strong>',ucfirst($jour),$horaires[$jour]);
-				if(array_key_exists($jour.'_am',$horaires) && !empty($horaires[$jour.'_am'])) {
-					printf('<span class="separateur">//</span><strong>%s</strong>',$horaires[$jour.'_am']);
+				if(array_key_exists($jour,$horaires) && !empty($horaires[$jour])) {
+					printf('<li>%s : <strong>%s</strong>',ucfirst($jour),$horaires[$jour]);
+					if(array_key_exists($jour.'_am',$horaires) && !empty($horaires[$jour.'_am'])) {
+						printf('<span class="separateur">//</span><strong>%s</strong>',$horaires[$jour.'_am']);
+					}
+					echo '</li>';
 				}
-				echo '</li>';
 			}
 			echo "</ul>";
 		echo '</div>';//fin .texte 
