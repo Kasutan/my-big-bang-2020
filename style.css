@@ -1911,6 +1911,14 @@ a.cta-resultat {
   .site-header.sticky {
     min-height: 125px; } }
 
+.site-header.landing {
+  background-color: transparent;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10; }
+
 /*Styles communs aux pages single et archive*/
 .fil-ariane {
   font-size: 14px;

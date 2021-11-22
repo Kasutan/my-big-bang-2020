@@ -3,7 +3,7 @@
 get_header('landing');
 
 ?>
-<main id="main" class="site-main">
+<main id="main" class="site-main landing">
 <div class="entry-content container">
 	<?php
 	the_content();

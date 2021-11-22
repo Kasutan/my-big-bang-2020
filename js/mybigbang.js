@@ -25,7 +25,7 @@
 		}
 		/****************** Sticky header *************************/	
 		var siteHeader=$('.site-header');
-		var siteContent=$('.site-main');
+		var siteContent=$('.site-main').not('.landing');
 		var mainNavigation=$('.main-navigation');
 		var headerTop=0;
 		var headerBottom=0;
