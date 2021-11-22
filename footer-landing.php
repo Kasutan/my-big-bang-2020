@@ -11,7 +11,7 @@
 
 	?>
 
-	<footer id="landin-footer" class="landing-footer">
+	<footer id="landing-footer" class="landing-footer">
 		<?php
 
 
