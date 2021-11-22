@@ -127,7 +127,7 @@ require get_template_directory() . '/inc/colors.php';
  */
 function mbb_scripts() {
 	wp_enqueue_style( 'mybigbang-owl-carousel', get_template_directory_uri() . '/lib/owlcarousel/owl.carousel.min.css',array(),'2.3.4');
-	wp_enqueue_style( 'mybigbang-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'mybigbang-style', get_stylesheet_uri(), array(), time() );
 	wp_enqueue_style( 'mybigbang-google-font', 'https://fonts.googleapis.com/css?family=Zilla+Slab:600');
 	wp_enqueue_style( 'mybigbang-typekit-font', 'https://use.typekit.net/siy5vua.css');
 
@@ -146,7 +146,7 @@ function mbb_scripts() {
 	wp_enqueue_script( 'mybigbang-list',get_template_directory_uri() . '/lib/list.min.js', array(), '1.5.0', true );
 
 
-	wp_enqueue_script( 'mybigbang-scripts', get_template_directory_uri() . '/js/mybigbang.js', array('jquery', 'mybigbang-owl-carousel','mybigbang-list'), '', true );
+	wp_enqueue_script( 'mybigbang-scripts', get_template_directory_uri() . '/js/mybigbang.js', array('jquery', 'mybigbang-owl-carousel','mybigbang-list'), time(), true );
 
 
 }
