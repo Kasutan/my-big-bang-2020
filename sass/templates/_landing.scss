@@ -127,23 +127,6 @@
 		width: 100px;
 		height: 2px;
 	}
-
-
-	.wp-block-columns.avec-picto {
-		flex-wrap: nowrap;
-		.wp-block-column {
-			&:first-child {
-				flex-basis:50px !important;
-				flex-grow:0;
-			}
-			&:last-child {
-				flex-basis:calc(100% - 50px) !important;
-				flex-grow:1;
-				margin-left: 2em;
-			}
-		
-		}
-	}
 }
 
 .wp-block-columns.landing-temoignages {
@@ -162,5 +145,34 @@
 			flex-grow:0;
 			flex-shrink:1;
 		}
+	}
+}
+
+.landing-video {
+	.texte {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		padding:50px;
+		.wp-block-group__inner-container p {
+			max-width:600px;
+		}
+	}
+	@include bp(lg) {
+		padding-top:15%;
+		padding-left:200px;
+		position: relative;
+		.video {
+			left:0;
+			position:absolute;
+			top:0;
+			width:60%;
+			z-index:1;
+		}
+		.texte {
+			padding-top:25%;
+			position: relative;
+		}
+
 	}
 }

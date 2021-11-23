@@ -61,3 +61,19 @@
 		}
 	}
 }
+
+.wp-block-columns.avec-picto {
+	flex-wrap: nowrap;
+	.wp-block-column {
+		&:first-child {
+			flex-basis:50px !important;
+			flex-grow:0;
+		}
+		&:last-child {
+			flex-basis:calc(100% - 50px) !important;
+			flex-grow:1;
+			margin-left: 2em;
+		}
+		
+	}
+}
