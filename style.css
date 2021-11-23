@@ -1983,6 +1983,7 @@ a.cta-resultat {
         font-size: 0.875rem; } }
 
 .wp-block-cover.landing-banniere {
+  margin-bottom: 0;
   padding: 6rem var(--padding-x) 0; }
   .wp-block-cover.landing-banniere img {
     -webkit-clip-path: polygon(0px 0px, 100% 0px, 100% 85%, 0 100%);
@@ -2008,6 +2009,13 @@ a.cta-resultat {
   @media (min-width: 960px) {
     .wp-block-cover.landing-banniere {
       --padding-x: calc(50vw - 450px); } }
+
+.wp-block-gallery.landing-galerie {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .wp-block-gallery.landing-galerie .blocks-gallery-grid {
+    max-width: 1000px; }
 
 /*Styles communs aux pages single et archive*/
 .fil-ariane {

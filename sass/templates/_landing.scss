@@ -72,6 +72,7 @@
 
 
 .wp-block-cover.landing-banniere {
+	margin-bottom: 0;
 	padding:6rem var(--padding-x) 0;
 	img {
 		clip-path: polygon(0px 0px, 100% 0px, 100% 85%, 0 100%);
@@ -102,5 +103,11 @@
 
 	@include bp(lg) {
 		--padding-x: calc(50vw - 450px);
+	}
+}
+.wp-block-gallery.landing-galerie {
+	justify-content: center;
+	.blocks-gallery-grid {
+		max-width:1000px;
 	}
 }
