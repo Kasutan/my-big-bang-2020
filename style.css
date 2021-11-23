@@ -1924,6 +1924,10 @@ a.cta-resultat {
   top: 0;
   width: 100%;
   z-index: 10; }
+  .site-header.landing.sticky {
+    min-height: unset; }
+  .site-header.landing a.button:visited {
+    color: #fff; }
 
 .landing .site-branding {
   max-width: 50%;
