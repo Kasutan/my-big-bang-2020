@@ -5661,6 +5661,11 @@ h1.fond-bleu {
         height: 805px;
         width: 100%; } }
 
+.acf-block-studios-selection {
+  margin-bottom: 0; }
+  .acf-block-studios-selection #carte {
+    height: 500px; }
+
 .wp-block-group.alignfull {
   padding: 40px var(--padding-x); }
   @media (min-width: 768px) {

@@ -126,8 +126,13 @@ require get_template_directory() . '/inc/colors.php';
  * Enqueue scripts and styles.
  */
 function mbb_scripts() {
+	//PROD
+	$version='';
+	//DEV
+	$version=time();
+
 	wp_enqueue_style( 'mybigbang-owl-carousel', get_template_directory_uri() . '/lib/owlcarousel/owl.carousel.min.css',array(),'2.3.4');
-	wp_enqueue_style( 'mybigbang-style', get_stylesheet_uri(), array(), time() );
+	wp_enqueue_style( 'mybigbang-style', get_stylesheet_uri(), array(), $version );
 	wp_enqueue_style( 'mybigbang-google-font', 'https://fonts.googleapis.com/css?family=Zilla+Slab:600');
 	wp_enqueue_style( 'mybigbang-typekit-font', 'https://use.typekit.net/siy5vua.css');
 
@@ -146,7 +151,7 @@ function mbb_scripts() {
 	wp_enqueue_script( 'mybigbang-list',get_template_directory_uri() . '/lib/list.min.js', array(), '1.5.0', true );
 
 
-	wp_enqueue_script( 'mybigbang-scripts', get_template_directory_uri() . '/js/mybigbang.js', array('jquery', 'mybigbang-owl-carousel','mybigbang-list'), time(), true );
+	wp_enqueue_script( 'mybigbang-scripts', get_template_directory_uri() . '/js/mybigbang.js', array('jquery', 'mybigbang-owl-carousel','mybigbang-list'), $version, true );
 
 
 }
@@ -193,7 +198,7 @@ function mbb_block_categories( $categories, $post ) {
 		$categories
 	);
 }
-add_filter( 'block_categories', 'mbb_block_categories', 10, 2 );
+add_filter( 'block_categories_all', 'mbb_block_categories', 10, 2 );
 
 require_once( 'blocks/acf-block-questionnaire.php' );
 require_once( 'blocks/acf-block-accueil-etat-esprit.php' );
@@ -214,6 +219,7 @@ require_once( 'blocks/acf-block-rdv.php' );
 require_once( 'blocks/acf-block-reservation-session.php' );
 require_once( 'blocks/acf-block-deux-colonnes.php' );
 require_once( 'blocks/acf-block-studios.php' );
+require_once( 'blocks/acf-block-studios-selection.php' );
 require_once( 'blocks/acf-block-coupon.php' );
 require_once( 'blocks/acf-block-arguments.php' );
 require_once( 'blocks/acf-block-facteurs-succes.php' );

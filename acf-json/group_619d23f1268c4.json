@@ -1,0 +1,66 @@
+{
+    "key": "group_619d23f1268c4",
+    "title": "Bloc carte avec une sélection de studios",
+    "fields": [
+        {
+            "key": "field_619d23f12de1c",
+            "label": "Bloc carte avec une sélection de studios",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Saisie des studios dans le menu \"Studios\" de la barre latérale gauche.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_619d246f2e1d6",
+            "label": "Studios à afficher sur la carte",
+            "name": "studios",
+            "type": "relationship",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "studio"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/acf-studios-selection"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1637688504
+}

@@ -7,7 +7,7 @@ function mbb_google_maps_scripts() {
 	wp_register_script( 'maps-acf', get_template_directory_uri() . '/js/maps-acf.js', array( 'jquery' ), '1.0.0', true );
 	wp_register_script( 'google-maps-api', 'https://maps.googleapis.com/maps/api/js?key='.MAPS_API_KEY, null, null, true);
 	
-	if(is_page( 'mon-studio' ) || is_page( 'nos-studios-delectro-stimulation' ) || (is_single() && 'studio' == get_post_type()) ) {
+	if(is_page( 'mon-studio' ) || is_page( 'nos-studios-delectro-stimulation' ) || (is_single() && 'studio' == get_post_type()) || is_page_template('page-templates/landing.php')) {
 		wp_enqueue_script('maps-acf');
 		wp_enqueue_script('google-maps-api');
 	}
