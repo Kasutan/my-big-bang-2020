@@ -2017,6 +2017,31 @@ a.cta-resultat {
   .wp-block-gallery.landing-galerie .blocks-gallery-grid {
     max-width: 1000px; }
 
+.wp-block-columns.landing-colonnes h2 {
+  margin-bottom: 0; }
+
+.wp-block-columns.landing-colonnes hr.wp-block-separator {
+  margin: 2rem 0;
+  width: 100px;
+  height: 2px; }
+
+.wp-block-columns.landing-colonnes .wp-block-columns.avec-picto {
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap; }
+  .wp-block-columns.landing-colonnes .wp-block-columns.avec-picto .wp-block-column:first-child {
+    -ms-flex-preferred-size: 50px !important;
+    flex-basis: 50px !important;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0; }
+  .wp-block-columns.landing-colonnes .wp-block-columns.avec-picto .wp-block-column:last-child {
+    -ms-flex-preferred-size: calc(100% - 50px) !important;
+    flex-basis: calc(100% - 50px) !important;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin-left: 2em; }
+
 /*Styles communs aux pages single et archive*/
 .fil-ariane {
   font-size: 14px;
@@ -5619,6 +5644,28 @@ h1.fond-bleu {
   @media (min-width: 768px) {
     .wp-block-image.alignfull.show-for-md {
       display: block; } }
+
+.wp-block-image.avec-fond {
+  --debord:40px;
+  display: block;
+  position: relative;
+  margin: 0 var(--debord) var(--debord) 0; }
+  .wp-block-image.avec-fond::before {
+    background-color: var(--gris-decor);
+    content: '';
+    height: 100%;
+    left: var(--debord);
+    position: absolute;
+    top: var(--debord);
+    width: 100%; }
+  .wp-block-image.avec-fond img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: relative;
+    width: 100%; }
+  .wp-block-image.avec-fond.rouge::before {
+    background-color: var(--rouge); }
 
 .acf-block-coupon {
   margin-bottom: 40px; }

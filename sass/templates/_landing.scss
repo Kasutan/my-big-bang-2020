@@ -111,3 +111,32 @@
 		max-width:1000px;
 	}
 }
+
+
+.wp-block-columns.landing-colonnes {
+	h2 {
+		margin-bottom: 0;
+	}
+	hr.wp-block-separator {
+		margin: 2rem 0;
+		width: 100px;
+		height: 2px;
+	}
+
+
+	.wp-block-columns.avec-picto {
+		flex-wrap: nowrap;
+		.wp-block-column {
+			&:first-child {
+				flex-basis:50px !important;
+				flex-grow:0;
+			}
+			&:last-child {
+				flex-basis:calc(100% - 50px) !important;
+				flex-grow:1;
+				margin-left: 2em;
+			}
+		
+		}
+	}
+}

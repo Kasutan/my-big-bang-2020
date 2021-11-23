@@ -34,3 +34,30 @@
 		}
 	}
 }
+
+.wp-block-image.avec-fond {
+	--debord:40px;
+	display:block;
+	position: relative;
+	margin:0 var(--debord) var(--debord) 0;
+	&::before {
+		background-color: var(--gris-decor);
+		content: '';
+		height: 100%;
+		left: var(--debord);
+		position: absolute;
+		top: var(--debord);
+		width: 100%;
+	}
+	img {
+		height:100%;
+		object-fit: cover;
+		position: relative;
+		width: 100%;
+	}
+	&.rouge {
+		&::before {
+			background-color: var(--rouge);
+		}
+	}
+}
