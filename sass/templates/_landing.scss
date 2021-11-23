@@ -70,6 +70,11 @@
 
 }
 
+.page-template-landing {
+	h2 {
+		margin-bottom: 0.4em;
+	}
+}
 
 .wp-block-cover.landing-banniere {
 	margin-bottom: 0;
@@ -137,6 +142,25 @@
 				margin-left: 2em;
 			}
 		
+		}
+	}
+}
+
+.wp-block-columns.landing-temoignages {
+	.wp-block-column {
+		box-shadow: 0 0 40px var(--gris-decor);
+		padding: 20px 30px;
+	}
+	p {
+		margin-bottom: 0;
+	}
+	@include bp(md) {
+		align-items: flex-start;
+		justify-content: space-between;
+		.wp-block-column {
+			flex-basis : 370px;
+			flex-grow:0;
+			flex-shrink:1;
 		}
 	}
 }

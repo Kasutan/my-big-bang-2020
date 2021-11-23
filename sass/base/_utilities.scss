@@ -4,6 +4,11 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+@mixin mx-auto {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 .small-padding {
 	padding: 1rem;
@@ -97,5 +102,10 @@
 	margin-bottom:var(--margin-bottom);
 }
 
+.max-width-750 {
+	@include mx-auto();
+	max-width:750px;
+
+}
 
 
