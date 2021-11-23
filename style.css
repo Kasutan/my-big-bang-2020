@@ -1982,6 +1982,33 @@ a.cta-resultat {
       .landing-footer .copyright {
         font-size: 0.875rem; } }
 
+.wp-block-cover.landing-banniere {
+  padding: 6rem var(--padding-x) 0; }
+  .wp-block-cover.landing-banniere img {
+    -webkit-clip-path: polygon(0px 0px, 100% 0px, 100% 85%, 0 100%);
+    clip-path: polygon(0px 0px, 100% 0px, 100% 85%, 0 100%);
+    -webkit-filter: brightness(0.4);
+    filter: brightness(0.4); }
+  .wp-block-cover.landing-banniere h1 {
+    padding: 0;
+    text-align: left; }
+  .wp-block-cover.landing-banniere hr.wp-block-separator {
+    margin: 2.5rem 0 0.5rem;
+    opacity: 0.8;
+    width: 100px;
+    border: none;
+    height: 2px; }
+  .wp-block-cover.landing-banniere .wp-block-buttons {
+    margin-top: 3rem; }
+    .wp-block-cover.landing-banniere .wp-block-buttons > .wp-block-button {
+      margin-bottom: 0; }
+      .wp-block-cover.landing-banniere .wp-block-buttons > .wp-block-button a.wp-block-button__link:not(.has-background) {
+        padding: 15px;
+        margin-bottom: 0; }
+  @media (min-width: 960px) {
+    .wp-block-cover.landing-banniere {
+      --padding-x: calc(50vw - 450px); } }
+
 /*Styles communs aux pages single et archive*/
 .fil-ariane {
   font-size: 14px;
