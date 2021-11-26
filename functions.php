@@ -127,7 +127,7 @@ require get_template_directory() . '/inc/colors.php';
  */
 function mbb_scripts() {
 	//PROD
-	$version='';
+	$version='1.2.3';
 	//DEV
 	$version=time();
 

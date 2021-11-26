@@ -80,6 +80,12 @@
 	h2 {
 		margin-bottom: 0.4em;
 	}
+	@media screen and (max-width:500px) {
+		font-size:1.12rem;
+		h1 {
+			font-size: 2rem;
+		}
+	}
 }
 
 .wp-block-cover.landing-banniere {
@@ -120,6 +126,21 @@
 	justify-content: center;
 	.blocks-gallery-grid {
 		max-width:1000px;
+	}
+	@media screen and (min-width:450px) and (max-width:599px) {
+		.blocks-gallery-grid {
+			flex-wrap: nowrap;
+		}
+	}
+	@media screen and (max-width:449px) {
+		.blocks-gallery-grid {
+			justify-content: center;
+		}
+		.blocks-gallery-item {
+			margin:-5px;
+			flex-grow:0;
+			flex-basis: 35%;
+		}
 	}
 }
 
@@ -180,5 +201,25 @@
 			position: relative;
 		}
 
+	}
+}
+
+html .landing-formulaire {
+	.formcraft-css .fc-form .form-element .field-cover .button.submit-button {
+		background-color: var(--rouge) !important;
+		border:none;
+		margin-top: 2rem;
+		&:hover, &:focus {
+			background-color: var(--rouge-clair) !important;
+		}
+	}
+	a.powered-by {
+		display: none;
+	}
+	.formcraft-css .fc-form .final-success {
+		color: var(--rouge) !important;
+		.final-success-check {
+			border-color:var(--rouge) !important;
+		}
 	}
 }

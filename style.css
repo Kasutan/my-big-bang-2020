@@ -1995,6 +1995,12 @@ a.cta-resultat {
 .page-template-landing h2 {
   margin-bottom: 0.4em; }
 
+@media screen and (max-width: 500px) {
+  .page-template-landing {
+    font-size: 1.12rem; }
+    .page-template-landing h1 {
+      font-size: 2rem; } }
+
 .wp-block-cover.landing-banniere {
   margin-bottom: 0;
   padding: 6rem var(--padding-x) 0; }
@@ -2029,6 +2035,22 @@ a.cta-resultat {
   justify-content: center; }
   .wp-block-gallery.landing-galerie .blocks-gallery-grid {
     max-width: 1000px; }
+  @media screen and (min-width: 450px) and (max-width: 599px) {
+    .wp-block-gallery.landing-galerie .blocks-gallery-grid {
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; } }
+  @media screen and (max-width: 449px) {
+    .wp-block-gallery.landing-galerie .blocks-gallery-grid {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+    .wp-block-gallery.landing-galerie .blocks-gallery-item {
+      margin: -5px;
+      -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+      flex-grow: 0;
+      -ms-flex-preferred-size: 35%;
+      flex-basis: 35%; } }
 
 .wp-block-columns.landing-colonnes h2 {
   margin-bottom: 0; }
@@ -2091,6 +2113,21 @@ a.cta-resultat {
     .landing-video .texte {
       padding-top: 25%;
       position: relative; } }
+
+html .landing-formulaire .formcraft-css .fc-form .form-element .field-cover .button.submit-button {
+  background-color: var(--rouge) !important;
+  border: none;
+  margin-top: 2rem; }
+  html .landing-formulaire .formcraft-css .fc-form .form-element .field-cover .button.submit-button:hover, html .landing-formulaire .formcraft-css .fc-form .form-element .field-cover .button.submit-button:focus {
+    background-color: var(--rouge-clair) !important; }
+
+html .landing-formulaire a.powered-by {
+  display: none; }
+
+html .landing-formulaire .formcraft-css .fc-form .final-success {
+  color: var(--rouge) !important; }
+  html .landing-formulaire .formcraft-css .fc-form .final-success .final-success-check {
+    border-color: var(--rouge) !important; }
 
 /*Styles communs aux pages single et archive*/
 .fil-ariane {

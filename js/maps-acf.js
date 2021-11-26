@@ -129,7 +129,7 @@
     *  @return	n/a
     */
     
-    function center_map( map , desktop) {
+    function center_map( map , desktop, landing) {
     
         // vars
         var bounds = new google.maps.LatLngBounds();
@@ -148,7 +148,7 @@
         {
             // set center of map
 			map.setCenter( bounds.getCenter() );
-			if(desktop) {
+			if(desktop || landing) {
 				map.setZoom( 16 );
 			} else {
 				map.setZoom( 10 );
@@ -158,7 +158,7 @@
         {
             // fit to bounds
 			  map.setCenter( bounds.getCenter() );
-			  if(desktop) {
+			  if(desktop || landing) {
 				map.setZoom( 10 );
 				map.fitBounds( bounds ); 
 
@@ -191,7 +191,7 @@
     
             // create map
 			map = new_map( $(this) );
-			center_map(map, window.innerWidth > 768);
+			center_map(map, window.innerWidth > 768, $('body').hasClass('page-template-landing'));
 			
 
     
