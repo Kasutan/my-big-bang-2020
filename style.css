@@ -1935,6 +1935,9 @@ a.cta-resultat {
   @media (min-width: 576px) {
     .landing .site-branding {
       max-width: 200px; } }
+  @media (min-width: 768px) {
+    .landing .site-branding {
+      max-width: 250px; } }
 
 .landing-footer {
   -webkit-box-align: center;

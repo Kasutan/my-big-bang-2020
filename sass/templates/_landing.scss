@@ -19,6 +19,9 @@
 	@include bp(sm) {
 		max-width:200px;
 	}
+	@include bp(md) {
+		max-width:250px;
+	}
 }
 
 .landing-footer {
