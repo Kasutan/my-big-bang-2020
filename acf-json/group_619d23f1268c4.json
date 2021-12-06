@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Saisie des studios dans le menu \"Studios\" de la barre latérale gauche.",
+            "message": "Saisie des studios qui seront montrés sur la carte. Le zoom et le centre de la carte s'ajustent automatiquement pour montrer tous les studios sélectionnés.",
             "new_lines": "wpautop",
             "esc_html": 0
         },
@@ -62,5 +62,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1637688504
+    "show_in_rest": 0,
+    "modified": 1638798775
 }
